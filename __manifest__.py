@@ -12,5 +12,8 @@
     "application": False,
     "installable": True,
     "depends": ["crm"],
-    "data": ["views/crm_lead_views.xml"],
+    "data": [
+        "views/crm_lead_views.xml",
+        'data/l10n_cities_co_data.xml',
+    ],
 }

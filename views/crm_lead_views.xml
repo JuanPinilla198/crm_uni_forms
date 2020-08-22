@@ -5,14 +5,68 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//page[@name='lead']" position="after">
-                <page string="Formulario - Encuesta">
+
+            <!-- Hiding some fields that will be replaced partially or just set to invisible -->
+
+            <xpath expr="//page[@name='lead']" position="replace">
+                
+            <group attrs="{'invisible': [('type', '=', 'lead')]}">
+                <field name="partner_id"
+                    widget="res_partner_many2one"
+                    string="Customer"
+                    context="{'res_partner_search_mode': type == 'opportunity' and 'customer' or False,
+                            'default_x_pvereda': x_pvereda,
+                            
+                                    }"
+                                />                          
+            </group>
                     
-                    <group>
+            <page string="Formulario - Encuesta">
+
+                    <!--Este grupo sirve para copiar los datos del CRM al contacto-->
+          
+                    <group string="Módulo 1 - Caracterización del Propietario ">
                         <group>
+                            <field name="partner_name" />
+                            <field name="contact_name" />                            
+                            <field name="doctype" />
+                            <field name="xidentification" />
+                            <field name="x_sexo" />
+                            <field name="x_etnia" />
+                            <field name="x_edad" />                                     
+                            <field name="state_id"/> 
+                            <field name="xcity"/>
+                        </group>
+
+                        <group>                            
                             <field name="x_vereda" />
+                            <field name="mobile" />
+                            <field name="email_from" />
+                            <field name="x_limitacion" />
+                            <field name="x_escolaridad" />
+                            <field name="x_posgrado"
+                                options="{'no_open': True}"
+                                attrs="{'readonly':[('x_escolaridad', '=', '33')],
+                                'readonly':[('x_escolaridad', '=', '32')],
+                                'readonly':[('x_escolaridad', '=', '34')],
+                                'invisible':[('x_escolaridad', '=', False)],}"        
+                                placeholder="Posgrado" 
+                                />
+                            <field name="x_grupos" />
+                            <field name="x_estrato" />
+
                         </group>
+                    </group>
+
+                    <group string="Módulo 2 - Caracterización del Micronegocio">
+                        <group>
+                            <field name="x_situacion" />
+                            <field name="x_actcomer" /> 
+                            <field name="x_state_id" />                         
+                                                  
                         </group>
+
+                    </group>
                    
                 </page>
             </xpath>
