@@ -8,23 +8,9 @@
 
             <!-- Hiding some fields that will be replaced partially or just set to invisible -->
 
-            <xpath expr="//page[@name='lead']" position="replace">
-                
-            <group attrs="{'invisible': [('type', '=', 'lead')]}">
-                <field name="partner_id"
-                    widget="res_partner_many2one"
-                    string="Customer"
-                    context="{'res_partner_search_mode': type == 'opportunity' and 'customer' or False,
-                            'default_x_pvereda': x_pvereda,
-                            
-                                    }"
-                                />                          
-            </group>
+            <xpath expr="//page[@name='lead']" position="after">
+                <page string="Formulario - Encuesta">
                     
-            <page string="Formulario - Encuesta">
-
-                    <!--Este grupo sirve para copiar los datos del CRM al contacto-->
-          
                     <group string="Módulo 1 - Caracterización del Propietario ">
                         <group>
                             <field name="partner_name" />
@@ -44,17 +30,40 @@
                             <field name="email_from" />
                             <field name="x_limitacion" />
                             <field name="x_escolaridad" />
+
+                            <field name="x_pregrado"
+                                   options="{'no_open': True}"
+                                   attrs="{'readonly':[('x_escolaridad', '=', '34')],
+                                   'invisible':[('x_pregrado', '=', False)],}"        
+                                   />
+
+                            <field name="x_pregrado"
+                                   options="{'no_open': True}"
+                                   attrs="{'readonly':[('x_escolaridad', '=', '30')],
+                                   'invisible':[('x_pregrado', '=', True)],}"        
+                                   />
+
                             <field name="x_posgrado"
-                                options="{'no_open': True}"
-                                attrs="{'readonly':[('x_escolaridad', '=', '33')],
-                                'readonly':[('x_escolaridad', '=', '32')],
-                                'readonly':[('x_escolaridad', '=', '34')],
-                                'invisible':[('x_escolaridad', '=', False)],}"        
-                                placeholder="Posgrado" 
-                                />
+                                   options="{'no_open': True}"
+                                   attrs="{'readonly':[('x_escolaridad', '=', '35')],
+                                   'invisible':[('x_posgrado', '=', False)],}"        
+                                   />
+
+                            <field name="x_posgrado"
+                                   options="{'no_open': True}"
+                                   attrs="{'readonly':[('x_escolaridad', '=', '30')],
+                                   'invisible':[('x_posgrado', '=', False)],}"        
+                                   />
+
+                            <field name="x_otro"
+                                   options="{'no_open': True}"
+                                   attrs="{'readonly':[('x_escolaridad', '=', '36')],
+                                   'invisible':[('x_otro', '=', False)],}"        
+                                   />
+
+
                             <field name="x_grupos" />
                             <field name="x_estrato" />
-
                         </group>
                     </group>
 
