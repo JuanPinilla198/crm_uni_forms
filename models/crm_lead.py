@@ -127,6 +127,16 @@ class Lead(models.Model):
         string="Posgrado",
         help="Escriba el Posgrado",
     )
+    
+     x_pregrado = fields.Char(
+        string="Pregrado",
+        help="Escriba el Pregrado",
+    )
+        
+     x_otro = fields.Char(
+        string="Cual",
+        help="Escriba que otra cosa ha hecho",
+    )
 
     x_state_id = fields.Many2one('res.country.state', 'Departamento del Micronegocio')
 
