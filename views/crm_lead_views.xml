@@ -6,68 +6,236 @@
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
 
-            <!-- Hiding some fields that will be replaced partially or just set to invisible -->
+        	 <xpath expr="//group/group[5]" position="replace">
+        	 	<group>
+                                <field name="user_id" domain="[('share', '=', False)]" string="Mentor"
+                                    context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'sales_team.group_sale_salesman_all_leads'], 'team_id': team_id}"/>
+                                <field name="team_id" widget="selection"
+                                    domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]"/>
+                                <field name="type" invisible="1"/>
+                            </group>
+
+                
+
+                </xpath>
+
+
+<xpath expr="//group/group[3]" position="replace">
+                 <group attrs="{'invisible': [('type', '=', 'opportunity')]}">
+                                <label for="contact_name"/>
+                                <div class="o_row">
+                                    <field name="contact_name"/>
+                                    <field name="title" placeholder="Title" domain="[]" options='{"no_open": True}'/>
+                                </div>
+                                <field name="is_blacklisted" invisible="1"/>
+                                <field name="email_state" invisible="1"/>
+                                <field name="phone_state" invisible="1"/>
+                                <label for="email_from" class="oe_inline"/>
+                                <div class="o_row o_row_readonly">
+                                    <i class="fa fa-ban" style="color: red;" role="img" title="This email is blacklisted for mass mailing"
+                                        aria-label="Blacklisted" attrs="{'invisible': [('is_blacklisted', '=', False)]}" groups="base.group_user"/>
+                                    <field name="email_from" widget="email" invisible="1"/>
+                                </div>
+                                <field name="email_cc" groups="base.group_no_one"/>
+                                <field name="function"/>
+                                <field name="phone" widget="phone" options="{'enable_sms': True}" invisible="1"/>
+                                <field name="mobile" widget="phone" options="{'enable_sms': True}" invisible="1"/>
+
+                            </group>
+                        </xpath>
+
+                
+
+            <xpath expr="//group/group[2]" position="replace">
+            <group attrs="{'invisible': [('type', '=', 'lead')]}">
+                                <field name="partner_id"
+                                    widget="res_partner_many2one"
+                                    string="Propietario"
+                                    context="{'res_partner_search_mode': type == 'opportunity' and 'customer' or False,
+                                        'default_name': contact_name or partner_name,
+                                        'default_street': street,
+                                        'default_is_company': type == 'opportunity' and contact_name == False,
+                                        'default_company_name': type == 'opportunity' and partner_name,
+                                        'default_street2': street2,
+                                        'default_city': city,
+                                        'default_title': title,
+                                        'default_state_id': state_id,
+                                        'default_zip': zip,
+                                        'default_country_id': country_id,
+                                        'default_function': function,
+                                        'default_phone': phone,
+                                        'default_mobile': mobile,
+                                        'default_email': email_from,
+                                        'default_user_id': user_id,
+                                        'default_team_id': team_id,
+                                        'default_website': website,
+                                        'show_vat': True,
+                                    }"
+                                />
+                                <field name="is_blacklisted" invisible="1"/>
+                                <field name="partner_is_blacklisted" invisible="1"/>
+                                <field name="email_state" invisible="1"/>
+                                <field name="phone_state" invisible="1"/>
+                                <label for="email_from" class="oe_inline"/>
+                                <div class="o_row o_row_readonly">
+                                    <i class="fa fa-ban" style="color: red;" role="img" title="This email is blacklisted for mass mailing"
+                                        aria-label="Blacklisted" attrs="{'invisible': ['|', ('is_blacklisted', '=', False), ('partner_address_email', '!=', False)]}" groups="base.group_user"/>
+                                    <field name="email_from"
+                                        attrs="{'invisible': [('partner_address_email', '!=', False)]}" string="Email" widget="email"/>
+                                    <i class="fa fa-ban" style="color: red;" role="img" title="This email is blacklisted for mass mailing"
+                                        aria-label="Blacklisted" attrs="{'invisible': ['|', ('partner_is_blacklisted', '=', False), ('partner_address_email', '=', False)]}" groups="base.group_user"/>
+                                    <field name="partner_address_email"
+                                        attrs="{'invisible': [('partner_address_email', '==', False)]}" widget="email" string="Email"/>
+                                </div>
+                                <field string="Phone"
+                                    name="partner_address_phone"
+                                    widget="phone" options="{'enable_sms': True}"
+                                    readonly="1"
+                                    attrs="{'invisible': [('partner_address_phone', '==', False)]}"/>
+                                <field name="phone"
+                                    widget="phone" options="{'enable_sms': True}"
+                                    attrs="{'invisible':  [('partner_address_phone', '!=', False)]}"/>
+                            </group>
+                      </xpath>
+
+            <!-- Reemplazar la Pestaña de CRM por la encuenta de Registro -->
 
             <xpath expr="//page[@name='lead']" position="replace">
-                
-            <group attrs="{'invisible': [('type', '=', 'lead')]}">
-                <field name="partner_id"
-                    widget="res_partner_many2one"
-                    string="Customer"
-                    context="{'res_partner_search_mode': type == 'opportunity' and 'customer' or False,
-                            'default_x_pvereda': x_pvereda,
-                            
-                                    }"
-                                />                          
-            </group>
-                    
-            <page string="Formulario - Encuesta">
-
-                    <!--Este grupo sirve para copiar los datos del CRM al contacto-->
-          
-                    <group string="Módulo 1 - Caracterización del Propietario ">
+                <page string="Modulo 1">
+                    <group>
+                        <field name="x_datos1" />
+                    </group>
+                    <group string="MÓDULO 1 - REGISTRO" style="line-height: 10px;">
                         <group>
-                            <field name="partner_name" />
-                            <field name="contact_name" />                            
+                            <field name="partner_name" string="Nombre del negocio"/>
+                            <field name="contact_name" string="Nombre Propietario"/>                            
                             <field name="doctype" />
                             <field name="xidentification" />
                             <field name="x_sexo" />
                             <field name="x_etnia" />
-                            <field name="x_edad" />                                     
-                            <field name="state_id"/> 
-                            <field name="xcity"/>
-                        </group>
-
-                        <group>                            
+                            <field name="x_edad" />  
+                            <field name="country_id"/>                                 
+                            <field name="state_id" string="Departamento de Recidencia"/> 
+                            <field name="xcity" string="Municipio de Recidencia"/>
                             <field name="x_vereda" />
-                            <field name="mobile" />
+                            <field name="mobile" string="Teléfono Celular"/>
                             <field name="email_from" />
                             <field name="x_limitacion" />
                             <field name="x_escolaridad" />
-                            <field name="x_posgrado"
-                                options="{'no_open': True}"
-                                attrs="{'readonly':[('x_escolaridad', '=', '33')],
-                                'readonly':[('x_escolaridad', '=', '32')],
-                                'readonly':[('x_escolaridad', '=', '34')],
-                                'invisible':[('x_escolaridad', '=', False)],}"        
-                                placeholder="Posgrado" 
-                                />
+                            <!--field name="x_cual"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_escolaridad', '!=', '34')],}"        
+                                   />
+                            <field name="x_cual"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_escolaridad', '!=', '35')],}"        
+                                   />
+                            <field name="x_cual"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_escolaridad', '!=', '36')],}"        
+                                   /-->
+                        </group>
+
+                        <group>                            
                             <field name="x_grupos" />
+                            <field name="x_grupos_cual"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_grupos', '!=', '40')],}"        
+                                   />
                             <field name="x_estrato" />
-
-                        </group>
-                    </group>
-
-                    <group string="Módulo 2 - Caracterización del Micronegocio">
-                        <group>
                             <field name="x_situacion" />
+                            <field name="x_sector" /> 
                             <field name="x_actcomer" /> 
-                            <field name="x_state_id" />                         
-                                                  
+                            <field name="x_state_id" /> 
+                            <field name="x_city_id" /> 
+                            <field name="x_ubic" /> 
+                            <field name="x_com_cuenta" /> 
                         </group>
+                    </group>
+
+                   
+                </page>
+
+                <page string="Modulo 2">
+
+                 <group string="MÓDULO 2 - PARTICIPACIÓN">
+                       <field name="x_cont1" />              
+                    </group>
+                </page>
+
+                <page string="Diagnostico - 1ra Parte">
+                    <group> 
+                        <field name="x_datos3" />
+                    </group>
+                    <group string="MÓDULO 3 - CARACTERIZACIÓN " style="line-height: 30px;">
+                       
+                    <group>
+                    
+                    <field name="x_sisben" />
+                    <field name="x_tsisben"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_sisben', '!=', '50')],}"        
+                                   />
+                    <field name="x_nsisben"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_sisben', '!=', '50')],}"        
+                                   />
+                    <field name="x_tactiv" />
+                    <field name="x_tactiv_anos"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_tactiv', '!=', '51')],}"        
+                                   />
+                    <field name="x_horas_trab" />
+                    <field name="x_cotiza" />
+                    <field name="x_motivo" />
+                    <field name="x_sitio_ubi" />
+                    <field name="x_microneg" />
+                    <field name="x_desc_act" />
+                    <field name="x_desc_act_sec" />
+                    <field name="x_microneg" />
+                    <field name="x_desc_act" />
+                    <field name="x_desc_act_sec" />
+                    <field name="x_merca" />
+                    <field name="x_merca_tipo"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_microneg', '!=', '50')],}"        
+                                   />
+                    </group>
+
+                    <group>
+                    <field name="x_fabric" />
+                    <field name="x_fabric_si"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_fabric', '!=', '50')],}"        
+                                   />
+                    <field name="x_servicios" />
+                    <field name="x_ambula" />
+                    <field name="x_ambula_2" />
+                    <field name="x_ambula_cual"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_ambula_2', '!=', '57')],}"        
+                                   />
+                    <field name="x_mprima" />
+                    <field name="x_clientes" />
+                    <field name="x_problema" />
+                    <field name="x_familia" />
+                    <field name="x_reinvierte" />
+                    
 
                     </group>
-                   
+
+                    </group> 
+
                 </page>
             </xpath>
         </field>
