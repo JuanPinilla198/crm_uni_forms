@@ -18,32 +18,6 @@
                 
 
                 </xpath>
-
-
-<xpath expr="//group/group[3]" position="replace">
-                 <group attrs="{'invisible': [('type', '=', 'opportunity')]}">
-                                <label for="contact_name"/>
-                                <div class="o_row">
-                                    <field name="contact_name"/>
-                                    <field name="title" placeholder="Title" domain="[]" options='{"no_open": True}'/>
-                                </div>
-                                <field name="is_blacklisted" invisible="1"/>
-                                <field name="email_state" invisible="1"/>
-                                <field name="phone_state" invisible="1"/>
-                                <label for="email_from" class="oe_inline"/>
-                                <div class="o_row o_row_readonly">
-                                    <i class="fa fa-ban" style="color: red;" role="img" title="This email is blacklisted for mass mailing"
-                                        aria-label="Blacklisted" attrs="{'invisible': [('is_blacklisted', '=', False)]}" groups="base.group_user"/>
-                                    <field name="email_from" widget="email" invisible="1"/>
-                                </div>
-                                <field name="email_cc" groups="base.group_no_one"/>
-                                <field name="function"/>
-                                <field name="phone" widget="phone" options="{'enable_sms': True}" invisible="1"/>
-                                <field name="mobile" widget="phone" options="{'enable_sms': True}" invisible="1"/>
-
-                            </group>
-                        </xpath>
-
                 
 
             <xpath expr="//group/group[2]" position="replace">
@@ -92,7 +66,7 @@
                                     widget="phone" options="{'enable_sms': True}"
                                     readonly="1"
                                     attrs="{'invisible': [('partner_address_phone', '==', False)]}"/>
-                                <field name="phone"
+                                <field name="mobile"
                                     widget="phone" options="{'enable_sms': True}"
                                     attrs="{'invisible':  [('partner_address_phone', '!=', False)]}"/>
                             </group>
@@ -101,27 +75,41 @@
             <!-- Reemplazar la Pestaña de CRM por la encuenta de Registro -->
 
             <xpath expr="//page[@name='lead']" position="replace">
-                <page string="Modulo 1">
+                <page string="Módulo 1">
                     <group>
                         <field name="x_datos1" />
                     </group>
                     <group string="MÓDULO 1 - REGISTRO" style="line-height: 10px;">
                         <group>
-                            <field name="partner_name" string="Nombre del negocio"/>
-                            <field name="contact_name" string="Nombre Propietario"/>                            
-                            <field name="doctype" />
-                            <field name="xidentification" />
-                            <field name="x_sexo" />
-                            <field name="x_etnia" />
-                            <field name="x_edad" />  
-                            <field name="country_id"/>                                 
-                            <field name="state_id" string="Departamento de Recidencia"/> 
-                            <field name="xcity" string="Municipio de Recidencia"/>
-                            <field name="x_vereda" />
-                            <field name="mobile" string="Teléfono Celular"/>
-                            <field name="email_from" />
-                            <field name="x_limitacion" />
-                            <field name="x_escolaridad" />
+                            <field name="x_nombre_negocio" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_nombre" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>                
+                            <field name="doctype" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="xidentification" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_sexo" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_etnia" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_edad" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                             <field name="country_id" attrs=
+                              "{'invisible': ['|','|',('x_datos1','=','51'),('x_datos1','=',False),('x_datos1','=','50')]}"/>
+                            <field name="state_id" string="Departamento de Residencia" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="xcity" string="Municipio de Recidencia" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_vereda" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="mobile" string="Teléfono Celular" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="email_from" attrs="{'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_limitacion" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_escolaridad" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
                             <!--field name="x_cual"
                                    options="{'no_open': False}"
                                    attrs="{
@@ -140,34 +128,43 @@
                         </group>
 
                         <group>                            
-                            <field name="x_grupos" />
+                            <field name="x_grupos" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
                             <field name="x_grupos_cual"
                                    options="{'no_open': False}"
                                    attrs="{
-                                   'invisible':[('x_grupos', '!=', '40')],}"        
+                                   'invisible':[('x_grupos', '!=', '40')],'required': [('x_datos1','=','50'),('x_grupos', '=', '40')]}"        
                                    />
-                            <field name="x_estrato" />
-                            <field name="x_situacion" />
-                            <field name="x_sector" /> 
-                            <field name="x_actcomer" /> 
-                            <field name="x_state_id" /> 
-                            <field name="x_city_id" /> 
-                            <field name="x_ubic" /> 
-                            <field name="x_com_cuenta" /> 
+                            <field name="x_estrato" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_situacion" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_sector" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_actcomer" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_state_id" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_city_id" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_ubic" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_com_cuenta" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
                         </group>
                     </group>
 
                    
                 </page>
 
-                <page string="Modulo 2">
+                <page string="Módulo 2">
 
                  <group string="MÓDULO 2 - PARTICIPACIÓN">
                        <field name="x_cont1" />              
                     </group>
                 </page>
 
-                <page string="Diagnostico - 1ra Parte">
+                <page string="Módulo 3">
                     <group> 
                         <field name="x_datos3" />
                     </group>
@@ -239,5 +236,23 @@
                 </page>
             </xpath>
         </field>
+    </record>
+
+
+    <record id="view_search_crm_inherited" model="ir.ui.view">
+            <field name="name">Search - extension</field>
+                <field name="model">crm.lead</field>
+                <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+                <field name="arch" type="xml">
+                    <field name="name" position="replace">
+                       <field name="name" string="Propietario" filter_domain="[
+                        '|', '|', '|', '|',
+                        ('partner_id', 'ilike', self),
+                        ('x_nombre_negocio', 'ilike', self),
+                        ('email_from', 'ilike', self),
+                        ('name', 'ilike', self),
+                        ('xidentification', 'ilike', self)]"/>
+                    </field>
+            </field>
     </record>
 </odoo>

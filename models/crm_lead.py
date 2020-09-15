@@ -1,7 +1,7 @@
 # Copyright 2015 Antiun Ingeniería, S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import fields, models, api
+from odoo import fields, models, api, exceptions
 
 class CountryStateCity(models.Model):
     """
@@ -10,17 +10,29 @@ class CountryStateCity(models.Model):
     _description = 'Model to manipulate Cities'
     _name = 'res.country.state.city'
 
-    code = fields.Char('City Code', size=5, help='Code DANE - 5 digits-',
-                       required=True)
-    name = fields.Char('City Name', size=64, required=True)
-    state_id = fields.Many2one('res.country.state', 'State', required=True)
-    x_state_id = fields.Many2one('res.country.state', 'State', required=True)
-    country_id = fields.Many2one('res.country', 'Country', required=True, default='Colombia')
+    code = fields.Char('City Code', size=5, help='Code DANE - 5 digits-',)
+    name = fields.Char('City Name', size=64, )
+    state_id = fields.Many2one('res.country.state', 'State')
+    x_state_id = fields.Many2one('res.country.state', 'State')
+    country_id = fields.Many2one('res.country', 'Country', default='Colombia')
     _order = 'code'
 
 
 class Lead(models.Model):
     _inherit = "crm.lead"
+
+    x_nombre = fields.Char(
+    	related ="name",
+        string="2. Nombre del Propietario",
+        help="Ingrese el nombre del propietario",
+        readonly=False
+    )
+
+    x_nombre_negocio = fields.Char(
+        string="1. Nombre del Negocio",
+        help="Ingrese el nombre del negocio",
+        readonly=False
+    )
 
     x_vereda = fields.Char(
         string="Barrio/Vereda",
@@ -45,17 +57,18 @@ class Lead(models.Model):
             ('4', 'Pasaporte'),
             ('5', 'Permiso especial de permanencia (PEP)'),
 
-        ], "Tipo de identificación", default='1', required=True
+        ], "Tipo de identificación", default='2'
     )
 
     xidentification = fields.Integer(
         string="Número de identificación",
-        help="Ingrese el tipo de identificación ", required=True
+        help="Ingrese el tipo de identificación ",
+        store=True,
     )
 
     _sql_constraints = [
-        ('ident_unique',
-         'UNIQUE(xidentification)',
+        ('xidentification',
+         'UNIQUE (xidentification)',
          "El número de docuemnto debe ser único!"),
     ]
 
@@ -65,7 +78,7 @@ class Lead(models.Model):
             ('10', 'Masculino'),
             ('11', 'Femenino'),
 
-        ], "Sexo", required=True
+        ], "Sexo", 
     )
 
     x_etnia = fields.Selection(
@@ -76,17 +89,17 @@ class Lead(models.Model):
             ('22', 'Indígena'),
             ('23', 'No pertenezco'),
 
-        ], "¿Pertenece a algún tipo de etnia?", required=True
+        ], "¿Pertenece a algún tipo de etnia?", 
     )
 
     x_edad = fields.Integer(
         string="Edad",
-        help="Escriba su edad", required=True
+        help="Escriba su edad", 
     )
 
     x_limitacion = fields.Char(
         string="¿Usted tiene algún tipo de diversidad funcional?",
-        help="Describa sus limitaciones fisicas", required=True
+        help="Describa sus limitaciones fisicas", 
     )
 
     x_escolaridad = fields.Selection(
@@ -102,10 +115,9 @@ class Lead(models.Model):
             ('38', 'Pregrado'),
             ('39', 'Especialización'),
             ('40', 'Maestría'),
-            ('41', 'Otro'),
-            ('42', 'Ninguno'),
+            ('41', 'Ninguno'),
 
-        ], "Ultimo año de escolaridad", required=True
+        ], "Ultimo año de escolaridad", 
     )
 
     #x_cual = fields.Char(
@@ -200,6 +212,16 @@ class Lead(models.Model):
             ('43', 'Industrial'),
         ], "¿En qué sector económico se encuentra su negocio?",
         help="Escriba el sector económico de su negocio ",
+    )
+    
+    x_pregrado = fields.Char(
+        string="Pregrado",
+        help="Escriba el Pregrado",
+    )
+        
+    x_otro = fields.Char(
+        string="Cual",
+        help="Escriba que otra cosa ha hecho",
     )
 
     x_ubic = fields.Selection(
@@ -331,7 +353,7 @@ class Lead(models.Model):
         ], "¿Su micronegocio está?",
     )
 
-    x_desc_act = fields.Char('Describa la actividad comercial de su negocio', required=True)
+    x_desc_act = fields.Char('Describa la actividad comercial de su negocio', )
 
     x_desc_act_sec = fields.Char('¿Cuál es la actividad secundaria de su negocio? (si la tiene)')
 
@@ -488,13 +510,10 @@ class Lead(models.Model):
         help="Ingrese un numero entre 1 y 100",
     )
 
-
-
-
-
     country_id = fields.Many2one('res.country', "Country")
     xcity = fields.Many2one('res.country.state.city', "Municipio de Residencia")
     city = fields.Char(related="xcity.name")
+
 
     x_state_id = fields.Many2one('res.country.state', 'Departamento del Micronegocio')
     x_city_id = fields.Many2one('res.country.state.city', 'Municipio del Micronegocio')
@@ -534,7 +553,4 @@ class Lead(models.Model):
             'domain': {domain: [('id', 'in', id_domain)]},
             'value': {domain: ''}
         }
-
-
-
 
