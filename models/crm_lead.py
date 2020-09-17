@@ -35,7 +35,7 @@ class Lead(models.Model):
     )
 
     x_vereda = fields.Char(
-        string="Barrio/Vereda",
+        string="10. Barrio/Vereda",
         help="Tax Identification Number. The first 2 characters are the "
         "country code.",
     )
@@ -57,19 +57,19 @@ class Lead(models.Model):
             ('4', 'Pasaporte'),
             ('5', 'Permiso especial de permanencia (PEP)'),
 
-        ], "Tipo de identificación", default='2'
+        ], "3. Tipo de identificación", default='2'
     )
 
-    xidentification = fields.Integer(
-        string="Número de identificación",
+    x_identification = fields.Integer(
+        string="4. Número de identificación",
         help="Ingrese el tipo de identificación ",
         store=True,
     )
 
     _sql_constraints = [
-        ('xidentification',
-         'UNIQUE (xidentification)',
-         "El número de docuemnto debe ser único!"),
+        ('x_identification',
+         'UNIQUE (x_identification)',
+         "El número de documento debe ser único!"),
     ]
 
     x_sexo = fields.Selection(
@@ -78,7 +78,7 @@ class Lead(models.Model):
             ('10', 'Masculino'),
             ('11', 'Femenino'),
 
-        ], "Sexo", 
+        ], "5. Sexo", 
     )
 
     x_etnia = fields.Selection(
@@ -89,16 +89,16 @@ class Lead(models.Model):
             ('22', 'Indígena'),
             ('23', 'No pertenezco'),
 
-        ], "¿Pertenece a algún tipo de etnia?", 
+        ], "6. ¿Pertenece a algún tipo de etnia?", 
     )
 
     x_edad = fields.Integer(
-        string="Edad",
+        string="7. Edad",
         help="Escriba su edad", 
     )
 
     x_limitacion = fields.Char(
-        string="¿Usted tiene algún tipo de diversidad funcional?",
+        string="13. ¿Usted tiene algún tipo de diversidad funcional?",
         help="Describa sus limitaciones fisicas", 
     )
 
@@ -117,7 +117,7 @@ class Lead(models.Model):
             ('40', 'Maestría'),
             ('41', 'Ninguno'),
 
-        ], "Ultimo año de escolaridad", 
+        ], "14. Ultimo año de escolaridad", 
     )
 
     #x_cual = fields.Char(
@@ -130,14 +130,14 @@ class Lead(models.Model):
             ('40', 'Si'),
             ('41', 'No'),
 
-        ], "¿Pertenece a alguna organización:  asociación, corporación, cooperativa, grupo?",
+        ], "15. ¿Pertenece a alguna organización:  asociación, corporación, cooperativa, grupo?",
 
         help="Escriba el tipo de organización a la cual pertenece",
     )
 
     x_grupos_cual = fields.Char(
         string="¿Cuál?",
-        help="¿A qué tipo de organización, asociación, corporación, cooperativa, grupo pertenece?",
+        help="16. ¿A qué tipo de organización, asociación, corporación, cooperativa, grupo pertenece?",
     )
 
     x_estrato = fields.Selection(
@@ -148,14 +148,14 @@ class Lead(models.Model):
             ('43', '4'),
             ('44', '5'),
             ('45', '6'),
-        ], "Estrato socioeconomico de residencia ",
+        ], "17. Estrato socioeconomico de residencia ",
     )
 
     x_situacion = fields.Selection(
         [
             ('40', 'Cuenta propia'),
             ('41', 'Empleador'),
-        ], "Actualmente usted es", default='40'
+        ], "18. Actualmente usted es"
     )
 
     x_actcomer = fields.Selection(
@@ -200,7 +200,7 @@ class Lead(models.Model):
             ('77', 'Fábrica y venta de productos metálicos hierro acero maquinaria y otras aplicaciones industriales'),
             ('78', 'Jardín infantil, salacuna, educación'),
             ('79', 'Transporte de pasajeros'),
-        ], "¿Cuál es la actividad comercial de su negocio?",
+        ], "20. ¿Cuál es la actividad comercial de su negocio?",
         help="Escriba la actividad comercial de su negocio",
     )
 
@@ -210,18 +210,8 @@ class Lead(models.Model):
             ('41', 'Comercio'),
             ('42', 'Servicios'),
             ('43', 'Industrial'),
-        ], "¿En qué sector económico se encuentra su negocio?",
+        ], "19. ¿En qué sector económico se encuentra su negocio?",
         help="Escriba el sector económico de su negocio ",
-    )
-    
-    x_pregrado = fields.Char(
-        string="Pregrado",
-        help="Escriba el Pregrado",
-    )
-        
-    x_otro = fields.Char(
-        string="Cual",
-        help="Escriba que otra cosa ha hecho",
     )
 
     x_ubic = fields.Selection(
@@ -230,7 +220,7 @@ class Lead(models.Model):
             ('50', 'Zona Urbana'),
             ('51', 'Zona rural'),
 
-        ], "Ubicación del negocio",
+        ], "23. Ubicación del negocio",
     )
 
     x_com_cuenta = fields.Selection(
@@ -239,7 +229,7 @@ class Lead(models.Model):
             ('50', 'Establecimiento'),
             ('51', 'Sin establecimiento'),
 
-        ], "Su actividad comercial cuenta con",
+        ], "24. Su actividad comercial cuenta con",
     )
 
     x_cont1 = fields.Selection(
@@ -260,13 +250,22 @@ class Lead(models.Model):
         ], "ACEPTA ENTREGARLE A UNIMINUTO LOS DATOS GENERALES SUYOS Y DEL MICRONEGOCIO CON FINES ACADÉMICOS",
     )
 
+    x_microneg = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Formalizado'),
+            ('51', 'Informal'),
+
+        ], "25. ¿Su micronegocio está?",
+    )
+
     x_sisben = fields.Selection(
         #string="Sexo",
         [
             ('50', 'Si'),
             ('51', 'No'),
 
-        ], "¿Usted pertenece al Sisben?",
+        ], "26. ¿Usted pertenece al Sisben?",
     )
 
     x_tsisben = fields.Selection(
@@ -275,7 +274,7 @@ class Lead(models.Model):
             ('50', 'Urbano'),
             ('51', 'Rural'),
 
-        ], "¿Su Sisben es?",
+        ], "27. ¿Su Sisben es?",
     )
 
     x_nsisben = fields.Selection(
@@ -285,39 +284,78 @@ class Lead(models.Model):
             ('51', 'Nivel 2 '),
             ('52', 'Nivel 3 '),
 
-        ], "¿Cuál es el nivel de Sisben que usted tiene?",
+        ], "28. ¿Cuál es el nivel de Sisben que usted tiene?",
     )
 
-    x_tactiv = fields.Selection(
+    x_estrato_neg = fields.Selection(
+        [
+            ('40', '1'),
+            ('41', '2'),
+            ('42', '3'),
+            ('43', '4'),
+            ('44', '5'),
+            ('45', '6'),
+        ], "29. Estrato socioeconomico de donde se encuentra el negocio ",
+    )
+
+    x_tactiv = fields.Integer(
+    	string="30. ¿Cuánto tiempo lleva su negocio en funcionamiento? (Meses)",
+    )
+
+    x_dias_sem_inf = fields.Integer(
+        string="31. ¿Cuantas horas de trabajo diario dedica para el funcionamiento del negocio?",
+    )
+
+    x_dias_sem_for = fields.Integer(
+        string="31. ¿Cuantos dias a la semana opera su negocio? ",
+    )
+
+    x_dias_sem_for2 = fields.Integer(
+        string="32. ¿Cuántos dias a la semana dedica a su negocio?",
+    )
+
+    x_horas_trab_inf = fields.Integer(
+        string="32. ¿Cuantas horas de trabajo diario dedica para el funcionamiento del negocio?",
+    )
+
+    x_horas_trab_form = fields.Integer(
+        string="33. ¿Cuantas horas de trabajo diario dedica para el funcionamiento del negocio?",
+    )
+
+    x_trabajadores_inf = fields.Integer(
+        string="33. ¿Cuantos trabajadores tiene su negocio?",
+    )
+
+    x_trabajadores_form = fields.Integer(
+        string="34. ¿Cuantos trabajadores tiene su negocio?",
+    )
+
+    x_cotiza_form = fields.Selection(
         #string="Sexo",
         [
-            ('50', 'Menos de un año '),
-            ('51', 'Mas de un año'),
+            ('50', 'Salud'),
+            ('51', 'Pension'),
+            ('52', 'ARL'),
+            ('53', 'Caja de compensación'),
+            ('53', 'ICBF'),
+            ('53', 'SENA'),
+            ('53', 'Todas'),
 
-        ], "¿Cuánto tiempo lleva ejerciendo su actividad?",
+        ], "35. ¿Cuales son los aportes que realiza para sus trabajadores?",
     )
 
-    x_tactiv_anos = fields.Integer(
-        string="¿Cuantos años?",
-        help="Ingrese un numero mayor a 1 ",
-    )
-
-    x_horas_trab = fields.Integer(
-        string="¿Cuantas horas de trabajo diario dedica para el funcionamiento del negocio?",
-    )
-
-    x_cotiza = fields.Selection(
+    x_cotiza_inf = fields.Selection(
         #string="Sexo",
         [
-            ('50', 'Salud y pensión'),
-            ('51', 'Solo salud'),
-            ('52', 'Solo pensión'),
-            ('53', 'No aporta '),
+            ('50', 'Salud'),
+            ('51', 'Pension'),
+            ('52', 'ARL'),
+            ('53', 'Ninguna'),
 
-        ], "¿Usted cotiza a salud y pensión?",
+        ], "34. ¿Cuales son los aportes que realiza su negocio?",
     )
 
-    x_motivo = fields.Selection(
+    x_motivo_inf = fields.Selection(
         #string="Sexo",
         [
             ('50', 'Por necesidad de generar ingresos'),
@@ -328,34 +366,96 @@ class Lead(models.Model):
             ('55', 'Pocas oportunidades de empleo'),
             ('56', 'Otro (administrar horario, gusto, desplazamiento, búsqueda de independencia)'),
 
-        ], "¿Cuál fue el motivo principal para la creación del negocio?",
+        ], "37. ¿Cuál fue el motivo principal para la creación del negocio?",
     )
 
-    x_sitio_ubi = fields.Selection(
+    x_motivo_form = fields.Selection(
         #string="Sexo",
         [
-            ('50', 'En su vivienda'),
-            ('51', 'Establecimiento'),
+            ('50', 'Por necesidad de generar ingresos'),
+            ('51', 'Oportunidad de negocio en el mercado'),
+            ('52', 'Por tradición familiar o herencia '),
+            ('53', 'Complementar el ingreso familiar o mejorar el ingreso'),
+            ('54', 'Para ejercer su oficio, carrera o profesión'),
+            ('55', 'Pocas oportunidades de empleo'),
+            ('56', 'Para generar oportunidad de empleo'),
+            ('57', 'Otro (administrar horario, gusto, desplazamiento, búsqueda de independencia)'),
+
+        ], "38. ¿Cuál fue el motivo principal para la creación del negocio?",
+    )
+
+    x_motivo_cual_inf = fields.Char('38. ¿Cual?')
+
+    x_motivo_cual_form = fields.Char('39. ¿Cual?')
+
+    x_recursos_inf = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Ahorros personales'),
+            ('51', 'Prestamos familiares '),
+            ('52', 'Prestamos bancarios'),
+            ('53', 'Prestamistas '),
+            ('54', 'Capital semilla'),
+            ('55', 'Programas del Gobierno'),
+            ('56', 'Otras'),
+
+        ], "35. ¿Cual fue la principal fuente de recursos para la creación o constitución del negocio?",
+    )
+
+
+    x_recursos_form = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Ahorros personales'),
+            ('51', 'Prestamos familiares '),
+            ('52', 'Prestamos bancarios'),
+            ('53', 'Prestamistas '),
+            ('54', 'Capital semilla'),
+            ('55', 'Programas del Gobierno'),
+            ('56', 'Otras'),
+
+        ], "36. ¿Cual fue la principal fuente de recursos para la creación o constitución del negocio?",
+    )
+
+    x_recursos_cual_inf = fields.Char('36. ¿Cual?')
+
+    x_recursos_cual_form = fields.Char('37. ¿Cual?')
+
+    x_sitio_ubi_inf = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'En la vivienda'),
+            ('51', 'Local, tienda, taller, fábrica, oficina, consultorio'),
             ('52', 'De puerta a puerta o a domicilio'),
             ('53', 'Ambulante - sitio al descubierto'),
             ('54', 'Vehículo con o sin motor'),
-            ('55', 'Otro (cancha de futbol, parqueadero)'),
+            ('54', 'Obra o construcción'),
+            ('54', 'Finca'),
+            ('55', 'Otro'),
 
-        ], "¿Cual es el sitio, lugar o ubicación del negocio?",
+        ], "39. ¿Cual es el sitio o ubicación del negocio?",
     )
 
-    x_microneg = fields.Selection(
+    x_sitio_ubi_form = fields.Selection(
         #string="Sexo",
         [
-            ('50', 'Formalizado'),
-            ('51', 'Informal'),
+            ('50', 'En la vivienda'),
+            ('51', 'Local, tienda, taller, fábrica, oficina, consultorio'),
+            ('52', 'Obra o construcción'),
+            ('53', 'Finca'),
+            ('54', 'Otro'),
 
-        ], "¿Su micronegocio está?",
+        ], "40. ¿Cual es el sitio, lugar o ubicación del negocio?",
     )
 
-    x_desc_act = fields.Char('Describa la actividad comercial de su negocio', )
+    x_sitio_ubi_cual_form = fields.Char('41. ¿Cual?')
+    x_sitio_ubi_cual_inf = fields.Char('40. ¿Cual?')
 
-    x_desc_act_sec = fields.Char('¿Cuál es la actividad secundaria de su negocio? (si la tiene)')
+    x_desc_act_form = fields.Char('42. Describa la actividad comercial de su negocio' )
+    x_desc_act_inf = fields.Char('41. Describa la actividad comercial de su negocio' )
+
+    x_desc_act_sec_form = fields.Char('43. ¿Cuál es la actividad secundaria de su negocio? (si la tiene)')
+    x_desc_act_sec_inf = fields.Char('42. ¿Cuál es la actividad secundaria de su negocio? (si la tiene)')
 
     x_merca = fields.Selection(
         #string="Sexo",
@@ -364,6 +464,53 @@ class Lead(models.Model):
             ('51', 'No'),
 
         ], "¿Adquiere mercancía y comercializa con ella?",
+    )
+
+    x_ambula_inf = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Móvil'),
+            ('51', 'Estacionario'),
+            ('52', 'No aplica'),
+
+        ], "43. Si el negocio es ambulante - sitio al descubierto, ¿cual es su forma de funcionamiento? ",
+    )
+
+    x_ambula_2_inf = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Llega muy temprano'),
+            ('51', 'Paga vigilancia'),
+            ('52', 'Paga una cuota'),
+            ('53', 'Le respetan el puesto'),
+            ('54', 'Agrupado con otros vendedores'),
+            ('55', 'Tiene carné'),
+            ('56', 'No aplica'),
+            ('57', 'Otro ¿Cuál?'),
+
+        ], "44. Si el negocio es ambulante - sitio al descubierto, ¿cómo hace para conservar diariamente el mismo sitio de trabajo?",
+    )
+
+    x_mprima_inf = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Diariamente'),
+            ('51', 'Semanalmente'),
+            ('52', 'Quincenalmente'),
+            ('53', 'Mensualmente'),
+
+        ], "45. ¿Con que frecuencia adquiere materia prima o mercania para su negocio?",
+    )
+
+    x_mprima_form = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Diariamente'),
+            ('51', 'Semanalmente'),
+            ('52', 'Quincenalmente'),
+            ('53', 'Mensualmente'),
+
+        ], "44. ¿Con que frecuencia adquiere materia prima o mercania para su negocio?",
     )
 
     x_merca_tipo = fields.Selection(
@@ -399,10 +546,10 @@ class Lead(models.Model):
     x_fabric_si = fields.Selection(
         #string="Sexo",
         [
-            ('50', ' Artículos de uso doméstico'),
-            ('51', ' Ropa y calzado'),
+            ('50', 'Artículos de uso doméstico'),
+            ('51', 'Ropa y calzado'),
             ('52', 'Artículos para empresas u oficinas'),
-            ('53', '  Artículos para uso industrial'),
+            ('53', 'Artículos para uso industrial'),
             ('54', 'Materias primas para fábricas o industrias'),
             ('55', 'Artículos para construcción'),
             ('56', 'Alimentos o bebidas de consumo humano'),
@@ -438,52 +585,17 @@ class Lead(models.Model):
         ], "Si presta servicios o realiza consultorías, ¿De qué tipo son?",
     )
 
-    x_ambula = fields.Selection(
-        #string="Sexo",
-        [
-            ('50', 'Móvil'),
-            ('51', 'Estacionario'),
-            ('52', 'No aplica'),
-
-        ], "Los productos que comercializa, ¿son fabricados por usted o por sus empleados?",
-    )
-
-    x_ambula_2 = fields.Selection(
-        #string="Sexo",
-        [
-            ('50', 'Llega muy temprano'),
-            ('51', 'Paga vigilancia'),
-            ('52', 'Paga una cuota'),
-            ('53', 'Le respetan el puesto'),
-            ('54', 'Agrupado con otros vendedores'),
-            ('55', 'Tiene carné'),
-            ('56', 'No aplica'),
-            ('57', 'Otro ¿Cuál?'),
-
-        ], "Si el negocio es ambulante - sitio al descubierto, ¿cómo hace para conservar diariamente el mismo sitio de trabajo?",
-    )
-
-    x_ambula_cual = fields.Char(
-        string="¿Cuál?",
-    )
-
-    x_mprima = fields.Selection(
-        #string="Sexo",
-        [
-            ('50', 'Diariamente'),
-            ('51', 'Semanalmente'),
-            ('52', 'Quincenalmente'),
-            ('53', 'Mensualmente'),
-
-        ], "¿Con que frecuencia adquiere materia prima o mercania para su negocio?",
-    )
-
-    x_clientes = fields.Integer(
-        string="¿Cuántos clientes atiende diariamente (1-100)?",
+    x_clientes_form = fields.Integer(
+        string="45. ¿Cuántos clientes atiende diariamente?",
         help="Ingrese un numero entre 1 y 100",
     )
 
-    x_problema = fields.Selection(
+    x_clientes_inf = fields.Integer(
+        string="46. ¿Cuántos clientes atiende diariamente?",
+        help="Ingrese un numero entre 1 y 100",
+    )
+
+    x_problema_inf = fields.Selection(
         #string="Sexo",
         [
             ('50', 'Dificultad en obtener creditos'),
@@ -495,28 +607,59 @@ class Lead(models.Model):
             ('56', 'Desconfianza de los clientes para adquirir productos de consumo'),
             ('57', 'Dificultad en la produccion del producto'),
             ('58', 'No se encuentra virtualizado'),
+            ('59', 'Falta de capacitacion '),
+            ('60', 'Falta de tecnologia y conexion'),
+            ('61', 'Normatividad, acreditación o certificación de su producto o servicio'),
+            ('62', 'Otro'),
 
-
-        ], "Si el negocio es ambulante - sitio al descubierto, ¿cómo hace para conservar diariamente el mismo sitio de trabajo?",
+        ], "47. Seleccione el principal problema que usted tiene actualmente con su negocio?",
     )
 
-    x_familia = fields.Integer(
-        string="¿Cuantas personas de su familia trabajan actualmente con usted en el negocio?",
+    x_problema_form = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Dificultad en obtener creditos'),
+            ('51', 'Competencia excesiva'),
+            ('52', 'Problemas de comercializacion de productos'),
+            ('53', 'Problemas con las autoridades'),
+            ('54', 'No cuenta con las condiciones de bioseguridad que se requieren'),
+            ('55', 'Aumento en el precio de los insumos'),
+            ('56', 'Desconfianza de los clientes para adquirir productos de consumo'),
+            ('57', 'Dificultad en la produccion del producto'),
+            ('58', 'No se encuentra virtualizado'),
+            ('59', 'Falta de capacitacion '),
+            ('60', 'Falta de tecnologia y conexion'),
+            ('61', 'Normatividad, acreditación o certificación de su producto o servicio'),
+            ('62', 'Otro'),
+
+        ], "46. Seleccione el principal problema que usted tiene actualmente con su negocio",
+    )
+
+    x_prob_desc_form = fields.Char(
+        string="47. Una vez seleccionado el principal problema del micronegocio, describalo en una frase",
+    )
+
+    x_prob_desc_inf = fields.Char(
+        string="48. Una vez seleccionado el principal problema del micronegocio, describalo en una frase",
+    )
+
+    x_reinvierte_inf = fields.Integer(
+        string="49. ¿Qúé porcentaje de las ventas reinvierte nuevamente en mercancia (1-100)?",
         help="Ingrese un numero entre 1 y 100",
     )
 
-    x_reinvierte = fields.Integer(
-        string="¿Qúé porcentaje de las ventas reinvierte nuevamente en mercancia (1-100)?",
+    x_reinvierte_form = fields.Integer(
+        string="48. ¿Qúé porcentaje de las ventas reinvierte nuevamente en mercancia (1-100)?",
         help="Ingrese un numero entre 1 y 100",
     )
 
     country_id = fields.Many2one('res.country', "Country")
-    xcity = fields.Many2one('res.country.state.city', "Municipio de Residencia")
+    xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
     city = fields.Char(related="xcity.name")
 
 
-    x_state_id = fields.Many2one('res.country.state', 'Departamento del Micronegocio')
-    x_city_id = fields.Many2one('res.country.state.city', 'Municipio del Micronegocio')
+    x_state_id = fields.Many2one('res.country.state', '21. Departamento donde se ubica su negocio')
+    x_city_id = fields.Many2one('res.country.state.city', '22. Municipio donde se ubica su negocio')
 
     @api.onchange('country_id', 'state_id')
     def onchange_location(self):
