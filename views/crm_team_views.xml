@@ -26,12 +26,12 @@
             </field>
     </record>
 
-    <record id="sales_team.sales_team_config_action" model="ir.actions.act_window">
+    <!--record id="sales_team.sales_team_config_action" model="ir.actions.act_window">
       <field name="name">Equipo de Facilitadores</field>
     </record>
 
     <record id="crm.crm_team_config" model="ir.ui.menu">
       <field name="name">Equipo de Facilitadores</field>
-    </record>
+    </record-->
 
 </odoo>
