@@ -99,7 +99,7 @@ class Lead(models.Model):
 
     x_limitacion = fields.Char(
         string="13. ¿Usted tiene algún tipo de diversidad funcional?",
-        help="Describa sus limitaciones fisicas", 
+        help="Describa sus limitaciones físicas", 
     )
 
     x_escolaridad = fields.Selection(
@@ -108,9 +108,9 @@ class Lead(models.Model):
             ('31', 'Primaria completa'),
             ('32', 'Secundaria incompleta'),
             ('33', 'Secundaria completa'),
-            ('34', 'Tecnico'),
+            ('34', 'Técnico'),
             ('35', 'Tecnólogo'),
-            ('36', 'Educacion No formal: Cursos libres, diplomados,seminarios.'),
+            ('36', 'Educación No formal: Cursos libres, diplomados,seminarios.'),
             ('37', 'Tecnólogo'),
             ('38', 'Pregrado'),
             ('39', 'Especialización'),
@@ -148,7 +148,7 @@ class Lead(models.Model):
             ('43', '4'),
             ('44', '5'),
             ('45', '6'),
-        ], "17. Estrato socioeconomico de residencia ",
+        ], "17. Estrato socioeconómico de residencia ",
     )
 
     x_situacion = fields.Selection(
@@ -160,36 +160,36 @@ class Lead(models.Model):
 
     x_actcomer = fields.Selection(
     	[
-            ('40', 'Peluqueria, salon de belleza, barberia, arreglo de uñas'),
-            ('41', 'Cafeteria o  salon de onces'),
-            ('42', 'Elaboracion de productos de panaderia, tortas, pasteles, pudin, ponques'),
-            ('43', 'Comidas rapidas '),
+            ('40', 'Peluquería, salón de belleza, barbería, arreglo de uñas'),
+            ('41', 'Cafetería o  salón de onces'),
+            ('42', 'Elaboración de productos de panadería, tortas, pasteles, pudin, ponques'),
+            ('43', 'Comidas rápidas '),
             ('44', 'Bar, taberna, estanco, licorera, discoteca, rumbeadero'),
             ('45', 'Tienda'),
             ('46', 'Billares, juegos de mesa, rana, gallera'),
             ('47', 'Comercio  de colchones, muebles'),
             ('48', 'Comercio de elementos deportivos, implementos, balones, tienda de bicicletas'),
             ('49', 'Veterinaria, venta de alimento o enseres para mascotas o animales, perros, gatos, peces.'),
-            ('50', 'Comercio de productos de tecnologia, celulares, computadores'),
-            ('51', 'Productos asociados al arte, cuadros, pintura, joyeria, relojeria, actividades de fotografia'),
+            ('50', 'Comercio de productos de tecnología, celulares, computadores'),
+            ('51', 'Productos asociados al arte, cuadros, pintura, joyería, relojería, actividades de fotografía'),
             ('52', 'Comercio de regalos, variedades, adornos, tajetas, articulos diversos.'),
-            ('53', 'Heladeria o fruteria '),
+            ('53', 'Heladería o frutería '),
             ('54', 'Carnicería, pescadería, charcutería, quesos, lácteos, salsamentaria'),
-            ('55', 'Cerrajería, Ferretería, ferreléctricos, vidriería'),
+            ('55', 'Cerrajería, ferretería, ferreléctricos, vidriería'),
             ('56', 'Servicios de salud, óptica, odontología, consultorio médico, ortodoncia, tienda naturista'),
             ('57', 'Droguería'),
             ('58', 'Envíos, giros, recargas, chance, apuestas, servicios financieros, banco, corresponsal'),
             ('59', 'Café internet, telecomunicaciones, videojuegos, venta de películas, mantenimiento computadores, telefonía, informática'),
             ('60', 'Floristería, abono, venta de gallinas, actividad pecuaria'),
             ('61', 'Retaurante, fondo paisa, corrientazo, asadero'),
-            ('62', 'Papelería, Fotocopias, impresiones, miscelanea'),
+            ('62', 'Papelería, fotocopias, impresiones, miscelanea'),
             ('63', 'Casa comercial, monte de piedad, compraventa, prestamista'),
             ('64', 'Eventos, refrigerios, casa de banquetes'),
             ('65', 'Gimnasio, academia de baile, establecimiento para deportes'),
             ('66', 'Academia de idiomas, lectura rápida'),
             ('67', 'Inmobiliaria'),
-            ('68', 'Asesoría comercial, publicidad, mercadeo imagen corporativa, asesoria juridica, tributaria'),
-            ('69', 'Mantenimiento de bicicletas, automóbiles, despinche, vulcanizadora, taller automotriz, mecánica general'),
+            ('68', 'Asesoría comercial, publicidad, mercadeo imagen corporativa, asesoría jurídica, tributaria'),
+            ('69', 'Mantenimiento de bicicletas, automóviles, despinche, vulcanizadora, taller automotriz, mecánica general'),
             ('70', 'Lavandería'),
             ('71', 'Supermercado, minimercado, mercado, venta de elementos de aseo, venta de frutas y verduras'),
             ('72', 'Venta de ropa, zapatos, calzado, modestería, uniformes, accesorios, prendas y elementos de vestir, remontadora de calzado'),
@@ -295,7 +295,7 @@ class Lead(models.Model):
             ('43', '4'),
             ('44', '5'),
             ('45', '6'),
-        ], "29. Estrato socioeconomico de donde se encuentra el negocio ",
+        ], "29. Estrato socioeconómico de donde se encuentra el negocio ",
     )
 
     x_tactiv = fields.Integer(
@@ -303,56 +303,56 @@ class Lead(models.Model):
     )
 
     x_dias_sem_inf = fields.Integer(
-        string="31. ¿Cuantas horas de trabajo diario dedica para el funcionamiento del negocio?",
+        string="31. ¿Cuántas horas de trabajo diario dedica para el funcionamiento del negocio?",
     )
 
     x_dias_sem_for = fields.Integer(
-        string="31. ¿Cuantos dias a la semana opera su negocio? ",
+        string="31. ¿Cuántos días a la semana opera su negocio? ",
     )
 
     x_dias_sem_for2 = fields.Integer(
-        string="32. ¿Cuántos dias a la semana dedica a su negocio?",
+        string="32. ¿Cuántos días a la semana dedica a su negocio?",
     )
 
     x_horas_trab_inf = fields.Integer(
-        string="32. ¿Cuantas horas de trabajo diario dedica para el funcionamiento del negocio?",
+        string="32. ¿Cuántas horas de trabajo diario dedica para el funcionamiento del negocio?",
     )
 
     x_horas_trab_form = fields.Integer(
-        string="33. ¿Cuantas horas de trabajo diario dedica para el funcionamiento del negocio?",
+        string="33. ¿Cuántas horas de trabajo diario dedica para el funcionamiento del negocio?",
     )
 
     x_trabajadores_inf = fields.Integer(
-        string="33. ¿Cuantos trabajadores tiene su negocio?",
+        string="33. ¿Cuántos trabajadores tiene su negocio?",
     )
 
     x_trabajadores_form = fields.Integer(
-        string="34. ¿Cuantos trabajadores tiene su negocio?",
+        string="34. ¿Cuántos trabajadores tiene su negocio?",
     )
 
     x_cotiza_form = fields.Selection(
         #string="Sexo",
         [
             ('50', 'Salud'),
-            ('51', 'Pension'),
+            ('51', 'Pensión'),
             ('52', 'ARL'),
             ('53', 'Caja de compensación'),
             ('53', 'ICBF'),
             ('53', 'SENA'),
             ('53', 'Todas'),
 
-        ], "35. ¿Cuales son los aportes que realiza para sus trabajadores?",
+        ], "35. ¿Cuáles son los aportes que realiza para sus trabajadores?",
     )
 
     x_cotiza_inf = fields.Selection(
         #string="Sexo",
         [
             ('50', 'Salud'),
-            ('51', 'Pension'),
+            ('51', 'Pensión'),
             ('52', 'ARL'),
             ('53', 'Ninguna'),
 
-        ], "34. ¿Cuales son los aportes que realiza su negocio?",
+        ], "34. ¿Cuáles son los aportes que realiza su negocio?",
     )
 
     x_motivo_inf = fields.Selection(
@@ -360,7 +360,7 @@ class Lead(models.Model):
         [
             ('50', 'Por necesidad de generar ingresos'),
             ('51', 'Oportunidad de negocio en el mercado'),
-            ('52', 'Por tradición familiar o herencia '),
+            ('52', 'Por tradición familiar o herencia'),
             ('53', 'Complementar el ingreso familiar o mejorar el ingreso'),
             ('54', 'Para ejercer su oficio, carrera o profesión'),
             ('55', 'Pocas oportunidades de empleo'),
@@ -399,7 +399,7 @@ class Lead(models.Model):
             ('55', 'Programas del Gobierno'),
             ('56', 'Otras'),
 
-        ], "35. ¿Cual fue la principal fuente de recursos para la creación o constitución del negocio?",
+        ], "35. ¿Cuál fue la principal fuente de recursos para la creación o constitución del negocio?",
     )
 
 
@@ -414,12 +414,12 @@ class Lead(models.Model):
             ('55', 'Programas del Gobierno'),
             ('56', 'Otras'),
 
-        ], "36. ¿Cual fue la principal fuente de recursos para la creación o constitución del negocio?",
+        ], "36. ¿Cuál fue la principal fuente de recursos para la creación o constitución del negocio?",
     )
 
-    x_recursos_cual_inf = fields.Char('36. ¿Cual?')
+    x_recursos_cual_inf = fields.Char('36. ¿Cuál?')
 
-    x_recursos_cual_form = fields.Char('37. ¿Cual?')
+    x_recursos_cual_form = fields.Char('37. ¿Cuál?')
 
     x_sitio_ubi_inf = fields.Selection(
         #string="Sexo",
@@ -433,7 +433,7 @@ class Lead(models.Model):
             ('54', 'Finca'),
             ('55', 'Otro'),
 
-        ], "39. ¿Cual es el sitio o ubicación del negocio?",
+        ], "39. ¿Cuál es el sitio o ubicación del negocio?",
     )
 
     x_sitio_ubi_form = fields.Selection(
@@ -445,11 +445,11 @@ class Lead(models.Model):
             ('53', 'Finca'),
             ('54', 'Otro'),
 
-        ], "40. ¿Cual es el sitio, lugar o ubicación del negocio?",
+        ], "40. ¿Cuál es el sitio, lugar o ubicación del negocio?",
     )
 
-    x_sitio_ubi_cual_form = fields.Char('41. ¿Cual?')
-    x_sitio_ubi_cual_inf = fields.Char('40. ¿Cual?')
+    x_sitio_ubi_cual_form = fields.Char('41. ¿Cuál?')
+    x_sitio_ubi_cual_inf = fields.Char('40. ¿Cuál?')
 
     x_desc_act_form = fields.Char('42. Describa la actividad comercial de su negocio' )
     x_desc_act_inf = fields.Char('41. Describa la actividad comercial de su negocio' )
@@ -473,7 +473,7 @@ class Lead(models.Model):
             ('51', 'Estacionario'),
             ('52', 'No aplica'),
 
-        ], "43. Si el negocio es ambulante - sitio al descubierto, ¿cual es su forma de funcionamiento? ",
+        ], "43. Si el negocio es ambulante - sitio al descubierto, ¿cuál es su forma de funcionamiento? ",
     )
 
     x_ambula_2_inf = fields.Selection(
@@ -486,7 +486,7 @@ class Lead(models.Model):
             ('54', 'Agrupado con otros vendedores'),
             ('55', 'Tiene carné'),
             ('56', 'No aplica'),
-            ('57', 'Otro ¿Cuál?'),
+            ('57', 'Otro'),
 
         ], "44. Si el negocio es ambulante - sitio al descubierto, ¿cómo hace para conservar diariamente el mismo sitio de trabajo?",
     )
@@ -499,7 +499,7 @@ class Lead(models.Model):
             ('52', 'Quincenalmente'),
             ('53', 'Mensualmente'),
 
-        ], "45. ¿Con que frecuencia adquiere materia prima o mercania para su negocio?",
+        ], "45. ¿Con qué frecuencia adquiere materia prima o mercancía para su negocio?",
     )
 
     x_mprima_form = fields.Selection(
@@ -510,7 +510,7 @@ class Lead(models.Model):
             ('52', 'Quincenalmente'),
             ('53', 'Mensualmente'),
 
-        ], "44. ¿Con que frecuencia adquiere materia prima o mercania para su negocio?",
+        ], "44. ¿Con qué frecuencia adquiere materia prima o mercancía para su negocio?",
     )
 
     x_merca_tipo = fields.Selection(
@@ -587,28 +587,28 @@ class Lead(models.Model):
 
     x_clientes_form = fields.Integer(
         string="45. ¿Cuántos clientes atiende diariamente?",
-        help="Ingrese un numero entre 1 y 100",
+        help="Ingrese un número entre 1 y 100",
     )
 
     x_clientes_inf = fields.Integer(
         string="46. ¿Cuántos clientes atiende diariamente?",
-        help="Ingrese un numero entre 1 y 100",
+        help="Ingrese un número entre 1 y 100",
     )
 
     x_problema_inf = fields.Selection(
         #string="Sexo",
         [
-            ('50', 'Dificultad en obtener creditos'),
+            ('50', 'Dificultad en obtener créditos'),
             ('51', 'Competencia excesiva'),
-            ('52', 'Problemas de comercializacion de productos'),
+            ('52', 'Problemas de comercialización de productos'),
             ('53', 'Problemas con las autoridades'),
             ('54', 'No cuenta con las condiciones de bioseguridad que se requieren'),
             ('55', 'Aumento en el precio de los insumos'),
             ('56', 'Desconfianza de los clientes para adquirir productos de consumo'),
-            ('57', 'Dificultad en la produccion del producto'),
+            ('57', 'Dificultad en la producción del producto'),
             ('58', 'No se encuentra virtualizado'),
-            ('59', 'Falta de capacitacion '),
-            ('60', 'Falta de tecnologia y conexion'),
+            ('59', 'Falta de capacitación'),
+            ('60', 'Falta de tecnología y conexión'),
             ('61', 'Normatividad, acreditación o certificación de su producto o servicio'),
             ('62', 'Otro'),
 
@@ -620,15 +620,15 @@ class Lead(models.Model):
         [
             ('50', 'Dificultad en obtener creditos'),
             ('51', 'Competencia excesiva'),
-            ('52', 'Problemas de comercializacion de productos'),
+            ('52', 'Problemas de comercialización de productos'),
             ('53', 'Problemas con las autoridades'),
             ('54', 'No cuenta con las condiciones de bioseguridad que se requieren'),
             ('55', 'Aumento en el precio de los insumos'),
             ('56', 'Desconfianza de los clientes para adquirir productos de consumo'),
-            ('57', 'Dificultad en la produccion del producto'),
+            ('57', 'Dificultad en la producción del producto'),
             ('58', 'No se encuentra virtualizado'),
-            ('59', 'Falta de capacitacion '),
-            ('60', 'Falta de tecnologia y conexion'),
+            ('59', 'Falta de capacitación'),
+            ('60', 'Falta de tecnología y conexión'),
             ('61', 'Normatividad, acreditación o certificación de su producto o servicio'),
             ('62', 'Otro'),
 
@@ -636,21 +636,21 @@ class Lead(models.Model):
     )
 
     x_prob_desc_form = fields.Char(
-        string="47. Una vez seleccionado el principal problema del micronegocio, describalo en una frase",
+        string="47. Una vez seleccionado el principal problema del micronegocio, descríbalo en una frase",
     )
 
     x_prob_desc_inf = fields.Char(
-        string="48. Una vez seleccionado el principal problema del micronegocio, describalo en una frase",
+        string="48. Una vez seleccionado el principal problema del micronegocio, descríbalo en una frase",
     )
 
     x_reinvierte_inf = fields.Integer(
-        string="49. ¿Qúé porcentaje de las ventas reinvierte nuevamente en mercancia (1-100)?",
-        help="Ingrese un numero entre 1 y 100",
+        string="49. ¿Qúé porcentaje de las ventas reinvierte nuevamente en mercancía (1-100)?",
+        help="Ingrese un número entre 1 y 100",
     )
 
     x_reinvierte_form = fields.Integer(
-        string="48. ¿Qúé porcentaje de las ventas reinvierte nuevamente en mercancia (1-100)?",
-        help="Ingrese un numero entre 1 y 100",
+        string="48. ¿Qúé porcentaje de las ventas reinvierte nuevamente en mercancía (1-100)?",
+        help="Ingrese un número entre 1 y 100",
     )
 
     country_id = fields.Many2one('res.country', "Country")
