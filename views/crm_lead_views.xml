@@ -379,6 +379,14 @@
                     <filter name="salesperson" position="replace">
                       <filter string="Facilitador" name="salesperson" context="{'group_by':'user_id'}"/>
                     </filter>
+                    <filter name="saleschannel" position="replace">
+                    	<filter string="NRC" name="saleschannel" context="{'group_by':'team_id'}"/>
+                	</filter>
+                  <filter name="assigned_to_me" position="replace">
+                      <filter string="Propietarios Asignados" name="assigned_to_me"
+                        domain="[('user_id', '=', uid)]"
+                        help="Opportunities that are assigned to me"/>
+                  </filter>
             </field>
     </record>
 

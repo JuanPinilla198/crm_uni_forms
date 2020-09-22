@@ -18,7 +18,7 @@
             <field name="inherit_id" ref="sales_team.crm_team_view_tree"/>
             <field name="arch" type="xml">
               <field name="name" position="replace">
-                <field name="name" string="Equipo de Facilitadores"/>
+                <field name="name" string="NRC"/>
               </field>
               <field name="user_id" position="replace">  
                 <field name="user_id" string="Orientador"/>
@@ -26,12 +26,20 @@
             </field>
     </record>
 
-    <!--record id="sales_team.sales_team_config_action" model="ir.actions.act_window">
+    <record id="sales_team.sales_team_config_action" model="ir.actions.act_window">
+      <field name="name">NRC</field>
+    </record>
+
+    <!--record id="crm.crm_team_config" model="ir.ui.menu" >
       <field name="name">Equipo de Facilitadores</field>
     </record>
 
-    <record id="crm.crm_team_config" model="ir.ui.menu">
-      <field name="name">Equipo de Facilitadores</field>
+    <record id="crm.crm_menu_sales" model="ir.ui.menu" >
+      <field name="name">Propietarios</field>
+    </record>
+
+    <record model="ir.ui.menu" id="crm.sales_team_menu_team_pipeline" >
+      <field name="name">Control de Cursos</field>
     </record-->
 
 </odoo>
