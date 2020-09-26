@@ -13,7 +13,6 @@ class CountryStateCity(models.Model):
     code = fields.Char('City Code', size=5, help='Code DANE - 5 digits-',)
     name = fields.Char('City Name', size=64, )
     state_id = fields.Many2one('res.country.state', 'State')
-    x_state_id = fields.Many2one('res.country.state', 'State')
     country_id = fields.Many2one('res.country', 'Country', default='Colombia')
     _order = 'code'
 
@@ -653,6 +652,446 @@ class Lead(models.Model):
         help="Ingrese un número entre 1 y 100",
     )
 
+    #MÓDULO 3-PROTOCOLOS DE BIOSEGURIDAD
+    x_dcont1 = fields.Boolean(
+        string="¿Desea continuar con el Formulario?",
+    )
+
+    x_proto1 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "1. ¿Usted conoce los protocolos de bioseguridad para su negocio??",
+    )
+
+    x_proto2 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "2. ¿En su negocio implementa los protocolos de bioseguridad?",
+    )
+
+    x_proto3 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "3. ¿Dispone de puntos de alcohol con una concentracion no inferior al 70% para la higiene de las manos de los clientes y los trabajadores del negocio?",
+    )
+
+    x_proto4 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "4. Dispone de la adecuada provision de tapabocas y elementos de proteccion para quienes laboran en el negocio?",
+    )
+
+    x_proto5 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "5. ¿Se realiza cambio de tapabocas durante la jornada laboral?",
+    )
+
+    x_proto6 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+            ('52', 'No Aplica'),
+
+        ], "6. ¿Atiende a un cliente a la vez y mantiene el distanciamiento social?",
+    )
+
+    x_proto7 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+            ('52', 'No Aplica'),
+
+        ], "7. ¿Atiende de manera prioritaria a la poblacion con riesgo del COVID19, para disminuir el tiempo que permenecen en el lugar?",
+    )
+
+    x_proto8 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+            ('52', 'No Aplica'),
+
+        ], "8. ¿Realiza la proteccion permanente de los alimentos en exhibicion, con el uso de peliculas plasticas, tapas, vitrinas, etc?",
+    )
+
+    x_proto9 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "9. ¿Dispone de superficies faciles de limpiar y desinfectar para ubicar los productos?",
+    )
+
+    x_proto10 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "10. ¿Desinfecta los objetos del local cuando son prestados a los clientes o proveedores (esferos, grapadora, etc.), antes y después de su uso?",
+    )
+
+    x_proto11 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "11. ¿Coloca avisos o alertas para mantener las medidas de prevencion?",
+    )
+
+    x_proto12 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+            ('52', 'No Aplica'),
+
+        ], "12. ¿Realiza la entrega de productos o alimentos para llevar o consumir fuera del local?",
+    )
+
+    x_proto13 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "13. ¿Limpia y desinfecta las herramientas de trabajo una vez finalice la jornada?",
+    )
+
+    x_proto14 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "14. ¿Asegura que los colaboradores y los clientes usen tapabocas?",
+    )
+
+    x_proto15 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "15. Realiza la limpieza del espacio de trabajo al menos dos vez al dia?",
+    )
+
+    x_proto16 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "16. ¿Entrega los productos sobre una superficie, sin tener contacto con el cliente?",
+    )
+
+    x_proto17 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Si'),
+            ('51', 'No'),
+
+        ], "17. ¿Ha recibido o recibe algun apoyo o beneficio economico por parte del Gobierno en la emergencia para usted?",
+    )
+
+    x_proto18 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Subsidios'),
+            ('51', 'Mercados'),
+            ('52', 'Bonos'),
+            ('53', 'Implementos de bioseguridad'),
+
+        ], "18. ¿Que tipo de beneficios?",
+    )
+
+    #INNOVACION DEL MODELO DE NEGOCIO
+    x_dcont2 = fields.Boolean(
+        string="¿Desea continuar con el Formulario?",
+    )
+
+    x_innova19 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "19. ¿Ha recibido o recibe algun apoyo o beneficio economico por parte del Gobierno en la emergencia para usted?",
+    )
+
+    x_innova20 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "20. ¿Se ha capacitado en la formacion de modelos de negocio?",
+    )
+
+    x_innova21 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "21. ¿Conoce los canales de distribucion para su producto?",
+    )
+
+    x_innova22 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Canal directo: Productor-Consumidor'),
+            ('51', 'Canal Detallista: Productor-Minorista-Consumidor'),
+            ('52', 'Canal Distribuidor:  Productor-Distribuidor-Minorista-Consumidor'),
+            ('53', 'Canal Broker: Productor-Mayorista-Distribuidor-Minorista-Consumidor'),
+
+        ], "22. ¿Que tipo de beneficios?",
+    )
+
+    x_innova23 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Totalmente de acuerdo'),
+            ('51', 'De acuerdo'),
+            ('52', 'Ni de acuerdo, ni en desacuerdo'),
+            ('53', 'En desacuerdo'),
+            ('54', 'Totalmente en desacuerdo'),
+
+        ], "23. ¿Considera que para la produccion o manipulacion del producto debe contar con personal capacitado?",
+    )
+
+    x_innova24 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "24. ¿Cuenta con personal capacitado para la produccion o manipulacion del producto?",
+    )
+
+    x_innova25 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "25. ¿Cuenta con un espacio adecuado para la produccion y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad?",
+    )
+
+    x_innova26 = fields.Selection(
+        #string="Sexo",
+        [
+            ('50', 'Totalmente de acuerdo'),
+            ('51', 'De acuerdo'),
+            ('52', 'Ni de acuerdo, ni en desacuerdo'),
+            ('53', 'En desacuerdo'),
+            ('54', 'Totalmente en desacuerdo'),
+
+        ], "26. ¿Usted considera importante que el uso de buenas practicas  manipulacion y produccion de la materia prima debe estar sujeta a estandares de calidad certificada  ¿Esto garantizara o generara confianza a los clientes para aumentar la demanda de consumo o uso de los productos  o servicios que ofrece?",
+    )
+
+    x_innova27 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "27. ¿Para la obtencion de la materia prima o mercancia depende de un solo proveedor? ",
+    )
+
+    x_innova28 = fields.Selection(
+        #string="Sexo",
+        [('50', 'De contado'),
+         ('51', 'A credito'),
+         ('52', 'A plazos'),
+
+        ], "28. El pago de la materia prima la realiza ",
+    )
+
+    x_innova29 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "29. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancia?",
+    )
+
+    x_innova30 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "30. ¿Considera que la estandarizacion de procesos para la produccion o manipulacion del producto permiten agilizar los tiempos de entrega?",
+    )
+
+    x_innova31 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "31. ¿Cuenta con un proceso estandarizado para la produccion o manipulacion del producto?",
+    )
+
+    x_innova32 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "32. ¿Considera que en el inventario se llevan los registros de las entradas y salidas del producto?",
+    )
+
+    x_innova33 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "33. ¿Cuenta con un inventario donde registre las entradas y salidas del producto?",
+    )
+
+    x_innova34 = fields.Integer(
+        string="34. ¿Cuantas lineas de producto tiene su negocio?",
+    )
+
+    x_innova35 = fields.Char(
+        string="35. Describa las lineas de producto que tiene su negocio",
+    )
+
+    x_innova36 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "36. ¿Sabe lo que le cuesta a su negocio la produccion y comercializacion del producto o servicio?",
+    )
+
+    x_innova37 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Por el mercado'),
+         ('51', 'Por el punto de equilibrio'),
+         ('52', 'Costos fijos + variables + costos de utilidad'),
+
+        ], "37. ¿Sabe lo que le cuesta a su negocio la produccion y comercializacion del producto o servicio?",
+    )
+
+    x_innova38 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "38. ¿Conoce que es el punto de equilibrio?",
+    )
+
+    x_innova39 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "39. ¿Sabe cual es el punto de equilibrio de su negocio?",
+    )
+
+    x_innova40 = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "40. ¿En el ultimo año ha realizado actividades de innovacion para su negocio?",
+    )
+
+    x_innova41_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "41. ¿Realiza actividades con los trabajadores para crear innovaciones en su negocio?",
+    )
+
+    x_innova41_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "41. ¿Cree que capacitar a sus trabajadores puede aumentar los resultados de su negocio?",
+    )
+
+    x_innova42_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "42. ¿Ha recibido formacion en creatividad e innovacion? ",
+    )
+
+    x_innova42_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "42. ¿Realiza actividades con los trabajadores para crear innovaciones en su negocio?",
+    )
+
+    x_innova43_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "43. ¿Ofrece con frecuencia productos o servicios nuevos a partir de sugerencias de sus clientes?",
+    )
+
+    x_innova43_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "43. ¿Ha recibido formacion en creatividad e innovacion? ",
+    )
+
+    x_innova44_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "44. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (Diseño, envase, promocion, forma de cotizar, etc.)",
+    )
+
+    x_innova44_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "44. ¿Ofrece con frecuencia productos o servicios nuevos a partir de sugerencias de sus clientes?",
+    )
+
+    x_innova45_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "45. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (Diseño, envase, promocion, forma de cotizar, etc.)",
+    )
+
     country_id = fields.Many2one('res.country', "Country")
     xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
     city = fields.Char(related="xcity.name")
@@ -671,12 +1110,6 @@ class Lead(models.Model):
         @param state_id: State Id (ISO)
         @return: object
         """
-        
-        #if self.country_id and not self.state_id:
-         #   mymodel = 'res.country.state'
-          #  filter_column = 'country_id'
-           # check_value = self.country_id.id
-            #domain = 'state_id'
 
         if self.state_id:
             mymodel = 'res.country.state.city'
