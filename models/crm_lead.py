@@ -681,7 +681,7 @@ class Lead(models.Model):
             ('50', 'Si'),
             ('51', 'No'),
 
-        ], "3. ¿Dispone de puntos de alcohol con una concentracion no inferior al 70% para la higiene de las manos de los clientes y los trabajadores del negocio?",
+        ], "3. ¿Dispone de puntos de alcohol con una concentración no inferior al 70% para la higiene de las manos de los clientes y los trabajadores del negocio?",
     )
 
     x_proto4 = fields.Selection(
@@ -690,7 +690,7 @@ class Lead(models.Model):
             ('50', 'Si'),
             ('51', 'No'),
 
-        ], "4. Dispone de la adecuada provision de tapabocas y elementos de proteccion para quienes laboran en el negocio?",
+        ], "4. Dispone de la adecuada provision de tapabocas y elementos de protección para quienes laboran en el negocio?",
     )
 
     x_proto5 = fields.Selection(
@@ -756,7 +756,7 @@ class Lead(models.Model):
             ('50', 'Si'),
             ('51', 'No'),
 
-        ], "11. ¿Coloca avisos o alertas para mantener las medidas de prevencion?",
+        ], "11. ¿Coloca avisos o alertas para mantener las medidas de prevención?",
     )
 
     x_proto12 = fields.Selection(
@@ -857,12 +857,12 @@ class Lead(models.Model):
     x_innova22 = fields.Selection(
         #string="Sexo",
         [
-            ('50', 'Canal directo: Productor-Consumidor'),
+            ('50', 'Canal Directo: Productor-Consumidor'),
             ('51', 'Canal Detallista: Productor-Minorista-Consumidor'),
             ('52', 'Canal Distribuidor:  Productor-Distribuidor-Minorista-Consumidor'),
             ('53', 'Canal Broker: Productor-Mayorista-Distribuidor-Minorista-Consumidor'),
 
-        ], "22. ¿Que tipo de beneficios?",
+        ], "22. ¿Qué tipo de beneficios?",
     )
 
     x_innova23 = fields.Selection(
@@ -874,7 +874,7 @@ class Lead(models.Model):
             ('53', 'En desacuerdo'),
             ('54', 'Totalmente en desacuerdo'),
 
-        ], "23. ¿Considera que para la produccion o manipulacion del producto debe contar con personal capacitado?",
+        ], "23. ¿Considera que para la producción o manipulación del producto debe contar con personal capacitado?",
     )
 
     x_innova24 = fields.Selection(
@@ -902,7 +902,7 @@ class Lead(models.Model):
             ('53', 'En desacuerdo'),
             ('54', 'Totalmente en desacuerdo'),
 
-        ], "26. ¿Usted considera importante que el uso de buenas practicas manipulacion y producción de la materia prima debe estar sujeta a estandares de calidad certificada  ¿Esto garantizará o generara confianza a los clientes para aumentar la demanda de consumo o uso de los productos  o servicios que ofrece?",
+        ], "26. ¿Usted considera importante que el uso de buenas prácticas manipulación y producción de la materia prima debe estar sujeta a estandares de calidad certificada  ¿Esto garantizará o generará confianza a los clientes para aumentar la demanda de consumo o uso de los productos o servicios que ofrece?",
     )
 
     x_innova27 = fields.Selection(
@@ -910,13 +910,13 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "27. ¿Para la obtencion de la materia prima o mercancia depende de un solo proveedor? ",
+        ], "27. ¿Para la obtención de la materia prima o mercancía depende de un solo proveedor? ",
     )
 
     x_innova28 = fields.Selection(
         #string="Sexo",
         [('50', 'De contado'),
-         ('51', 'A credito'),
+         ('51', 'A crédito'),
          ('52', 'A plazos'),
 
         ], "28. El pago de la materia prima la realiza ",
@@ -927,7 +927,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "29. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancia?",
+        ], "29. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancía?",
     )
 
     x_innova30 = fields.Selection(
@@ -938,7 +938,7 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "30. ¿Considera que la estandarizacion de procesos para la produccion o manipulacion del producto permiten agilizar los tiempos de entrega?",
+        ], "30. ¿Considera que la estandarización de procesos para la producción ó manipulación del producto permiten agilizar los tiempos de entrega?",
     )
 
     x_innova31 = fields.Selection(
@@ -946,7 +946,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "31. ¿Cuenta con un proceso estandarizado para la produccion o manipulacion del producto?",
+        ], "31. ¿Cuenta con un proceso estandarizado para la producción o manipulación del producto?",
     )
 
     x_innova32 = fields.Selection(
@@ -957,7 +957,7 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "32. ¿Considera que en el inventario se llevan los registros de las entradas y salidas del producto?",
+        ], "32. ¿Considera qué en el inventario se llevan los registros de las entradas y salidas del producto?",
     )
 
     x_innova33 = fields.Selection(
@@ -969,11 +969,11 @@ class Lead(models.Model):
     )
 
     x_innova34 = fields.Integer(
-        string="34. ¿Cuantas lineas de producto tiene su negocio?",
+        string="34. ¿Cuántas líneas de producto tiene su negocio?",
     )
 
     x_innova35 = fields.Char(
-        string="35. Describa las lineas de producto que tiene su negocio",
+        string="35. Describa las líneas de producto que tiene su negocio",
     )
 
     x_innova36 = fields.Selection(
@@ -981,7 +981,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "36. ¿Sabe lo que le cuesta a su negocio la produccion y comercializacion del producto o servicio?",
+        ], "36. ¿Sabe lo qué le cuesta a su negocio la producción y comercialización del producto o servicio?",
     )
 
     x_innova37 = fields.Selection(
@@ -990,7 +990,7 @@ class Lead(models.Model):
          ('51', 'Por el punto de equilibrio'),
          ('52', 'Costos fijos + variables + costos de utilidad'),
 
-        ], "37. ¿Sabe lo que le cuesta a su negocio la produccion y comercializacion del producto o servicio?",
+        ], "37. ¿Sabe lo qué le cuesta a su negocio la producción y comercialización del producto o servicio?",
     )
 
     x_innova38 = fields.Selection(
@@ -998,7 +998,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "38. ¿Conoce que es el punto de equilibrio?",
+        ], "38. ¿Conoce qué es el punto de equilibrio?",
     )
 
     x_innova39 = fields.Selection(
@@ -1006,7 +1006,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "39. ¿Sabe cual es el punto de equilibrio de su negocio?",
+        ], "39. ¿Sabe cuál es el punto de equilibrio de su negocio?",
     )
 
     x_innova40 = fields.Selection(
@@ -1014,7 +1014,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "40. ¿En el ultimo año ha realizado actividades de innovacion para su negocio?",
+        ], "40. ¿En el último año ha realizado actividades de innovación para su negocio?",
     )
 
     x_innova41_inf = fields.Selection(
@@ -1033,7 +1033,7 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "41. ¿Cree que capacitar a sus trabajadores puede aumentar los resultados de su negocio?",
+        ], "41. ¿Cree qué capacitar a sus trabajadores puede aumentar los resultados de su negocio?",
     )
 
     x_innova42_inf = fields.Selection(
@@ -1041,7 +1041,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "42. ¿Ha recibido formacion en creatividad e innovacion? ",
+        ], "42. ¿Ha recibido formación en creatividad e innovación? ",
     )
 
     x_innova42_form = fields.Selection(
@@ -1065,7 +1065,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "43. ¿Ha recibido formacion en creatividad e innovacion? ",
+        ], "43. ¿Ha recibido formación en creatividad e innovación? ",
     )
 
     x_innova44_inf = fields.Selection(
@@ -1073,7 +1073,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "44. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (Diseño, envase, promocion, forma de cotizar, etc.)",
+        ], "44. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (diseño, envase, promoción, forma de cotizar, etc.)",
     )
 
     x_innova44_form = fields.Selection(
@@ -1089,7 +1089,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "45. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (Diseño, envase, promocion, forma de cotizar, etc.)",
+        ], "45. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (diseño, envase, promoción, forma de cotizar, etc.)",
     )
     #gavii
 
@@ -1104,7 +1104,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "45. ¿Considera que al realizar un analisis interno y externo de su negocio, permitira la identificacion de debilidades, oportunidades,fortalezas y amenazas?",
+        ], "45. ¿Considera que al realizar un análisis interno y externo de su negocio, permitirá la identificación de debilidades, oportunidades,fortalezas y amenazas?",
     )
 
     x_forma46_form = fields.Selection(
@@ -1112,7 +1112,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "46. ¿Considera que al realizar un analisis interno y externo de su negocio, permitira la identificacion de debilidades, oportunidades,fortalezas y amenazas?",
+        ], "46. ¿Considera que al realizar un análisis interno y externo de su negocio, permitirá la identificación de debilidades, oportunidades,fortalezas y amenazas?",
     )
 
     x_forma46_inf = fields.Selection(
@@ -1120,7 +1120,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "46. ¿Sabe como realizar un analisis interno de su negocio?",
+        ], "46. ¿Sabe cómo realizar un análisis interno de su negocio?",
     )
 
     x_forma47_form = fields.Selection(
@@ -1128,7 +1128,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "47. ¿Sabe como realizar un analisis interno de su negocio?",
+        ], "47. ¿Sabe cómo realizar un análisis interno de su negocio?",
     )
 
     x_forma47_inf = fields.Selection(
@@ -1136,7 +1136,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "47. ¿Sabe como realizar un analisis externo de su negocio?",
+        ], "47. ¿Sabe cómo realizar un análisis externo de su negocio?",
     )
 
     x_forma48_form = fields.Selection(
@@ -1144,7 +1144,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "48. ¿Sabe como realizar un analisis externo de su negocio?",
+        ], "48. ¿Sabe como realizar un análisis externo de su negocio?",
     )
 
     x_forma48_inf = fields.Selection(
@@ -1168,7 +1168,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "49. ¿Para usted es importante la formalizacion de su negocio?",
+        ], "49. ¿Para usted es importante la formalización de su negocio?",
     )
 
     x_forma50_form = fields.Selection(
@@ -1216,7 +1216,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "52. ¿Tiene este negocio RUT(Registro Único Tributario)?",
+        ], "52. ¿Tiene este negocio RUT (Registro Único Tributario)?",
     )
 
     x_forma53_form = fields.Selection(
@@ -1232,7 +1232,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "53. ¿se encuentra actualizado?",
+        ], "53. ¿Se encuentra actualizado?",
     )
 
     x_forma54_form = fields.Selection(
@@ -1248,7 +1248,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "54. ¿Tiene este negocio NIT(Número de identificacion Tributaria?",
+        ], "54. ¿Tiene este negocio NIT (Número de Identificación Tributaria?",
     )
 
     x_forma55_form = fields.Selection(
@@ -1280,7 +1280,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "56. Para el funcionamiento del negocio: ¿Requiere algun permiso municipal/distrital adicional para funcionar?",
+        ], "56. Para el funcionamiento del negocio: ¿Requiere algún permiso municipal/distrital adicional para funcionar?",
     )
 
     x_forma57_form = fields.Selection(
@@ -1304,7 +1304,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "58. Antes de la pandemia COVID-19 ¿Cuantas personas de su familia trabajaban con usted en el negocio?",
+        ], "58. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
     )
 
     x_forma58_inf = fields.Selection(
@@ -1320,7 +1320,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "59. Antes de la pandemia COVID-19 ¿Cuantas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
+        ], "59. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
     )
 
     x_forma59_inf = fields.Selection(
@@ -1336,7 +1336,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "60. ¿Cuantas personas de su familia trabajan actualmente con usted en el negocio?",
+        ], "60. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
     )
 
     x_forma60_inf = fields.Selection(
@@ -1352,7 +1352,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "61. ¿Cuantas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+        ], "61. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
     )
 
     x_forma61_inf = fields.Selection(
@@ -1368,7 +1368,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "62. ¿Que tipo de contrato aplica más para los trabajadores de su negocio?",
+        ], "62. ¿Qué tipo de contrato aplica más para los trabajadores de su negocio?",
     )
 
     x_forma62_inf = fields.Selection(
@@ -1376,7 +1376,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "62. Antes de la pandemia COVID-19 ¿Cuantas personas de su familia trabajaban con usted en el negocio?",
+        ], "62. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
     )
 
     x_forma63_form = fields.Selection(
@@ -1392,7 +1392,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "63. Antes de la pandemia COVID-19 ¿Cuantas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
+        ], "63. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
     )
 
     x_forma64_form = fields.Selection(
@@ -1400,7 +1400,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "64. ¿Considera importante para su negocio conocer y aplicar las obligaciones correspondientes para los trabajadores que laboran en su negocio? ",
+        ], "64. ¿Considera importante para su negocio conocer y aplicar las obligaciones correspondientes para los trabajadores que laboran en su negocio?",
     )
 
     x_forma64_inf = fields.Selection(
@@ -1408,7 +1408,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "64. ¿Cuantas personas de su familia trabajan actualmente con usted en el negocio?",
+        ], "64. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
     )
 
     x_forma65_inf = fields.Selection(
@@ -1416,7 +1416,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "65. ¿Cuantas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+        ], "65. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
     )
 
     x_forma66_inf = fields.Selection(
@@ -1424,7 +1424,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "66. ¿Si tiene trabajadores como es el sistema de remuneracion?  ",
+        ], "66. ¿Si tiene trabajadores como es el sistema de remuneración?",
     )
 
     x_forma67_inf = fields.Selection(
@@ -1474,7 +1474,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "67. ¿Utiliza alguna estrategia para la visibilizacion de sus productos?",
+        ], "67. ¿Utiliza alguna estrategia para la visibilización de sus productos?",
     )
 
     x_merc70_inf = fields.Selection(
@@ -1482,7 +1482,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "70. ¿Utiliza alguna estrategia para la visibilizacion de sus productos?",
+        ], "70. ¿Utiliza alguna estrategia para la visibilización de sus productos?",
     )
 
     x_merc68_form = fields.Char(
@@ -1545,7 +1545,7 @@ class Lead(models.Model):
          ('4', 'En desacuerdo'),
          ('5', 'Totalmente en desacuerdo'),
 
-        ], "71. ¿Considera que el las redes sociales permite mejorar la competitividad de su negocio? ",
+        ], "71. ¿Considera que las redes sociales permite mejorar la competitividad de su negocio? ",
     )
 
     x_merc74_inf = fields.Selection(
@@ -1556,7 +1556,7 @@ class Lead(models.Model):
          ('4', 'En desacuerdo'),
          ('5', 'Totalmente en desacuerdo'),
 
-        ], "74. ¿Considera que el las redes sociales permite mejorar la competitividad de su negocio? ",
+        ], "74. ¿Considera que las redes sociales permite mejorar la competitividad de su negocio? ",
     )
 
     x_merc72_form = fields.Selection(
@@ -1569,7 +1569,7 @@ class Lead(models.Model):
          ('5', 'Todas las anteriores'),
          ('1', 'Ninguna de las anteriores'),
 
-        ], "72. ¿Que redes sociales utiliza para su negocio? ",
+        ], "72. ¿Qué redes sociales utiliza para su negocio? ",
     )
 
     x_merc75_inf = fields.Selection(
@@ -1582,7 +1582,7 @@ class Lead(models.Model):
          ('6', 'Todas las anteriores'),
          ('7', 'Ninguna de las anteriores'),
 
-        ], "75. ¿Que redes sociales utiliza para su negocio? ",
+        ], "75. ¿Qué redes sociales utiliza para su negocio? ",
     )
 
     x_merc73_form = fields.Selection(
@@ -1593,7 +1593,7 @@ class Lead(models.Model):
          ('4', 'Transferencias'),
          ('5', 'Todas las anteriores'),
 
-        ], "73. Que actividades propias de su negocio realiza a traves de internet? ",
+        ], "73. ¿Qué actividades propias de su negocio realiza a través de internet? ",
     )
 
     x_merc76_inf = fields.Selection(
@@ -1604,7 +1604,7 @@ class Lead(models.Model):
          ('4', 'Transferencias'),
          ('5', 'Todas las anteriores'),
 
-        ], "76. Que actividades propias de su negocio realiza a traves de internet? ",
+        ], "76. ¿Qué actividades propias de su negocio realiza a través de internet? ",
     )
 
     x_merc74_form = fields.Selection(
@@ -1612,7 +1612,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "74. ¿Realiza procesos de seguimiento y fidelizacion de clientes (Servicio Post-venta)?",
+        ], "74. ¿Realiza procesos de seguimiento y fidelización de clientes (Servicio Post-venta)?",
     )
 
     x_merc77_inf = fields.Selection(
@@ -1620,7 +1620,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "77. ¿Realiza procesos de seguimiento y fidelizacion de clientes (Servicio Post-venta)?",
+        ], "77. ¿Realiza procesos de seguimiento y fidelización de clientes (Servicio Post-venta)?",
     )
 
     x_merc75_form = fields.Selection(
@@ -1647,7 +1647,7 @@ class Lead(models.Model):
          ('53', 'Tarjeta de débito o crédito'),
          ('54', 'Cheque'),
 
-        ], "76. ¿Cual es la forma de pago que mas utilizan los clientes en su negocio? ",
+        ], "76. ¿Cuál es la forma de pago que más utilizan los clientes en su negocio? ",
     )
 
     x_merc79_inf = fields.Selection(
@@ -1658,7 +1658,7 @@ class Lead(models.Model):
          ('53', 'Tarjeta de débito o crédito'),
          ('54', 'Cheque'),
 
-        ], "79. ¿Cual es la forma de pago que mas utilizan los clientes en su negocio? ",
+        ], "79. ¿Cuál es la forma de pago que más utilizan los clientes en su negocio? ",
     )
 
     x_merc77_form = fields.Selection(
@@ -1669,7 +1669,7 @@ class Lead(models.Model):
          ('53', 'Tarjeta de débito o crédito'),
          ('54', 'Cheque'),
 
-        ], "77. ¿Cual es la forma de pago que más utiliza para comprar insumo, materia prima o pagar obligaciones? ",
+        ], "77. ¿Cuál es la forma de pago que más utiliza para comprar insumo, materia prima o pagar obligaciones? ",
     )
 
     x_merc80_inf = fields.Selection(
@@ -1679,16 +1679,16 @@ class Lead(models.Model):
          ('53', 'Tarjeta de débito o crédito'),
          ('54', 'Cheque'),
 
-        ], "80. ¿Cual es la forma de pago que más utiliza para comprar insumo, materia prima o pagar obligaciones? ",
+        ], "80. ¿Cuál es la forma de pago que más utiliza para comprar insumo, materia prima o pagar obligaciones? ",
     )
 
     x_merc78_form = fields.Integer(
-        string="78. ¿Cual es su promedio de ventas ACTUAL en una semana BUENA?",
+        string="78. ¿Cuál es su promedio de ventas ACTUAL en una semana BUENA?",
         help="", 
     )
 
     x_merc81_inf = fields.Integer(
-        string="81. ¿Cual es su promedio de ventas ACTUAL en una semana BUENA?",
+        string="81. ¿Cuál es su promedio de ventas ACTUAL en una semana BUENA?",
         help="", 
     )
 
@@ -1730,7 +1730,7 @@ class Lead(models.Model):
          ('4', 'En desacuerdo'),
          ('5', 'Totalmente en desacuerdo'),
 
-        ], "82. ¿El grado de satisfaccion de sus clientes con el producto o servicio que usted ofrece le ha permitido mejorar sus ventas?",
+        ], "82. ¿El grado de satisfacción de sus clientes con el producto o servicio que usted ofrece le ha permitido mejorar sus ventas?",
     )
 
     x_merc85_inf = fields.Selection(
@@ -1741,7 +1741,7 @@ class Lead(models.Model):
          ('4', 'En desacuerdo'),
          ('5', 'Totalmente en desacuerdo'),
 
-        ], "85. ¿El grado de satisfaccion de sus clientes con el producto o servicio que usted ofrece le ha permitido mejorar sus ventas? ",
+        ], "85. ¿El grado de satisfacción de sus clientes con el producto o servicio que usted ofrece le ha permitido mejorar sus ventas? ",
     )
 
     x_merc83_form = fields.Selection(
@@ -1819,7 +1819,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "87. ¿Vende mas o menos lo mismo durante la mayoria del año?",
+        ], "87. ¿Vende mas o menos lo mismo durante la mayoría del año?",
     )
 
     x_merc90_inf = fields.Selection(
@@ -1827,7 +1827,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "90. ¿Vende mas o menos lo mismo durante la mayoria del año?",
+        ], "90. ¿Vende mas o menos lo mismo durante la mayoría del año?",
     )
 
     #FINANZAS
@@ -1901,14 +1901,14 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "93. ¿Considera que a traves de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
+        ], "93. ¿Considera que a través de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
     )
 
     x_finan94_form = fields.Selection(
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "94. ¿Usted ha tenido acceso durante los ultimos 12 meses algun tipo de credito para invertirlo en su negocio?",
+        ], "94. ¿Usted ha tenido acceso durante los últimos 12 meses algun tipo de crédito para invertirlo en su negocio?",
     )
 
     x_finan95_form = fields.Selection(
@@ -1919,7 +1919,7 @@ class Lead(models.Model):
          ('53', 'Compra o arriendo de maquinaria '),
          ('54', 'Otro'),
 
-        ], "95. ¿A que destino el credito solicitado?",
+        ], "95. ¿A qué destino el crédito solicitado?",
     )
 
     x_finan96_form = fields.Selection(
@@ -1932,7 +1932,7 @@ class Lead(models.Model):
          ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
          ('56', 'Está reportado en Centrales de Riesgo'),
 
-        ], "96. ¿Cual es la razon principal de que no haya solicitado un credito?",
+        ], "96. ¿Cuál es la razón principal de que no haya solicitado un crédito?",
     )
 
     x_finan97_form = fields.Selection(
@@ -1945,7 +1945,7 @@ class Lead(models.Model):
          ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
          ('56', 'Está reportado en Centrales de Riesgo'),
 
-        ], "97. ¿Cual es la razon secundaria de que no haya solicitado un credito?",
+        ], "97. ¿Cuál es la razón secundaria de que no haya solicitado un crédito?",
     )
 
     x_finan98_form = fields.Selection(
@@ -1970,9 +1970,9 @@ class Lead(models.Model):
         #string="Sexo",
         [('50', 'Cuenta de ahorros'),
          ('51', 'Cuenta corriente'),
-         ('52', 'Tarjetas de Credito'),
-         ('53', 'Bileteras electronicas'),
-         ('54', 'Creditos'),
+         ('52', 'Tarjetas de Crédito'),
+         ('53', 'Billeteras electrónicas'),
+         ('54', 'Créditos'),
          ('55', 'Seguros'),
          ('56', 'Ninguna de las anteriores'),
 
@@ -2024,14 +2024,14 @@ class Lead(models.Model):
          ('54', 'No cumple con los requerimientos'),
          ('55', 'Está reportado en Centrales de Riesgo'),
 
-        ], "105. ¿Cual es la razon para que no tenga una cuenta de ahorros o una cuenta corriente para su negocio?",
+        ], "105. ¿Cuál es la razón para que no tenga una cuenta de ahorros o una cuenta corriente para su negocio?",
     )
 
     x_finan106_form = fields.Selection(
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "106. ¿Sabe que son las billeteras electronicas?",
+        ], "106. ¿Sabe que son las billeteras electrónicas?",
     )
 
     x_finan107_form = fields.Selection(
@@ -2042,7 +2042,7 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "107. ¿Considera importante el uso de las billeteras electronicas para el negocio?",
+        ], "107. ¿Considera importante el uso de las billeteras electrónicas para el negocio?",
     )
 
     x_finan108_form = fields.Selection(
@@ -2074,14 +2074,14 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "95. ¿Considera que a traves de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
+        ], "95. ¿Considera que a través de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
     )
 
     x_finan96_inf = fields.Selection(
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "96. ¿Usted ha tenido acceso durante los ultimos 12 meses algun tipo de credito para invertirlo en su negocio?",
+        ], "96. ¿Usted ha tenido acceso durante los últimos 12 meses algun tipo de crédito para invertirlo en su negocio?",
     )
 
     x_finan97_inf = fields.Selection(
@@ -2092,7 +2092,7 @@ class Lead(models.Model):
          ('53', 'Compra o arriendo de maquinaria '),
          ('54', 'Otro'),
 
-        ], "97. ¿A que destino el credito solicitado?",
+        ], "97. ¿A qué destino el crédito solicitado?",
     )
 
     x_finan98_inf = fields.Selection(
@@ -2105,7 +2105,7 @@ class Lead(models.Model):
          ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
          ('56', 'Está reportado en Centrales de Riesgo'),
 
-        ], "98. ¿Cual es la razon principal de que no haya solicitado un credito?",
+        ], "98. ¿Cuál es la razón principal de que no haya solicitado un crédito?",
     )
 
     x_finan99_inf = fields.Selection(
@@ -2118,7 +2118,7 @@ class Lead(models.Model):
          ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
          ('56', 'Está reportado en Centrales de Riesgo'),
 
-        ], "99. ¿Cual es la razon secundaria de que no haya solicitado un credito?",
+        ], "99. ¿Cuál es la razón secundaria de que no haya solicitado un crédito?",
     )
 
     x_finan100_inf = fields.Selection(
@@ -2143,9 +2143,9 @@ class Lead(models.Model):
         #string="Sexo",
         [('50', 'Cuenta de ahorros'),
          ('51', 'Cuenta corriente'),
-         ('52', 'Tarjetas de Credito'),
-         ('53', 'Bileteras electronicas'),
-         ('54', 'Creditos'),
+         ('52', 'Tarjetas de Crédito'),
+         ('53', 'Billeteras electrónicas'),
+         ('54', 'Créditos'),
          ('55', 'Seguros'),
          ('56', 'Ninguna de las anteriores'),
 
@@ -2197,14 +2197,14 @@ class Lead(models.Model):
          ('54', 'No cumple con los requerimientos'),
          ('55', 'Está reportado en Centrales de Riesgo'),
 
-        ], "107. ¿Cual es la razon para que no tenga una cuenta de ahorros o una cuenta corriente para su negocio?",
+        ], "107. ¿Cuál es la razón para que no tenga una cuenta de ahorros o una cuenta corriente para su negocio?",
     )
 
     x_finan108_inf = fields.Selection(
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "108. ¿Sabe que son las billeteras electronicas?",
+        ], "108. ¿Sabe que son las billeteras electrónicas?",
     )
 
     x_finan109_inf = fields.Selection(
@@ -2215,7 +2215,7 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "109. ¿Considera importante el uso de las billeteras electronicas para el negocio?",
+        ], "109. ¿Considera importante el uso de las billeteras electrónicas para el negocio?",
     )
 
     x_finan110_inf = fields.Selection(
