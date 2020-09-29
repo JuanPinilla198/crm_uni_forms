@@ -1901,14 +1901,14 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "93. ¿Considera que a través de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
+        ], "93. ¿Considera qué a través de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
     )
 
     x_finan94_form = fields.Selection(
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "94. ¿Usted ha tenido acceso durante los últimos 12 meses algun tipo de crédito para invertirlo en su negocio?",
+        ], "94. ¿Usted ha tenido acceso durante los últimos 12 meses algún tipo de crédito para invertirlo en su negocio?",
     )
 
     x_finan95_form = fields.Selection(
@@ -1945,14 +1945,14 @@ class Lead(models.Model):
          ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
          ('56', 'Está reportado en Centrales de Riesgo'),
 
-        ], "97. ¿Cuál es la razón secundaria de que no haya solicitado un crédito?",
+        ], "97. ¿Cuál es la razón secundaría de que no haya solicitado un crédito?",
     )
 
     x_finan98_form = fields.Selection(
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "98. ¿Acude al fenomeno gota gota para financiar su negocio?",
+        ], "98. ¿Acude al fenómeno gota gota para financiar su negocio?",
     )
 
     x_finan99_form = fields.Selection(
@@ -1963,7 +1963,7 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "99. ¿Considera que los ingresos del negocio son suficientes para cubrir los gastos y costos en que incurrre el negocio?",
+        ], "99. ¿Considera qué los ingresos del negocio son suficientes para cubrir los gastos y costos en que incurrre el negocio?",
     )
 
     x_finan100_form = fields.Selection(
@@ -1983,7 +1983,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "101. ¿Necesita  acceder a servicios y productos financieros para cubrir los gastos de materia prima, salarios, entre otros?",
+        ], "101. ¿Necesita acceder a servicios y productos financieros para cubrir los gastos de materia prima, salarios, entre otros?",
     )
 
     x_finan102_form = fields.Selection(
@@ -1994,7 +1994,7 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "102. ¿Considera que los gastos fijos y los gastos financieros consumen las ganancias de su negocio?",
+        ], "102. ¿Considera qué los gastos fijos y los gastos financieros consumen las ganancias de su negocio?",
     )
 
     x_finan103_form = fields.Selection(
@@ -2005,7 +2005,7 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "103. ¿Considera importante tener los ahorros del negocio en cuentas bacarias?",
+        ], "103. ¿Considera importante tener los ahorros del negocio en cuentas bancarias?",
     )
 
     x_finan104_form = fields.Selection(
@@ -2031,7 +2031,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "106. ¿Sabe que son las billeteras electrónicas?",
+        ], "106. ¿Sabe qué son las billeteras electrónicas?",
     )
 
     x_finan107_form = fields.Selection(
@@ -2081,7 +2081,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "96. ¿Usted ha tenido acceso durante los últimos 12 meses algun tipo de crédito para invertirlo en su negocio?",
+        ], "96. ¿Usted ha tenido acceso durante los últimos 12 meses algún tipo de crédito para invertirlo en su negocio?",
     )
 
     x_finan97_inf = fields.Selection(
@@ -2118,14 +2118,14 @@ class Lead(models.Model):
          ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
          ('56', 'Está reportado en Centrales de Riesgo'),
 
-        ], "99. ¿Cuál es la razón secundaria de que no haya solicitado un crédito?",
+        ], "99. ¿Cuál es la razón secundaría de que no haya solicitado un crédito?",
     )
 
     x_finan100_inf = fields.Selection(
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "100. ¿Acude al fenomeno gota gota para financiar su negocio?",
+        ], "100. ¿Acude al fenómeno gota gota para financiar su negocio?",
     )
 
     x_finan101_inf = fields.Selection(
@@ -2156,7 +2156,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "103. ¿Necesita  acceder a servicios y productos financieros para cubrir los gastos de materia prima, salarios, entre otros?",
+        ], "103. ¿Necesita acceder a servicios y productos financieros para cubrir los gastos de materia prima, salarios, entre otros?",
     )
 
     x_finan104_inf = fields.Selection(
