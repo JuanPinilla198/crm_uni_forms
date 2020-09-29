@@ -2167,7 +2167,7 @@ class Lead(models.Model):
          ('53', 'En desacuerdo'),
          ('54', 'Totalmente en desacuerdo'),
 
-        ], "104. ¿Considera que los gastos fijos y los gastos financieros consumen las ganancias de su negocio?",
+        ], "104. ¿Considera qué los gastos fijos y los gastos financieros consumen las ganancias de su negocio?",
     )
 
     x_finan105_inf = fields.Selection(
@@ -2197,14 +2197,14 @@ class Lead(models.Model):
          ('54', 'No cumple con los requerimientos'),
          ('55', 'Está reportado en Centrales de Riesgo'),
 
-        ], "107. ¿Cuál es la razón para que no tenga una cuenta de ahorros o una cuenta corriente para su negocio?",
+        ], "107. ¿Cuál es la razón para qué no tenga una cuenta de ahorros o una cuenta corriente para su negocio?",
     )
 
     x_finan108_inf = fields.Selection(
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "108. ¿Sabe que son las billeteras electrónicas?",
+        ], "108. ¿Sabe qué son las billeteras electrónicas?",
     )
 
     x_finan109_inf = fields.Selection(
