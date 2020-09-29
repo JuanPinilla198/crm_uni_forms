@@ -654,7 +654,7 @@ class Lead(models.Model):
 
     #MÓDULO 3-PROTOCOLOS DE BIOSEGURIDAD
     x_dcont1 = fields.Boolean(
-        string="¿Desea continuar con el Formulario?",
+        string="Continuar con el Formulario",
     )
 
     x_proto1 = fields.Selection(
@@ -1091,6 +1091,442 @@ class Lead(models.Model):
 
         ], "45. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (Diseño, envase, promocion, forma de cotizar, etc.)",
     )
+    #gavii
+
+    
+#FORMALIZACION SECCION 3: ADMINISTRACION
+    x_dcont3 = fields.Boolean(
+        string="Continuar con el Formulario",
+    )
+
+    x_forma45_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "45. ¿Considera que al realizar un analisis interno y externo de su negocio, permitira la identificacion de debilidades, oportunidades,fortalezas y amenazas?",
+    )
+
+    x_forma46_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "46. ¿Considera que al realizar un analisis interno y externo de su negocio, permitira la identificacion de debilidades, oportunidades,fortalezas y amenazas?",
+    )
+
+    x_forma46_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "46. ¿Sabe como realizar un analisis interno de su negocio?",
+    )
+
+    x_forma47_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "47. ¿Sabe como realizar un analisis interno de su negocio?",
+    )
+
+    x_forma47_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "47. ¿Sabe como realizar un analisis externo de su negocio?",
+    )
+
+    x_forma48_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "48. ¿Sabe como realizar un analisis externo de su negocio?",
+    )
+
+    x_forma48_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "48. ¿Ha pensado en formalizar su negocio?",
+    )
+
+    x_forma49_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "49. ¿Tiene claro la proyección de su negocio a corto, mediano y largo plazo?",
+    )
+
+    x_forma49_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "49. ¿Para usted es importante la formalizacion de su negocio?",
+    )
+
+    x_forma50_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "50. ¿Toma medidas para desarrollar una cultura de la organización?",
+    )
+
+    x_forma50_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "50. ¿Tiene su negocio un registro mercantil?",
+    )
+
+    x_forma51_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "51. ¿Conoce las normas y estándares de calidad para productos y servicios?",
+    )
+
+    x_forma51_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "51. ¿se encuentra actualizado?",
+    )
+
+    x_forma52_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "52. ¿Cuenta con alguna norma o estandar que certifique la calidad del producto o servicio que usted ofrece?",
+    )
+
+    x_forma52_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "52. ¿Tiene este negocio RUT(Registro Único Tributario)?",
+    )
+
+    x_forma53_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "53. ¿Expedir factura permite que los clientes tengan mayor confianza y seguridad al momento de comprar sus productos o servicios?",
+    )
+
+    x_forma53_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "53. ¿se encuentra actualizado?",
+    )
+
+    x_forma54_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "54. ¿Expide factura?",
+    )
+
+    x_forma54_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "54. ¿Tiene este negocio NIT(Número de identificacion Tributaria?",
+    )
+
+    x_forma55_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "55. ¿Expide facturación electrónica?",
+    )
+
+    x_forma55_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "55. ¿Se encuentra actualizado?",
+    )
+
+    x_forma56_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "56. ¿Considera que se debe tener claridad de los impuestos presentados por su actividad económica y las frecuencias en que debe pagar?",
+    )
+
+    x_forma56_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "56. Para el funcionamiento del negocio: ¿Requiere algun permiso municipal/distrital adicional para funcionar?",
+    )
+
+    x_forma57_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "57. ¿Ha tenido que reducir la cantidad de sus trabajadores por consecuencias de la pandemia?",
+    )
+
+    x_forma57_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "57. ¿Cuenta actualmente con el permiso municipal/distrital adicional para funcionar?",
+    )
+
+    x_forma58_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "58. Antes de la pandemia COVID-19 ¿Cuantas personas de su familia trabajaban con usted en el negocio?",
+    )
+
+    x_forma58_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "58. ¿Expedir factura permite que los clientes tengan mayor confianza y seguridad al momento de comprar sus productos o servicios?",
+    )
+
+    x_forma59_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "59. Antes de la pandemia COVID-19 ¿Cuantas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
+    )
+
+    x_forma59_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "59. ¿Expide factura?",
+    )
+
+    x_forma60_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "60. ¿Cuantas personas de su familia trabajan actualmente con usted en el negocio?",
+    )
+
+    x_forma60_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "60. ¿Considera que se debe tener claridad de los impuestos presentados por su actividad económica y las frecuencias en que debe pagar?",
+    )
+
+    x_forma61_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "61. ¿Cuantas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+    )
+
+    x_forma61_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "61. ¿Ha tenido que reducir la cantidad de sus trabajadores por consecuencias de la pandemia?",
+    )
+
+    x_forma62_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "62. ¿Que tipo de contrato aplica más para los trabajadores de su negocio?",
+    )
+
+    x_forma62_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "62. Antes de la pandemia COVID-19 ¿Cuantas personas de su familia trabajaban con usted en el negocio?",
+    )
+
+    x_forma63_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "63. ¿Si tiene trabajadores como es el sistema de remuneración?  ",
+    )
+
+    x_forma63_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "63. Antes de la pandemia COVID-19 ¿Cuantas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
+    )
+
+    x_forma64_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "64. ¿Considera importante para su negocio conocer y aplicar las obligaciones correspondientes para los trabajadores que laboran en su negocio? ",
+    )
+
+    x_forma64_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "64. ¿Cuantas personas de su familia trabajan actualmente con usted en el negocio?",
+    )
+
+    x_forma65_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "65. ¿Cuantas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+    )
+
+    x_forma66_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "66. ¿Si tiene trabajadores como es el sistema de remuneracion?  ",
+    )
+
+    x_forma67_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "67. ¿Considera importante para su negocio conocer y aplicar las obligaciones correspondientes para los trabajadores que laboran en su negocio?",
+    )
+
+    x_dcont4 = fields.Boolean(
+        string="Continuar con el Formulario",
+    )
+
+    x_merc65_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "65. ¿Utiliza alguna estrategia para comercializar sus productos?",
+    )
+
+    x_merc68_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "68. ¿Utiliza alguna estrategia para comercializar sus productos?",
+    )
+
+    
+
+    x_merc66_form = fields.Char(
+        string="66. ¿Cuál es la estrategia que utiliza para comercializar sus productos o servicios?",
+        help="Escriba su estrategia", 
+    )
+
+    
+
+    x_merc69_inf = fields.Char(
+        string="69. ¿Cuál es la estrategia que utiliza para comercializar sus productos o servicios?",
+        help="Escriba su estrategia", 
+    )
+
+    x_merc67_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "67. ¿Utiliza alguna estrategia para la visibilizacion de sus productos?",
+    )
+
+    x_merc70_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "70. ¿Utiliza alguna estrategia para la visibilizacion de sus productos?",
+    )
+
+    x_merc68_form = fields.Char(
+        string="68. ¿Cuál es la estrategia que utiliza para la visibilización de sus productos o servicios?",
+        help="Escriba su respuesta", 
+    )
+
+    
+
+    x_merc71_inf = fields.Char(
+        string="71. ¿Cuál es la estrategia que utiliza para la visibilización de sus productos o servicios?",
+        help="Escriba su respuesta", 
+    )
+
+    x_merc69_form = fields.Selection(
+        #string="Sexo",
+        [('1', 'Teléfono celular no Smart'),
+         ('2', 'Smartphone'),
+         ('3', 'Computador de escritorio'),
+         ('4', 'Computador portátil'),
+         ('5', 'Tablet'),
+         ('6', 'Todas las anteriores'),
+         ('7', 'Todas las anteriores'),
+
+        ], "69. ¿Cuál es la estrategia que utiliza para la visibilización de sus productos o servicios? ",
+    )
+
+    x_merc72_inf = fields.Selection(
+        #string="Sexo",
+        [('1', 'Teléfono celular no Smart'),
+         ('2', 'Smartphone'),
+         ('3', 'Computador de escritorio'),
+         ('4', 'Computador portátil'),
+         ('5', 'Tablet'),
+         ('6', 'Todas las anteriores'),
+         ('7', 'Todas las anteriores'),
+
+        ], "72. ¿Cuál es la estrategia que utiliza para la visibilización de sus productos o servicios? ",
+    )
+
+
+
+
+   
 
     country_id = fields.Many2one('res.country', "Country")
     xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
