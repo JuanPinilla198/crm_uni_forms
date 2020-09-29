@@ -116,7 +116,7 @@ class Lead(models.Model):
             ('40', 'Maestría'),
             ('41', 'Ninguno'),
 
-        ], "14. Ultimo año de escolaridad", 
+        ], "14. Último año de escolaridad", 
     )
 
     #x_cual = fields.Char(
@@ -1945,7 +1945,7 @@ class Lead(models.Model):
          ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
          ('56', 'Está reportado en Centrales de Riesgo'),
 
-        ], "97. ¿Cuál es la razón secundaría de que no haya solicitado un crédito?",
+        ], "97. ¿Cuál es la razón secundaria de que no haya solicitado un crédito?",
     )
 
     x_finan98_form = fields.Selection(
@@ -2118,7 +2118,7 @@ class Lead(models.Model):
          ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
          ('56', 'Está reportado en Centrales de Riesgo'),
 
-        ], "99. ¿Cuál es la razón secundaría de que no haya solicitado un crédito?",
+        ], "99. ¿Cuál es la razón secundaria de que no haya solicitado un crédito?",
     )
 
     x_finan100_inf = fields.Selection(
