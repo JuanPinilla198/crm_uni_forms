@@ -654,7 +654,7 @@ class Lead(models.Model):
 
     #MÓDULO 3-PROTOCOLOS DE BIOSEGURIDAD
     x_dcont1 = fields.Boolean(
-        string="¿Desea continuar con el Formulario?",
+        string="Continuar con el Formulario",
     )
 
     x_proto1 = fields.Selection(
@@ -1091,6 +1091,1140 @@ class Lead(models.Model):
 
         ], "45. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (Diseño, envase, promocion, forma de cotizar, etc.)",
     )
+    #gavii
+
+    
+#FORMALIZACION SECCION 3: ADMINISTRACION
+    x_dcont3 = fields.Boolean(
+        string="Continuar con el Formulario",
+    )
+
+    x_forma45_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "45. ¿Considera que al realizar un analisis interno y externo de su negocio, permitira la identificacion de debilidades, oportunidades,fortalezas y amenazas?",
+    )
+
+    x_forma46_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "46. ¿Considera que al realizar un analisis interno y externo de su negocio, permitira la identificacion de debilidades, oportunidades,fortalezas y amenazas?",
+    )
+
+    x_forma46_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "46. ¿Sabe como realizar un analisis interno de su negocio?",
+    )
+
+    x_forma47_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "47. ¿Sabe como realizar un analisis interno de su negocio?",
+    )
+
+    x_forma47_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "47. ¿Sabe como realizar un analisis externo de su negocio?",
+    )
+
+    x_forma48_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "48. ¿Sabe como realizar un analisis externo de su negocio?",
+    )
+
+    x_forma48_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "48. ¿Ha pensado en formalizar su negocio?",
+    )
+
+    x_forma49_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "49. ¿Tiene claro la proyección de su negocio a corto, mediano y largo plazo?",
+    )
+
+    x_forma49_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "49. ¿Para usted es importante la formalizacion de su negocio?",
+    )
+
+    x_forma50_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "50. ¿Toma medidas para desarrollar una cultura de la organización?",
+    )
+
+    x_forma50_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "50. ¿Tiene su negocio un registro mercantil?",
+    )
+
+    x_forma51_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "51. ¿Conoce las normas y estándares de calidad para productos y servicios?",
+    )
+
+    x_forma51_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "51. ¿se encuentra actualizado?",
+    )
+
+    x_forma52_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "52. ¿Cuenta con alguna norma o estandar que certifique la calidad del producto o servicio que usted ofrece?",
+    )
+
+    x_forma52_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "52. ¿Tiene este negocio RUT(Registro Único Tributario)?",
+    )
+
+    x_forma53_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "53. ¿Expedir factura permite que los clientes tengan mayor confianza y seguridad al momento de comprar sus productos o servicios?",
+    )
+
+    x_forma53_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "53. ¿se encuentra actualizado?",
+    )
+
+    x_forma54_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "54. ¿Expide factura?",
+    )
+
+    x_forma54_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "54. ¿Tiene este negocio NIT(Número de identificacion Tributaria?",
+    )
+
+    x_forma55_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "55. ¿Expide facturación electrónica?",
+    )
+
+    x_forma55_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "55. ¿Se encuentra actualizado?",
+    )
+
+    x_forma56_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "56. ¿Considera que se debe tener claridad de los impuestos presentados por su actividad económica y las frecuencias en que debe pagar?",
+    )
+
+    x_forma56_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "56. Para el funcionamiento del negocio: ¿Requiere algun permiso municipal/distrital adicional para funcionar?",
+    )
+
+    x_forma57_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "57. ¿Ha tenido que reducir la cantidad de sus trabajadores por consecuencias de la pandemia?",
+    )
+
+    x_forma57_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "57. ¿Cuenta actualmente con el permiso municipal/distrital adicional para funcionar?",
+    )
+
+    x_forma58_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "58. Antes de la pandemia COVID-19 ¿Cuantas personas de su familia trabajaban con usted en el negocio?",
+    )
+
+    x_forma58_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "58. ¿Expedir factura permite que los clientes tengan mayor confianza y seguridad al momento de comprar sus productos o servicios?",
+    )
+
+    x_forma59_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "59. Antes de la pandemia COVID-19 ¿Cuantas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
+    )
+
+    x_forma59_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "59. ¿Expide factura?",
+    )
+
+    x_forma60_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "60. ¿Cuantas personas de su familia trabajan actualmente con usted en el negocio?",
+    )
+
+    x_forma60_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "60. ¿Considera que se debe tener claridad de los impuestos presentados por su actividad económica y las frecuencias en que debe pagar?",
+    )
+
+    x_forma61_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "61. ¿Cuantas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+    )
+
+    x_forma61_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "61. ¿Ha tenido que reducir la cantidad de sus trabajadores por consecuencias de la pandemia?",
+    )
+
+    x_forma62_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "62. ¿Que tipo de contrato aplica más para los trabajadores de su negocio?",
+    )
+
+    x_forma62_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "62. Antes de la pandemia COVID-19 ¿Cuantas personas de su familia trabajaban con usted en el negocio?",
+    )
+
+    x_forma63_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "63. ¿Si tiene trabajadores como es el sistema de remuneración?  ",
+    )
+
+    x_forma63_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "63. Antes de la pandemia COVID-19 ¿Cuantas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
+    )
+
+    x_forma64_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "64. ¿Considera importante para su negocio conocer y aplicar las obligaciones correspondientes para los trabajadores que laboran en su negocio? ",
+    )
+
+    x_forma64_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "64. ¿Cuantas personas de su familia trabajan actualmente con usted en el negocio?",
+    )
+
+    x_forma65_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "65. ¿Cuantas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+    )
+
+    x_forma66_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "66. ¿Si tiene trabajadores como es el sistema de remuneracion?  ",
+    )
+
+    x_forma67_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "67. ¿Considera importante para su negocio conocer y aplicar las obligaciones correspondientes para los trabajadores que laboran en su negocio?",
+    )
+
+    x_dcont4 = fields.Boolean(
+        string="Continuar con el Formulario",
+    )
+
+    x_merc65_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "65. ¿Utiliza alguna estrategia para comercializar sus productos?",
+    )
+
+    x_merc68_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "68. ¿Utiliza alguna estrategia para comercializar sus productos?",
+    )
+
+    
+
+    x_merc66_form = fields.Char(
+        string="66. ¿Cuál es la estrategia que utiliza para comercializar sus productos o servicios?",
+        help="Escriba su estrategia", 
+    )
+
+    
+
+    x_merc69_inf = fields.Char(
+        string="69. ¿Cuál es la estrategia que utiliza para comercializar sus productos o servicios?",
+        help="Escriba su estrategia", 
+    )
+
+    x_merc67_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "67. ¿Utiliza alguna estrategia para la visibilizacion de sus productos?",
+    )
+
+    x_merc70_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "70. ¿Utiliza alguna estrategia para la visibilizacion de sus productos?",
+    )
+
+    x_merc68_form = fields.Char(
+        string="68. ¿Cuál es la estrategia que utiliza para la visibilización de sus productos o servicios?",
+        help="Escriba su respuesta", 
+    )
+
+    x_merc71_inf = fields.Char(
+        string="71. ¿Cuál es la estrategia que utiliza para la visibilización de sus productos o servicios?",
+        help="Escriba su respuesta", 
+    )
+
+    x_merc69_form = fields.Selection(
+        #string="Sexo",
+        [('1', 'Teléfono celular no Smart'),
+         ('2', 'Smartphone'),
+         ('3', 'Computador de escritorio'),
+         ('4', 'Computador portátil'),
+         ('5', 'Tablet'),
+         ('6', 'Todas las anteriores'),
+         ('7', 'Ninguna de las anteriores'),
+
+        ], "69. ¿Cuál es la estrategia que utiliza para la visibilización de sus productos o servicios? ",
+    )
+
+    x_merc72_inf = fields.Selection(
+        #string="Sexo",
+        [('1', 'Teléfono celular no Smart'),
+         ('2', 'Smartphone'),
+         ('3', 'Computador de escritorio'),
+         ('4', 'Computador portátil'),
+         ('5', 'Tablet'),
+         ('6', 'Todas las anteriores'),
+         ('7', 'Ninguna de las anteriores'),
+
+        ], "72. ¿Cuál es la estrategia que utiliza para la visibilización de sus productos o servicios? ",
+    )
+
+    x_merc70_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "70. Para realizar las actividades propias de su negocio, ¿utiliza Internet?",
+    )
+
+    x_merc73_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "73. Para realizar las actividades propias de su negocio, ¿utiliza Internet?",
+    )
+
+    x_merc71_form = fields.Selection(
+        #string="Sexo",
+        [('1', 'Totalmente de acuerdo'),
+         ('2', 'De  acuerdo'),
+         ('3', 'Ni de acuerdo, ni en desacuerdo'),
+         ('4', 'En desacuerdo'),
+         ('5', 'Totalmente en desacuerdo'),
+
+        ], "71. ¿Considera que el las redes sociales permite mejorar la competitividad de su negocio? ",
+    )
+
+    x_merc74_inf = fields.Selection(
+        #string="Sexo",
+        [('1', 'Totalmente de acuerdo'),
+         ('2', 'De  acuerdo'),
+         ('3', 'Ni de acuerdo, ni en desacuerdo'),
+         ('4', 'En desacuerdo'),
+         ('5', 'Totalmente en desacuerdo'),
+
+        ], "74. ¿Considera que el las redes sociales permite mejorar la competitividad de su negocio? ",
+    )
+
+    x_merc72_form = fields.Selection(
+        #string="Sexo",
+        [('5', 'WhatsApp'),
+         ('5', 'Facebook'),
+         ('5', 'Twitter'),
+         ('5', 'Instagram'),
+         ('5', 'Youtube'),
+         ('5', 'Todas las anteriores'),
+         ('1', 'Ninguna de las anteriores'),
+
+        ], "72. ¿Que redes sociales utiliza para su negocio? ",
+    )
+
+    x_merc75_inf = fields.Selection(
+        #string="Sexo",
+        [('1', 'WhatsApp'),
+         ('2', 'Facebook'),
+         ('3', 'Twitter'),
+         ('4', 'Instagram'),
+         ('5', 'Youtube'),
+         ('6', 'Todas las anteriores'),
+         ('7', 'Ninguna de las anteriores'),
+
+        ], "75. ¿Que redes sociales utiliza para su negocio? ",
+    )
+
+    x_merc73_form = fields.Selection(
+        #string="Sexo",
+        [('1', 'Pago a proveedores'),
+         ('2', 'Recaudo de ventas'),
+         ('3', 'Consignaciones a terceros'),
+         ('4', 'Transferencias'),
+         ('5', 'Todas las anteriores'),
+
+        ], "73. Que actividades propias de su negocio realiza a traves de internet? ",
+    )
+
+    x_merc76_inf = fields.Selection(
+        #string="Sexo",
+        [('1', 'Pago a proveedores'),
+         ('2', 'Recaudo de ventas'),
+         ('3', 'Consignaciones a terceros'),
+         ('4', 'Transferencias'),
+         ('5', 'Todas las anteriores'),
+
+        ], "76. Que actividades propias de su negocio realiza a traves de internet? ",
+    )
+
+    x_merc74_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "74. ¿Realiza procesos de seguimiento y fidelizacion de clientes (Servicio Post-venta)?",
+    )
+
+    x_merc77_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "77. ¿Realiza procesos de seguimiento y fidelizacion de clientes (Servicio Post-venta)?",
+    )
+
+    x_merc75_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "75. ¿Sus productos o servicios cuentan con una marca que los diferencie?",
+    )
+
+    x_merc78_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "78. ¿Sus productos o servicios cuentan con una marca que los diferencie?",
+    )
+
+    x_merc76_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'De contado'),
+         ('51', 'A crédito o a plazos'),
+         ('52', 'Transferencia'),
+         ('53', 'Tarjeta de débito o crédito'),
+         ('54', 'Cheque'),
+
+        ], "76. ¿Cual es la forma de pago que mas utilizan los clientes en su negocio? ",
+    )
+
+    x_merc79_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'De contado'),
+         ('51', 'A crédito o a plazos'),
+         ('52', 'Transferencia'),
+         ('53', 'Tarjeta de débito o crédito'),
+         ('54', 'Cheque'),
+
+        ], "79. ¿Cual es la forma de pago que mas utilizan los clientes en su negocio? ",
+    )
+
+    x_merc77_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'De contado'),
+         ('51', 'A crédito o a plazos'),
+         ('52', 'Transferencia'),
+         ('53', 'Tarjeta de débito o crédito'),
+         ('54', 'Cheque'),
+
+        ], "77. ¿Cual es la forma de pago que más utiliza para comprar insumo, materia prima o pagar obligaciones? ",
+    )
+
+    x_merc80_inf = fields.Selection(
+        [('50', 'De contado'),
+         ('51', 'A crédito o a plazos'),
+         ('52', 'Transferencia'),
+         ('53', 'Tarjeta de débito o crédito'),
+         ('54', 'Cheque'),
+
+        ], "80. ¿Cual es la forma de pago que más utiliza para comprar insumo, materia prima o pagar obligaciones? ",
+    )
+
+    x_merc78_form = fields.Integer(
+        string="78. ¿Cual es su promedio de ventas ACTUAL en una semana BUENA?",
+        help="", 
+    )
+
+    x_merc81_inf = fields.Integer(
+        string="81. ¿Cual es su promedio de ventas ACTUAL en una semana BUENA?",
+        help="", 
+    )
+
+    x_merc79_form = fields.Integer(
+        string="79. ¿Cuál es su promedio de ventas ACTUAL en una semana NORMAL?",
+        help="", 
+    )
+
+    x_merc82_inf = fields.Integer(
+        string="82. ¿Cuál es su promedio de ventas ACTUAL en una semana NORMAL?",
+        help="", 
+    )
+
+    x_merc80_form = fields.Integer(
+        string="80. Antes de la pandemia COVID-19 ¿Cuál era su promedio de ventas en una semana BUENA?",
+        help="", 
+    )
+
+    x_merc83_inf = fields.Integer(
+        string="83. Antes de la pandemia COVID-19 ¿Cuál era su promedio de ventas en una semana BUENA?",
+        help="", 
+    )
+
+    x_merc81_form = fields.Integer(
+        string="81. Antes de la pandemia COVID-19 ¿Cuál era su promedio de ventas en una semana NORMAL?",
+        help="", 
+    )
+
+    x_merc84_inf = fields.Integer(
+        string="84. Antes de la pandemia COVID-19 ¿Cuál era su promedio de ventas en una semana NORMAL?",
+        help="", 
+    )
+
+    x_merc82_form = fields.Selection(
+        #string="Sexo",
+        [('1', 'Totalmente de acuerdo'),
+         ('2', 'De  acuerdo'),
+         ('3', 'Ni de acuerdo, ni en desacuerdo'),
+         ('4', 'En desacuerdo'),
+         ('5', 'Totalmente en desacuerdo'),
+
+        ], "82. ¿El grado de satisfaccion de sus clientes con el producto o servicio que usted ofrece le ha permitido mejorar sus ventas?",
+    )
+
+    x_merc85_inf = fields.Selection(
+        #string="Sexo",
+        [('1', 'Totalmente de acuerdo'),
+         ('2', 'De  acuerdo'),
+         ('3', 'Ni de acuerdo, ni en desacuerdo'),
+         ('4', 'En desacuerdo'),
+         ('5', 'Totalmente en desacuerdo'),
+
+        ], "85. ¿El grado de satisfaccion de sus clientes con el producto o servicio que usted ofrece le ha permitido mejorar sus ventas? ",
+    )
+
+    x_merc83_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "83. ¿Ha realizado actividades para detectar y vincular nuevos clientes a su negocio?",
+    )
+
+    x_merc86_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "86. ¿Ha realizado actividades para detectar y vincular nuevos clientes a su negocio?",
+    )
+
+    x_merc84_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "84. ¿Ha realizado actividades para promocionar las ventas de los productos o servicios que ofrece en su negocio?",
+    )
+
+    x_merc87_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "87. ¿Ha realizado actividades para promocionar las ventas de los productos o servicios que ofrece en su negocio?",
+    )
+
+    x_merc85_form = fields.Selection(
+        #string="Sexo",
+        [('1', 'Totalmente de acuerdo'),
+         ('2', 'De  acuerdo'),
+         ('3', 'Ni de acuerdo, ni en desacuerdo'),
+         ('4', 'En desacuerdo'),
+         ('5', 'Totalmente en desacuerdo'),
+
+        ], "85. ¿Considera importante realizar descuentos a los clientes para cerrar las ventas?",
+    )
+
+    x_merc88_inf = fields.Selection(
+        #string="Sexo",
+        [('1', 'Totalmente de acuerdo'),
+         ('2', 'De  acuerdo'),
+         ('3', 'Ni de acuerdo, ni en desacuerdo'),
+         ('4', 'En desacuerdo'),
+         ('5', 'Totalmente en desacuerdo'),
+
+        ], "88. ¿Considera importante realizar descuentos a los clientes para cerrar las ventas?",
+    )
+
+    x_merc86_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "86. ¿Su negocio depende de ventas de temporada?",
+    )
+
+    x_merc89_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "89. ¿Su negocio depende de ventas de temporada?",
+    )
+
+    x_merc87_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "87. ¿Vende mas o menos lo mismo durante la mayoria del año?",
+    )
+
+    x_merc90_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "90. ¿Vende mas o menos lo mismo durante la mayoria del año?",
+    )
+
+    #FINANZAS
+
+    x_dcont5 = fields.Boolean(
+        string="Continuar con el Formulario",
+    )
+
+    x_finan88_form = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "88. Lleva los registros contables del negocio",
+    )
+
+    x_finan91_inf = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "91. Lleva los registros contables del negocio",
+    )
+
+    x_finan92_inf = fields.Selection(
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "92. ¿Considera que debe mejorar la manera en la que lleva el registro contable del negocio?",
+    )
+
+    x_finan89_form = fields.Selection(
+        [('50', 'Contabilidad formal (libro de compras y venta,estados de resultados, etc.)'),
+         ('51', 'Registros personales'),
+         ('52', 'Contabilidad electrónica'),
+
+        ], "89. ¿De qué manera lleva los registros contables del negocio?",
+    )
+
+    x_finan90_form = fields.Selection(
+        [('50', 'Cuento con los servicios remunerados de un contador'),
+         ('51', 'Cuento con la ayuda de un contador amigo o familiar (no remunerado)'),
+         ('52', 'Me ayuda un consultorio empresarial u otra institución'),
+         ('53', 'Me ayuda un familiar, amigo o asesor con experiencia'),
+         ('54', 'Ninguna')
+
+
+        ], "90. ¿Cuenta usted con asesoría para llevar las cuentas?",
+    )
+
+    x_finan91_form = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "91. ¿Tiene claridad el margen de utilidad que genera su negocio?",
+    )
+
+    x_finan92_form = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "92. ¿Tiene la cultura de ahorrar o invertir las ganancias de su negocio? ",
+    )
+
+    x_finan93_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "93. ¿Considera que a traves de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
+    )
+
+    x_finan94_form = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "94. ¿Usted ha tenido acceso durante los ultimos 12 meses algun tipo de credito para invertirlo en su negocio?",
+    )
+
+    x_finan95_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Capital de trabajo '),
+         ('51', 'Remodelaciones o adecuaciones'),
+         ('52', 'Pago de nómina'),
+         ('53', 'Compra o arriendo de maquinaria '),
+         ('54', 'Otro'),
+
+        ], "95. ¿A que destino el credito solicitado?",
+    )
+
+    x_finan96_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'No lo necesita/No le gusta pedir prestamos'),
+         ('51', 'No sabe dónde acudir'),
+         ('52', 'Desconoce el procedimiento para solicitarlo'),
+         ('53', 'No se lo otorgarían (no cree cumplir con los requerimientos: garantías, codeudores, avales, fiadores)'),
+         ('54', 'No confía en las instituciones financieras'),
+         ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
+         ('56', 'Está reportado en Centrales de Riesgo'),
+
+        ], "96. ¿Cual es la razon principal de que no haya solicitado un credito?",
+    )
+
+    x_finan97_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'No lo necesita/No le gusta pedir prestamos'),
+         ('51', 'No sabe dónde acudir'),
+         ('52', 'Desconoce el procedimiento para solicitarlo'),
+         ('53', 'No se lo otorgarían (no cree cumplir con los requerimientos: garantías, codeudores, avales, fiadores)'),
+         ('54', 'No confía en las instituciones financieras'),
+         ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
+         ('56', 'Está reportado en Centrales de Riesgo'),
+
+        ], "97. ¿Cual es la razon secundaria de que no haya solicitado un credito?",
+    )
+
+    x_finan98_form = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "98. ¿Acude al fenomeno gota gota para financiar su negocio?",
+    )
+
+    x_finan99_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "99. ¿Considera que los ingresos del negocio son suficientes para cubrir los gastos y costos en que incurrre el negocio?",
+    )
+
+    x_finan100_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Cuenta de ahorros'),
+         ('51', 'Cuenta corriente'),
+         ('52', 'Tarjetas de Credito'),
+         ('53', 'Bileteras electronicas'),
+         ('54', 'Creditos'),
+         ('55', 'Seguros'),
+         ('56', 'Ninguna de las anteriores'),
+
+        ], "100. Seleccione los productos financieros que utiliza su negocio",
+    )
+
+    x_finan101_form = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "101. ¿Necesita  acceder a servicios y productos financieros para cubrir los gastos de materia prima, salarios, entre otros?",
+    )
+
+    x_finan102_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "102. ¿Considera que los gastos fijos y los gastos financieros consumen las ganancias de su negocio?",
+    )
+
+    x_finan103_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "103. ¿Considera importante tener los ahorros del negocio en cuentas bacarias?",
+    )
+
+    x_finan104_form = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "104. ¿Tiene cuentas bancarias del negocio?",
+    )
+
+    x_finan105_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'No la necesita/ No le interesa'),
+         ('51', 'No sabe'),
+         ('52', 'Desconoce el procedimiento para solicitar una cuenta bancaria'),
+         ('53', 'Los intereses y comisiones son muy altos'),
+         ('54', 'No cumple con los requerimientos'),
+         ('55', 'Está reportado en Centrales de Riesgo'),
+
+        ], "105. ¿Cual es la razon para que no tenga una cuenta de ahorros o una cuenta corriente para su negocio?",
+    )
+
+    x_finan106_form = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "106. ¿Sabe que son las billeteras electronicas?",
+    )
+
+    x_finan107_form = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "107. ¿Considera importante el uso de las billeteras electronicas para el negocio?",
+    )
+
+    x_finan108_form = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "108. ¿En su negocio utiliza billeteras electrónicas?",
+    )
+
+    x_finan93_inf = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "93. ¿Tiene claridad el margen de utilidad que genera su negocio?",
+    )
+
+    x_finan94_inf = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "94. ¿Tiene la cultura de ahorrar o invertir las ganancias de su negocio? ",
+    )
+
+    x_finan95_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "95. ¿Considera que a traves de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
+    )
+
+    x_finan96_inf = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "96. ¿Usted ha tenido acceso durante los ultimos 12 meses algun tipo de credito para invertirlo en su negocio?",
+    )
+
+    x_finan97_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Capital de trabajo '),
+         ('51', 'Remodelaciones o adecuaciones'),
+         ('52', 'Pago de nómina'),
+         ('53', 'Compra o arriendo de maquinaria '),
+         ('54', 'Otro'),
+
+        ], "97. ¿A que destino el credito solicitado?",
+    )
+
+    x_finan98_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'No lo necesita/No le gusta pedir prestamos'),
+         ('51', 'No sabe dónde acudir'),
+         ('52', 'Desconoce el procedimiento para solicitarlo'),
+         ('53', 'No se lo otorgarían (no cree cumplir con los requerimientos: garantías, codeudores, avales, fiadores)'),
+         ('54', 'No confía en las instituciones financieras'),
+         ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
+         ('56', 'Está reportado en Centrales de Riesgo'),
+
+        ], "98. ¿Cual es la razon principal de que no haya solicitado un credito?",
+    )
+
+    x_finan99_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'No lo necesita/No le gusta pedir prestamos'),
+         ('51', 'No sabe dónde acudir'),
+         ('52', 'Desconoce el procedimiento para solicitarlo'),
+         ('53', 'No se lo otorgarían (no cree cumplir con los requerimientos: garantías, codeudores, avales, fiadores)'),
+         ('54', 'No confía en las instituciones financieras'),
+         ('55', 'No entiende las condiciones asociadas a un crédito (tasa de interés, plazos, cuotas, etc.)'),
+         ('56', 'Está reportado en Centrales de Riesgo'),
+
+        ], "99. ¿Cual es la razon secundaria de que no haya solicitado un credito?",
+    )
+
+    x_finan100_inf = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "100. ¿Acude al fenomeno gota gota para financiar su negocio?",
+    )
+
+    x_finan101_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "101. ¿Considera que los ingresos del negocio son suficientes para cubrir los gastos y costos en que incurrre el negocio?",
+    )
+
+    x_finan102_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Cuenta de ahorros'),
+         ('51', 'Cuenta corriente'),
+         ('52', 'Tarjetas de Credito'),
+         ('53', 'Bileteras electronicas'),
+         ('54', 'Creditos'),
+         ('55', 'Seguros'),
+         ('56', 'Ninguna de las anteriores'),
+
+        ], "102. Seleccione los productos financieros que utiliza su negocio",
+    )
+
+    x_finan103_inf = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "103. ¿Necesita  acceder a servicios y productos financieros para cubrir los gastos de materia prima, salarios, entre otros?",
+    )
+
+    x_finan104_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "104. ¿Considera que los gastos fijos y los gastos financieros consumen las ganancias de su negocio?",
+    )
+
+    x_finan105_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "105. ¿Considera importante tener los ahorros del negocio en cuentas bacarias?",
+    )
+
+    x_finan106_inf = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "106. ¿Tiene cuentas bancarias del negocio?",
+    )
+
+    x_finan107_inf = fields.Selection(
+        #string="Sexo",
+        [('50', 'No la necesita/ No le interesa'),
+         ('51', 'No sabe'),
+         ('52', 'Desconoce el procedimiento para solicitar una cuenta bancaria'),
+         ('53', 'Los intereses y comisiones son muy altos'),
+         ('54', 'No cumple con los requerimientos'),
+         ('55', 'Está reportado en Centrales de Riesgo'),
+
+        ], "107. ¿Cual es la razon para que no tenga una cuenta de ahorros o una cuenta corriente para su negocio?",
+    )
+
+    x_finan108_inf = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "108. ¿Sabe que son las billeteras electronicas?",
+    )
+
+    x_finan109_inf = fields.Selection(
+        #strng="Sexo",
+        [('50', 'Totalmente de acuerdo'),
+         ('51', 'De acuerdo'),
+         ('52', 'Ni de acuerdo, ni en desacuerdo'),
+         ('53', 'En desacuerdo'),
+         ('54', 'Totalmente en desacuerdo'),
+
+        ], "109. ¿Considera importante el uso de las billeteras electronicas para el negocio?",
+    )
+
+    x_finan110_inf = fields.Selection(
+        [('50', 'Si'),
+         ('51', 'No'),
+
+        ], "110. ¿En su negocio utiliza billeteras electrónicas?",
+    )
+
 
     country_id = fields.Many2one('res.country', "Country")
     xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
