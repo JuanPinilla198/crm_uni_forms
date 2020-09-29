@@ -383,9 +383,9 @@ class Lead(models.Model):
         ], "38. ¿Cuál fue el motivo principal para la creación del negocio?",
     )
 
-    x_motivo_cual_inf = fields.Char('38. ¿Cual?')
+    x_motivo_cual_inf = fields.Char('38. ¿Cuál?')
 
-    x_motivo_cual_form = fields.Char('39. ¿Cual?')
+    x_motivo_cual_form = fields.Char('39. ¿Cuál?')
 
     x_recursos_inf = fields.Selection(
         #string="Sexo",
@@ -719,7 +719,7 @@ class Lead(models.Model):
             ('51', 'No'),
             ('52', 'No Aplica'),
 
-        ], "7. ¿Atiende de manera prioritaria a la poblacion con riesgo del COVID19, para disminuir el tiempo que permenecen en el lugar?",
+        ], "7. ¿Atiende de manera prioritaria a la población con riesgo del COVID19, para disminuir el tiempo que permenecen en el lugar?",
     )
 
     x_proto8 = fields.Selection(
@@ -729,7 +729,7 @@ class Lead(models.Model):
             ('51', 'No'),
             ('52', 'No Aplica'),
 
-        ], "8. ¿Realiza la proteccion permanente de los alimentos en exhibicion, con el uso de peliculas plasticas, tapas, vitrinas, etc?",
+        ], "8. ¿Realiza la protección permanente de los alimentos en exhibición, con el uso de películas plásticas, tapas, vitrinas, etc?",
     )
 
     x_proto9 = fields.Selection(
@@ -738,7 +738,7 @@ class Lead(models.Model):
             ('50', 'Si'),
             ('51', 'No'),
 
-        ], "9. ¿Dispone de superficies faciles de limpiar y desinfectar para ubicar los productos?",
+        ], "9. ¿Dispone de superficies fáciles de limpiar y desinfectar para ubicar los productos?",
     )
 
     x_proto10 = fields.Selection(
@@ -793,7 +793,7 @@ class Lead(models.Model):
             ('50', 'Si'),
             ('51', 'No'),
 
-        ], "15. Realiza la limpieza del espacio de trabajo al menos dos vez al dia?",
+        ], "15. Realiza la limpieza del espacio de trabajo al menos dos vez al día?",
     )
 
     x_proto16 = fields.Selection(
@@ -811,7 +811,7 @@ class Lead(models.Model):
             ('50', 'Si'),
             ('51', 'No'),
 
-        ], "17. ¿Ha recibido o recibe algun apoyo o beneficio economico por parte del Gobierno en la emergencia para usted?",
+        ], "17. ¿Ha recibido o recibe algun apoyo o beneficio económico por parte del Gobierno en la emergencia para usted?",
     )
 
     x_proto18 = fields.Selection(
@@ -822,7 +822,7 @@ class Lead(models.Model):
             ('52', 'Bonos'),
             ('53', 'Implementos de bioseguridad'),
 
-        ], "18. ¿Que tipo de beneficios?",
+        ], "18. ¿Qué tipo de beneficios?",
     )
 
     #INNOVACION DEL MODELO DE NEGOCIO
@@ -835,7 +835,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "19. ¿Ha recibido o recibe algun apoyo o beneficio economico por parte del Gobierno en la emergencia para usted?",
+        ], "19. ¿Ha recibido o recibe algun apoyo o beneficio económico por parte del Gobierno en la emergencia para usted?",
     )
 
     x_innova20 = fields.Selection(
@@ -843,7 +843,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "20. ¿Se ha capacitado en la formacion de modelos de negocio?",
+        ], "20. ¿Se ha capacitado en la formación de modelos de negocio?",
     )
 
     x_innova21 = fields.Selection(
@@ -851,7 +851,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "21. ¿Conoce los canales de distribucion para su producto?",
+        ], "21. ¿Conoce los canales de distribución para su producto?",
     )
 
     x_innova22 = fields.Selection(
@@ -882,7 +882,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "24. ¿Cuenta con personal capacitado para la produccion o manipulacion del producto?",
+        ], "24. ¿Cuenta con personal capacitado para la producción o manipulación del producto?",
     )
 
     x_innova25 = fields.Selection(
@@ -890,7 +890,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "25. ¿Cuenta con un espacio adecuado para la produccion y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad?",
+        ], "25. ¿Cuenta con un espacio adecuado para la producción y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad?",
     )
 
     x_innova26 = fields.Selection(
@@ -902,7 +902,7 @@ class Lead(models.Model):
             ('53', 'En desacuerdo'),
             ('54', 'Totalmente en desacuerdo'),
 
-        ], "26. ¿Usted considera importante que el uso de buenas practicas  manipulacion y produccion de la materia prima debe estar sujeta a estandares de calidad certificada  ¿Esto garantizara o generara confianza a los clientes para aumentar la demanda de consumo o uso de los productos  o servicios que ofrece?",
+        ], "26. ¿Usted considera importante que el uso de buenas practicas manipulacion y producción de la materia prima debe estar sujeta a estandares de calidad certificada  ¿Esto garantizará o generara confianza a los clientes para aumentar la demanda de consumo o uso de los productos  o servicios que ofrece?",
     )
 
     x_innova27 = fields.Selection(
