@@ -623,7 +623,7 @@
                               'invisible': ['|',('x_forma50_inf','!=','50'),('x_dcont3','=',False)]}"/>
 
                         <field name="x_forma52_form" attrs=
-                              "{'required': [('x_dcont3','=',True),('x_microneg','=','50')], 
+                              "{'required': [('x_dcont3','=',True),('x_microneg','=','51')], 
                               'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','51')]}"/>
 
                         <field name="x_forma52_inf"  attrs=
