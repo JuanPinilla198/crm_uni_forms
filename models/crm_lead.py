@@ -547,6 +547,8 @@ class Lead(models.Model):
         ], "44. Si el negocio es ambulante - sitio al descubierto, ¿cómo hace para conservar diariamente el mismo sitio de trabajo?",
     )
 
+    x_ambula_2_cual = fields.Char('44.1. ¿Cuál?')
+
     x_mprima_inf = fields.Selection(
         #string="Sexo",
         [

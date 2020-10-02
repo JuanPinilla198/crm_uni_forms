@@ -268,11 +268,18 @@
                               'invisible': [('x_microneg','!=','50')]}"/>
 
                     <field name="x_motivo_cual_inf" attrs=
-                              "{'required': [('x_motivo_inf','=','56'),], 
-                              'invisible': ['|',('x_motivo_inf','!=','56'),('x_microneg','!=','51')]}"/>
+                              "{'required': [('x_motivo_inf','=','59'),], 
+                              'invisible': ['|',('x_motivo_inf','!=','59'),('x_microneg','!=','51')]}"/>
                     <field name="x_motivo_cual_form" attrs=
                               "{'required': [('x_motivo_form','=','57'),], 
                               'invisible': ['|',('x_motivo_form','!=','57'),('x_microneg','!=','50')]}"/>
+
+                    <field name="x_sitio_ubi_inf" attrs=
+                              "{'required': [('x_microneg','=','51')],
+                              'invisible': [('x_microneg','!=','51')]}"/>
+                    <field name="x_sitio_ubi_cual_inf" attrs=
+                              "{'required': [('x_sitio_ubi_inf','=','57'),], 
+                              'invisible': ['|',('x_sitio_ubi_inf','!=','57'),('x_microneg','!=','51')]}"/>
 
 
                     </group>
@@ -281,16 +288,12 @@
 
 
 
-                    <field name="x_sitio_ubi_inf" attrs=
-                              "{'required': [('x_microneg','=','51')],
-                              'invisible': [('x_microneg','!=','51')]}"/>
+                    
                     <field name="x_sitio_ubi_form"  attrs=
                               "{'required': [('x_microneg','=','50')], 
                               'invisible': [('x_microneg','!=','50')]}"/>
 
-                    <field name="x_sitio_ubi_cual_inf" attrs=
-                              "{'required': [('x_sitio_ubi_inf','=','55'),], 
-                              'invisible': ['|',('x_sitio_ubi_inf','!=','55'),('x_microneg','!=','51')]}"/>
+                    
                     <field name="x_sitio_ubi_cual_form" attrs=
                               "{'required': [('x_sitio_ubi_form','=','54'),], 
                               'invisible': ['|',('x_sitio_ubi_form','!=','54'),('x_microneg','!=','50')]}"/>
@@ -316,6 +319,9 @@
                     <field name="x_ambula_2_inf" attrs=
                               "{'required': [('x_microneg','=','51')],
                               'invisible': [('x_microneg','!=','51')]}"/>
+                    <field name="x_ambula_2_cual" attrs=
+                              "{'required': [('x_ambula_2_inf','=','57'),], 
+                              'invisible': ['|',('x_ambula_2_inf','!=','57'),('x_microneg','!=','51')]}"/>
 
                     <field name="x_mprima_inf" attrs=
                               "{'required': [('x_microneg','=','51')],
@@ -663,20 +669,20 @@
                         <field name="x_forma57_inf"  attrs=
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','51')], 
                               'invisible': ['|',('x_forma56_inf','!=','50'),('x_dcont3','=',False)]}"/>
-                        <field name="x_forma58_form" attrs=
-                              "{'required': [('x_dcont3','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','51')]}"/>
                         
+                        <field name="x_forma58_inf"  attrs=
+                              "{'required': [('x_dcont3','=',True),('x_microneg','=','51')], 
+                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','50')]}"/>
 
                         
                       </group>
 
                       <group>
                         
-
-                        <field name="x_forma58_inf"  attrs=
-                              "{'required': [('x_dcont3','=',True),('x_microneg','=','51')], 
-                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','50')]}"/>
+                        <field name="x_forma58_form" attrs=
+                              "{'required': [('x_dcont3','=',True),('x_microneg','=','50')], 
+                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','51')]}"/>
+                        
 
                         <field name="x_forma59_form" attrs=
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','50')], 

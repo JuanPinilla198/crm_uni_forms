@@ -12,11 +12,11 @@
             <field name="name">Mercados</field>
         </record>
 
-        <record model="model.manipulate.many2many" id="06">
+        <record model="model.manipulate.many2many" id="07">
             <field name="name">Bonos</field>
         </record>
 
-        <record model="model.manipulate.many2many" id="07">
+        <record model="model.manipulate.many2many" id="08">
             <field name="name">Implementos de bioseguridad</field>
         </record>
         
