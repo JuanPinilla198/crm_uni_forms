@@ -404,6 +404,9 @@ class Lead(models.Model):
             ('51', 'Pensión'),
             ('52', 'ARL'),
             ('53', 'Ninguna'),
+            ('54', 'ICBF'),
+            ('55', 'SENA'),
+            ('56', 'Todas'),
 
         ], "34. ¿Cuáles son los aportes que realiza su negocio para sus trabajadores?",
     )
