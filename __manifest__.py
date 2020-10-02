@@ -17,5 +17,6 @@
         "views/crm_lead_views.xml",
         "views/crm_team_views.xml",
         'data/l10n_cities_co_data.xml',
+        'data/severalfields.xml',
     ],
 }

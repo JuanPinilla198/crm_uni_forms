@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!-- 18 Formales-->
+    <data noupdate="1">
+
+        <record model="model.manipulate.many2many" id="05">
+            <field name="name">Subsidios</field>
+        </record>
+
+        <record model="model.manipulate.many2many" id="06">
+            <field name="name">Mercados</field>
+        </record>
+
+        <record model="model.manipulate.many2many" id="06">
+            <field name="name">Bonos</field>
+        </record>
+
+        <record model="model.manipulate.many2many" id="07">
+            <field name="name">Implementos de bioseguridad</field>
+        </record>
+        
+        <record model="model.form.many2many" id="69">
+            <field name="name">Teléfono celular no Smart</field>
+        </record>
+
+        <record model="model.form.many2many" id="70">
+            <field name="name">Smartphone</field>
+        </record>
+
+        <record model="model.form.many2many" id="71">
+            <field name="name">Computador de escritorio</field>
+        </record>
+
+        <record model="model.form.many2many" id="72">
+            <field name="name">Computador portátil</field>
+        </record>
+
+        <record model="model.form.many2many" id="73">
+            <field name="name">Tablet</field>
+        </record>
+
+        <record model="model.form.many2many" id="74">
+            <field name="name">Todas las anteriores</field>
+        </record>
+
+        <record model="model.form.many2many" id="75">
+            <field name="name">Ninguna de las anteriores</field>
+        </record>
+
+        <record model="model.many2many72" id="76">
+            <field name="name">WhatsApp</field>
+        </record>
+
+        <record model="model.many2many72" id="77">
+            <field name="name">Facebook</field>
+        </record>
+
+        <record model="model.many2many72" id="78">
+            <field name="name">Instagram</field>
+        </record>
+
+        <record model="model.many2many72" id="79">
+            <field name="name">Youtube</field>
+        </record>
+
+        <record model="model.many2many72" id="80">
+            <field name="name">Twitter</field>
+        </record>
+
+        <record model="model.many2many72" id="81">
+            <field name="name">Todas las anteriores</field>
+        </record>
+
+        <record model="model.many2many72" id="82">
+            <field name="name">Ninguna de las anteriores</field>
+        </record>
+
+        <record model="model.many2many73" id="92">
+            <field name="name">Pago a proveedores</field>
+        </record>
+
+        <record model="model.many2many73" id="93">
+            <field name="name">Recaudo de ventas</field>
+        </record>
+
+        <record model="model.many2many73" id="94">
+            <field name="name">Consignaciones a terceros</field>
+        </record>
+
+        <record model="model.many2many73" id="95">
+            <field name="name">Transferencias</field>
+        </record>
+
+        <record model="model.many2many73" id="96">
+            <field name="name">Todas las anteriores</field>
+        </record>
+
+        <record model="model.many2many73" id="97">
+            <field name="name">Ninguna de las anteriores</field>
+        </record>
+
+        <record model="model.many2many75" id="101">
+            <field name="name">WhatsApp</field>
+        </record>
+
+        <record model="model.many2many75" id="102">
+            <field name="name">Facebook</field>
+        </record>
+
+        <record model="model.many2many75" id="103">
+            <field name="name">Instagram</field>
+        </record>
+
+        <record model="model.many2many75" id="104">
+            <field name="name">Youtube</field>
+        </record>
+
+        <record model="model.many2many75" id="105">
+            <field name="name">Twitter</field>
+        </record>
+
+        <record model="model.many2many75" id="106">
+            <field name="name">Todas las anteriores</field>
+        </record>
+
+        <record model="model.many2many75" id="107">
+            <field name="name">Ninguna de las anteriores</field>
+        </record>
+
+        <record model="model.many2many76" id="108">
+            <field name="name">Pago a proveedores</field>
+        </record>
+
+        <record model="model.many2many76" id="109">
+            <field name="name">Recaudo de ventas</field>
+        </record>
+
+        <record model="model.many2many76" id="110">
+            <field name="name">Consignaciones a terceros</field>
+        </record>
+
+        <record model="model.many2many76" id="111">
+            <field name="name">Transferencias</field>
+        </record>
+
+        <record model="model.many2many76" id="112">
+            <field name="name">Todas las anteriores</field>
+        </record>
+
+        <record model="model.many2many76" id="113">
+            <field name="name">Ninguna de las anteriores</field>
+        </record>
+
+        <record model="model.many2many102" id="114">
+            <field name="name">Cuenta de ahorros</field>
+        </record>
+
+        <record model="model.many2many102" id="115">
+            <field name="name">Cuenta corriente</field>
+        </record>
+
+        <record model="model.many2many102" id="116">
+            <field name="name">Tarjetas de Credito</field>
+        </record>
+
+        <record model="model.many2many102" id="117">
+            <field name="name">Billeteras electronicas</field>
+        </record>
+
+        <record model="model.many2many102" id="118">
+            <field name="name">Creditos</field>
+        </record>
+
+        <record model="model.many2many102" id="119">
+            <field name="name">Seguros</field>
+        </record>
+
+        <record model="model.many2many102" id="120">
+            <field name="name">Ninguna de las anteriores</field>
+        </record>
+
+        <record model="model.many2many176" id="121">
+            <field name="name">De contado</field>
+        </record>
+
+        <record model="model.many2many176" id="122">
+            <field name="name">A crédito o a plazos</field>
+        </record>
+
+        <record model="model.many2many176" id="123">
+            <field name="name">Transferencias</field>
+        </record>
+
+        <record model="model.many2many176" id="124">
+            <field name="name">Tarjeta de débito o crédito</field>
+        </record>
+
+        <record model="model.many2many176" id="125">
+            <field name="name">Cheque</field>
+        </record>
+
+        <record model="model.many2many176" id="126">
+            <field name="name">Todas las anteriores</field>
+        </record>
+
+        <record model="model.many2many177" id="127">
+            <field name="name">De contado</field>
+        </record>
+
+        <record model="model.many2many177" id="128">
+            <field name="name">A crédito o a plazos</field>
+        </record>
+
+        <record model="model.many2many177" id="129">
+            <field name="name">Transferencias</field>
+        </record>
+
+        <record model="model.many2many177" id="130">
+            <field name="name">Tarjeta de débito o crédito</field>
+        </record>
+
+        <record model="model.many2many177" id="131">
+            <field name="name">Cheque</field>
+        </record>
+
+        <record model="model.many2many177" id="132">
+            <field name="name">Todas las anteriores</field>
+        </record>
+</data>
+</odoo>

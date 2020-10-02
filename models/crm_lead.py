@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields, models, api, exceptions
+from odoo.exceptions import ValidationError
 
 class CountryStateCity(models.Model):
     """
@@ -16,6 +17,59 @@ class CountryStateCity(models.Model):
     country_id = fields.Many2one('res.country', 'Country', default='Colombia')
     _order = 'code'
 
+class SeveralFields(models.Model):
+    _description = 'Modelo para Manipular Many2many'
+    _name = 'model.manipulate.many2many'
+
+    name = fields.Char('Beneficios')
+
+class modelo69form(models.Model):
+    _description = 'Modelo para Manipular Many2many'
+    _name = 'model.form.many2many'
+
+    name = fields.Char('69form')
+
+class modelo72form(models.Model):
+    _description = 'Modelo para Manipular Many2many72'
+    _name = 'model.many2many72'
+
+    name = fields.Char('72form')
+
+class modelo73form(models.Model):
+    _description = 'Modelo para Manipular Many2many73'
+    _name = 'model.many2many73'
+
+    name = fields.Char('73form')
+
+class modelo75inf(models.Model):
+    _description = 'Modelo para Manipular Many2many75'
+    _name = 'model.many2many75'
+
+    name = fields.Char('75form')
+
+class modelo76inf(models.Model):
+    _description = 'Modelo para Manipular Many2many76'
+    _name = 'model.many2many76'
+
+    name = fields.Char('76form')
+
+class modelo102inf(models.Model):
+    _description = 'Modelo para Manipular Many2many102'
+    _name = 'model.many2many102'
+
+    name = fields.Char('102form')
+
+class modelo176form(models.Model):
+    _description = 'Modelo para Manipular Many2many176'
+    _name = 'model.many2many176'
+
+    name = fields.Char('176form')
+
+class modelo176form(models.Model):
+    _description = 'Modelo para Manipular Many2many177'
+    _name = 'model.many2many177'
+
+    name = fields.Char('177form')
 
 class Lead(models.Model):
     _inherit = "crm.lead"
@@ -302,7 +356,7 @@ class Lead(models.Model):
     )
 
     x_dias_sem_inf = fields.Integer(
-        string="31. ¿Cuántas horas de trabajo diario dedica para el funcionamiento del negocio?",
+        string="31. ¿Cuantos días a la semana opera su  negocio?",
     )
 
     x_dias_sem_for = fields.Integer(
@@ -310,15 +364,15 @@ class Lead(models.Model):
     )
 
     x_dias_sem_for2 = fields.Integer(
-        string="32. ¿Cuántos días a la semana dedica a su negocio?",
+        string="32. ¿Cuantos días a la semana dedica a su  negocio?",
     )
 
     x_horas_trab_inf = fields.Integer(
-        string="32. ¿Cuántas horas de trabajo diario dedica para el funcionamiento del negocio?",
+        string="32. ¿Cuántas horas de trabajo diario dedicaa su negocio?",
     )
 
     x_horas_trab_form = fields.Integer(
-        string="33. ¿Cuántas horas de trabajo diario dedica para el funcionamiento del negocio?",
+        string="33. ¿Cuántas horas de trabajo diario dedica a su negocio?",
     )
 
     x_trabajadores_inf = fields.Integer(
@@ -336,9 +390,9 @@ class Lead(models.Model):
             ('51', 'Pensión'),
             ('52', 'ARL'),
             ('53', 'Caja de compensación'),
-            ('53', 'ICBF'),
-            ('53', 'SENA'),
-            ('53', 'Todas'),
+            ('54', 'ICBF'),
+            ('55', 'SENA'),
+            ('56', 'Todas'),
 
         ], "35. ¿Cuáles son los aportes que realiza para sus trabajadores?",
     )
@@ -351,7 +405,7 @@ class Lead(models.Model):
             ('52', 'ARL'),
             ('53', 'Ninguna'),
 
-        ], "34. ¿Cuáles son los aportes que realiza su negocio?",
+        ], "34. ¿Cuáles son los aportes que realiza su negocio para sus trabajadores?",
     )
 
     x_motivo_inf = fields.Selection(
@@ -363,7 +417,10 @@ class Lead(models.Model):
             ('53', 'Complementar el ingreso familiar o mejorar el ingreso'),
             ('54', 'Para ejercer su oficio, carrera o profesión'),
             ('55', 'Pocas oportunidades de empleo'),
-            ('56', 'Otro (administrar horario, gusto, desplazamiento, búsqueda de independencia)'),
+            ('56', 'Administrar horario'),
+            ('57', 'Busqueda de independencia'),
+            ('58', 'Facilidad de desplazamiento'),
+            ('59', 'Otros'),
 
         ], "37. ¿Cuál fue el motivo principal para la creación del negocio?",
     )
@@ -378,7 +435,7 @@ class Lead(models.Model):
             ('54', 'Para ejercer su oficio, carrera o profesión'),
             ('55', 'Pocas oportunidades de empleo'),
             ('56', 'Para generar oportunidad de empleo'),
-            ('57', 'Otro (administrar horario, gusto, desplazamiento, búsqueda de independencia)'),
+            ('57', 'Otro'),
 
         ], "38. ¿Cuál fue el motivo principal para la creación del negocio?",
     )
@@ -428,9 +485,9 @@ class Lead(models.Model):
             ('52', 'De puerta a puerta o a domicilio'),
             ('53', 'Ambulante - sitio al descubierto'),
             ('54', 'Vehículo con o sin motor'),
-            ('54', 'Obra o construcción'),
-            ('54', 'Finca'),
-            ('55', 'Otro'),
+            ('55', 'Obra o construcción'),
+            ('56', 'Finca'),
+            ('57', 'Otro'),
 
         ], "39. ¿Cuál es el sitio o ubicación del negocio?",
     )
@@ -614,6 +671,8 @@ class Lead(models.Model):
         ], "47. Seleccione el principal problema que usted tiene actualmente con su negocio?",
     )
 
+    x_problema_inf_cual = fields.Char('47. ¿Cuál?')
+
     x_problema_form = fields.Selection(
         #string="Sexo",
         [
@@ -633,6 +692,10 @@ class Lead(models.Model):
 
         ], "46. Seleccione el principal problema que usted tiene actualmente con su negocio",
     )
+
+    x_problema_otro_inf = fields.Char('47.1. ¿Cuál?')
+
+    x_problema_otro_form = fields.Char('46.1. ¿Cuál?')
 
     x_prob_desc_form = fields.Char(
         string="47. Una vez seleccionado el principal problema del micronegocio, descríbalo en una frase",
@@ -814,16 +877,7 @@ class Lead(models.Model):
         ], "17. ¿Ha recibido o recibe algun apoyo o beneficio económico por parte del Gobierno en la emergencia para usted?",
     )
 
-    x_proto18 = fields.Selection(
-        #string="Sexo",
-        [
-            ('50', 'Subsidios'),
-            ('51', 'Mercados'),
-            ('52', 'Bonos'),
-            ('53', 'Implementos de bioseguridad'),
-
-        ], "18. ¿Qué tipo de beneficios?",
-    )
+    x_proto18 = fields.Many2many('model.manipulate.many2many', string="18. ¿Que tipo de beneficios?")
 
     #INNOVACION DEL MODELO DE NEGOCIO
     x_dcont2 = fields.Boolean(
@@ -835,7 +889,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "19. ¿Ha recibido o recibe algun apoyo o beneficio económico por parte del Gobierno en la emergencia para usted?",
+        ], "19. ¿Conoce usted que es un  modelo de negocio?",
     )
 
     x_innova20 = fields.Selection(
@@ -862,7 +916,7 @@ class Lead(models.Model):
             ('52', 'Canal Distribuidor:  Productor-Distribuidor-Minorista-Consumidor'),
             ('53', 'Canal Broker: Productor-Mayorista-Distribuidor-Minorista-Consumidor'),
 
-        ], "22. ¿Qué tipo de beneficios?",
+        ], "22. ¿Cuál es el canal de distribución  que utiliza para su negocio?",
     )
 
     x_innova23 = fields.Selection(
@@ -990,7 +1044,7 @@ class Lead(models.Model):
          ('51', 'Por el punto de equilibrio'),
          ('52', 'Costos fijos + variables + costos de utilidad'),
 
-        ], "37. ¿Sabe lo qué le cuesta a su negocio la producción y comercialización del producto o servicio?",
+        ], "37. ¿Como define el  precio de venta de su producto o servicio? ",
     )
 
     x_innova38 = fields.Selection(
@@ -1109,8 +1163,11 @@ class Lead(models.Model):
 
     x_forma46_form = fields.Selection(
         #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
+        [('1', 'Totalmente de acuerdo'),
+         ('2', 'De  acuerdo'),
+         ('3', 'Ni de acuerdo, ni en desacuerdo'),
+         ('4', 'En desacuerdo'),
+         ('5', 'Totalmente en desacuerdo'),
 
         ], "46. ¿Considera que al realizar un análisis interno y externo de su negocio, permitirá la identificación de debilidades, oportunidades,fortalezas y amenazas?",
     )
@@ -1269,8 +1326,11 @@ class Lead(models.Model):
 
     x_forma56_form = fields.Selection(
         #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
+        [('1', 'Totalmente de acuerdo'),
+         ('2', 'De  acuerdo'),
+         ('3', 'Ni de acuerdo, ni en desacuerdo'),
+         ('4', 'En desacuerdo'),
+         ('5', 'Totalmente en desacuerdo'),
 
         ], "56. ¿Considera que se debe tener claridad de los impuestos presentados por su actividad económica y las frecuencias en que debe pagar?",
     )
@@ -1299,13 +1359,17 @@ class Lead(models.Model):
         ], "57. ¿Cuenta actualmente con el permiso municipal/distrital adicional para funcionar?",
     )
 
-    x_forma58_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "58. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
+    x_forma58_form = fields.Integer(
+        string="58. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
     )
+
+    #x_forma58_form = fields.Selection(
+        #string="Sexo",
+     #3   [('50', 'Si'),
+       #  ('51', 'No'),
+
+        #], "58. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
+    #)
 
     x_forma58_inf = fields.Selection(
         #string="Sexo",
@@ -1315,13 +1379,17 @@ class Lead(models.Model):
         ], "58. ¿Expedir factura permite que los clientes tengan mayor confianza y seguridad al momento de comprar sus productos o servicios?",
     )
 
-    x_forma59_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "59. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
+    x_forma59_form = fields.Integer(
+        string="59. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
     )
+
+    #x_forma59_form = fields.Selection(
+        #string="Sexo",
+       # [('50', 'Si'),
+       #  ('51', 'No'),
+
+      #  ], "59. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
+    #)
 
     x_forma59_inf = fields.Selection(
         #string="Sexo",
@@ -1331,13 +1399,17 @@ class Lead(models.Model):
         ], "59. ¿Expide factura?",
     )
 
-    x_forma60_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "60. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
+    x_forma60_form = fields.Integer(
+        string="60. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
     )
+
+    #x_forma60_form = fields.Selection(
+   #     #string="Sexo",
+    #    [('50', 'Si'),
+     #    ('51', 'No'),
+#
+ #       ], "60. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
+  #  )
 
     x_forma60_inf = fields.Selection(
         #string="Sexo",
@@ -1347,90 +1419,141 @@ class Lead(models.Model):
         ], "60. ¿Considera que se debe tener claridad de los impuestos presentados por su actividad económica y las frecuencias en que debe pagar?",
     )
 
-    x_forma61_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "61. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+    x_forma61_form = fields.Integer(
+        string="61. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
     )
+
+    #x_forma61_form = fields.Selection(
+        #string="Sexo",
+     #   [('50', 'Si'),
+      #   ('51', 'No'),
+
+        #], "61. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+    #)
 
     x_forma61_inf = fields.Selection(
         #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
+        [('60', 'Si'),
+         ('61', 'No'),
 
         ], "61. ¿Ha tenido que reducir la cantidad de sus trabajadores por consecuencias de la pandemia?",
     )
 
     x_forma62_form = fields.Selection(
         #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
+        [('60', 'Contrato a término fijo'),
+         ('61', 'Contrato a término indefinido'),
+         ('62', 'Contrato por obra o labor'),
 
         ], "62. ¿Qué tipo de contrato aplica más para los trabajadores de su negocio?",
     )
 
-    x_forma62_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "62. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
+    x_forma62_inf = fields.Integer(
+        string="62. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
     )
+
+    #x_forma62_inf = fields.Selection(
+     #   #string="Sexo",
+      #  [('50', 'Si'),
+      #   ('51', 'No'),
+
+       # ], "62. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
+    #)
 
     x_forma63_form = fields.Selection(
         #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
+        [('50', 'Pago por hora'),
+         ('51', 'Pago diario'),
+         ('52', 'Pago semanal'),
+         ('53', 'Pago quincenal'),
+         ('54', 'Pago mensual'),
 
         ], "63. ¿Si tiene trabajadores como es el sistema de remuneración?  ",
     )
 
-    x_forma63_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "63. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
+    x_forma63_inf = fields.Integer(
+        string="63. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
     )
+
+    #x_forma63_inf = fields.Selection(
+        #string="Sexo",
+     #   [('50', 'Si'),
+      #   ('51', 'No'),
+
+       # ], "63. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
+    #)
 
     x_forma64_form = fields.Selection(
         #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
+        [('1', 'Totalmente de acuerdo'),
+         ('2', 'De  acuerdo'),
+         ('3', 'Ni de acuerdo, ni en desacuerdo'),
+         ('4', 'En desacuerdo'),
+         ('5', 'Totalmente en desacuerdo'),
 
         ], "64. ¿Considera importante para su negocio conocer y aplicar las obligaciones correspondientes para los trabajadores que laboran en su negocio?",
     )
 
-    x_forma64_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "64. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
+    x_forma64_inf = fields.Integer(
+        string="64. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
     )
 
-    x_forma65_inf = fields.Selection(
+    #x_forma64_inf = fields.Selection(
         #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
+     #   [('50', 'Si'),
+      #   ('51', 'No'),
 
-        ], "65. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+       # ], "64. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
+    #)
+
+    x_forma65_inf = fields.Integer(
+        string="65. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
     )
 
+    #x_forma65_inf = fields.Selection(
+        #string="Sexo",
+     #   [('50', 'Si'),
+      #   ('51', 'No'),
+
+       # ], "65. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+    #)
+    
     x_forma66_inf = fields.Selection(
         #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
+        [('50', 'Pago por hora'),
+         ('51', 'Pago diario'),
+         ('52', 'Pago semanal'),
+         ('53', 'Pago quincenal'),
+         ('54', 'Pago mensual'),
+         ('55', 'Labor o pieza'),
+         ('55', 'Sin remuneracion'),
 
-        ], "66. ¿Si tiene trabajadores como es el sistema de remuneración?",
+        ], "63. ¿Si tiene trabajadores como es el sistema de remuneración?  ",
     )
+
+    #x_forma66_inf = fields.Selection(
+        #string="Sexo",
+     #   [('50', 'Si'),
+      #   ('51', 'No'),
+
+       # ], "66. ¿Si tiene trabajadores como es el sistema de remuneración?",
+    #)
+
+    #x_forma67_inf = fields.Selection(
+        #string="Sexo",
+     #   [('50', 'Si'),
+      #   ('51', 'No'),
+
+       # ], "67. ¿Considera importante para su negocio conocer y aplicar las obligaciones correspondientes para los trabajadores que laboran en su negocio?",
+    #)
 
     x_forma67_inf = fields.Selection(
         #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
+        [('1', 'Totalmente de acuerdo'),
+         ('2', 'De  acuerdo'),
+         ('3', 'Ni de acuerdo, ni en desacuerdo'),
+         ('4', 'En desacuerdo'),
+         ('5', 'Totalmente en desacuerdo'),
 
         ], "67. ¿Considera importante para su negocio conocer y aplicar las obligaciones correspondientes para los trabajadores que laboran en su negocio?",
     )
@@ -1495,18 +1618,22 @@ class Lead(models.Model):
         help="Escriba su respuesta", 
     )
 
-    x_merc69_form = fields.Selection(
-        #string="Sexo",
-        [('1', 'Teléfono celular no Smart'),
-         ('2', 'Smartphone'),
-         ('3', 'Computador de escritorio'),
-         ('4', 'Computador portátil'),
-         ('5', 'Tablet'),
-         ('6', 'Todas las anteriores'),
-         ('7', 'Ninguna de las anteriores'),
+    x_merc69_form = fields.Many2many('model.form.many2many', string = "69. ¿Que medios electrónicos utiliza?")
 
-        ], "69. ¿Cuál es la estrategia que utiliza para la visibilización de sus productos o servicios? ",
-    )
+    
+
+    #x_merc69_form = fields.model.many2many(
+        #string="Sexo",
+        ##[('1', 'Teléfono celular no Smart'),
+     #    ('2', 'Smartphone'),
+      #   ('3', 'Computador de escritorio'),
+       #  ('4', 'Computador portátil'),
+        # ('5', 'Tablet'),
+        # ('6', 'Todas las anteriores'),
+        # ('7', 'Ninguna de las anteriores'),
+
+        #], "69. ¿Que medios electrónicos utiliza? ",
+   # )
 
     x_merc72_inf = fields.Selection(
         #string="Sexo",
@@ -1518,7 +1645,7 @@ class Lead(models.Model):
          ('6', 'Todas las anteriores'),
          ('7', 'Ninguna de las anteriores'),
 
-        ], "72. ¿Cuál es la estrategia que utiliza para la visibilización de sus productos o servicios? ",
+        ], "72. ¿Que medios electrónicos utiliza? ",
     )
 
     x_merc70_form = fields.Selection(
@@ -1559,53 +1686,37 @@ class Lead(models.Model):
         ], "74. ¿Considera que las redes sociales permite mejorar la competitividad de su negocio? ",
     )
 
-    x_merc72_form = fields.Selection(
+    x_merc72_form = fields.Many2many('model.many2many72', string="72. ¿Qué redes sociales utiliza para su negocio?")
+
+    x_merc75_inf = fields.Many2many('model.many2many75', string="75. ¿Qué redes sociales utiliza para su negocio? ")
+
+    x_merc76_inf = fields.Many2many('model.many2many76', string="76. ¿Qué actividades propias de su negocio realiza a través de internet?")
+
+    #x_merc75_inf = fields.Selection(
         #string="Sexo",
-        [('5', 'WhatsApp'),
-         ('5', 'Facebook'),
-         ('5', 'Twitter'),
-         ('5', 'Instagram'),
-         ('5', 'Youtube'),
-         ('5', 'Todas las anteriores'),
-         ('1', 'Ninguna de las anteriores'),
+     #   [('1', 'WhatsApp'),
+        # ('2', 'Facebook'),
+      #   ('3', 'Twitter'),
+       #  ('4', 'Instagram'),
+        # ('5', 'Youtube'),
+        # ('6', 'Todas las anteriores'),
+        # ('7', 'Ninguna de las anteriores'),
 
-        ], "72. ¿Qué redes sociales utiliza para su negocio? ",
-    )
+        #], "75. ¿Qué redes sociales utiliza para su negocio? ",
+    #)
+    
+    x_merc73_form = fields.Many2many('model.many2many73', string="73. ¿Qué actividades propias de su negocio realiza a través de internet?")
 
-    x_merc75_inf = fields.Selection(
+    #x_merc76_inf = fields.Selection(
         #string="Sexo",
-        [('1', 'WhatsApp'),
-         ('2', 'Facebook'),
-         ('3', 'Twitter'),
-         ('4', 'Instagram'),
-         ('5', 'Youtube'),
-         ('6', 'Todas las anteriores'),
-         ('7', 'Ninguna de las anteriores'),
+     #   [('1', 'Pago a proveedores'),
+      #   ('2', 'Recaudo de ventas'),
+       #  ('3', 'Consignaciones a terceros'),
+       #  ('4', 'Transferencias'),
+        # ('5', 'Todas las anteriores'),
 
-        ], "75. ¿Qué redes sociales utiliza para su negocio? ",
-    )
-
-    x_merc73_form = fields.Selection(
-        #string="Sexo",
-        [('1', 'Pago a proveedores'),
-         ('2', 'Recaudo de ventas'),
-         ('3', 'Consignaciones a terceros'),
-         ('4', 'Transferencias'),
-         ('5', 'Todas las anteriores'),
-
-        ], "73. ¿Qué actividades propias de su negocio realiza a través de internet? ",
-    )
-
-    x_merc76_inf = fields.Selection(
-        #string="Sexo",
-        [('1', 'Pago a proveedores'),
-         ('2', 'Recaudo de ventas'),
-         ('3', 'Consignaciones a terceros'),
-         ('4', 'Transferencias'),
-         ('5', 'Todas las anteriores'),
-
-        ], "76. ¿Qué actividades propias de su negocio realiza a través de internet? ",
-    )
+     #   ], "76. ¿Qué actividades propias de su negocio realiza a través de internet? ",
+    #)#
 
     x_merc74_form = fields.Selection(
         #string="Sexo",
@@ -1639,16 +1750,18 @@ class Lead(models.Model):
         ], "78. ¿Sus productos o servicios cuentan con una marca que los diferencie?",
     )
 
-    x_merc76_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'De contado'),
-         ('51', 'A crédito o a plazos'),
-         ('52', 'Transferencia'),
-         ('53', 'Tarjeta de débito o crédito'),
-         ('54', 'Cheque'),
+    x_merc76_form = fields.Many2many('model.many2many176', string="76. ¿Cuál es la forma de pago que más utilizan los clientes en su negocio?")
 
-        ], "76. ¿Cuál es la forma de pago que más utilizan los clientes en su negocio? ",
-    )
+    #x_merc76_form = fields.Selection(
+     #   #string="Sexo",
+      #  [('50', 'De contado'),
+       #  ('51', 'A crédito o a plazos'),
+       #  ('52', 'Transferencia'),
+       #  ('53', 'Tarjeta de débito o crédito'),
+       #  ('54', 'Cheque'),
+
+        #], "76. ¿Cuál es la forma de pago que más utilizan los clientes en su negocio? ",
+    #)
 
     x_merc79_inf = fields.Selection(
         #string="Sexo",
@@ -1661,16 +1774,18 @@ class Lead(models.Model):
         ], "79. ¿Cuál es la forma de pago que más utilizan los clientes en su negocio? ",
     )
 
-    x_merc77_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'De contado'),
-         ('51', 'A crédito o a plazos'),
-         ('52', 'Transferencia'),
-         ('53', 'Tarjeta de débito o crédito'),
-         ('54', 'Cheque'),
+    x_merc77_form = fields.Many2many('model.many2many177', string="77. ¿Cuál es la forma de pago que más utiliza para comprar insumo, materia prima o pagar obligaciones? ")
 
-        ], "77. ¿Cuál es la forma de pago que más utiliza para comprar insumo, materia prima o pagar obligaciones? ",
-    )
+    #x_merc77_form = fields.Selection(
+        #string="Sexo",
+     #   [('50', 'De contado'),
+      #   ('51', 'A crédito o a plazos'),
+       #  ('52', 'Transferencia'),
+        # ('53', 'Tarjeta de débito o crédito'),
+       #  ('54', 'Cheque'),
+
+        #3], "77. ¿Cuál es la forma de pago que más utiliza para comprar insumo, materia prima o pagar obligaciones? ",
+    #)
 
     x_merc80_inf = fields.Selection(
         [('50', 'De contado'),
@@ -2095,6 +2210,11 @@ class Lead(models.Model):
         ], "97. ¿A qué destino el crédito solicitado?",
     )
 
+    x_cual_97 = fields.Char(
+        string="97.1 Cual?",
+        help="Escriba los detalles",
+    )
+
     x_finan98_inf = fields.Selection(
         #string="Sexo",
         [('50', 'No lo necesita/No le gusta pedir prestamos'),
@@ -2139,18 +2259,22 @@ class Lead(models.Model):
         ], "101. ¿Considera que los ingresos del negocio son suficientes para cubrir los gastos y costos en que incurrre el negocio?",
     )
 
-    x_finan102_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Cuenta de ahorros'),
-         ('51', 'Cuenta corriente'),
-         ('52', 'Tarjetas de Crédito'),
-         ('53', 'Billeteras electrónicas'),
-         ('54', 'Créditos'),
-         ('55', 'Seguros'),
-         ('56', 'Ninguna de las anteriores'),
+    x_finan102_inf = fields.Many2many('model.many2many102', string="102. Seleccione los productos financieros que utiliza su negocio")
 
-        ], "102. Seleccione los productos financieros que utiliza su negocio",
-    )
+    #x_finan102_inf = fields.Selection(
+        #string="Sexo",
+   #     [('50', 'Cuenta de ahorros'),
+    #     ('51', 'Cuenta corriente'),
+     #    ('52', 'Tarjetas de Crédito'),
+      #   ('53', 'Billeteras electrónicas'),
+       #  ('54', 'Créditos'),
+        # ('55', 'Seguros'),
+        #3 ('56', 'Ninguna de las anteriores'),
+
+        #], "102. Seleccione los productos financieros que utiliza su negocio",
+    #)
+
+
 
     x_finan103_inf = fields.Selection(
         [('50', 'Si'),
@@ -2263,4 +2387,32 @@ class Lead(models.Model):
             'domain': {domain: [('id', 'in', id_domain)]},
             'value': {domain: ''}
         }
+
+    @api.constrains('x_dias_sem_inf','x_dias_sem_for','x_dias_sem_for2','x_horas_trab_inf',
+                    'x_trabajadores_form','x_innova34','x_forma59_form','x_forma58_form',
+                    'x_forma60_form','x_forma61_form','x_trabajadores_inf')
+    def _check_value_1(self):
+        if self.x_dias_sem_inf > 7 or self.x_dias_sem_inf < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 7. (Pregunta 31)")
+        if self.x_dias_sem_for > 7 or self.x_dias_sem_for < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 7. (Pregunta 31)")
+        if self.x_dias_sem_for2 > 7 or self.x_dias_sem_for2 < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 7. (Pregunta 32)")
+        if self.x_horas_trab_inf > 24 or self.x_horas_trab_inf < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 24. (Pregunta 32)")
+        if self.x_trabajadores_form > 9 or self.x_trabajadores_form < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 34)")
+        if self.x_innova34 > 42 or self.x_innova34 < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 42. (Pregunta 34)")
+        if self.x_forma58_form > 9 or self.x_forma58_form < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 58)")
+        if self.x_forma59_form > 9 or self.x_forma59_form < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 59)")
+        if self.x_forma60_form > 9 or self.x_forma60_form < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 60)")
+        if self.x_forma61_form > 9 or self.x_forma61_form < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 61)")
+        if self.x_trabajadores_inf > 9 or self.x_trabajadores_inf < 0:
+            raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 33)")
+
 
