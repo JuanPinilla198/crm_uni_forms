@@ -1530,7 +1530,7 @@ class Lead(models.Model):
          ('55', 'Labor o pieza'),
          ('55', 'Sin remuneracion'),
 
-        ], "63. ¿Si tiene trabajadores como es el sistema de remuneración?  ",
+        ], "66. ¿Si tiene trabajadores como es el sistema de remuneración?  ",
     )
 
     #x_forma66_inf = fields.Selection(
