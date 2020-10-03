@@ -2420,11 +2420,11 @@ class Lead(models.Model):
             raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 61)")
         if self.x_trabajadores_inf > 9 or self.x_trabajadores_inf < 0:
             raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 33)")
-        if self.x_reinvierte_form > 100 or self.x_reinvierte_form < 1:
+        if self.x_reinvierte_form > 100 or self.x_reinvierte_form < 0:
             raise ValidationError("Ingrese un valor entre 1 y 100. (Pregunta 48)")
-        if self.x_clientes_form > 100 or self.x_clientes_form < 1:
+        if self.x_clientes_form > 100 or self.x_clientes_form < 0:
             raise ValidationError("Ingrese un valor entre 1 y 100. (Pregunta 45)")
-        if self.x_clientes_inf > 100 or self.x_clientes_inf < 1:
+        if self.x_clientes_inf > 100 or self.x_clientes_inf < 0:
             raise ValidationError("Ingrese un valor entre 1 y 100. (Pregunta 46)")
 
 
