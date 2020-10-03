@@ -48,31 +48,31 @@
             <field name="name">Ninguna de las anteriores</field>
         </record>
 
-        <record model="model.inf.many2many" id="69">
+        <record model="model.inf.many2many" id="169">
             <field name="name">Teléfono celular no Smart</field>
         </record>
 
-        <record model="model.inf.many2many" id="70">
+        <record model="model.inf.many2many" id="170">
             <field name="name">Smartphone</field>
         </record>
 
-        <record model="model.inf.many2many" id="71">
+        <record model="model.inf.many2many" id="171">
             <field name="name">Computador de escritorio</field>
         </record>
 
-        <record model="model.inf.many2many" id="72">
+        <record model="model.inf.many2many" id="172">
             <field name="name">Computador portátil</field>
         </record>
 
-        <record model="model.inf.many2many" id="73">
+        <record model="model.inf.many2many" id="173">
             <field name="name">Tablet</field>
         </record>
 
-        <record model="model.inf.many2many" id="74">
+        <record model="model.inf.many2many" id="174">
             <field name="name">Todas las anteriores</field>
         </record>
 
-        <record model="model.inf.many2many" id="75">
+        <record model="model.inf.many2many" id="175">
             <field name="name">Ninguna de las anteriores</field>
         </record>
 
