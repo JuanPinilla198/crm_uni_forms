@@ -1028,13 +1028,13 @@
                                 'invisible': ['|',('x_dcont5','=',False),('x_finan96_inf','!=','51')]}"/>
                   
                   <field name="x_finan96_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_finan94_form','!=','50')], 
+                              "{'required': [('x_dcont5','=',True),('x_finan94_form','=','51')], 
                               'invisible': ['|',('x_dcont5','=',False),('x_finan94_form','!=','51')]}"/>
                   <field name="x_finan100_inf" attrs=
                                 "{'required': [('x_dcont5','=',True),('x_microneg','=','51')], 
                                 'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','50')]}"/>
                    <field name="x_finan97_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_finan94_form','!=','50')], 
+                              "{'required': [('x_dcont5','=',True),('x_finan94_form','=','51')], 
                               'invisible': ['|',('x_dcont5','=',False),('x_finan94_form','!=','51')]}"/>
                   <field name="x_finan101_inf" attrs=
                                 "{'required': [('x_dcont5','=',True),('x_microneg','=','51')], 
@@ -1091,7 +1091,7 @@
                               "{'required': [('x_dcont5','=',True),('x_microneg','=','50')], 
                               'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','51')]}"/>
                   <field name="x_finan107_inf" attrs=
-                                "{'required': [('x_dcont5','=',True),('x_finan106_inf','!=','50')], 
+                                "{'required': [('x_dcont5','=',True),('x_finan106_inf','=','51')], 
                                 'invisible': ['|',('x_finan106_inf','!=','51'),('x_microneg','=','50')]}"/>
                   
                   <field name="x_finan104_form" attrs=
