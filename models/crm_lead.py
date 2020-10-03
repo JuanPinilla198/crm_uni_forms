@@ -173,11 +173,6 @@ class Lead(models.Model):
         ], "14. Último año de escolaridad", 
     )
 
-    #x_cual = fields.Char(
-        #string="Cual?",
-        #help="Escriba los detalles",
-    #)
-
     x_grupos = fields.Selection(
     	[
             ('40', 'Si'),
@@ -1368,14 +1363,6 @@ class Lead(models.Model):
         string="58. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
     )
 
-    #x_forma58_form = fields.Selection(
-        #string="Sexo",
-     #3   [('50', 'Si'),
-       #  ('51', 'No'),
-
-        #], "58. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
-    #)
-
     x_forma58_inf = fields.Selection(
         #string="Sexo",
         [('50', 'Si'),
@@ -1387,14 +1374,6 @@ class Lead(models.Model):
     x_forma59_form = fields.Integer(
         string="59. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
     )
-
-    #x_forma59_form = fields.Selection(
-        #string="Sexo",
-       # [('50', 'Si'),
-       #  ('51', 'No'),
-
-      #  ], "59. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
-    #)
 
     x_forma59_inf = fields.Selection(
         #string="Sexo",
@@ -1408,14 +1387,6 @@ class Lead(models.Model):
         string="60. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
     )
 
-    #x_forma60_form = fields.Selection(
-   #     #string="Sexo",
-    #    [('50', 'Si'),
-     #    ('51', 'No'),
-#
- #       ], "60. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
-  #  )
-
     x_forma60_inf = fields.Selection(
         #string="Sexo",
         [('50', 'Si'),
@@ -1427,14 +1398,6 @@ class Lead(models.Model):
     x_forma61_form = fields.Integer(
         string="61. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
     )
-
-    #x_forma61_form = fields.Selection(
-        #string="Sexo",
-     #   [('50', 'Si'),
-      #   ('51', 'No'),
-
-        #], "61. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
-    #)
 
     x_forma61_inf = fields.Selection(
         #string="Sexo",
@@ -1457,14 +1420,6 @@ class Lead(models.Model):
         string="62. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
     )
 
-    #x_forma62_inf = fields.Selection(
-     #   #string="Sexo",
-      #  [('50', 'Si'),
-      #   ('51', 'No'),
-
-       # ], "62. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
-    #)
-
     x_forma63_form = fields.Selection(
         #string="Sexo",
         [('50', 'Pago por hora'),
@@ -1479,14 +1434,6 @@ class Lead(models.Model):
     x_forma63_inf = fields.Integer(
         string="63. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
     )
-
-    #x_forma63_inf = fields.Selection(
-        #string="Sexo",
-     #   [('50', 'Si'),
-      #   ('51', 'No'),
-
-       # ], "63. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajaban con usted en el negocio?",
-    #)
 
     x_forma64_form = fields.Selection(
         #string="Sexo",
@@ -1503,25 +1450,9 @@ class Lead(models.Model):
         string="64. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
     )
 
-    #x_forma64_inf = fields.Selection(
-        #string="Sexo",
-     #   [('50', 'Si'),
-      #   ('51', 'No'),
-
-       # ], "64. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
-    #)
-
     x_forma65_inf = fields.Integer(
         string="65. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
     )
-
-    #x_forma65_inf = fields.Selection(
-        #string="Sexo",
-     #   [('50', 'Si'),
-      #   ('51', 'No'),
-
-       # ], "65. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
-    #)
     
     x_forma66_inf = fields.Selection(
         #string="Sexo",
@@ -1535,22 +1466,6 @@ class Lead(models.Model):
 
         ], "66. ¿Si tiene trabajadores como es el sistema de remuneración?  ",
     )
-
-    #x_forma66_inf = fields.Selection(
-        #string="Sexo",
-     #   [('50', 'Si'),
-      #   ('51', 'No'),
-
-       # ], "66. ¿Si tiene trabajadores como es el sistema de remuneración?",
-    #)
-
-    #x_forma67_inf = fields.Selection(
-        #string="Sexo",
-     #   [('50', 'Si'),
-      #   ('51', 'No'),
-
-       # ], "67. ¿Considera importante para su negocio conocer y aplicar las obligaciones correspondientes para los trabajadores que laboran en su negocio?",
-    #)
 
     x_forma67_inf = fields.Selection(
         #string="Sexo",
@@ -1583,14 +1498,10 @@ class Lead(models.Model):
         ], "68. ¿Utiliza alguna estrategia para comercializar sus productos?",
     )
 
-    
-
     x_merc66_form = fields.Char(
         string="66. ¿Cuál es la estrategia que utiliza para comercializar sus productos o servicios?",
         help="Escriba su estrategia", 
     )
-
-    
 
     x_merc69_inf = fields.Char(
         string="69. ¿Cuál es la estrategia que utiliza para comercializar sus productos o servicios?",
@@ -1625,34 +1536,8 @@ class Lead(models.Model):
 
     x_merc69_form = fields.Many2many('model.form.many2many', string = "69. ¿Que medios electrónicos utiliza?")
 
+    x_merc72_inf = fields.Many2many('model.form.many2many', string = "72. ¿Que medios electrónicos utiliza?")
     
-
-    #x_merc69_form = fields.model.many2many(
-        #string="Sexo",
-        ##[('1', 'Teléfono celular no Smart'),
-     #    ('2', 'Smartphone'),
-      #   ('3', 'Computador de escritorio'),
-       #  ('4', 'Computador portátil'),
-        # ('5', 'Tablet'),
-        # ('6', 'Todas las anteriores'),
-        # ('7', 'Ninguna de las anteriores'),
-
-        #], "69. ¿Que medios electrónicos utiliza? ",
-   # )
-
-    x_merc72_inf = fields.Selection(
-        #string="Sexo",
-        [('1', 'Teléfono celular no Smart'),
-         ('2', 'Smartphone'),
-         ('3', 'Computador de escritorio'),
-         ('4', 'Computador portátil'),
-         ('5', 'Tablet'),
-         ('6', 'Todas las anteriores'),
-         ('7', 'Ninguna de las anteriores'),
-
-        ], "72. ¿Que medios electrónicos utiliza? ",
-    )
-
     x_merc70_form = fields.Selection(
         #string="Sexo",
         [('50', 'Si'),
@@ -2396,7 +2281,7 @@ class Lead(models.Model):
     @api.constrains('x_dias_sem_inf','x_dias_sem_for','x_dias_sem_for2','x_horas_trab_inf',
                     'x_trabajadores_form','x_innova34','x_forma59_form','x_forma58_form',
                     'x_forma60_form','x_forma61_form','x_trabajadores_inf','x_reinvierte_form',
-                    'x_clientes_form','x_clientes_inf')
+                    'x_clientes_form','x_clientes_inf','x_reinvierte_inf')
     def _check_value_1(self):
         if self.x_dias_sem_inf > 7 or self.x_dias_sem_inf < 0:
             raise ValidationError("Ingrese un valor entre 0 y 7. (Pregunta 31)")
@@ -2422,6 +2307,8 @@ class Lead(models.Model):
             raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 33)")
         if self.x_reinvierte_form > 100 or self.x_reinvierte_form < 0:
             raise ValidationError("Ingrese un valor entre 1 y 100. (Pregunta 48)")
+        if self.x_reinvierte_inf > 100 or self.x_reinvierte_inf < 0:
+            raise ValidationError("Ingrese un valor entre 1 y 100. (Pregunta 49)")
         if self.x_clientes_form > 100 or self.x_clientes_form < 0:
             raise ValidationError("Ingrese un valor entre 1 y 100. (Pregunta 45)")
         if self.x_clientes_inf > 100 or self.x_clientes_inf < 0:
