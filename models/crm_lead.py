@@ -2287,7 +2287,7 @@ class Lead(models.Model):
     @api.constrains('x_dias_sem_inf','x_dias_sem_for','x_dias_sem_for2','x_horas_trab_inf',
                     'x_trabajadores_form','x_innova34','x_forma59_form','x_forma58_form',
                     'x_forma60_form','x_forma61_form','x_trabajadores_inf','x_reinvierte_form',
-                    'x_clientes_form','x_clientes_inf','x_reinvierte_inf')
+                    'x_clientes_form','x_clientes_inf','x_reinvierte_inf','x_forma62_inf','x_forma63_inf','x_forma64_inf','x_forma65_inf')
     def _check_value_1(self):
         if self.x_dias_sem_inf > 7 or self.x_dias_sem_inf < 0:
             raise ValidationError("Ingrese un valor entre 0 y 7. (Pregunta 31)")
@@ -2315,9 +2315,13 @@ class Lead(models.Model):
             raise ValidationError("Ingrese un valor entre 1 y 100. (Pregunta 48)")
         if self.x_reinvierte_inf > 100 or self.x_reinvierte_inf < 0:
             raise ValidationError("Ingrese un valor entre 1 y 100. (Pregunta 49)")
-        if self.x_clientes_form > 100 or self.x_clientes_form < 0:
-            raise ValidationError("Ingrese un valor entre 1 y 100. (Pregunta 45)")
-        if self.x_clientes_inf > 100 or self.x_clientes_inf < 0:
-            raise ValidationError("Ingrese un valor entre 1 y 100. (Pregunta 46)")
+        if self.x_forma62_inf > 9 or self.x_forma62_inf < 0:
+            raise ValidationError("Ingrese un valor entre 1 y 9. (Pregunta 62)")
+        if self.x_forma63_inf > 9 or self.x_forma63_inf < 0:
+            raise ValidationError("Ingrese un valor entre 1 y 9. (Pregunta 63)")
+        if self.x_forma64_inf > 9 or self.x_forma64_inf < 0:
+            raise ValidationError("Ingrese un valor entre 1 y 9. (Pregunta 64)")
+        if self.x_forma65_inf > 9 or self.x_forma65_inf < 0:
+            raise ValidationError("Ingrese un valor entre 1 y 9. (Pregunta 65)")    
 
 
