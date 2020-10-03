@@ -795,7 +795,7 @@
                               "{'required': [('x_dcont4','=',True),('x_microneg','=','50')], 
                               'invisible': ['|',('x_dcont4','=',False),('x_microneg','=','51')]}"/>
 
-                              <field name="x_merc72_inf" attrs=
+                              <field name="x_merc72_inf" widget="many2many_tags" attrs=
                               "{'required': [('x_dcont4','=',True),('x_microneg','=','51')], 
                               'invisible': ['|',('x_dcont4','=',False),('x_microneg','=','50')]}"/> 
 

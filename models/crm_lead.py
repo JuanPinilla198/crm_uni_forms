@@ -29,6 +29,12 @@ class modelo69form(models.Model):
 
     name = fields.Char('69form')
 
+class modelo72inf(models.Model):
+    _description = 'Modelo para Manipular Many2many'
+    _name = 'model.inf.many2many'
+
+    name = fields.Char('72inform')
+
 class modelo72form(models.Model):
     _description = 'Modelo para Manipular Many2many72'
     _name = 'model.many2many72'
@@ -1536,7 +1542,7 @@ class Lead(models.Model):
 
     x_merc69_form = fields.Many2many('model.form.many2many', string = "69. ¿Que medios electrónicos utiliza?")
 
-    x_merc72_inf = fields.Many2many('model.form.many2many', string = "72. ¿Que medios electrónicos utiliza?")
+    x_merc72_inf = fields.Many2many('model.inf.many2many', string = "72. ¿Que medios electrónicos utiliza?")
     
     x_merc70_form = fields.Selection(
         #string="Sexo",
