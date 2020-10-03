@@ -2,6 +2,7 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_res_country_state_city,access.res.country.state.city.group.user,model_res_country_state_city,base.group_user,1,1,1,1
 access_model_manipulate_many2many ,access.model.manipulate.many2many.group.user,model_model_manipulate_many2many,base.group_user,1,1,1,1
 access_model_form_many2many,access.model.form.many2many.group.user,model_model_form_many2many,base.group_user,1,1,1,1
+access_model_inf_many2many,access.model.inf.many2many.group.user,model_model_inf_many2many,base.group_user,1,1,1,1
 access_model_many2many72,access.model.many2many72.group.user,model_model_many2many72,base.group_user,1,1,1,1
 access_model_many2many73,access.model.many2many73.group.user,model_model_many2many73,base.group_user,1,1,1,1
 access_model_many2many75,access.model.many2many75.group.user,model_model_many2many75,base.group_user,1,1,1,1
