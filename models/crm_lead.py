@@ -962,7 +962,7 @@ class Lead(models.Model):
             ('53', 'En desacuerdo'),
             ('54', 'Totalmente en desacuerdo'),
 
-        ], "26. ¿Usted considera importante que el uso de buenas prácticas manipulación y producción de la materia prima debe estar sujeta a estandares de calidad certificada  ¿Esto garantizará o generará confianza a los clientes para aumentar la demanda de consumo o uso de los productos o servicios que ofrece?",
+        ], "26. ¿Usted considera importante que el uso de buenas prácticas manipulación...",
     )
 
     x_innova27 = fields.Selection(

@@ -471,7 +471,7 @@
                         <field name="x_innova25"  attrs=
                               "{'required': [('x_dcont2','=',True)], 
                               'invisible': [('x_dcont2','=',False)]}"/>
-                        <field name="x_innova26"  attrs=
+                        <field name="x_innova26"  string="26. ¿Usted considera importante que el uso de buenas prácticas manipulación y producción de la materia prima debe estar sujeta a estandares de calidad certificada  ¿Esto garantizará o generará confianza a los clientes para aumentar la demanda de consumo o uso de los productos o servicios que ofrece?" attrs=
                               "{'required': [('x_dcont2','=',True)], 
                               'invisible': [('x_dcont2','=',False)]}"/>
                         <field name="x_innova27"  attrs=
