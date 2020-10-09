@@ -1162,6 +1162,11 @@
                         help="Opportunities that are assigned to me"/>
                   </filter>
 
+                  <filter name="country" position="replace">
+                      <filter string="Departamento de Residencia" name="state_id" context="{'group_by':'state_id'}"/>
+                  </filter>
+                  
+
                   <filter name="city" position="replace">
                       <filter string="Municipio de Residencia" name="city" context="{'group_by':'xcity'}"/>
                   </filter>
