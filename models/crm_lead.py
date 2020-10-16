@@ -394,6 +394,7 @@ class Lead(models.Model):
             ('54', 'ICBF'),
             ('55', 'SENA'),
             ('56', 'Todas'),
+            ('57', 'Ninguno'),
 
         ], "35. ¿Cuáles son los aportes que realiza para sus trabajadores?",
     )
