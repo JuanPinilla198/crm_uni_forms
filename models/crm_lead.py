@@ -514,25 +514,20 @@ class Lead(models.Model):
     )
     x_por_34 = fields.Char(
         string="36. ¿Por que?",
-        help="",
     )
 
     x_cont1 = fields.Selection(
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
         ], "Una vez comprendido el programa de acompañamiento, ¿usted desea continuar?",
+    )
+    x_cont1_por = fields.Char(
+        string="¿Por que?",
     )
 
-    x_cont1 = fields.Selection(
-        [
-            ('50', 'Si'),
-            ('51', 'No'),
-        ], "Una vez comprendido el programa de acompañamiento, ¿usted desea continuar?",
-    )
 
     x_datos3 = fields.Selection(
-        #string="Sexo",
         [
             ('50', 'Si'),
             ('51', 'No'),

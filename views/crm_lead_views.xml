@@ -205,7 +205,9 @@
                 <page string="Módulo 2">
 
                  <group string="MÓDULO 2 - PARTICIPACIÓN">
-                       <field name="x_cont1" />              
+                       <field name="x_cont1" /> 
+                       <field name="x_por_34" attrs=
+                              "{'required': [('x_cont1','=','no')], 'invisible': ['|',('x_cont1','=','si'),('x_cont1','=',False)]}"/>             
                     </group>
                 </page>
 
