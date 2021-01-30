@@ -100,23 +100,22 @@ class Lead(models.Model):
     )
 
     x_datos1 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
         ], "ACEPTA ENTREGARLE A UNIMINUTO LOS DATOS GENERALES SUYOS Y DEL MICRONEGOCIO CON FINES ACADÉMICOS",
     )
 
     doctype = fields.Selection(
         [
-            ('1', 'Sin identificación'),
-            ('2', 'Cédula'),
-            ('3', 'Cédula de extranjería'),
-            ('4', 'Pasaporte'),
-            ('5', 'Permiso especial de permanencia (PEP)'),
+            ('sin_identificacion', 'Sin identificación'),
+            ('cedula', 'Cédula'),
+            ('cedula_de_extranjeria', 'Cédula de extranjería'),
+            ('pasaporte', 'Pasaporte'),
+            ('permiso_especial_de_permanencia_pep', 'Permiso especial de permanencia (PEP)'),
 
-        ], "3. Tipo de identificación", default='2'
+        ], "3. Tipo de identificación", default='cedula'
     )
 
     x_identification = fields.Integer(
@@ -132,21 +131,18 @@ class Lead(models.Model):
     ]
 
     x_sexo = fields.Selection(
-        #string="Sexo",
         [
-            ('10', 'Masculino'),
-            ('11', 'Femenino'),
-
+            ('masculino', 'Masculino'),
+            ('femenino', 'Femenino'),
         ], "5. Sexo", 
     )
 
     x_etnia = fields.Selection(
-        #string="¿Pertenece a algún tipo de etnia?",
         [
-            ('20', 'NARP'),
-            ('21', 'Gitano ROM'),
-            ('22', 'Indígena'),
-            ('23', 'No pertenezco'),
+            ('narp', 'NARP'),
+            ('gitano_rom', 'Gitano ROM'),
+            ('indigena', 'Indígena'),
+            ('no_pertenezco', 'No pertenezco'),
 
         ], "6. ¿Pertenece a algún tipo de etnia?", 
     )
@@ -163,29 +159,26 @@ class Lead(models.Model):
 
     x_escolaridad = fields.Selection(
         [
-            ('30', 'Primaria incompleta'),
-            ('31', 'Primaria completa'),
-            ('32', 'Secundaria incompleta'),
-            ('33', 'Secundaria completa'),
-            ('34', 'Técnico'),
-            ('35', 'Tecnólogo'),
-            ('36', 'Educación No formal: Cursos libres, diplomados,seminarios.'),
-            ('37', 'Tecnólogo'),
-            ('38', 'Pregrado'),
-            ('39', 'Especialización'),
-            ('40', 'Maestría'),
-            ('41', 'Ninguno'),
-
+            ('primaria_incompleta', 'Primaria incompleta'),
+            ('primaria_completa', 'Primaria completa'),
+            ('secundaria_incompleta', 'Secundaria incompleta'),
+            ('secundaria_completa', 'Secundaria completa'),
+            ('tecnico', 'Técnico'),
+            ('tecnologo', 'Tecnólogo'),
+            ('educacion_no_formal_Cursos_libres_diplomados_seminarios', 'Educación No formal: Cursos libres, diplomados,seminarios'),
+            ('tecnologo', 'Tecnólogo'),
+            ('pregrado', 'Pregrado'),
+            ('especializacion', 'Especialización'),
+            ('maestria', 'Maestría'),
+            ('ninguno', 'Ninguno'),
         ], "14. Último año de escolaridad", 
     )
 
     x_grupos = fields.Selection(
     	[
-            ('40', 'Si'),
-            ('41', 'No'),
-
+            ('si', 'Si'),
+            ('no', 'No'),
         ], "15. ¿Pertenece a alguna organización:  asociación, corporación, cooperativa, grupo?",
-
         help="Escriba el tipo de organización a la cual pertenece",
     )
 
@@ -196,102 +189,101 @@ class Lead(models.Model):
 
     x_estrato = fields.Selection(
         [
-            ('40', '1'),
-            ('41', '2'),
-            ('42', '3'),
-            ('43', '4'),
-            ('44', '5'),
-            ('45', '6'),
+            ('1', '1'),
+            ('2', '2'),
+            ('3', '3'),
+            ('4', '4'),
+            ('5', '5'),
+            ('6', '6'),
         ], "17. Estrato socioeconómico de residencia ",
     )
 
     x_situacion = fields.Selection(
         [
-            ('40', 'Cuenta propia'),
-            ('41', 'Empleador'),
+            ('cuenta_propia', 'Cuenta propia'),
+            ('empleador', 'Empleador'),
         ], "18. Actualmente usted es"
     )
 
     x_actcomer = fields.Selection(
     	[
-            ('40', 'Peluquería, salón de belleza, barbería, arreglo de uñas'),
-            ('41', 'Cafetería o  salón de onces'),
-            ('42', 'Elaboración de productos de panadería, tortas, pasteles, pudin, ponques'),
-            ('43', 'Comidas rápidas '),
-            ('44', 'Bar, taberna, estanco, licorera, discoteca, rumbeadero'),
-            ('45', 'Tienda'),
-            ('46', 'Billares, juegos de mesa, rana, gallera'),
-            ('47', 'Comercio  de colchones, muebles'),
-            ('48', 'Comercio de elementos deportivos, implementos, balones, tienda de bicicletas'),
-            ('49', 'Veterinaria, venta de alimento o enseres para mascotas o animales, perros, gatos, peces.'),
-            ('50', 'Comercio de productos de tecnología, celulares, computadores'),
-            ('51', 'Productos asociados al arte, cuadros, pintura, joyería, relojería, actividades de fotografía'),
-            ('52', 'Comercio de regalos, variedades, adornos, tajetas, articulos diversos.'),
-            ('53', 'Heladería o frutería '),
-            ('54', 'Carnicería, pescadería, charcutería, quesos, lácteos, salsamentaria'),
-            ('55', 'Cerrajería, ferretería, ferreléctricos, vidriería'),
-            ('56', 'Servicios de salud, óptica, odontología, consultorio médico, ortodoncia, tienda naturista'),
-            ('57', 'Droguería'),
-            ('58', 'Envíos, giros, recargas, chance, apuestas, servicios financieros, banco, corresponsal'),
-            ('59', 'Café internet, telecomunicaciones, videojuegos, venta de películas, mantenimiento computadores, telefonía, informática'),
-            ('60', 'Floristería, abono, venta de gallinas, actividad pecuaria'),
-            ('61', 'Retaurante, fondo paisa, corrientazo, asadero'),
-            ('62', 'Papelería, fotocopias, impresiones, miscelanea'),
-            ('63', 'Casa comercial, monte de piedad, compraventa, prestamista'),
-            ('64', 'Eventos, refrigerios, casa de banquetes'),
-            ('65', 'Gimnasio, academia de baile, establecimiento para deportes'),
-            ('66', 'Academia de idiomas, lectura rápida'),
-            ('67', 'Inmobiliaria'),
-            ('68', 'Asesoría comercial, publicidad, mercadeo imagen corporativa, asesoría jurídica, tributaria'),
-            ('69', 'Mantenimiento de bicicletas, automóviles, despinche, vulcanizadora, taller automotriz, mecánica general'),
-            ('70', 'Lavandería'),
-            ('71', 'Supermercado, minimercado, mercado, venta de elementos de aseo, venta de frutas y verduras'),
-            ('72', 'Venta de ropa, zapatos, calzado, modestería, uniformes, accesorios, prendas y elementos de vestir, remontadora de calzado'),
-            ('73', 'Parqueadero de carros, motos, bicicletas'),
-            ('74', 'Productos de belleza, spa, tatuajes'),
-            ('75', 'Fábrica de manufacturas textiles ropa calzado balones deportivos cueros marroquinería'),
-            ('76', 'Venta y comercio de autopartes, carros, vehículos, motos, partes de motocicleta, cascos, automotores'),
-            ('77', 'Fábrica y venta de productos metálicos hierro acero maquinaria y otras aplicaciones industriales'),
-            ('78', 'Jardín infantil, salacuna, educación'),
-            ('79', 'Transporte de pasajeros'),
+            ('peluqueria_salon_de_belleza_barberia_arreglo_de_unas', 'Peluquería, salón de belleza, barbería, arreglo de uñas'),
+            ('cafeteria_o _salon_de_onces', 'Cafetería o  salón de onces'),
+            ('elaboracion_de_productos_de_panaderia_tortas_pasteles_pudin_ponques', 'Elaboración de productos de panadería, tortas, pasteles, pudin, ponques'),
+            ('comidas_rapidas', 'Comidas rápidas'),
+            ('bar_taberna_estanco_licorera_discoteca_rumbeadero', 'Bar, taberna, estanco, licorera, discoteca, rumbeadero'),
+            ('tienda', 'Tienda'),
+            ('billares_juegos_de_mesa_rana_gallera', 'Billares, juegos de mesa, rana, gallera'),
+            ('comercio_de_colchones_muebles', 'Comercio  de colchones, muebles'),
+            ('comercio_de_elementos_deportivos_implementos_balones_tienda_de_bicicletas', 'Comercio de elementos deportivos, implementos, balones, tienda de bicicletas'),
+            ('veterinaria_venta_de_alimento_o_enseres_para_mascotas_o_animales_perros_gatos_peces', 'Veterinaria, venta de alimento o enseres para mascotas o animales, perros, gatos, peces'),
+            ('comercio_de_productos_de_tecnologia_celulares_computadores', 'Comercio de productos de tecnología, celulares, computadores'),
+            ('productos_asociados_al_arte_cuadros_pintura_joyeria_relojeria_actividades_de_fotografia', 'Productos asociados al arte, cuadros, pintura, joyería, relojería, actividades de fotografía'),
+            ('comercio_de_regalos_variedades_adornos_tajetas_articulos_diversos', 'Comercio de regalos, variedades, adornos, tajetas, articulos diversos.'),
+            ('heladeria_o_fruteria', 'Heladería o frutería'),
+            ('carniceria_pescaderia_charcuteria_quesos_lacteos_salsamentaria', 'Carnicería, pescadería, charcutería, quesos, lácteos, salsamentaria'),
+            ('cerrajeria_ferreteria_ferrelectricos_vidrieria', 'Cerrajería, ferretería, ferreléctricos, vidriería'),
+            ('servicios_de_salud_optica_odontologia_consultorio_medico_ortodoncia_tienda_naturista', 'Servicios de salud, óptica, odontología, consultorio médico, ortodoncia, tienda naturista'),
+            ('drogueria', 'Droguería'),
+            ('envios_giros_recargas_chance_apuestas_servicios_financieros_banco_corresponsal', 'Envíos, giros, recargas, chance, apuestas, servicios financieros, banco, corresponsal'),
+            ('cafe_internet_telecomunicaciones_videojuegos_venta_de_peliculas_mantenimiento_computadores_telefonia_informatica', 'Café internet, telecomunicaciones, videojuegos, venta de películas, mantenimiento computadores, telefonía, informática'),
+            ('floristeria_abono_venta_de_gallinas_actividad_pecuaria', 'Floristería, abono, venta de gallinas, actividad pecuaria'),
+            ('restaurante_fondo_paisa_corrientazo_asadero', 'Restaurante, fondo paisa, corrientazo, asadero'),
+            ('papeleria_fotocopias_impresiones_miscelanea', 'Papelería, fotocopias, impresiones, miscelanea'),
+            ('casa_comercial_monte_de_piedad_compraventa_prestamista', 'Casa comercial, monte de piedad, compraventa, prestamista'),
+            ('eventos_refrigerios_casa_de_banquetes', 'Eventos, refrigerios, casa de banquetes'),
+            ('gimnasio_academia_de_baile_establecimiento_para_deportes', 'Gimnasio, academia de baile, establecimiento para deportes'),
+            ('academia_de_idiomas_lectura_rapida', 'Academia de idiomas, lectura rápida'),
+            ('inmobiliaria', 'Inmobiliaria'),
+            ('asesora_comercial_publicidad_mercadeo_imagen_corporativa_asesoría_juridica_tributaria', 'Asesoría comercial, publicidad, mercadeo imagen corporativa, asesoría jurídica, tributaria'),
+            ('mantenimiento_de_bicicletas_automoviles_despinche_vulcanizadora_taller_automotriz_mecanica_general', 'Mantenimiento de bicicletas, automóviles, despinche, vulcanizadora, taller automotriz, mecánica general'),
+            ('lavanderia', 'Lavandería'),
+            ('supermercado_minimercado_mercado_venta_de_elementos_de_aseo_venta_de_frutas_y_verduras', 'Supermercado, minimercado, mercado, venta de elementos de aseo, venta de frutas y verduras'),
+            ('venta_de_ropa_zapatos_calzado_modesteria_uniformes_accesorios_prendas_y_elementos_de_vestir_remontadora_de_calzado', 'Venta de ropa, zapatos, calzado, modestería, uniformes, accesorios, prendas y elementos de vestir, remontadora de calzado'),
+            ('parqueadero_de_carros_motos_bicicletas', 'Parqueadero de carros, motos, bicicletas'),
+            ('productos_de_belleza_spa_tatuajes', 'Productos de belleza, spa, tatuajes'),
+            ('fabrica_de_manufacturas_textiles_ropa_calzado_balones_deportivos_cueros_marroquineria', 'Fábrica de manufacturas textiles ropa calzado balones deportivos cueros marroquinería'),
+            ('venta_y_comercio_de_autopartes_carros_vehículos_motos_partes_de_motocicleta_cascos_automotores', 'Venta y comercio de autopartes, carros, vehículos, motos, partes de motocicleta, cascos, automotores'),
+            ('fabrica_y_venta_de_productos_metalicos_hierro_acero_maquinaria_y_otras_aplicaciones_industriales', 'Fábrica y venta de productos metálicos hierro acero maquinaria y otras aplicaciones industriales'),
+            ('jardin_infantil_salacuna_educacion', 'Jardín infantil, salacuna, educación'),
+            ('transporte_de_pasajeros', 'Transporte de pasajeros'),
         ], "20. ¿Cuál es la actividad comercial de su negocio?",
         help="Escriba la actividad comercial de su negocio",
     )
 
     x_sector = fields.Selection(
         [
-            ('40', 'Agropecuario'),
-            ('41', 'Comercio'),
-            ('42', 'Servicios'),
-            ('43', 'Industrial'),
+            ('agropecuario', 'Agropecuario'),
+            ('comercio', 'Comercio'),
+            ('servicios', 'Servicios'),
+            ('industrial', 'Industrial'),
         ], "19. ¿En qué sector económico se encuentra su negocio?",
         help="Escriba el sector económico de su negocio ",
     )
 
     x_ubic = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Zona Urbana'),
-            ('51', 'Zona rural'),
-
+            ('zona_Urbana', 'Zona Urbana'),
+            ('zona_rural', 'Zona rural'),
         ], "23. Ubicación del negocio",
     )
-
+    #campo actulizado
     x_com_cuenta = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Establecimiento'),
+           ('50', 'Establecimiento'),
             ('51', 'Sin establecimiento'),
-
-        ], "24. Su actividad comercial cuenta con",
+    
+        ], "25. Su actividad comercial cuenta con",
+    )
+    x_dir_neg = fields.Char(
+        string="¿Cuál?",
+        help="24. Direccion del negocio",
     )
 
     x_cont1 = fields.Selection(
-        #string="Sexo",
         [
             ('50', 'Si'),
             ('51', 'No'),
-
         ], "Una vez comprendido el programa de acompañamiento, ¿usted desea continuar?",
     )
 

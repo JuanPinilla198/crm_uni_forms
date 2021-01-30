@@ -172,6 +172,8 @@
                               "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
                             <field name="x_com_cuenta" attrs=
                               "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_dir_neg" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
                         </group>
                     </group>
 
