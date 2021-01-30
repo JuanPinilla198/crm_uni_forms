@@ -132,24 +132,6 @@
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_escolaridad" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <!--field name="x_cual"
-                                   options="{'no_open': False}"
-                                   attrs="{
-                                   'invisible':[('x_escolaridad', '!=', '34')],}"        
-                                   />
-                            <field name="x_cual"
-                                   options="{'no_open': False}"
-                                   attrs="{
-                                   'invisible':[('x_escolaridad', '!=', '35')],}"        
-                                   />
-                            <field name="x_cual"
-                                   options="{'no_open': False}"
-                                   attrs="{
-                                   'invisible':[('x_escolaridad', '!=', '36')],}"        
-                                   /-->
-                        </group>
-
-                        <group>                            
                             <field name="x_grupos" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_grupos_cual"
@@ -168,6 +150,24 @@
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_city_id" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <!--field name="x_cual"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_escolaridad', '!=', '34')],}"        
+                                   />
+                            <field name="x_cual"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_escolaridad', '!=', '35')],}"        
+                                   />
+                            <field name="x_cual"
+                                   options="{'no_open': False}"
+                                   attrs="{
+                                   'invisible':[('x_escolaridad', '!=', '36')],}"        
+                                   /-->
+                        </group>
+
+                        <group>                            
                             <field name="x_ubic" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_dir_neg" attrs=
