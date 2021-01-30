@@ -508,6 +508,15 @@ class Lead(models.Model):
             ('no', 'No'),
         ], "34. ¿Tiene proyectado cambiar de idea de negocio?",
     )
+    x_cual_34 = fields.Char(
+        string="35. ¿Cual?",
+        help="",
+    )
+    x_por_34 = fields.Char(
+        string="36. ¿Por que?",
+        help="",
+    )
+
     x_cont1 = fields.Selection(
         [
             ('50', 'Si'),
