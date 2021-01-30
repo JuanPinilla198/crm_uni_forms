@@ -170,9 +170,11 @@
                               "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
                             <field name="x_ubic" attrs=
                               "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
+                            <field name="x_dir_neg" attrs=
+                              "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
                             <field name="x_com_cuenta" attrs=
                               "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
-                            <field name="x_dir_neg" attrs=
+                            <field name="x_merc78_form" attrs=
                               "{'required': [('x_datos1','=','50')], 'invisible': ['|',('x_datos1','=','51'),('x_datos1','=',False)]}"/>
                         </group>
                     </group>
@@ -871,13 +873,13 @@
                       </group>
 
                       <group>
-                              <field name="x_merc78_form" attrs=
+                              <!--field name="x_merc78_form" attrs=
                               "{'required': [('x_dcont4','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont4','=',False),('x_microneg','=','51')]}"/>
+                              'invisible': ['|',('x_dcont4','=',False),('x_microneg','=','51')]}"/-->
 
-                              <field name="x_merc81_inf" attrs=
+                              <!--field name="x_merc81_inf" attrs=
                               "{'required': [('x_dcont4','=',True),('x_microneg','=','51')], 
-                              'invisible': ['|',('x_dcont4','=',False),('x_microneg','=','50')]}"/>
+                              'invisible': ['|',('x_dcont4','=',False),('x_microneg','=','50')]}"/-->
 
                               <field name="x_merc79_form" attrs=
                               "{'required': [('x_dcont4','=',True),('x_microneg','=','50')], 

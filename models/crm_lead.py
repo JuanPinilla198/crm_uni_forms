@@ -271,12 +271,12 @@ class Lead(models.Model):
     x_com_cuenta = fields.Selection(
         [
            ('50', 'Establecimiento'),
-            ('51', 'Sin establecimiento'),
+           ('51', 'Sin establecimiento'),
     
         ], "25. Su actividad comercial cuenta con",
     )
     x_dir_neg = fields.Char(
-        string="¿Cuál?",
+        string="24. Direccion del negocio",
         help="24. Direccion del negocio",
     )
 
@@ -1685,10 +1685,15 @@ class Lead(models.Model):
 
         ], "80. ¿Cuál es la forma de pago que más utiliza para comprar insumo, materia prima o pagar obligaciones? ",
     )
-
-    x_merc78_form = fields.Integer(
-        string="78. ¿Cuál es su promedio de ventas ACTUAL en una semana BUENA?",
-        help="", 
+    #actualizacion y cambio de vista
+    x_merc78_form = fields.Selection(
+        [('de_0_a_500', 'De $0 a $500.000'),
+         ('de_500_a_1000', 'De $500.000 a $1´000.000'),
+         ('de_1000_a_3000', 'De $1´000.000 a $3´000.000'),
+         ('de_3000_a_6000', 'De $3´000.000 a $6´000.000'),
+         ('de_6000_a_10000', 'De $6´000.000 a $10´000.000'),
+         ('mas_de_10000','Mas de $10´000.000')
+        ], "26. Durante la pandemia COVID-19, en una semana buena ¿donde se ubica sus ventas dentro de los siguientes rangos?",
     )
 
     x_merc81_inf = fields.Integer(
