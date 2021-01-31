@@ -526,26 +526,28 @@ class Lead(models.Model):
         string="¿Por que?",
     )
 
-
     x_datos3 = fields.Selection(
         [
-            ('50', 'Si'),
-            ('51', 'No'),
-
+            ('si', 'Si'),
+            ('no', 'No'),
         ], "ACEPTA ENTREGARLE A UNIMINUTO LOS DATOS GENERALES SUYOS Y DEL MICRONEGOCIO CON FINES ACADÉMICOS",
+    )
+    in_empleo = fields.Selection(
+        [
+            ('si','Si'),
+            ('no','No')
+        ], "1. ¿Está interesado en la búsqueda de un empleo?"
     )
 
     x_microneg = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Formalizado'),
-            ('51', 'Informal'),
+            ('si', 'Formalizado'),
+            ('no', 'Informal'),
 
         ], "25. ¿Su micronegocio está?",
     )
 
     x_sisben = fields.Selection(
-        #string="Sexo",
         [
             ('50', 'Si'),
             ('51', 'No'),

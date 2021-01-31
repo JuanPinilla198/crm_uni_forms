@@ -206,7 +206,7 @@
 
                  <group string="MÓDULO 2 - PARTICIPACIÓN">
                        <field name="x_cont1" /> 
-                       <field name="x_por_34" attrs=
+                       <field name="x_cont1_por" attrs=
                               "{'required': [('x_cont1','=','no')], 'invisible': ['|',('x_cont1','=','si'),('x_cont1','=',False)]}"/>             
                     </group>
                 </page>
@@ -215,6 +215,13 @@
                     <group> 
                         <field name="x_datos3" />
                     </group>
+                    <group string="GENERALIDADES" style="line-height: 25px;">
+                    </group>
+                    <group>
+                        <field name="in_empleo" attrs=
+                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
+                    </group>
+
                     <group string="CARACTERIZACIÓN " style="line-height: 25px;">
                        
                     <group>
