@@ -412,8 +412,8 @@
 
                     </group--> 
 
-                    <group string="SECCION 1: BIOSEGURIDAD" style="line-height: 25px;">
-                      <group>
+                    <group string="PROTOCOLOS DE BIOSEGURIDAD" style="line-height: 25px;">
+                      <group string="SECCION 1: BIOSEGURIDAD" style="line-height: 25px;">
                         <field name="x_dcont1" attrs=
                               "{'invisible': [('x_datos3','!=','si')]}"/>
                       </group>
