@@ -1222,8 +1222,86 @@ class Lead(models.Model):
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
-        ], "37. ¿La negocio cuenta con algún tipo de alianza para su desarrollo técnico?",
+        ], "37. ¿El negocio cuenta con algún tipo de alianza para su desarrollo técnico?",
     )
+    prodl38 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "38. ¿Cuenta con personal capacitado para la produccion o manipulacion del producto?",
+    )
+    prodl39 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "39. ¿Cuenta con un espacio adecuado para la produccion y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad??",
+    )
+    prodl40 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "40. ¿Tiene implementado un proceso de buenas practicas de manipulacion y produccion?",
+    )
+    prodl41 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "41. ¿Para la obtencion de la materia prima o mercancia depende de un solo proveedor? ",
+    )
+    prodl42 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "42. ¿Se tiene en el negocio definidos los estándares de los procesos de producción de los productos/servicios que vende?",
+    )
+    prodl43 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "43. ¿Tiene su negocio un sistema de control/ gestion de calidad adoptado e implementado?",
+    )
+    prodl44 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "44. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancia?",
+    )
+    prodl45 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "45. ¿Cuenta con un inventario donde registre las entradas y salidas del producto?",
+    )
+    prodl46 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "46. ¿Sabe lo que le cuesta a su negocio la produccion y comercializacion del producto o servicio?",
+    )
+    prodl47 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "47. ¿sabe cuáles son los costos de cada etapa del proceso de producción?",
+    )
+    prodl48 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+        ], "48. ¿Sabe cual es el punto de equilibrio de su negocio?",
+    )
+
+
 
     x_innova19 = fields.Selection(
         #string="Sexo",
@@ -2632,6 +2710,7 @@ class Lead(models.Model):
 
         ], "110. ¿En su negocio utiliza billeteras electrónicas?",
     )
+
 
 
     country_id = fields.Many2one('res.country', "Country")
