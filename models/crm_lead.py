@@ -1630,8 +1630,17 @@ class Lead(models.Model):
         ], "59. ¿Expide factura?",
     )
 
-    x_forma60_form = fields.Integer(
-        string="60. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
+    x_forma60_form = fields.Selection(
+        [  ('1', '1'),
+           ('2', '2'),
+           ('3', '3'),
+           ('4', '4'),
+           ('5', '5'),
+           ('6', '6'),
+           ('7', '7'),
+           ('8', '8'),
+           ('9', '9'),
+        ], "4. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
     )
 
     x_forma60_inf = fields.Selection(
@@ -1652,7 +1661,7 @@ class Lead(models.Model):
            ('7', '7'),
            ('8', '8'),
            ('9', '9'),
-        ],"3. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+        ],"3. Antes de la pandemia COVID-19 ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
     )
 
     x_forma61_inf = fields.Selection(
@@ -1706,12 +1715,20 @@ class Lead(models.Model):
         string="64. ¿Cuántas personas de su familia trabajan actualmente con usted en el negocio?",
     )
 
-    x_forma65_inf = fields.Integer(
-        string="65. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+    x_forma65_inf = fields.Selection(
+        [  ('1', '1'),
+           ('2', '2'),
+           ('3', '3'),
+           ('4', '4'),
+           ('5', '5'),
+           ('6', '6'),
+           ('7', '7'),
+           ('8', '8'),
+           ('9', '9'),
+        ], "5. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
     )
     
     x_forma66_inf = fields.Selection(
-        #string="Sexo",
         [('50', 'Pago por hora'),
          ('51', 'Pago diario'),
          ('52', 'Pago semanal'),
