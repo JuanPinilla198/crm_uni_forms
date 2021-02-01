@@ -414,10 +414,11 @@
 
                     </group--> 
 
-                    <group string="PROTOCOLOS DE BIOSEGURIDAD" style="line-height: 25px;">
+                    <group string="PROTOCOLOS DE BIOSEGURIDAD
+                    SECCION 1: BIOSEGURIDAD" style="line-height: 25px;">
                       <group>
                         <field name="x_dcont1" attrs=
-                              "{'invisible': [('x_datos3','!=','50')]}"/>
+                              "{'invisible': [('x_datos3','!=','si')]}"/>
                       </group>
                       <group>
                       </group>
