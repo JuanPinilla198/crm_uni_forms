@@ -1112,7 +1112,118 @@ class Lead(models.Model):
             ('en_proceso', 'En proceso'),
         ], "21. ¿Tiene identificados y caracterizados los segmentos de mercado objetivo de su negocio?",
     )
-
+    model22 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "22. ¿Tiene definida con claridad y apropiadamente una propuesta de valor para  los segmentos de mercado objetivo de su negocio?",
+    )
+    model23 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "23. ¿Cumple la propuesta de valor definida para  los segmentos de mercado objetivo?",
+    )
+    model24 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "24. ¿Tiene identificados y en funcionamiento óptimo canales apropiados para comunicar la oferta a cada uno de sus segmentos de mercado objetivo?",
+    )
+    model25 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "25. ¿Tiene identificados y en funcionamiento óptimo canales apropiados para que cada uno de sus segmentos de mercado objetivo realice la compra y estos son competitivos con lo ofrecido por la competencia?",
+    )
+    model26 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "26. ¿Tiene identificados y en funcionamiento óptimo canales apropiados para realizar la entrega a cada uno de sus segmentos de mercado y estos son competitivos con lo ofrecido por la competencia??",
+    )
+    model27 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "27. ¿El servicio posventa es competitivo y se enfoca en las necesidades de cada uno de los segmentos de mercado?",
+    )
+    model28 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "28. ¿Los mecanismos de captación de clientes son apropiados desde la captación y el funcionamiento, y se enfocan en la caracteterísticas de cada segmento de mercado?",
+    )
+    model29 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "29. ¿Los mecanismos de fidelización de clientes son apropiados desde la captación y el funcionamiento, y se enfocan en la caracteterísticas de cada segmento de mercado?",
+    )
+    model30 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "30. ¿Los mecanismos de estimulación para el aumento de la compra en los clientes son apropiados desde la captación y el funcionamiento, y se enfocan en la caracteterísticas de cada segmento de mercado?",
+    )
+    model31 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "31. ¿Son claras las fuentes de ingreso y estas están verdaderamente basadas y enfocadas en el valor esperado por los clientes?",
+    )
+    model32 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "32. ¿El negocio tiene identificados los recursos requeridos para el perfecto funcionamiento del modelo de negocio y el cumplimiento de la propuesta de valor?",
+    )
+    model33 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "33. ¿El negocio cuenta con todos los recursos requeridos para el perfecto funcionamiento del modelo de negocio y el cumplimiento de la propuesta de valor?",
+    )
+    model34 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "34. ¿El negocio tiene identificadas las actividades claves para el perfecto funcionamiento del modelo de negocio y el cumplimiento de la propuesta de valor?",
+    )
+    model35 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "35. ¿Las actividades claves de la negocio hacen parte de procesos estandarizados y bien definidos?",
+    )
+    model36 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "36. ¿La negocio cuenta con acuerdos con proveedores y estos son suficientes y apropiados?",
+    )
+    model37 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "37. ¿La negocio cuenta con algún tipo de alianza para su desarrollo técnico?",
+    )
 
     x_innova19 = fields.Selection(
         #string="Sexo",

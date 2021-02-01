@@ -491,8 +491,27 @@
                       </group>
                         <group>
                             <field name="model21"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model22"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model23"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model24"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model25"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model26"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model27"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model28"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model29"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                        </group>
+                        <group>
+                            <field name="model30"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model31"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model32"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model33"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model34"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model35"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model36"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="model37"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
                         </group>
 
+                        
                       <!--group>
                         <field name="x_innova19"  attrs=
                               "{'required': [('x_dcont2','=',True)], 
@@ -534,7 +553,7 @@
                         
                       </group-->
 
-                      <group>
+                      <!--group>
                         <field name="x_innova31"  attrs=
                               "{'required': [('x_dcont2','=',True)], 
                               'invisible': [('x_dcont2','=',False)]}"/>
@@ -561,15 +580,15 @@
                               'invisible': [('x_dcont2','=',False)]}"/>
                         <field name="x_innova39"  attrs=
                               "{'required': [('x_dcont2','=',True)], 
-                              'invisible': [('x_dcont2','=',False)]}"/>
+                              'invisible': [('x_dcont2','=',False)]}"/-->
                         <!--field name="x_innova39"  attrs=
                               "{'required': [('x_dcont2','=',True)], 
                               'invisible': [('x_dcont2','=',False)]}"/-->
-                        <field name="x_innova40"  attrs=
+                        <!--field name="x_innova40"  attrs=
                               "{'required': [('x_dcont2','=',True)], 
-                              'invisible': [('x_dcont2','=',False)]}"/>
+                              'invisible': [('x_dcont2','=',False)]}"/-->
 
-                        <field name="x_innova41_inf" attrs=
+                        <!--field name="x_innova41_inf" attrs=
                               "{'required': [('x_dcont2','=',True),('x_microneg','=','51')], 
                               'invisible': ['|',('x_dcont2','=',False),('x_microneg','=','50')]}"/>
                         <field name="x_innova41_form" attrs=
@@ -599,9 +618,9 @@
                         
                         <field name="x_innova45_form" attrs=
                               "{'required': [('x_dcont2','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont2','=',False),('x_microneg','=','51')]}"/>
+                              'invisible': ['|',('x_dcont2','=',False),('x_microneg','=','51')]}"/-->
                             
-                      </group>
+                      <!--/group-->
 
                     </group>
 
