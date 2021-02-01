@@ -228,9 +228,11 @@
                               "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
                         <field name="x_forma60_form" attrs=
                               "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
+                        <field name="x_forma65_inf" attrs=
+                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
                     </group>
 
-                    <group string="CARACTERIZACIÓN " style="line-height: 25px;">
+                    <!--group string="CARACTERIZACIÓN " style="line-height: 25px;">
                        
                     <group>
                     <field name="x_microneg"  attrs=
@@ -409,7 +411,7 @@
 
                     </group>
 
-                    </group> 
+                    </group--> 
 
                     <group string="PROTOCOLOS DE BIOSEGURIDAD" style="line-height: 25px;">
                       <group>
