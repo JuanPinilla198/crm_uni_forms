@@ -219,7 +219,12 @@
                     <group string="GENERALIDADES" style="line-height: 25px;">
                     </group>
                     <group>
+                        <div/>
                         <field name="in_empleo" attrs=
+                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
+                        <field name="x_forma58_form" attrs=
+                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
+                        <field name="x_forma61_form" attrs=
                               "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
                     </group>
 
@@ -714,9 +719,9 @@
 
                       <group>
                         
-                        <field name="x_forma58_form" attrs=
+                        <!--field name="x_forma58_form" attrs=
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','51')]}"/>
+                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','51')]}"/-->
                         
 
                         <field name="x_forma59_form" attrs=
@@ -737,9 +742,9 @@
 
                         
 
-                        <field name="x_forma61_form" attrs=
+                        <!--field name="x_forma61_form" attrs=
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','51')]}"/>
+                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','51')]}"/-->
 
                         <field name="x_forma61_inf"  attrs=
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','51')], 
@@ -749,9 +754,9 @@
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','50')], 
                               'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','51')]}"/>
 
-                        <field name="x_forma62_inf"  attrs=
+                        <!--field name="x_forma62_inf"  attrs=
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','51')], 
-                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','50')]}"/>
+                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','50')]}"/-->
                         
 
                         <field name="x_forma63_form" attrs=
@@ -770,9 +775,9 @@
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','51')], 
                               'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','50')]}"/>
 
-                        <field name="x_forma65_inf" attrs=
+                        <!--field name="x_forma65_inf" attrs=
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','51')], 
-                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','50')]}"/>
+                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','50')]}"/-->
 
                         <field name="x_forma66_inf" attrs=
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','51')], 

@@ -1598,10 +1598,18 @@ class Lead(models.Model):
         ], "57. ¿Cuenta actualmente con el permiso municipal/distrital adicional para funcionar?",
     )
 
-    x_forma58_form = fields.Integer(
-        string="58. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
+    x_forma58_form = fields.Selection(
+        [  ('1', '1'),
+           ('2', '2'),
+           ('3', '3'),
+           ('4', '4'),
+           ('5', '5'),
+           ('6', '6'),
+           ('7', '7'),
+           ('8', '8'),
+           ('9', '9'),
+        ], "2. Antes de la pandemia COVID-19 ¿Cuántas personas de su familia trabajaban con usted en el negocio?",
     )
-
     x_forma58_inf = fields.Selection(
         #string="Sexo",
         [('50', 'Si'),
@@ -1634,8 +1642,17 @@ class Lead(models.Model):
         ], "60. ¿Considera que se debe tener claridad de los impuestos presentados por su actividad económica y las frecuencias en que debe pagar?",
     )
 
-    x_forma61_form = fields.Integer(
-        string="61. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
+    x_forma61_form = fields.Selection(
+        [  ('1', '1'),
+           ('2', '2'),
+           ('3', '3'),
+           ('4', '4'),
+           ('5', '5'),
+           ('6', '6'),
+           ('7', '7'),
+           ('8', '8'),
+           ('9', '9'),
+        ],"3. ¿Cuántas personas QUE NO SON de su familia trabajan actualmente con usted en el negocio?",
     )
 
     x_forma61_inf = fields.Selection(
