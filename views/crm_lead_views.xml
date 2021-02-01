@@ -235,10 +235,8 @@
                     <!--group string="CARACTERIZACIÓN " style="line-height: 25px;"-->
                        
                     <group>
-                    <field name="x_microneg"  attrs=
-                              "{'required': [('x_datos3','=','si')], 
-                              'invisible': [('x_datos3','!=','si')]}"/>
-                        </group>
+                    <field name="x_microneg"  attrs="{'invisible': 1}"/>
+                    </group>
 
                     <!--field name="x_sisben" attrs=
                               "{'required': ['|',('x_microneg','=','50'),('x_microneg','=','51')], 
@@ -414,8 +412,7 @@
 
                     </group--> 
 
-                    <group string="PROTOCOLOS DE BIOSEGURIDAD
-                    SECCION 1: BIOSEGURIDAD" style="line-height: 25px;">
+                    <group string="SECCION 1: BIOSEGURIDAD" style="line-height: 25px;">
                       <group>
                         <field name="x_dcont1" attrs=
                               "{'invisible': [('x_datos3','!=','si')]}"/>
@@ -436,15 +433,15 @@
                         <field name="x_proto4"  attrs=
                               "{'required': [('x_dcont1','=',True)], 
                               'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto5"  attrs=
-                              "{'required': [('x_proto4','!=','51'),('x_dcont1','=',True)], 
-                              'invisible': ['|',('x_proto4','=','51'),('x_dcont1','=',False)]}"/>
                         <field name="x_proto6"  attrs=
                               "{'required': [('x_dcont1','=',True)], 
                               'invisible': [('x_dcont1','=',False)]}"/>
                         <field name="x_proto7"  attrs=
                               "{'required': [('x_dcont1','=',True)], 
                               'invisible': [('x_dcont1','=',False)]}"/>
+                        <!--field name="x_proto5"  attrs=
+                              "{'required': [('x_proto4','!=','51'),('x_dcont1','=',True)], 
+                              'invisible': ['|',('x_proto4','=','51'),('x_dcont1','=',False)]}"/-->
                         <field name="x_proto8"  attrs=
                               "{'required': [('x_dcont1','=',True)], 
                               'invisible': [('x_dcont1','=',False)]}"/>

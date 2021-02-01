@@ -954,45 +954,40 @@ class Lead(models.Model):
         help="Ingrese un número entre 1 y 100",
     )
 
-    #MÓDULO 3-PROTOCOLOS DE BIOSEGURIDAD
+    #MÓDULO 3-PROTOCOLOS DE BIOSEGURIDAD(seccion 1 bioseguridad)
     x_dcont1 = fields.Boolean(
         string="Continuar con el Formulario",
     )
 
     x_proto1 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
-        ], "1. ¿Usted conoce los protocolos de bioseguridad para su negocio??",
+        ], "6. ¿Usted conoce los protocolos de bioseguridad para su negocio??",
     )
 
     x_proto2 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
-
-        ], "2. ¿En su negocio implementa los protocolos de bioseguridad?",
+            ('si', 'Si'),
+            ('no', 'No'),
+        ], "7. ¿En su negocio implementa los protocolos de bioseguridad?",
     )
 
     x_proto3 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
-        ], "3. ¿Dispone de puntos de alcohol con una concentración no inferior al 70% para la higiene de las manos de los clientes y los trabajadores del negocio?",
+        ], "8. ¿Dispone de puntos de alcohol con una concentración no inferior al 70% para la higiene de las manos de los clientes y los trabajadores del negocio?",
     )
 
     x_proto4 = fields.Selection(
-        #string="Sexo",
         [
             ('50', 'Si'),
             ('51', 'No'),
 
-        ], "4. Dispone de la adecuada provision de tapabocas y elementos de protección para quienes laboran en el negocio?",
+        ], "9. Dispone de la adecuada provision de tapabocas y elementos de protección para quienes laboran en el negocio?",
     )
 
     x_proto5 = fields.Selection(
@@ -1011,7 +1006,7 @@ class Lead(models.Model):
             ('51', 'No'),
             ('52', 'No Aplica'),
 
-        ], "6. ¿Atiende a un cliente a la vez y mantiene el distanciamiento social?",
+        ], "10. ¿Atiende a un cliente a la vez y mantiene el distanciamiento social?",
     )
 
     x_proto7 = fields.Selection(
@@ -1021,7 +1016,7 @@ class Lead(models.Model):
             ('51', 'No'),
             ('52', 'No Aplica'),
 
-        ], "7. ¿Atiende de manera prioritaria a la población con riesgo del COVID19, para disminuir el tiempo que permenecen en el lugar?",
+        ], "11. ¿Atiende de manera prioritaria a la población con riesgo del COVID19, para disminuir el tiempo que permenecen en el lugar?",
     )
 
     x_proto8 = fields.Selection(
@@ -1031,7 +1026,7 @@ class Lead(models.Model):
             ('51', 'No'),
             ('52', 'No Aplica'),
 
-        ], "8. ¿Realiza la protección permanente de los alimentos en exhibición, con el uso de películas plásticas, tapas, vitrinas, etc?",
+        ], "12. ¿Realiza la protección permanente de los alimentos en exhibición, con el uso de películas plásticas, tapas, vitrinas, etc?",
     )
 
     x_proto9 = fields.Selection(
@@ -1040,7 +1035,7 @@ class Lead(models.Model):
             ('50', 'Si'),
             ('51', 'No'),
 
-        ], "9. ¿Dispone de superficies fáciles de limpiar y desinfectar para ubicar los productos?",
+        ], "13. ¿Dispone de superficies fáciles de limpiar y desinfectar para ubicar los productos?",
     )
 
     x_proto10 = fields.Selection(
