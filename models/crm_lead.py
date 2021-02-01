@@ -1091,10 +1091,9 @@ class Lead(models.Model):
     )
 
     x_proto17 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
         ], "17. ¿Ha recibido o recibe algun apoyo o beneficio económico por parte del Gobierno en la emergencia para usted?",
     )
@@ -1105,6 +1104,15 @@ class Lead(models.Model):
     x_dcont2 = fields.Boolean(
         string="¿Desea continuar con el Formulario?",
     )
+    #preguntas nuevas modelo de negocio
+    model21 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "21. ¿Tiene identificados y caracterizados los segmentos de mercado objetivo de su negocio?",
+    )
+
 
     x_innova19 = fields.Selection(
         #string="Sexo",

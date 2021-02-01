@@ -483,15 +483,17 @@
 
                     </group>
 
-                    <group string="INNOVACION DEL MODELO DE NEGOCIO" style="line-height: 25px;">
-                      <group>
-                        <field name="x_dcont2" attrs=
-                              "{'invisible': [('x_datos3','!=','50')]}"/>
+                    <group string="MODELO DE NEGOCIO" style="line-height: 25px;">
+                      <group string="SECCION 2: ALINEACIÓN MODELO DE NEGOCIO" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
+                        <field name="x_dcont2" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
                       </group>
                       <group>
                       </group>
+                        <group>
+                            <field name="model21"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                        </group>
 
-                      <group>
+                      <!--group>
                         <field name="x_innova19"  attrs=
                               "{'required': [('x_dcont2','=',True)], 
                               'invisible': [('x_dcont2','=',False)]}"/>
@@ -530,7 +532,7 @@
                               'invisible': [('x_dcont2','=',False)]}"/>
                         
                         
-                      </group>
+                      </group-->
 
                       <group>
                         <field name="x_innova31"  attrs=
