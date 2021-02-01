@@ -97,7 +97,7 @@
             <!-- Reemplazar la Pestaña de CRM por la encuenta de Registro -->
 
             <xpath expr="//page[@name='lead']" position="replace">
-                <page string="Módulo 1">
+                <page string="MODULO 1 - REGISTRO">
                     <group>
                         <field name="x_datos1" />
                     </group>
@@ -202,7 +202,7 @@
                    
                 </page>
 
-                <page string="Módulo 2">
+                <page string="MODULO 2 - PARTICIPACIÓN">
 
                   <group string="MÓDULO 2 - PARTICIPACIÓN">
                         <div/>
@@ -211,7 +211,7 @@
                               "{'required': [('x_cont1','=','no')], 'invisible': ['|',('x_cont1','=','si'),('x_cont1','=',False)]}"/>             
                   </group>
                   </page>
-                  <page string="Módulo 3">
+                  <page string="MODULO 3 DIAGNOSTICO FINAL">
                     <group>
                         <div/> 
                         <field name="x_datos3" />
@@ -473,12 +473,12 @@
                         <field name="x_proto16"  attrs=
                               "{'required': [('x_dcont1','=',True)], 
                               'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto17"  attrs=
+                        <!--field name="x_proto17"  attrs=
                               "{'required': [('x_dcont1','=',True)], 
                               'invisible': [('x_dcont1','=',False)]}"/>
                         <field name="x_proto18"  widget="many2many_tags" attrs=
                               "{'required': [('x_proto17','!=','51'),('x_dcont1','=',True)], 
-                              'invisible': ['|',('x_proto17','=','51'),('x_dcont1','=',False)]}"/>
+                              'invisible': ['|',('x_proto17','=','51'),('x_dcont1','=',False)]}"/-->
                       
                       </group>
 

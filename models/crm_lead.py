@@ -984,122 +984,110 @@ class Lead(models.Model):
 
     x_proto4 = fields.Selection(
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
         ], "9. Dispone de la adecuada provision de tapabocas y elementos de protección para quienes laboran en el negocio?",
     )
 
     x_proto5 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
         ], "5. ¿Se realiza cambio de tapabocas durante la jornada laboral?",
     )
 
     x_proto6 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
-            ('52', 'No Aplica'),
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('no_aplica', 'No Aplica'),
 
         ], "10. ¿Atiende a un cliente a la vez y mantiene el distanciamiento social?",
     )
 
     x_proto7 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
-            ('52', 'No Aplica'),
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('no_aplica', 'No Aplica'),
 
         ], "11. ¿Atiende de manera prioritaria a la población con riesgo del COVID19, para disminuir el tiempo que permenecen en el lugar?",
     )
 
     x_proto8 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
-            ('52', 'No Aplica'),
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('no_aplica', 'No Aplica'),
 
         ], "12. ¿Realiza la protección permanente de los alimentos en exhibición, con el uso de películas plásticas, tapas, vitrinas, etc?",
     )
 
     x_proto9 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
         ], "13. ¿Dispone de superficies fáciles de limpiar y desinfectar para ubicar los productos?",
     )
 
     x_proto10 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
-        ], "10. ¿Desinfecta los objetos del local cuando son prestados a los clientes o proveedores (esferos, grapadora, etc.), antes y después de su uso?",
+        ], "14. ¿Desinfecta los objetos del local cuando son prestados a los clientes o proveedores (esferos, grapadora, etc.), antes y después de su uso?",
     )
 
     x_proto11 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
-        ], "11. ¿Coloca avisos o alertas para mantener las medidas de prevención?",
+        ], "15. ¿Coloca avisos o alertas para mantener las medidas de prevención?",
     )
 
     x_proto12 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
-            ('52', 'No Aplica'),
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('no_aplica', 'No Aplica'),
 
-        ], "12. ¿Realiza la entrega de productos o alimentos para llevar o consumir fuera del local?",
+        ], "16. ¿Realiza la entrega de productos para llevar o consumir fuera del establecimiento?",
     )
 
     x_proto13 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
-        ], "13. ¿Limpia y desinfecta las herramientas de trabajo una vez finalice la jornada?",
+        ], "17. ¿Limpia y desinfecta las herramientas de trabajo una vez finalice la jornada?",
     )
 
     x_proto14 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
-        ], "14. ¿Asegura que los colaboradores y los clientes usen tapabocas?",
+        ], "18. ¿Asegura que los colaboradores y los clientes usen tapabocas?",
     )
 
     x_proto15 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
-        ], "15. Realiza la limpieza del espacio de trabajo al menos dos vez al día?",
+        ], "19. Realiza la limpieza del espacio de trabajo al menos dos vez al día?",
     )
 
     x_proto16 = fields.Selection(
-        #string="Sexo",
         [
-            ('50', 'Si'),
-            ('51', 'No'),
+            ('si', 'Si'),
+            ('no', 'No'),
 
-        ], "16. ¿Entrega los productos sobre una superficie, sin tener contacto con el cliente?",
+        ], "20. ¿Entrega los productos sobre una superficie, sin tener contacto con el cliente?",
     )
 
     x_proto17 = fields.Selection(
