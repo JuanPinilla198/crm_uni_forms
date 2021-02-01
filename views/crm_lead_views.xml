@@ -101,7 +101,7 @@
                     <group>
                         <field name="x_datos1" />
                     </group>
-                    <group string="MÓDULO 1 - REGISTRO" style="line-height: 25px;">
+                    <group string="Modúlo 1: Formulario de Registro - Encuentro 1" style="line-height: 25px;">
                         <group>
                             <field name="x_nombre_negocio" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
@@ -204,7 +204,7 @@
 
                 <page string="MODULO 2 - PARTICIPACIÓN">
 
-                  <group string="MÓDULO 2 - PARTICIPACIÓN">
+                  <group string="Módulo 2. Confirmación de participación - Encuentro 2">
                         <div/>
                         <field name="x_cont1" /> 
                         <field name="x_cont1_por" attrs=
@@ -445,13 +445,12 @@
                         <field name="x_proto8"  attrs=
                               "{'required': [('x_dcont1','=',True)], 
                               'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto9"  attrs=
-                              "{'required': [('x_dcont1','=',True)], 
-                              'invisible': [('x_dcont1','=',False)]}"/>
-                        
                       </group>
 
                       <group>
+                        <field name="x_proto9"  attrs=
+                              "{'required': [('x_dcont1','=',True)], 
+                              'invisible': [('x_dcont1','=',False)]}"/>
                         <field name="x_proto10"  attrs=
                               "{'required': [('x_dcont1','=',True)], 
                               'invisible': [('x_dcont1','=',False)]}"/>
