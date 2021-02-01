@@ -520,10 +520,10 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-        ], "Una vez comprendido el programa de acompañamiento, ¿usted desea continuar?",
+        ], "1. Una vez comprendido el programa de acompañamiento, ¿usted desea continuar?",
     )
     x_cont1_por = fields.Char(
-        string="¿Por que?",
+        string="2. ¿Por qué no desea continuar con el proceso?",
     )
 
     x_datos3 = fields.Selection(
@@ -538,12 +538,11 @@ class Lead(models.Model):
             ('no','No')
         ], "1. ¿Está interesado en la búsqueda de un empleo?"
     )
-
+    #eliminado
     x_microneg = fields.Selection(
         [
             ('si', 'Formalizado'),
             ('no', 'Informal'),
-
         ], "25. ¿Su micronegocio está?",
     )
 

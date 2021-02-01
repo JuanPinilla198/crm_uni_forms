@@ -204,15 +204,16 @@
 
                 <page string="Módulo 2">
 
-                 <group string="MÓDULO 2 - PARTICIPACIÓN">
-                       <field name="x_cont1" /> 
-                       <field name="x_cont1_por" attrs=
+                  <group string="MÓDULO 2 - PARTICIPACIÓN">
+                        <div/>
+                        <field name="x_cont1" /> 
+                        <field name="x_cont1_por" attrs=
                               "{'required': [('x_cont1','=','no')], 'invisible': ['|',('x_cont1','=','si'),('x_cont1','=',False)]}"/>             
-                    </group>
-                </page>
-
-                <page string="Módulo 3">
-                    <group> 
+                  </group>
+                  </page>
+                  <page string="Módulo 3">
+                    <group>
+                        <div/> 
                         <field name="x_datos3" />
                     </group>
                     <group string="GENERALIDADES" style="line-height: 25px;">
@@ -226,8 +227,8 @@
                        
                     <group>
                     <field name="x_microneg"  attrs=
-                              "{'required': [('x_datos3','=','50')], 
-                              'invisible': [('x_datos3','!=','50')]}"/>
+                              "{'required': [('x_datos3','=','si')], 
+                              'invisible': [('x_datos3','!=','si')]}"/>
 
                     <field name="x_sisben" attrs=
                               "{'required': ['|',('x_microneg','=','50'),('x_microneg','=','51')], 
