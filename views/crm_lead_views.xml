@@ -187,8 +187,7 @@
                    
                 </page>
 
-                <page string="MODULO 2 - PARTICIPACIÓN">
-
+            <page string="MODULO 2 - PARTICIPACIÓN">
                   <group string="Módulo 2. Confirmación de participación - Encuentro 2">
                         <div/>
                         <field name="x_cont1" /> 
@@ -324,7 +323,7 @@
                   </group>
                         <group string="FORMALIZACION" style="line-height: 25px;">
                               <group string="SECCION 5: FORMALIZACION" style="line-height: 25px;">
-                              <field name="x_dcont5" attrs="{'invisible': [('x_datos3','!=','50')]}"/>
+                              <field name="x_dcont5" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
                         </group>  
                         <group>
                         </group>
@@ -333,85 +332,13 @@
                               <field name="x_forma50_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
                               <field name="x_forma52_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
                         </group>
-                <group>
-
-                  <field name="x_finan100_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','51')]}"/>
-
-                  <field name="x_finan102_inf" widget="many2many_tags" attrs=
-                                "{'required': [('x_dcont5','=',True),('x_microneg','=','51')], 
-                                'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','50')]}"/>
-
-                  <field name="x_finan103_inf" attrs=
-                                "{'required': [('x_dcont5','=',True),('x_microneg','=','51')], 
-                                'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','50')]}"/>
-
-                  <field name="x_finan104_inf" attrs=
-                                "{'required': [('x_dcont5','=',True),('x_microneg','=','51')], 
-                                'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','50')]}"/>
-                  
-                  
-                  <field name="x_finan101_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','51')]}"/>
-                  <field name="x_finan105_inf" attrs=
-                                "{'required': [('x_dcont5','=',True),('x_microneg','=','51')], 
-                                'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','50')]}"/>
-                  
-                  <field name="x_finan102_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','51')]}"/>
-                  <field name="x_finan106_inf" attrs=
-                                "{'required': [('x_dcont5','=',True),('x_microneg','=','51')], 
-                                'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','50')]}"/>
-                  
-                  <field name="x_finan103_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','51')]}"/>
-                  <field name="x_finan107_inf" attrs=
-                                "{'required': [('x_dcont5','=',True),('x_finan106_inf','=','51')], 
-                                'invisible': ['|',('x_finan106_inf','!=','51'),('x_microneg','=','50')]}"/>
-                  
-                  <field name="x_finan104_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','51')]}"/>
-                  <field name="x_finan108_inf" attrs=
-                                "{'required': [('x_dcont5','=',True),('x_microneg','=','51')], 
-                                'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','50')]}"/>
-                  
-                  <field name="x_finan105_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_finan104_form','=','51')], 
-                              'invisible': ['|',('x_microneg','!=','50'),('x_finan104_form','!=','51')]}"/>
-                  <field name="x_finan109_inf" attrs=
-                                "{'required': [('x_dcont5','=',True),('x_finan108_inf','=','50')], 
-                                'invisible': ['|',('x_finan108_inf','!=','50'),('x_microneg','=','50')]}"/>
-                
-                  <field name="x_finan106_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_microneg','=','50')], 
-                              'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','51')]}"/>
-                  <field name="x_finan110_inf" attrs=
-                                "{'required': [('x_dcont5','=',True),('x_microneg','=','51')], 
-                                'invisible': ['|',('x_dcont5','=',False),('x_microneg','=','50')]}"/>
-
-                  <field name="x_finan107_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_finan106_form','=','50')], 
-                              'invisible': ['|',('x_dcont5','=',False),('x_finan106_form','!=','50')]}"/>
-
-                  
-                  <field name="x_finan108_form" attrs=
-                              "{'required': [('x_dcont5','=',True),('x_finan106_form','=','50')], 
-                              'invisible': ['|',('x_dcont5','=',False),('x_finan106_form','!=','50')]}"/>
-                  
-                
-
-                </group>
-        </group>
-
-                </page>
+                        <group>
+                        </group>
+                  </group>
+            </page>
             </xpath>
         </field>
-    </record>
+</record>
 
 
     <record id="view_search_crm_inherited" model="ir.ui.view">
