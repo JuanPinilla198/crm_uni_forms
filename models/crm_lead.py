@@ -2439,8 +2439,8 @@ class Lead(models.Model):
     )
 
     x_finan104_form = fields.Selection(
-        [('50', 'Si'),
-         ('51', 'No'),
+        [('si', 'Si'),
+         ('no', 'No'),
 
         ], "91. ¿Tiene cuentas bancarias del negocio?",
     )
