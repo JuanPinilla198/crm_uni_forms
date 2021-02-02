@@ -320,24 +320,43 @@
                               <field name="ninova54" attrs="{'required': [('x_dcont4','=',True)],'invisible': [('x_dcont4','=',False)]}"/>  
                         </group>
   
-                  </group>
+                        </group>
                         <group string="FORMALIZACION" style="line-height: 25px;">
                               <group string="SECCION 5: FORMALIZACION" style="line-height: 25px;">
-                              <field name="x_dcont5" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
-                        </group>  
-                        <group>
+                                    <field name="x_dcont5" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
+                              </group>  
+                              <group>
+                              </group>
+                              <group>
+                                    <field name="for55" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
+                                    <field name="x_forma50_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
+                                    <field name="x_forma52_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
+                              </group>
+                              <group>
+                                    <field name="x_forma54_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
+                                    <field name="x_forma56_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
+                                    <field name="n_los_empl" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
+                              </group>
                         </group>
-                        <group>
-                              <field name="for55" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
-                              <field name="x_forma50_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
-                              <field name="x_forma52_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
+                        <group string="ORGANIZACIÓN" style="line-height: 25px;">
+                              <group string="SECCION 6: ORGANIZACION" style="line-height: 25px;">
+                                    <field name="x_dcont6" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
+                              </group>  
+                              <group>
+                              </group>
+                              <group>
+                                    <field name="org61" attrs="{'required': [('x_dcont6','=',True)], 'invisible': [('x_dcont6','=',False)]}"/>
+                                    <field name="org62" attrs="{'required': [('x_dcont6','=',True)], 'invisible': [('x_dcont6','=',False)]}"/>
+                                    <field name="org63" attrs="{'required': [('x_dcont6','=',True)], 'invisible': [('x_dcont6','=',False)]}"/>
+                                    <field name="org64" attrs="{'required': [('x_dcont6','=',True)], 'invisible': [('x_dcont6','=',False)]}"/>
+                              </group>
+                              <group>
+                                    <field name="org65" attrs="{'required': [('x_dcont6','=',True)], 'invisible': [('x_dcont6','=',False)]}"/>
+                                    <field name="org66" attrs="{'required': [('x_dcont6','=',True)], 'invisible': [('x_dcont6','=',False)]}"/>
+                                    <field name="org67" attrs="{'required': [('x_dcont6','=',True)], 'invisible': [('x_dcont6','=',False)]}"/>
+                                    <field name="org68" attrs="{'required': [('x_dcont6','=',True)], 'invisible': [('x_dcont6','=',False)]}"/>
+                              </group>
                         </group>
-                        <group>
-                              <field name="x_forma54_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
-                              <field name="x_forma56_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
-                              <field name="n_los_empl" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
-                        </group>
-                  </group>
             </page>
             </xpath>
         </field>

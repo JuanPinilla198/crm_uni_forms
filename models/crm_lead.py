@@ -1718,6 +1718,8 @@ class Lead(models.Model):
         ], "60. ¿Los empleados reciben beneficios laborales de conformidad a la Ley? ",
     )
 
+
+
     x_forma57_form = fields.Selection(
         #string="Sexo",
         [('50', 'Si'),
@@ -2666,8 +2668,63 @@ class Lead(models.Model):
 
         ], "110. ¿En su negocio utiliza billeteras electrónicas?",
     )
-
-
+    x_dcont6 = fields.Boolean(string="Continuar con el Formulario")
+    org61 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "61. ¿Su negocio cuenta con un plan de trabajo semanal/ quincenal/ mensual/ trimestral/ semestral/ anual? ",
+    )
+    org62 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "62. ¿Su negocio cuenta o elabora presupuesto semanal/ o quincenal o mensual o  trimestral o  semestral o anual?   ",
+    )
+    org63 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "63. ¿CuentaSu negocio con un plan estratégico de desarrollo?",
+    )
+    org64 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "64. ¿Lleva los registros y controles correspondientes en los Libros de Entradas o Ingresos ( Ventas)?",
+    )
+    org65 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "65. ¿Lleva los registros y controles correspondientes en los Libros de Salidas o Egresos (Compras)?",
+    )
+    org66 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "66. ¿Lleva control y registro de caja menor?",
+    )
+    org67 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "67. ¿Lleva el registro y control en el Libro Auxiliar de Cuentas por Cobrar?",
+    )
+    org68 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "68. ¿Lleva el registro y control en el Libro Auxiliar de Caja, Bancos?",
+    )
 
     country_id = fields.Many2one('res.country', "Country")
     xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
