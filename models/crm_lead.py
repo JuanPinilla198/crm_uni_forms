@@ -2238,7 +2238,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "86. ¿Su negocio depende de ventas de temporada?",
+        ], "76. ¿Su negocio depende de ventas de temporada?",
     )
 
     x_merc89_inf = fields.Selection(
@@ -2724,6 +2724,56 @@ class Lead(models.Model):
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "68. ¿Lleva el registro y control en el Libro Auxiliar de Caja, Bancos?",
+    )
+    x_dcont7 = fields.Boolean(string="Continuar con el Formulario")
+    mer69 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "69. ¿Su negocio tiene en ejecución planes para ampliar sus ventas? ",
+    )
+    mer70 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "70. ¿Cuenta su producto/servicio con una imagen comercial de acuerdo al segmento de mercado que ha definido?",
+    )
+    mer71 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "71. ¿Tiene el negocio en ejecución planes para la visibilizacion de sus productos?",
+    )
+    mer72 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "72. ¿Monitorea periódicamente la percepción de sus consumidores hacia su producto/ servicio con el objetivo de mejorarlo/ mantenerlo vigente?",
+    )
+    mer73 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "73. ¿Cuenta actualmente con un plan de mercadeo del producto? ",
+    )
+    mer74 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "74. ¿Cuenta con una base de datos/ listado de su(s) cliente(s) actual(es) de su(s) producto(s) y/o servicio(s)?",
+    )
+    mer75 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "75. ¿Ha desarrollado una o más estrategias de venta con el objetivo de incrementar su clientela?",
     )
 
     country_id = fields.Many2one('res.country', "Country")
