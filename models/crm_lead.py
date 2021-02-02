@@ -1520,7 +1520,12 @@ class Lead(models.Model):
     x_dcont3 = fields.Boolean(
         string="Continuar con el Formulario",
     )
-
+    for55 = fields.Selection(
+        [('si', 'Si'),
+         ('no', 'No'),
+         ('en_proceso', 'En proceso'),
+        ], "55. ¿Su negocio está legalmente constituido?",
+    )
     x_forma45_inf = fields.Selection(
         #string="Sexo",
         [('50', 'Si'),
@@ -1605,11 +1610,10 @@ class Lead(models.Model):
     )
 
     x_forma50_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "50. ¿Tiene su negocio un registro mercantil?",
+        [('si', 'Si'),
+         ('no', 'No'),
+         ('en_proceso','En proceso')
+        ], "56. ¿Tiene su negocio un registro mercantil?",
     )
 
     x_forma51_form = fields.Selection(
@@ -1637,11 +1641,10 @@ class Lead(models.Model):
     )
 
     x_forma52_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "52. ¿Tiene este negocio RUT (Registro Único Tributario)?",
+        [('si', 'Si'),
+         ('no', 'No'),
+         ('en_proceso','En proceso')
+        ], "57. ¿Tiene este negocio RUT (Registro Único Tributario)?",
     )
 
     x_forma53_form = fields.Selection(
