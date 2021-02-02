@@ -1320,7 +1320,7 @@ class Lead(models.Model):
         ], "39. ¿Cuenta con un espacio adecuado para la producción y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad?",
     )
 
-    x_innova26 = fields.Selection
+    x_innova26 = fields.Selection(
         [
           ('si', 'Si'),
           ('no', 'No'),
