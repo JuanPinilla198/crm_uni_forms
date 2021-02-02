@@ -2320,23 +2320,20 @@ class Lead(models.Model):
 
         ], "91. ¿Tiene claridad el margen de utilidad que genera su negocio?",
     )
-
     x_finan92_form = fields.Selection(
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "92. ¿Tiene la cultura de ahorrar o invertir las ganancias de su negocio? ",
+        [('si', 'Si'),
+         ('no', 'No'),
+        ], "83. ¿Tiene la cultura de ahorrar o invertir las ganancias de su negocio? ",
     )
 
     x_finan93_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Totalmente de acuerdo'),
-         ('51', 'De acuerdo'),
-         ('52', 'Ni de acuerdo, ni en desacuerdo'),
-         ('53', 'En desacuerdo'),
-         ('54', 'Totalmente en desacuerdo'),
+        [('totalmente_de_acuerdo', 'Totalmente de acuerdo'),
+         ('de_acuerdo', 'De acuerdo'),
+         ('ni_de_acuerdo_ni_en_desacuerdo', 'Ni de acuerdo, ni en desacuerdo'),
+         ('en_desacuerdo', 'En desacuerdo'),
+         ('totalmente_en_desacuerdo', 'Totalmente en desacuerdo'),
 
-        ], "93. ¿Considera qué a través de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
+        ], "84. ¿Considera qué a través de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
     )
 
     x_finan94_form = fields.Selection(
@@ -2384,21 +2381,19 @@ class Lead(models.Model):
     )
 
     x_finan98_form = fields.Selection(
-        [('50', 'Si'),
-         ('51', 'No'),
+        [('si', 'Si'),
+         ('no', 'No'),
 
-        ], "98. ¿Acude al fenómeno gota gota para financiar su negocio?",
+        ], "86. ¿Acude al fenómeno gota gota para financiar su negocio?",
     )
 
     x_finan99_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Totalmente de acuerdo'),
-         ('51', 'De acuerdo'),
-         ('52', 'Ni de acuerdo, ni en desacuerdo'),
-         ('53', 'En desacuerdo'),
-         ('54', 'Totalmente en desacuerdo'),
-
-        ], "99. ¿Considera qué los ingresos del negocio son suficientes para cubrir los gastos y costos en que incurrre el negocio?",
+        [('totalmente_de_acuerdo', 'Totalmente de acuerdo'),
+         ('de_acuerdo', 'De acuerdo'),
+         ('ni_de_acuerdo_ni_en_desacuerdo', 'Ni de acuerdo, ni en desacuerdo'),
+         ('en_desacuerdo', 'En desacuerdo'),
+         ('totalmente_en_desacuerdo', 'Totalmente en desacuerdo'),
+        ], "87. ¿Considera qué los ingresos del negocio son suficientes para cubrir los gastos y costos en que incurrre el negocio?",
     )
 
     x_finan100_form = fields.Selection(
@@ -2447,7 +2442,7 @@ class Lead(models.Model):
         [('50', 'Si'),
          ('51', 'No'),
 
-        ], "104. ¿Tiene cuentas bancarias del negocio?",
+        ], "91. ¿Tiene cuentas bancarias del negocio?",
     )
 
     x_finan105_form = fields.Selection(
@@ -2775,7 +2770,77 @@ class Lead(models.Model):
             ('en_proceso', 'En proceso'),
         ], "75. ¿Ha desarrollado una o más estrategias de venta con el objetivo de incrementar su clientela?",
     )
-
+    prom77 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "77. ¿Utiliza el correo electrónico, whatsapp, otro medio electrónico como herramienta de promoción de sus productos?",
+    )
+    prom78 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "78. ¿Cuenta con un perfil en redes sociales para promocionar su negocio y productos? (facebook, instagram, twiter, you tube)",
+    )
+    prom79 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "79. ¿Cuenta con página web  para promocionar sus productos/ servicios y demás actividades del negocio?",
+    )
+    prom80 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "80. ¿Actualmente utiliza su negocio material publicitario en físico para promocionar sus productos?  (hojas volantes, bifolio, trifolio, afiches, catálogo de productos, otros)",
+    )
+    prom81 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "81. ¿Actualmente tiene un plan de descuentos definido para cerrar las ventas con sus clientes?",
+    )
+    prom82 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "82. ¿Cuenta con fotografías profesionales de sus productos o servicios?",
+    )
+    x_dcont7 = fields.Boolean(string="Continuar con el Formulario")
+    fin85 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "85. ¿Ha realizado el negocio gestiones de préstamos en el sistema financiero alternativo y/o formal y los ha obtenido?",
+    )
+    fin88 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "88. ¿Para determinar el precio de los productos/ servicios del negocio considera los costos fijos y variables?",
+    )
+    fin89 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "89. ¿Conoce el nivel de ventas en el que su negocio cubre sus costos? (Punto de Equilibrio)",
+    )
+    fin90 = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "90. ¿Tiene un plan de inversiones?",
+    )
     country_id = fields.Many2one('res.country', "Country")
     xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
     city = fields.Char(related="xcity.name")
