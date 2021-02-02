@@ -519,19 +519,19 @@
                         <group>
                         </group>
                         <group>
-                            <field name="prodl38"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="prodl39"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="prodl40"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="prodl41"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_innova24"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_innova25"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_innova26"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_innova27"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
                             <field name="prodl42"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
                         </group>
                         <group>
                             <field name="prodl43"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="prodl44"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="prodl45"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="prodl46"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_innova29"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_innova33"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_innova36"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
                             <field name="prodl47"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="prodl48"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_innova39"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
                         </group>
                         <!--group>
                         <field name="x_forma45_inf"  attrs=
@@ -709,9 +709,9 @@
 
                         <field name="x_forma67_inf" attrs=
                               "{'required': [('x_dcont3','=',True),('x_microneg','=','51')], 
-                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','50')]}"/-->
+                              'invisible': ['|',('x_dcont3','=',False),('x_microneg','=','50')]}"/>
                             
-                      <!--/group-->
+                      </group-->
                     </group>
 
                       <group string="MERCADEO Y COMERCIALIZACION SECCION 4: MERCADEO Y VENTAS" style="line-height: 25px;">                      

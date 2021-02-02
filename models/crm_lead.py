@@ -1224,13 +1224,6 @@ class Lead(models.Model):
             ('en_proceso', 'En proceso'),
         ], "37. ¿El negocio cuenta con algún tipo de alianza para su desarrollo técnico?",
     )
-    prodl38 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "38. ¿Cuenta con personal capacitado para la produccion o manipulacion del producto?",
-    )
     prodl39 = fields.Selection(
         [
             ('si', 'Si'),
@@ -1238,20 +1231,7 @@ class Lead(models.Model):
             ('en_proceso', 'En proceso'),
         ], "39. ¿Cuenta con un espacio adecuado para la produccion y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad??",
     )
-    prodl40 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "40. ¿Tiene implementado un proceso de buenas practicas de manipulacion y produccion?",
-    )
-    prodl41 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "41. ¿Para la obtencion de la materia prima o mercancia depende de un solo proveedor? ",
-    )
+
     prodl42 = fields.Selection(
         [
             ('si', 'Si'),
@@ -1265,20 +1245,6 @@ class Lead(models.Model):
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "43. ¿Tiene su negocio un sistema de control/ gestion de calidad adoptado e implementado?",
-    )
-    prodl44 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "44. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancia?",
-    )
-    prodl45 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "45. ¿Cuenta con un inventario donde registre las entradas y salidas del producto?",
     )
     prodl46 = fields.Selection(
         [
@@ -1294,15 +1260,6 @@ class Lead(models.Model):
             ('en_proceso', 'En proceso'),
         ], "47. ¿sabe cuáles son los costos de cada etapa del proceso de producción?",
     )
-    prodl48 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-        ], "48. ¿Sabe cual es el punto de equilibrio de su negocio?",
-    )
-
-
-
     x_innova19 = fields.Selection(
         #string="Sexo",
         [('50', 'Si'),
@@ -1351,43 +1308,33 @@ class Lead(models.Model):
     )
 
     x_innova24 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "24. ¿Cuenta con personal capacitado para la producción o manipulación del producto?",
+        [('si', 'Si'),
+         ('no', 'No'),
+         ('en_proceso', 'En proceso'),
+        ], "38. ¿Cuenta con personal capacitado para la producción o manipulación del producto?",
     )
 
     x_innova25 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "25. ¿Cuenta con un espacio adecuado para la producción y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad?",
+        [('si', 'Si'),
+         ('no', 'No'),
+        ], "39. ¿Cuenta con un espacio adecuado para la producción y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad?",
     )
 
-    x_innova26 = fields.Selection(
-        #string="Sexo",
+    x_innova26 = fields.Selection
         [
-            ('50', 'Totalmente de acuerdo'),
-            ('51', 'De acuerdo'),
-            ('52', 'Ni de acuerdo, ni en desacuerdo'),
-            ('53', 'En desacuerdo'),
-            ('54', 'Totalmente en desacuerdo'),
-
-        ], "26. ¿Usted considera importante que el uso de buenas prácticas manipulación...",
+          ('si', 'Si'),
+          ('no', 'No'),
+          ('en_proceso', 'En proceso'),
+        ], "40. ¿Tiene implementado un proceso de buenas practicas de manipulacion y produccion ?",
     )
 
     x_innova27 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "27. ¿Para la obtención de la materia prima o mercancía depende de un solo proveedor? ",
+        [('si', 'Si'),
+         ('no', 'No'),
+        ], "41. ¿Para la obtención de la materia prima o mercancía depende de un solo proveedor?",
     )
 
     x_innova28 = fields.Selection(
-        #string="Sexo",
         [('50', 'De contado'),
          ('51', 'A crédito'),
          ('52', 'A plazos'),
@@ -1395,14 +1342,13 @@ class Lead(models.Model):
         ], "28. El pago de la materia prima la realiza ",
     )
 
-    x_innova29 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "29. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancía?",
+    x_innova29 = = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "44. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancia?",
     )
-
     x_innova30 = fields.Selection(
         #string="Sexo",
         [('50', 'Totalmente de acuerdo'),
@@ -1434,11 +1380,10 @@ class Lead(models.Model):
     )
 
     x_innova33 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "33. ¿Cuenta con un inventario donde registre las entradas y salidas del producto?",
+        [('si', 'Si'),
+         ('no', 'No'),
+         ('en_proceso', 'En proceso'),
+        ], "45. ¿Cuenta con un inventario donde registre las entradas y salidas del producto?",
     )
 
     x_innova34 = fields.Integer(
@@ -1450,11 +1395,9 @@ class Lead(models.Model):
     )
 
     x_innova36 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "36. ¿Sabe lo qué le cuesta a su negocio la producción y comercialización del producto o servicio?",
+        [('si', 'Si'),
+         ('no', 'No')
+        ], "46. ¿Sabe lo qué le cuesta a su negocio la producción y comercialización del producto o servicio?",
     )
 
     x_innova37 = fields.Selection(
@@ -1475,19 +1418,15 @@ class Lead(models.Model):
     )
 
     x_innova39 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "39. ¿Sabe cuál es el punto de equilibrio de su negocio?",
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+        ], "48. ¿Sabe cual es el punto de equilibrio de su negocio?",
     )
-
     x_innova40 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "40. ¿En el último año ha realizado actividades de innovación para su negocio?",
+        [('si', 'Si'),
+         ('no', 'No'),
+        ], "49. ¿En el último año ha realizado actividades de innovación para su negocio?",
     )
 
     x_innova41_inf = fields.Selection(
@@ -1565,8 +1504,6 @@ class Lead(models.Model):
         ], "45. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (diseño, envase, promoción, forma de cotizar, etc.)",
     )
     #gavii
-
-    
 #FORMALIZACION SECCION 3: ADMINISTRACION
     x_dcont3 = fields.Boolean(
         string="Continuar con el Formulario",
