@@ -1439,6 +1439,12 @@ class Lead(models.Model):
         ], "52. ¿El negocio ha recibido transferencias de tecnologias o de conocimientos para mejorar sus procesos, productos o servicios?",
     )
     ninova53 = fields.Text( string="53. ¿Cuales?",readonly=False)
+    ninova54 = fields.Selection(
+        [('si', 'Si'),
+         ('no', 'No'),
+         ('en_proceso', 'En proceso'),
+        ], "54. ¿La negocio ha desarrollado nuevos servicios o productos en los ultimos 2 años?",
+    )
     x_innova41_inf = fields.Selection(
         [('si', 'Si'),
          ('no', 'No'),
