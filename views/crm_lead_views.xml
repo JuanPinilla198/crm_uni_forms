@@ -326,11 +326,11 @@
                         <group>
                        </group>
                         <group>
-                              <field name="x_innova40" attrs=attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
+                              <field name="x_innova40" attrs="{'required': [('x_dcont4','=',True)],'invisible': [('x_dcont4','=',False)]}"/>
                               <field name="ninova50" attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/> 
                               <field name="x_innova43_inf" attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
-                              <field name="x_merc69_inf" attrs=attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
-                              <field name="ninova52" attrs=attrs=attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
+                              <field name="x_merc69_inf" attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
+                              <field name="ninova52" attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
                               <field name="ninova53" attrs="{'required': [('x_dcont4','=',True),('ninova53','=','si')], 'invisible': ['|',('x_dcont4','=',False),('ninova53','=','no')]}"/> 
 
                               <field name="x_merc68_form" attrs=
