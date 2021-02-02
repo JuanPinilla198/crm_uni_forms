@@ -522,7 +522,7 @@ class Lead(models.Model):
             ('no', 'No'),
         ], "1. Una vez comprendido el programa de acompañamiento, ¿usted desea continuar?",
     )
-    x_cont1_por = fields.Char(
+    x_cont1_por = fields.Text(
         string="2. ¿Por qué no desea continuar con el proceso?",
     )
 

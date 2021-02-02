@@ -239,16 +239,16 @@
                         <field name="x_proto8"  attrs= "{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
                       </group>
 
-                      <group>
-                        <field name="x_proto9"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto10"  attrs="{'required': [('x_dcont1','=',True)],'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto11"  attrs= "{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto12"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto13"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto14"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto15"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto16"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                      </group>
+                    <group>
+                      <field name="x_proto9"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                      <field name="x_proto10"  attrs="{'required': [('x_dcont1','=',True)],'invisible': [('x_dcont1','=',False)]}"/>
+                      <field name="x_proto11"  attrs= "{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                      <field name="x_proto12"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                      <field name="x_proto13"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                      <field name="x_proto14"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                      <field name="x_proto15"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                      <field name="x_proto16"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                    </group>
                     </group>
 
                   <group string="MODELO DE NEGOCIO" style="line-height: 25px;">
