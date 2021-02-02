@@ -1425,14 +1425,23 @@ class Lead(models.Model):
     x_innova40 = fields.Selection(
         [('si', 'Si'),
          ('no', 'No'),
-        ], "49. ¿En el último año ha realizado actividades de innovación para su negocio?",
+        ], "50. ¿En el último año ha realizado actividades de innovación para su negocio?",
     )
-
-    x_innova41_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
+    ninova50 = fields.Selection(
+        [('si', 'Si'),
+         ('no', 'No')
+        ], "46. ¿se generan espacios para  fomentar la Creatividad y la generación de ideas  innovadoras?",
+    )
+    ninova52 = fields.Selection(
+        [('si', 'Si'),
+         ('no', 'No'),
+         ('en_proceso', 'En proceso'),
+        ], "52. ¿El negocio ha recibido transferencias de tecnologias o de conocimientos para mejorar sus procesos, productos o servicios?",
+    )
+    ninova53 = fields.Text( string="53. ¿Cuales?",readonly=False)
+    x_innova41_inf = fields.Selection
+        [('si', 'Si'),
+         ('no', 'No'),
         ], "41. ¿Realiza actividades con los trabajadores para crear innovaciones en su negocio?",
     )
 
@@ -1464,11 +1473,9 @@ class Lead(models.Model):
     )
 
     x_innova43_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "43. ¿Ofrece con frecuencia productos o servicios nuevos a partir de sugerencias de sus clientes?",
+        [('si', 'Si'),
+         ('no', 'No'),
+        ], "51. ¿Ofrece con frecuencia productos o servicios nuevos a partir de sugerencias de sus clientes?",
     )
 
     x_innova43_form = fields.Selection(
