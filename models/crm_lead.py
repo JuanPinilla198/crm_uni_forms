@@ -1342,11 +1342,10 @@ class Lead(models.Model):
         ], "28. El pago de la materia prima la realiza ",
     )
 
-    x_innova29 = = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+    x_innova29 = fields.Selection(
+        [('si', 'Si'),
+          ('no', 'No'),
+          ('en_proceso', 'En proceso'),
         ], "44. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancia?",
     )
     x_innova30 = fields.Selection(
