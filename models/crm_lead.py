@@ -2812,7 +2812,7 @@ class Lead(models.Model):
             ('en_proceso', 'En proceso'),
         ], "82. ¿Cuenta con fotografías profesionales de sus productos o servicios?",
     )
-    x_dcont7 = fields.Boolean(string="Continuar con el Formulario")
+    x_dcont8 = fields.Boolean(string="Continuar con el Formulario")
     fin85 = fields.Selection(
         [
             ('si', 'Si'),
