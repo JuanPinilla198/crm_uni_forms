@@ -333,6 +333,9 @@
                               <field name="x_forma52_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
                         </group>
                         <group>
+                              <field name="x_forma54_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
+                              <field name="x_forma56_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
+                              <field name="n_los_empl" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
                         </group>
                   </group>
             </page>

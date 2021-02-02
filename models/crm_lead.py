@@ -1672,11 +1672,10 @@ class Lead(models.Model):
     )
 
     x_forma54_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "54. ¿Tiene este negocio NIT (Número de Identificación Tributaria?",
+        [('si', 'Si'),
+         ('no', 'No'),
+         ('en_proceso','En proceso')
+        ], "58. ¿Tiene este negocio NIT (Número de Identificación Tributaria?",
     )
 
     x_forma55_form = fields.Selection(
@@ -1707,11 +1706,16 @@ class Lead(models.Model):
     )
 
     x_forma56_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "56. Para el funcionamiento del negocio: ¿Requiere algún permiso municipal/distrital adicional para funcionar?",
+        [('si', 'Si'),
+         ('no', 'No'),
+         ('en_proceso','En proceso')
+        ], "59. Para el funcionamiento del negocio: ¿Requiere algún permiso municipal/distrital adicional para funcionar?",
+    )
+    n_los_empl = fields.Selection(
+        [('si', 'Si'),
+         ('no', 'No'),
+         ('en_proceso','En proceso')
+        ], "60. ¿Los empleados reciben beneficios laborales de conformidad a la Ley? ",
     )
 
     x_forma57_form = fields.Selection(
