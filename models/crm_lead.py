@@ -2879,9 +2879,6 @@ class Lead(models.Model):
             'value': {domain: ''}
         }
 
-    @api.constrains('x_dias_sem_inf','x_dias_sem_for','x_dias_sem_for2','x_horas_trab_inf',
-                    'x_trabajadores_form','x_innova34','x_forma59_form','x_forma58_form',
-                    'x_forma60_form','x_forma61_form','x_trabajadores_inf','x_reinvierte_form',
-                    'x_clientes_form','x_clientes_inf','x_reinvierte_inf','x_forma62_inf','x_forma63_inf','x_forma64_inf','x_forma65_inf')   
+     
 
 
