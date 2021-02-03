@@ -147,9 +147,9 @@
                             <field name="x_actcomer" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_state_id" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                              "{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_city_id" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                              "{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_ubic" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_dir_neg" attrs=
