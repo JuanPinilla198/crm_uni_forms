@@ -2896,8 +2896,8 @@ class Lead(models.Model):
             raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 34)")
         if self.x_innova34 > 42 or self.x_innova34 < 0:
             raise ValidationError("Ingrese un valor entre 0 y 42. (Pregunta 34)")
-        if self.x_forma58_form > 9 or self.x_forma58_form < 0:
-            raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 58)")
+        #if self.x_forma58_form > 9 or self.x_forma58_form < 0:
+            #raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 58)")
         if self.x_forma59_form > 9 or self.x_forma59_form < 0:
             raise ValidationError("Ingrese un valor entre 0 y 9. (Pregunta 59)")
         if self.x_forma60_form > 9 or self.x_forma60_form < 0:
