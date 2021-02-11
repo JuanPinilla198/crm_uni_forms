@@ -1105,124 +1105,141 @@ class Lead(models.Model):
         string="¿Desea continuar con el Formulario?",
     )
     #preguntas nuevas modelo de negocio
-    model21 = fields.Selection(
+    x_model21 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "21. ¿Tiene identificados y caracterizados los segmentos de mercado objetivo de su negocio?",
+        oldname="model21"
     )
-    model22 = fields.Selection(
+    x_model22 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "22. ¿Tiene definida con claridad y apropiadamente una propuesta de valor para  los segmentos de mercado objetivo de su negocio?",
+        oldname="model22"
     )
-    model23 = fields.Selection(
+    x_model23 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "23. ¿Cumple la propuesta de valor definida para  los segmentos de mercado objetivo?",
+        oldname="model23"
     )
-    model24 = fields.Selection(
+    x_model24 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "24. ¿Tiene identificados y en funcionamiento óptimo canales apropiados para comunicar la oferta a cada uno de sus segmentos de mercado objetivo?",
+        oldname="model24"
     )
-    model25 = fields.Selection(
+    x_model25 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "25. ¿Tiene identificados y en funcionamiento óptimo canales apropiados para que cada uno de sus segmentos de mercado objetivo realice la compra y estos son competitivos con lo ofrecido por la competencia?",
+        oldname="model25"
     )
-    model26 = fields.Selection(
+    x_model26 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "26. ¿Tiene identificados y en funcionamiento óptimo canales apropiados para realizar la entrega a cada uno de sus segmentos de mercado y estos son competitivos con lo ofrecido por la competencia??",
+        oldname="model26"
     )
-    model27 = fields.Selection(
+    x_model27 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "27. ¿El servicio posventa es competitivo y se enfoca en las necesidades de cada uno de los segmentos de mercado?",
+        oldname="model27"
     )
-    model28 = fields.Selection(
+    x_model28 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "28. ¿Los mecanismos de captación de clientes son apropiados desde la captación y el funcionamiento, y se enfocan en la caracteterísticas de cada segmento de mercado?",
+        oldname="model28"
     )
-    model29 = fields.Selection(
+    x_model29 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "29. ¿Los mecanismos de fidelización de clientes son apropiados desde la captación y el funcionamiento, y se enfocan en la caracteterísticas de cada segmento de mercado?",
+        oldname="model29"
     )
-    model30 = fields.Selection(
+    x_model30 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "30. ¿Los mecanismos de estimulación para el aumento de la compra en los clientes son apropiados desde la captación y el funcionamiento, y se enfocan en la caracteterísticas de cada segmento de mercado?",
+        oldname="model30"
     )
-    model31 = fields.Selection(
+    x_model31 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "31. ¿Son claras las fuentes de ingreso y estas están verdaderamente basadas y enfocadas en el valor esperado por los clientes?",
+        oldname="model31"
     )
-    model32 = fields.Selection(
+    x_model32 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "32. ¿El negocio tiene identificados los recursos requeridos para el perfecto funcionamiento del modelo de negocio y el cumplimiento de la propuesta de valor?",
+        oldname="model32"
     )
-    model33 = fields.Selection(
+    x_model33 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "33. ¿El negocio cuenta con todos los recursos requeridos para el perfecto funcionamiento del modelo de negocio y el cumplimiento de la propuesta de valor?",
+        oldname="model33"
     )
-    model34 = fields.Selection(
+    x_model34 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "34. ¿El negocio tiene identificadas las actividades claves para el perfecto funcionamiento del modelo de negocio y el cumplimiento de la propuesta de valor?",
+        oldname="model34"
     )
-    model35 = fields.Selection(
+    x_model35 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "35. ¿Las actividades claves de la negocio hacen parte de procesos estandarizados y bien definidos?",
+        oldname="model35"
     )
-    model36 = fields.Selection(
+    x_model36 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "36. ¿La negocio cuenta con acuerdos con proveedores y estos son suficientes y apropiados?",
+        oldname="model36"
     )
-    model37 = fields.Selection(
+    x_model37 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "37. ¿El negocio cuenta con algún tipo de alianza para su desarrollo técnico?",
+        oldname="model37"
     )
     prodl39 = fields.Selection(
         [
@@ -1232,33 +1249,37 @@ class Lead(models.Model):
         ], "39. ¿Cuenta con un espacio adecuado para la produccion y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad??",
     )
 
-    prodl42 = fields.Selection(
+    x_prodl42 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "42. ¿Se tiene en el negocio definidos los estándares de los procesos de producción de los productos/servicios que vende?",
+        oldname="prodl42"
     )
-    prodl43 = fields.Selection(
+    x_prodl43 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "43. ¿Tiene su negocio un sistema de control/ gestion de calidad adoptado e implementado?",
+        oldname="prodl43"
     )
-    prodl46 = fields.Selection(
+    x_prodl46 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "46. ¿Sabe lo que le cuesta a su negocio la produccion y comercializacion del producto o servicio?",
+        oldname="prodl46"
     )
-    prodl47 = fields.Selection(
+    x_prodl47 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "47. ¿sabe cuáles son los costos de cada etapa del proceso de producción?",
+        oldname="prodl47"
     )
     x_innova19 = fields.Selection(
         #string="Sexo",
@@ -1427,23 +1448,29 @@ class Lead(models.Model):
          ('no', 'No'),
         ], "50. ¿En el último año ha realizado actividades de innovación para su negocio?",
     )
-    ninova50 = fields.Selection(
+    x_ninova50 = fields.Selection(
         [('si', 'Si'),
          ('no', 'No')
         ], "46. ¿se generan espacios para  fomentar la Creatividad y la generación de ideas  innovadoras?",
+        oldname="ninova50"
     )
-    ninova52 = fields.Selection(
+    x_ninova52 = fields.Selection(
         [('si', 'Si'),
          ('no', 'No'),
          ('en_proceso', 'En proceso'),
         ], "52. ¿El negocio ha recibido transferencias de tecnologias o de conocimientos para mejorar sus procesos, productos o servicios?",
+        oldname="ninova52"
     )
-    ninova53 = fields.Text( string="53. ¿Cuales?",readonly=False)
-    ninova54 = fields.Selection(
+    x_ninova53 = fields.Text(
+        string="53. ¿Cuales?",
+        readonly=False,
+        oldname="ninova53")
+    x_ninova54 = fields.Selection(
         [('si', 'Si'),
          ('no', 'No'),
          ('en_proceso', 'En proceso'),
         ], "54. ¿La negocio ha desarrollado nuevos servicios o productos en los ultimos 2 años?",
+        oldname="ninova54"
     )
     x_innova41_inf = fields.Selection(
         [('si', 'Si'),
@@ -1520,11 +1547,12 @@ class Lead(models.Model):
     x_dcont3 = fields.Boolean(
         string="Continuar con el Formulario",
     )
-    for55 = fields.Selection(
+    x_for55 = fields.Selection(
         [('si', 'Si'),
          ('no', 'No'),
          ('en_proceso', 'En proceso'),
         ], "55. ¿Su negocio está legalmente constituido?",
+        oldname="for55"
     )
     x_forma45_inf = fields.Selection(
         #string="Sexo",
@@ -2664,111 +2692,125 @@ class Lead(models.Model):
         ], "110. ¿En su negocio utiliza billeteras electrónicas?",
     )
     x_dcont6 = fields.Boolean(string="Continuar con el Formulario")
-    org61 = fields.Selection(
+    x_org61 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "61. ¿Su negocio cuenta con un plan de trabajo semanal/ quincenal/ mensual/ trimestral/ semestral/ anual? ",
+        oldname="org61"
     )
-    org62 = fields.Selection(
+    x_org62 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "62. ¿Su negocio cuenta o elabora presupuesto semanal/ o quincenal o mensual o  trimestral o  semestral o anual?   ",
+        oldname="org62"
     )
-    org63 = fields.Selection(
+    x_org63 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "63. ¿CuentaSu negocio con un plan estratégico de desarrollo?",
+        oldname="org63"
     )
-    org64 = fields.Selection(
+    x_org64 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "64. ¿Lleva los registros y controles correspondientes en los Libros de Entradas o Ingresos ( Ventas)?",
+        oldname="org64"
     )
-    org65 = fields.Selection(
+    x_org65 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "65. ¿Lleva los registros y controles correspondientes en los Libros de Salidas o Egresos (Compras)?",
+        oldname="org65"
     )
-    org66 = fields.Selection(
+    x_org66 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "66. ¿Lleva control y registro de caja menor?",
+        oldname="org66"
     )
-    org67 = fields.Selection(
+    x_org67 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "67. ¿Lleva el registro y control en el Libro Auxiliar de Cuentas por Cobrar?",
+        oldname="org67"
     )
-    org68 = fields.Selection(
+    x_org68 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "68. ¿Lleva el registro y control en el Libro Auxiliar de Caja, Bancos?",
+        oldname="org68"
     )
     x_dcont7 = fields.Boolean(string="Continuar con el Formulario")
-    mer69 = fields.Selection(
+    x_mer69 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "69. ¿Su negocio tiene en ejecución planes para ampliar sus ventas? ",
+        oldname="mer69"
     )
-    mer70 = fields.Selection(
+    x_mer70 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "70. ¿Cuenta su producto/servicio con una imagen comercial de acuerdo al segmento de mercado que ha definido?",
+        oldname="mer70"
     )
-    mer71 = fields.Selection(
+    x_mer71 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "71. ¿Tiene el negocio en ejecución planes para la visibilizacion de sus productos?",
+        oldname="mer71"
     )
-    mer72 = fields.Selection(
+    x_mer72 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "72. ¿Monitorea periódicamente la percepción de sus consumidores hacia su producto/ servicio con el objetivo de mejorarlo/ mantenerlo vigente?",
     )
-    mer73 = fields.Selection(
+    x_mer73 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "73. ¿Cuenta actualmente con un plan de mercadeo del producto? ",
+        oldname="mer73"
     )
-    mer74 = fields.Selection(
+    x_mer74 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "74. ¿Cuenta con una base de datos/ listado de su(s) cliente(s) actual(es) de su(s) producto(s) y/o servicio(s)?",
+        oldname="mer74"
     )
-    mer75 = fields.Selection(
+    x_mer75 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "75. ¿Ha desarrollado una o más estrategias de venta con el objetivo de incrementar su clientela?",
+        oldname="mer75"
     )
     prom77 = fields.Selection(
         [
@@ -2813,33 +2855,37 @@ class Lead(models.Model):
         ], "82. ¿Cuenta con fotografías profesionales de sus productos o servicios?",
     )
     x_dcont8 = fields.Boolean(string="Continuar con el Formulario")
-    fin85 = fields.Selection(
+    x_fin85 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "85. ¿Ha realizado el negocio gestiones de préstamos en el sistema financiero alternativo y/o formal y los ha obtenido?",
+        oldname="fin85"
     )
-    fin88 = fields.Selection(
+    x_fin88 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "88. ¿Para determinar el precio de los productos/ servicios del negocio considera los costos fijos y variables?",
+        oldname="fin88"
     )
-    fin89 = fields.Selection(
+    x_fin89 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "89. ¿Conoce el nivel de ventas en el que su negocio cubre sus costos? (Punto de Equilibrio)",
+        oldname="fin89"
     )
-    fin90 = fields.Selection(
+    x_fin90 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
         ], "90. ¿Tiene un plan de inversiones?",
+        oldname="fin90"
     )
     country_id = fields.Many2one('res.country', "Country")
     xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
