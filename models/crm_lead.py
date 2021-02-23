@@ -2887,6 +2887,88 @@ class Lead(models.Model):
         ], "90. ¿Tiene un plan de inversiones?",
         oldname="fin90"
     )
+    x_fin87n = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "87. ¿Para determinar el precio de los productos/ servicios del negocio, considera los costos fijos (arriendos, servicios publicos, otros) y variables (materia prima, empaques, transporte, otros)?",
+    )
+    x_fin88n = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "88. ¿Conoce el nivel de ventas en el que su negocio cubre sus costos? (Punto de Equilibrio: No pierde, ni gana)",
+    )
+    x_fin89n = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+            ('en_proceso', 'En proceso'),
+        ], "89. ¿Tiene un plan de inversiones?(Documento que permite plasmar acciones y plazos, que garantizan su rentabilidad y minimizan su riesgo)",
+    )
+    x_fin90n = fields.Selection(
+        [
+            ('bancaria_para_el_negocio', 'Bancaria para el negocio'),
+            ('bancaria_personal', 'Bancaria personal'),
+            ('no_tiene_cuenta_bancaria', 'No tiene cuenta bancaria'),
+        ], "90. ¿Tiene cuenta  bancaria el negocio o cuenta bancaria personal?",
+    )
+    x_fin91n = fields.Selection(
+        [
+            ('bancos', 'Bancos'),
+            ('cooperativas', 'Cooperativas'),
+            ('familiares', 'Familiares'),
+            ('amigos', 'Amigos'),
+            ('no_he_solicitado_prestamos', 'No he solicitado prestamos'),
+        ], "91. Para financiar su negocio, ha solicitado prestamos en:",
+    )
+    x_fin92n = fields.Selection(
+        [
+            ('cubre_en_su_totalidad', 'Cubre en su totalidad'),
+            ('cubre_a_la_mitad', 'Cubre a la mitad'),
+            ('cubre_menos_de_la_mitad', 'Cubre menos de la mitad'),
+            ('no_cubre', 'No cubre'),
+        ], "92. ¿Que tanto cubre los ingresos actuales del negocio en los gastos y costos en que incurre?",
+    )
+    x_fin93n = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+        ], "93. ¿Tiene propiedades a su nombre o de su familia inmediata? Vehiculo, vivienda, entre otros.",
+    )
+    x_fin94n = fields.Selection(
+        [
+            ('no_tengo_deudas', 'No tengo deudas'),
+            ('50000_a_250000', '$50.000 a $250.000'),
+            ('250001_a_500000', '$250.001 a $500.000'),
+            ('500001_a_1000000', '$500.001 a $1.000.000'),
+            ('superior_a_1000000', 'Superior a $1.000.000'),
+        ], "94. ¿Cuál es el valor de sus deudas a la fecha?",
+    )
+    x_fin95n = fields.Selection(
+        [
+            ('50000_a_250000', '$50.000 a $250.000'),
+            ('250001_a_500000', '$250.001 a $500.000'),
+            ('500001_a_1000000', '$500.001 a $1.000.000'),
+            ('superior_a_1000000', 'Superior a $1.000.000'),
+            ('no_sabe_no_responde', 'No sabe, no responde'),
+        ], "95. ¿Cuánto vale su inventario?",
+    )
+    x_fin96n = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+        ], "96. ¿En la emergencia sanitaria pudo trabajar?",
+    )
+    x_fin97n = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+        ], "97. ¿Esta interesado en recibir orientacion sobre lineas de credito para financiacion?",
+    )
+
     country_id = fields.Many2one('res.country', "Country")
     xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
     city = fields.Char(related="xcity.name")

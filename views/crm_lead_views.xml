@@ -401,14 +401,21 @@
                                     <field name="x_finan93_form" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
                                     <field name="x_fin85" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
                                     <field name="x_finan98_form" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
-                                    <field name="x_finan99_form" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin87n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin88n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin89n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
                               </group>
                               <group>
-                                    <field name="x_fin88" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
-                                    <field name="x_fin89" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
-                                    <field name="x_fin90" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
-                                    <field name="x_finan104_form" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin90n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin91n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin92n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin93n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin94n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin95n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin96n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
+                                    <field name="x_fin97n" attrs="{'required': [('x_dcont8','=',True)], 'invisible': [('x_dcont8','=',False)]}"/>
                               </group>
+                              
                         </group>
             </page>
             </xpath>
