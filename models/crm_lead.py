@@ -2924,6 +2924,7 @@ class Lead(models.Model):
             'domain': {domain: [('id', 'in', id_domain)]},
             'value': {domain: ''}
         }
+        #
 
      
 
