@@ -1150,7 +1150,7 @@ class Lead(models.Model):
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
-        ], "26. ¿Tiene identificados y en funcionamiento óptimo canales apropiados para realizar la entrega a cada uno de sus segmentos de mercado y estos son competitivos con lo ofrecido por la competencia?",
+        ], "26. ¿Tiene identificados y en funcionamiento óptimo canales apropiados para realizar la entrega a cada uno de sus segmentos de mercado y estos son competitivos con lo ofrecido por la competencia??",
         oldname="model26"
     )
     x_model27 = fields.Selection(
@@ -1222,7 +1222,7 @@ class Lead(models.Model):
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
-        ], "35. ¿Las actividades claves del negocio hacen parte de procesos estandarizados y bien definidos?",
+        ], "35. ¿Las actividades claves de la negocio hacen parte de procesos estandarizados y bien definidos?",
         oldname="model35"
     )
     x_model36 = fields.Selection(
@@ -1230,7 +1230,7 @@ class Lead(models.Model):
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
-        ], "36. ¿El negocio cuenta con acuerdos con proveedores y estos son suficientes y apropiados?",
+        ], "36. ¿La negocio cuenta con acuerdos con proveedores y estos son suficientes y apropiados?",
         oldname="model36"
     )
     x_model37 = fields.Selection(
@@ -1366,7 +1366,7 @@ class Lead(models.Model):
     x_innova29 = fields.Selection(
         [('si', 'Si'),
           ('no', 'No'),
-          #('en_proceso', 'En proceso'),
+          ('en_proceso', 'En proceso'),
         ], "44. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancia?",
     )
     x_innova30 = fields.Selection(
@@ -1446,13 +1446,12 @@ class Lead(models.Model):
     x_innova40 = fields.Selection(
         [('si', 'Si'),
          ('no', 'No'),
-         ('en_proceso', 'En proceso'),
-        ], "49. ¿En el último año ha realizado actividades de innovación para su negocio?",
+        ], "50. ¿En el último año ha realizado actividades de innovación para su negocio?",
     )
     x_ninova50 = fields.Selection(
         [('si', 'Si'),
          ('no', 'No')
-        ], "50. ¿se generan espacios para  fomentar la Creatividad y la generación de ideas  innovadoras?",
+        ], "46. ¿se generan espacios para  fomentar la Creatividad y la generación de ideas  innovadoras?",
         oldname="ninova50"
     )
     x_ninova52 = fields.Selection(
@@ -1470,7 +1469,7 @@ class Lead(models.Model):
         [('si', 'Si'),
          ('no', 'No'),
          ('en_proceso', 'En proceso'),
-        ], "54. ¿El negocio ha desarrollado nuevos servicios o productos en los ultimos 2 años?",
+        ], "54. ¿La negocio ha desarrollado nuevos servicios o productos en los ultimos 2 años?",
         oldname="ninova54"
     )
     x_innova41_inf = fields.Selection(
@@ -2470,7 +2469,7 @@ class Lead(models.Model):
     x_finan104_form = fields.Selection(
         [('si', 'Si'),
          ('no', 'No'),
-         ('en_proceso', 'En proceso'),
+
         ], "91. ¿Tiene cuentas bancarias del negocio?",
     )
 
@@ -2714,7 +2713,7 @@ class Lead(models.Model):
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
-        ], "63. ¿Cuenta su negocio con un plan estratégico de desarrollo?",
+        ], "63. ¿CuentaSu negocio con un plan estratégico de desarrollo?",
         oldname="org63"
     )
     x_org64 = fields.Selection(

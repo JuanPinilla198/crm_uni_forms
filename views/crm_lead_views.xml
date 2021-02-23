@@ -97,7 +97,7 @@
             <!-- Reemplazar la Pestaña de CRM por la encuenta de Registro -->
 
             <xpath expr="//page[@name='lead']" position="replace">
-                <page string="MODULO 1 - REGISTRO" name="modulo1">
+                <page string="MODULO 1 - REGISTRO">
                     <group>
                         <field name="x_datos1" />
                     </group>
@@ -134,7 +134,10 @@
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_grupos" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_grupos_cual" attrs="{'invisible': [('x_grupos', '=', 'no')], 'required': [('x_datos1','=','si'), ('x_grupos', '=', 'si')]}"/>
+                            <field name="x_grupos_cual"
+                                   attrs="{
+                                   'invisible':[('x_grupos', '!=', '40')],'required': [('x_datos1','=','si'),('x_grupos', '=', '40')]}"        
+                                   />
                             <field name="x_estrato" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_situacion" attrs=
@@ -184,7 +187,7 @@
                    
                 </page>
 
-            <page string="MODULO 2 - PARTICIPACIÓN" name="modulo2">
+            <page string="MODULO 2 - PARTICIPACIÓN">
                   <group string="Módulo 2. Confirmación de participación - Encuentro 2">
                         <div/>
                         <field name="x_cont1" /> 
@@ -192,7 +195,7 @@
                               "{'required': [('x_cont1','=','no')], 'invisible': ['|',('x_cont1','=','si'),('x_cont1','=',False)]}"/>             
                   </group>
                   </page>
-                  <page string="MODULO 3 DIAGNOSTICO FINAL" name="modulo3">
+                  <page string="MODULO 3 DIAGNOSTICO FINAL">
                     <group>
                         <div/> 
                         <field name="x_datos3" />
