@@ -2355,12 +2355,8 @@ class Lead(models.Model):
     )
 
     x_finan93_form = fields.Selection(
-        [('totalmente_de_acuerdo', 'Totalmente de acuerdo'),
-         ('de_acuerdo', 'De acuerdo'),
-         ('ni_de_acuerdo_ni_en_desacuerdo', 'Ni de acuerdo, ni en desacuerdo'),
-         ('en_desacuerdo', 'En desacuerdo'),
-         ('totalmente_en_desacuerdo', 'Totalmente en desacuerdo'),
-
+        [('si', 'Si'),
+         ('no', 'No'),
         ], "84. ¿Considera qué a través de la contabilidad puede diferenciar los gastos de su negocio de los gastos de su hogar?",
     )
 
