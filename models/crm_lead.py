@@ -1150,7 +1150,7 @@ class Lead(models.Model):
             ('si', 'Si'),
             ('no', 'No'),
             ('en_proceso', 'En proceso'),
-        ], "26. ¿Tiene identificados y en funcionamiento óptimo canales apropiados para realizar la entrega a cada uno de sus segmentos de mercado y estos son competitivos con lo ofrecido por la competencia??",
+        ], "26. ¿Tiene identificados y en funcionamiento óptimo canales apropiados para realizar la entrega a cada uno de sus segmentos de mercado y estos son competitivos con lo ofrecido por la competencia?",
         oldname="model26"
     )
     x_model27 = fields.Selection(
