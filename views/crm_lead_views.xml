@@ -311,12 +311,12 @@
                         </group>
                         <group>
                               <field name="x_innova40" attrs="{'required': [('x_dcont4','=',True)],'invisible': [('x_dcont4','=',False)]}"/>
-                              <field name="x_ninova50" attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/> 
-                              <field name="x_innova43_inf" attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>    
+                              <field name="x_ninova53" attrs="{'required': [('x_dcont4','=',True),('x_innova40','=','si')], 'invisible': ['|',('x_dcont4','=',False),('x_innova40','=','no')]}"/>
+                              <field name="x_ninova50" attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
                         </group>
                         <group>
-                              <field name="x_ninova52" attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
-                              <field name="x_ninova53" attrs="{'required': [('x_dcont4','=',True),('x_innova40','=','si')], 'invisible': ['|',('x_dcont4','=',False),('x_innova40','=','no')]}"/> 
+                              <field name="x_innova43_inf" attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
+                              <field name="x_ninova52" attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/> 
                               <field name="x_ninova54" attrs="{'required': [('x_dcont4','=',True)],'invisible': [('x_dcont4','=',False)]}"/>  
                         </group>
   
