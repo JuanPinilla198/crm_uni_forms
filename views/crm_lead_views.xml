@@ -120,9 +120,9 @@
                              <field name="country_id" attrs=
                               "{'invisible': ['|','|',('x_datos1','=','no'),('x_datos1','=',False),('x_datos1','=','si')]}"/>
                             <field name="state_id" string="8. Departamento de Residencia" attrs=
-                              "{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                              "{'required': [('x_datos1','=','si')],'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="xcity" attrs=
-                              "{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                              "{'required': [('x_datos1','=','si')],'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_vereda" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="mobile" string="11. Teléfono Celular" attrs=
@@ -144,9 +144,9 @@
                             <field name="x_actcomer" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_state_id" attrs=
-                              "{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                              "{'required': [('x_datos1','=','si')],'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_city_id" attrs=
-                              "{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                              "{'required': [('x_datos1','=','si')],'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_ubic" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_dir_neg" attrs=
