@@ -15,9 +15,6 @@
                                     domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]"/>
                                 <field name="type" invisible="1"/>
                </group>
-
-                
-
                 </xpath>
                 
 
@@ -41,10 +38,8 @@
                                         'default_phone': phone,
                                         'default_mobile': mobile,
                                         'default_email': email_from,
-                                        
                                         'default_team_id': team_id,
                                         'default_doctype': doctype,
-                                        
                                         'default_x_sexo': x_sexo,
                                         'default_x_etnia': x_etnia,
                                         'default_x_edad': x_edad,
