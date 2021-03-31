@@ -59,8 +59,6 @@
                                         'default_x_sector': x_sector,
                                         'default_x_ubic': x_ubic,
                                         'default_x_com_cuenta': x_com_cuenta,
-                                        'default_x_cont1': x_cont1,
-                                        'default_x_datos3': x_datos3,
                                         'default_x_actcomer': x_actcomer,
                                         'default_x_nombre': x_nombre,
                                         'default_x_nombre_negocio': x_nombre_negocio,
@@ -186,7 +184,7 @@
 
                    
                 </page>
-                
+
             </xpath>
         </field>
 </record>
