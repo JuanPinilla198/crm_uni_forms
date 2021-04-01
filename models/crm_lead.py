@@ -132,39 +132,43 @@ class Lead(models.Model):
 
     x_sexo = fields.Selection(
         [
-            ('masculino', 'Masculino'),
-            ('femenino', 'Femenino'),
+            ('50', 'Si'),
+            ('51', 'No'),
         ], "5. Sexo", 
     )
 
     x_etnia = fields.Selection(
         [
-             ('si', 'Si'),
-             ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "6. ¿Pertenece a algún tipo de etnia?", 
     ) 
 
-    x_edad = fields.Integer(
-        string="7. Edad",
-        help="Escriba su edad", 
+    x_edad = fields.Selection(
+         [
+             ('50', 'Si'),
+             ('51', 'No'),
+        ], "7. Edad",  
     )
 
-    x_limitacion = fields.Char(
-        string="13. ¿Usted tiene algún tipo de diversidad funcional?",
-        help="Describa sus limitaciones físicas", 
+    x_limitacion = fields.Selection(
+         [
+             ('50', 'Si'),
+             ('51', 'No'),
+        ], "13. ¿Usted tiene algún tipo de diversidad funcional?", 
     )
 
     x_escolaridad = fields.Selection(
         [
-             ('si', 'Si'),
-             ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "14. Último año de escolaridad", 
     )
 
     x_grupos = fields.Selection(
     	[
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "15. ¿Pertenece a alguna organización:  asociación, corporación, cooperativa, grupo?",
         help="Escriba el tipo de organización a la cual pertenece",
     )
@@ -176,80 +180,82 @@ class Lead(models.Model):
 
     x_estrato = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "17. Estrato socioeconómico de residencia ",
     )
 
     x_situacion = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "18. Actualmente usted es"
     )
 
     x_actcomer = fields.Selection(
     	[
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "20. ¿Cuál es la actividad comercial de su negocio?",
         help="Escriba la actividad comercial de su negocio",
     )
 
     x_sector = fields.Selection(
         [
-             ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "19. ¿En qué sector económico se encuentra su negocio?",
         help="Escriba el sector económico de su negocio ",
     )
 
     x_ubic = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "23. Ubicación del negocio",
     )
     #campo actulizado
     x_com_cuenta = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "25. Su actividad comercial cuenta con",
     )
-    x_dir_neg = fields.Char(
-        string="24. Direccion del negocio",
-        help="24. Direccion del negocio",
+    x_dir_neg = fields.Selection(
+        [
+             ('50', 'Si'),
+             ('51', 'No'),
+        ], "24. Direccion del negocio",
     )
     x_que_por_ren = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "30. ¿Que porcentaje de rentabilidad le dejo su negocio durante de la pandemia COVID-19?",
     )
     x_que_por_ren_ant = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "31. ¿Que porcentaje de rentabilidad le dejo su negocio antes de la pandemia COVID-19?",
     )
 
     x_tien_dur = fields.Selection(
         [ 
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "32. Tiene usted proyectado continuar con su micronegocio durante:",
     )
     tie_us_cre = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "33. ¿Tiene usted proyectado crecer en puntos de venta?",
     )
     tie_ca_ide = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "34. ¿Tiene proyectado cambiar de idea de negocio?",
     )
     x_cual_34 = fields.Char(
@@ -1871,12 +1877,9 @@ class Lead(models.Model):
     )
     #actualizacion y cambio de vista
     x_merc78_form = fields.Selection(
-        [('de_0_a_500', 'De $0 a $500.000'),
-         ('de_500_a_1000', 'De $500.000 a $1´000.000'),
-         ('de_1000_a_3000', 'De $1´000.000 a $3´000.000'),
-         ('de_3000_a_6000', 'De $3´000.000 a $6´000.000'),
-         ('de_6000_a_10000', 'De $6´000.000 a $10´000.000'),
-         ('mas_de_10000','Mas de $10´000.000')
+        [    
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "26. Durante la pandemia COVID-19, en una semana buena ¿donde se ubica sus ventas dentro de los siguientes rangos?",
     )
 
@@ -1886,12 +1889,9 @@ class Lead(models.Model):
     )
 
     x_merc79_form = fields.Selection(
-        [('de_0_a_500', 'De $0 a $500.000'),
-         ('de_500_a_1000', 'De $500.000 a $1´000.000'),
-         ('de_1000_a_3000', 'De $1´000.000 a $3´000.000'),
-         ('de_3000_a_6000', 'De $3´000.000 a $6´000.000'),
-         ('de_6000_a_10000', 'De $6´000.000 a $10´000.000'),
-         ('mas_de_10000','Mas de $10´000.000')
+        [    
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "28. Durante la pandemia COVID-19, en una semana normal ¿donde se ubica sus ventas dentro de los siguientes rangos?",
     )
 
@@ -1901,12 +1901,9 @@ class Lead(models.Model):
     )
 
     x_merc80_form = fields.Selection(
-        [('de_0_a_500', 'De $0 a $500.000'),
-         ('de_500_a_1000', 'De $500.000 a $1´000.000'),
-         ('de_1000_a_3000', 'De $1´000.000 a $3´000.000'),
-         ('de_3000_a_6000', 'De $3´000.000 a $6´000.000'),
-         ('de_6000_a_10000', 'De $6´000.000 a $10´000.000'),
-         ('mas_de_10000','Mas de $10´000.000')
+        [    
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "27. Antes de la pandemia COVID-19, en una semana buena ¿donde se ubica sus ventas dentro de los siguientes rangos?",
     )
 
@@ -1916,12 +1913,9 @@ class Lead(models.Model):
     )
 
     x_merc81_form = fields.Selection(
-        [('de_0_a_500', 'De $0 a $500.000'),
-         ('de_500_a_1000', 'De $500.000 a $1´000.000'),
-         ('de_1000_a_3000', 'De $1´000.000 a $3´000.000'),
-         ('de_3000_a_6000', 'De $3´000.000 a $6´000.000'),
-         ('de_6000_a_10000', 'De $6´000.000 a $10´000.000'),
-         ('mas_de_10000','Mas de $10´000.000')
+        [
+             ('50', 'Si'),
+             ('51', 'No'),
         ], "29. Antes de la pandemia COVID-19, en una semana normal ¿donde se ubica sus ventas dentro de los siguientes rangos?",
     )
 
