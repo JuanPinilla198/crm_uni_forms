@@ -5,6 +5,7 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
+
         	 <xpath expr="//group/group[5]" position="replace">
         	     <group>
                     <field name="user_id" domain="[('share', '=', False)]" string="Facilitador"
@@ -14,7 +15,12 @@
                                     domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]"/>
                                 <field name="type" invisible="1"/>
                </group>
+
+                
+
                 </xpath>
+                
+
             <xpath expr="//group/group[2]" position="replace">
             <group attrs="{'invisible': [('type', '=', 'lead')]}">
                                 <field name="partner_id"
@@ -26,15 +32,33 @@
                                         'default_is_company': type == 'opportunity' and contact_name == False,
                                         'default_company_name': type == 'opportunity' and partner_name,
                                         'default_street2': street2,
+
                                         'default_title': title,
+                                      
                                         'default_zip': zip,
+                                        'default_country_id': country_id,
                                         'default_function': function,
                                         'default_phone': phone,
                                         'default_mobile': mobile,
                                         'default_email': email_from,
+                                        
                                         'default_team_id': team_id,
-                                        'default_doctype': doctype,       
-                                        'default_x_datos1': x_datos1,                                                                       
+                                        'default_doctype': doctype,
+                                        
+                                        'default_x_sexo': x_sexo,
+                                        'default_x_etnia': x_etnia,
+                                        'default_x_edad': x_edad,
+                                        'default_x_limitacion': x_limitacion,
+                                        'default_x_escolaridad': x_escolaridad,
+                                        'default_x_grupos': x_grupos,
+                                        'default_x_grupos_cual': x_grupos_cual,
+                                        'default_x_estrato': x_estrato,
+                                        'default_x_situacion': x_situacion,
+                                        'default_x_vereda': x_vereda,
+                                        'default_x_datos1': x_datos1,
+                                        'default_x_sector': x_sector,
+                                        'default_x_ubic': x_ubic,
+                                        'default_x_com_cuenta': x_com_cuenta,
                                         'default_x_datos3': x_datos3,
                                         'default_x_actcomer': x_actcomer,
                                         'default_x_nombre': x_nombre,
@@ -68,6 +92,7 @@
                             </group>
                       </xpath>
 
+
             <!-- Reemplazar la Pestaña de CRM por la encuenta de Registro -->
 
             <xpath expr="//page[@name='lead']" position="replace">
@@ -84,21 +109,82 @@
                             <field name="doctype" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_identification" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>   
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_sexo" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_etnia" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_edad" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_vereda" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="mobile" string="11. Teléfono Celular" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="email_from"  string="12. Correo electronico" attrs="{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>        
+                            <field name="email_from"  string="12. Correo electronico" attrs="{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_limitacion" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_escolaridad" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_grupos" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_grupos_cual"
+                                   attrs="{
+                                   'invisible':[('x_grupos', '!=', 'si')],'required': [('x_datos1','=','si'),('x_grupos', '=', 'si')]}"        
+                                   />
+                            <field name="x_estrato" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_situacion" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_sector" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_actcomer" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+          
+                            <field name="x_ubic" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_dir_neg" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                        </group> 
+                        </group>
+
+                        <group>                            
+                            <field name="x_com_cuenta" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="tie_ca_ide" attrs=
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            <field name="x_cual_34" attrs=
+                              "{'required': [('tie_ca_ide','=','si')], 'invisible': ['|',('tie_ca_ide','=','no'),('tie_ca_ide','=',False)]}"/>
+                            <field name="x_por_34" attrs=
+                              "{'required': [('tie_ca_ide','=','si')], 'invisible': ['|',('tie_ca_ide','=','no'),('tie_ca_ide','=',False)]}"/>
+                        </group>
                     </group>
+
+                   
                 </page>
+
+            
                   <page string="MODULO 3 DIAGNOSTICO FINAL" name="modulo3">
                     <group>
                         <div/> 
                         <field name="x_datos3" />
+                    </group>
+                    <group string="GENERALIDADES" style="line-height: 25px;">
+                    </group>
+                    <group>
+                        <div/>
+                        <field name="in_empleo" attrs=
+                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
+                        <field name="x_forma58_form" attrs=
+                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
+                        <field name="x_forma61_form" attrs=
+                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
+                        <field name="x_forma60_form" attrs=
+                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
+                        <field name="x_forma65_inf" attrs=
+                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
+                    </group>
+
+                    <!--group string="CARACTERIZACIÓN " style="line-height: 25px;"-->
+                       
                     <group>
                     <field name="x_microneg"  attrs="{'invisible': 1}"/>
                     </group>
@@ -109,6 +195,7 @@
                       </group>
                       <group>
                       </group>
+
                       <group>
                         <field name="x_proto1"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
                         <field name="x_proto2"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
@@ -187,6 +274,7 @@
         </field>
 </record>
 
+
     <record id="view_search_crm_inherited" model="ir.ui.view">
             <field name="name">Search - extension</field>
                 <field name="model">crm.lead</field>
@@ -201,6 +289,7 @@
                         ('name', 'ilike', self),
                         ('x_identification', 'ilike', self)]"/>
                     </field>
+
                     <filter name="salesperson" position="replace">
                       <filter string="Facilitador" name="salesperson" context="{'group_by':'user_id'}"/>
                     </filter>
@@ -211,7 +300,13 @@
                       <filter string="Propietarios Asignados" name="assigned_to_me"
                         domain="[('user_id', '=', uid)]"
                         help="Opportunities that are assigned to me"/>
-                  </filter> 
+                  </filter>
+
+                 
+                  
+
+                  
             </field>
     </record>
+
 </odoo>
