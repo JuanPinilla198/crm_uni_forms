@@ -88,7 +88,7 @@
                     <group>
                         <field name="x_datos1" />
                     </group>
-                    <group string="Modúlo 1: Formulario de Registro - Encuentro 1" style="line-height: 25px;">
+                    <group string="Modúlo 1:" style="line-height: 25px;">
                         <group>
                             <field name="x_nombre_negocio" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
@@ -127,7 +127,7 @@
                     <field name="x_microneg"  attrs="{'invisible': 1}"/>
                     </group>
                      <group string="PROTOCOLOS DE BIOSEGURIDAD" style="line-height: 25px;">
-                      <group string="SECCION 1: BIOSEGURIDAD" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
+                      <group string="SECCION 1" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
                         <field name="x_dcont1" attrs=
                               "{'invisible': [('x_datos3','!=','si')]}"/>
                       </group>
@@ -157,7 +157,7 @@
                     </group>
 
                   <group string="MODELO DE NEGOCIO" style="line-height: 25px;">
-                        <group string="SECCION 2: ALINEACIÓN MODELO DE NEGOCIO" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
+                        <group string="SECCION 2:" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
                               <field name="x_dcont2" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
                         </group>
                         <group>
@@ -186,7 +186,7 @@
                   </group>
 
                   <group string="PRODUCCIÓN" style="line-height: 25px;">
-                        <group string="SECCION 3: PRODUCCION" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
+                        <group string="SECCION 3:" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
                               <field name="x_dcont3" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
                         </group>
                         <group>
