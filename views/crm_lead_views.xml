@@ -50,10 +50,9 @@
                                        
                                        
                                         
-                                        'default_x_grupos': x_grupos,
-                                        'default_x_grupos_cual': x_grupos_cual,
                                        
-                                        'default_x_situacion': x_situacion,
+                                       
+                                        
                                         
                                         'default_x_datos1': x_datos1,
                                        
@@ -119,15 +118,9 @@
                             <field name="email_from"  string="12. Correo electronico" attrs="{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             
                            
-                            <field name="x_grupos" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_grupos_cual"
-                                   attrs="{
-                                   'invisible':[('x_grupos', '!=', 'si')],'required': [('x_datos1','=','si'),('x_grupos', '=', 'si')]}"        
-                                   />
                            
-                            <field name="x_situacion" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                           
+                            
                             
                             <field name="x_actcomer" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
@@ -149,21 +142,7 @@
                         <div/> 
                         <field name="x_datos3" />
                     </group>
-                    <group string="GENERALIDADES" style="line-height: 25px;">
-                    </group>
-                    <group>
-                        <div/>
-                        <field name="in_empleo" attrs=
-                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
-                        <field name="x_forma58_form" attrs=
-                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
-                        <field name="x_forma61_form" attrs=
-                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
-                        <field name="x_forma60_form" attrs=
-                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
-                        <field name="x_forma65_inf" attrs=
-                              "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
-                    </group>
+                    
 
                     <!--group string="CARACTERIZACIÓN " style="line-height: 25px;"-->
                        
