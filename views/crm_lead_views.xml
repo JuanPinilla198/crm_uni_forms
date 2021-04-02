@@ -33,12 +33,8 @@
                                         'default_mobile': mobile,
                                         'default_email': email_from,
                                         'default_team_id': team_id,
-                                        'default_doctype': doctype,
-                                        'default_x_sexo': x_sexo,
-                                        'default_x_etnia': x_etnia,
-                                        'default_x_edad': x_edad,         
-                                        'default_x_datos1': x_datos1,                                   
-                                        'default_x_ubic': x_ubic,                                    
+                                        'default_doctype': doctype,       
+                                        'default_x_datos1': x_datos1,                                                                       
                                         'default_x_datos3': x_datos3,
                                         'default_x_actcomer': x_actcomer,
                                         'default_x_nombre': x_nombre,
@@ -88,34 +84,21 @@
                             <field name="doctype" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_identification" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_sexo" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_etnia" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_edad" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>   
                             <field name="mobile" string="11. Teléfono Celular" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="email_from"  string="12. Correo electronico" attrs="{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>        
                             <field name="x_actcomer" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_ubic" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_dir_neg" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                         </group> 
                     </group>
                 </page>
-
                   <page string="MODULO 3 DIAGNOSTICO FINAL" name="modulo3">
                     <group>
                         <div/> 
                         <field name="x_datos3" />
-                    </group>
-                    <group string="GENERALIDADES" style="line-height: 25px;">
-                    </group>
- 
                     <group>
                     <field name="x_microneg"  attrs="{'invisible': 1}"/>
                     </group>
@@ -126,7 +109,6 @@
                       </group>
                       <group>
                       </group>
-
                       <group>
                         <field name="x_proto1"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
                         <field name="x_proto2"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
