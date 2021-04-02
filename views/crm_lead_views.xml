@@ -45,20 +45,20 @@
                                         'default_team_id': team_id,
                                         'default_doctype': doctype,
                                         
-                                        'default_x_sexo': x_sexo,
-                                        'default_x_etnia': x_etnia,
-                                        'default_x_edad': x_edad,
-                                        'default_x_limitacion': x_limitacion,
-                                        'default_x_escolaridad': x_escolaridad,
+                                        
+                                        
+                                       
+                                       
+                                        
                                         'default_x_grupos': x_grupos,
                                         'default_x_grupos_cual': x_grupos_cual,
-                                        'default_x_estrato': x_estrato,
+                                       
                                         'default_x_situacion': x_situacion,
-                                        'default_x_vereda': x_vereda,
+                                        
                                         'default_x_datos1': x_datos1,
-                                        'default_x_sector': x_sector,
-                                        'default_x_ubic': x_ubic,
-                                        'default_x_com_cuenta': x_com_cuenta,
+                                       
+                                       
+                                       
                                         'default_x_datos3': x_datos3,
                                         'default_x_actcomer': x_actcomer,
                                         'default_x_nombre': x_nombre,
@@ -110,52 +110,34 @@
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_identification" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_sexo" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_etnia" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_edad" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_vereda" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            
+                            
+                            
+                            
                             <field name="mobile" string="11. Teléfono Celular" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="email_from"  string="12. Correo electronico" attrs="{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_limitacion" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_escolaridad" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            
+                           
                             <field name="x_grupos" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_grupos_cual"
                                    attrs="{
                                    'invisible':[('x_grupos', '!=', 'si')],'required': [('x_datos1','=','si'),('x_grupos', '=', 'si')]}"        
                                    />
-                            <field name="x_estrato" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                           
                             <field name="x_situacion" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_sector" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            
                             <field name="x_actcomer" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
           
-                            <field name="x_ubic" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                            
                             <field name="x_dir_neg" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                         </group>
 
-                        <group>                            
-                            <field name="x_com_cuenta" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="tie_ca_ide" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_cual_34" attrs=
-                              "{'required': [('tie_ca_ide','=','si')], 'invisible': ['|',('tie_ca_ide','=','no'),('tie_ca_ide','=',False)]}"/>
-                            <field name="x_por_34" attrs=
-                              "{'required': [('tie_ca_ide','=','si')], 'invisible': ['|',('tie_ca_ide','=','no'),('tie_ca_ide','=',False)]}"/>
-                        </group>
+                      
                     </group>
 
                    
