@@ -32,21 +32,16 @@
                                         'default_is_company': type == 'opportunity' and contact_name == False,
                                         'default_company_name': type == 'opportunity' and partner_name,
                                         'default_street2': street2,
-
                                         'default_title': title,
-                                      
                                         'default_zip': zip,
                                         'default_country_id': country_id,
                                         'default_function': function,
                                         'default_phone': phone,
                                         'default_mobile': mobile,
                                         'default_email': email_from,
-                                        
                                         'default_team_id': team_id,
                                         'default_doctype': doctype,
- 
                                         'default_x_datos1': x_datos1,
-    
                                         'default_x_datos3': x_datos3,
                                         'default_x_actcomer': x_actcomer,
                                         'default_x_nombre': x_nombre,
@@ -237,12 +232,7 @@
                       <filter string="Propietarios Asignados" name="assigned_to_me"
                         domain="[('user_id', '=', uid)]"
                         help="Opportunities that are assigned to me"/>
-                  </filter>
-
-                 
-                  
-
-                  
+                  </filter>    
             </field>
     </record>
 
