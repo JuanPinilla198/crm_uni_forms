@@ -44,20 +44,9 @@
                                         
                                         'default_team_id': team_id,
                                         'default_doctype': doctype,
-                                        
-                                        
-                                        
-                                       
-                                       
-                                        
-                                       
-                                       
-                                        
-                                        
+ 
                                         'default_x_datos1': x_datos1,
-                                       
-                                       
-                                       
+    
                                         'default_x_datos3': x_datos3,
                                         'default_x_actcomer': x_actcomer,
                                         'default_x_nombre': x_nombre,
@@ -95,7 +84,7 @@
             <!-- Reemplazar la Pestaña de CRM por la encuenta de Registro -->
 
             <xpath expr="//page[@name='lead']" position="replace">
-                <page string="MODULO 1 - REGISTRO" name="modulo1">
+                <page string="INFORMACIÓN EMPRESA" name="modulo1">
                     <group>
                         <field name="x_datos1" />
                     </group>
@@ -109,35 +98,23 @@
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_identification" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            
-                            
-                            
-                            
+    
                             <field name="mobile" string="11. Teléfono Celular" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="email_from"  string="12. Correo electronico" attrs="{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            
-                           
-                           
-                           
-                            
-                            
+
                             <field name="x_actcomer" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-          
-                            
+  
                             <field name="x_dir_neg" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                         </group>
 
-                      
                     </group>
-
-                   
+ 
                 </page>
 
-            
-                  <page string="MODULO 3 DIAGNOSTICO FINAL" name="modulo3">
+                  <page string="DIAGNOSTICO" name="modulo3">
                     <group>
                         <div/> 
                         <field name="x_datos3" />
@@ -234,7 +211,6 @@
             </xpath>
         </field>
 </record>
-
 
     <record id="view_search_crm_inherited" model="ir.ui.view">
             <field name="name">Search - extension</field>
