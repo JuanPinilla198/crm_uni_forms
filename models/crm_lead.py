@@ -194,9 +194,6 @@ class Lead(models.Model):
         help="24. Direccion del negocio",
     )
    
-
-    
-    
     x_cual_34 = fields.Char(
         string="35. ¿Cual?",
         help="",
@@ -388,7 +385,7 @@ class Lead(models.Model):
 
     #INNOVACION DEL MODELO DE NEGOCIO
     x_dcont2 = fields.Boolean(
-        string="¿Desea continuar con el Formulario?",
+        string="continuar con el Formulario",
     )
     #preguntas nuevas modelo de negocio
     x_model21 = fields.Selection(
@@ -567,52 +564,6 @@ class Lead(models.Model):
         ], "47. ¿sabe cuáles son los costos de cada etapa del proceso de producción?",
         oldname="prodl47"
     )
-    x_innova19 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "19. ¿Conoce usted que es un  modelo de negocio?",
-    )
-
-    x_innova20 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "20. ¿Se ha capacitado en la formación de modelos de negocio?",
-    )
-
-    x_innova21 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "21. ¿Conoce los canales de distribución para su producto?",
-    )
-
-    x_innova22 = fields.Selection(
-        #string="Sexo",
-        [
-            ('50', 'Canal Directo: Productor-Consumidor'),
-            ('51', 'Canal Detallista: Productor-Minorista-Consumidor'),
-            ('52', 'Canal Distribuidor:  Productor-Distribuidor-Minorista-Consumidor'),
-            ('53', 'Canal Broker: Productor-Mayorista-Distribuidor-Minorista-Consumidor'),
-
-        ], "22. ¿Cuál es el canal de distribución  que utiliza para su negocio?",
-    )
-
-    x_innova23 = fields.Selection(
-        #string="Sexo",
-        [
-            ('50', 'Totalmente de acuerdo'),
-            ('51', 'De acuerdo'),
-            ('52', 'Ni de acuerdo, ni en desacuerdo'),
-            ('53', 'En desacuerdo'),
-            ('54', 'Totalmente en desacuerdo'),
-
-        ], "23. ¿Considera que para la producción o manipulación del producto debe contar con personal capacitado?",
-    )
 
     x_innova24 = fields.Selection(
         [('si', 'Si'),
@@ -654,35 +605,6 @@ class Lead(models.Model):
           ('no', 'No'),
         ], "44. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancia?",
     )
-    x_innova30 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Totalmente de acuerdo'),
-         ('51', 'De acuerdo'),
-         ('52', 'Ni de acuerdo, ni en desacuerdo'),
-         ('53', 'En desacuerdo'),
-         ('54', 'Totalmente en desacuerdo'),
-
-        ], "30. ¿Considera que la estandarización de procesos para la producción ó manipulación del producto permiten agilizar los tiempos de entrega?",
-    )
-
-    x_innova31 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "31. ¿Cuenta con un proceso estandarizado para la producción o manipulación del producto?",
-    )
-
-    x_innova32 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Totalmente de acuerdo'),
-         ('51', 'De acuerdo'),
-         ('52', 'Ni de acuerdo, ni en desacuerdo'),
-         ('53', 'En desacuerdo'),
-         ('54', 'Totalmente en desacuerdo'),
-
-        ], "32. ¿Considera qué en el inventario se llevan los registros de las entradas y salidas del producto?",
-    )
 
     x_innova33 = fields.Selection(
         [('si', 'Si'),
@@ -691,35 +613,10 @@ class Lead(models.Model):
         ], "45. ¿Cuenta con un inventario donde registre las entradas y salidas del producto?",
     )
 
-    x_innova34 = fields.Integer(
-        string="34. ¿Cuántas líneas de producto tiene su negocio?",
-    )
-
-    x_innova35 = fields.Char(
-        string="35. Describa las líneas de producto que tiene su negocio",
-    )
-
     x_innova36 = fields.Selection(
         [('si', 'Si'),
          ('no', 'No')
         ], "46. ¿Sabe lo qué le cuesta a su negocio la producción y comercialización del producto o servicio?",
-    )
-
-    x_innova37 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Por el mercado'),
-         ('51', 'Por el punto de equilibrio'),
-         ('52', 'Costos fijos + variables + costos de utilidad'),
-
-        ], "37. ¿Como define el  precio de venta de su producto o servicio? ",
-    )
-
-    x_innova38 = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "38. ¿Conoce qué es el punto de equilibrio?",
     )
 
     x_innova39 = fields.Selection(
@@ -728,106 +625,7 @@ class Lead(models.Model):
             ('no', 'No'),
         ], "48. ¿Sabe cual es el punto de equilibrio de su negocio?",
     )
-    x_innova40 = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No'),
-         ('en_proceso', 'En proceso'),
-        ], "49. ¿En el último año ha realizado actividades de innovación para su negocio?",
-    )
-    x_ninova50 = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No')
-        ], "50. ¿se generan espacios para  fomentar la Creatividad y la generación de ideas  innovadoras?",
-        oldname="ninova50"
-    )
-    x_ninova52 = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No'),
-         ('en_proceso', 'En proceso'),
-        ], "52. ¿El negocio ha recibido transferencias de tecnologias o de conocimientos para mejorar sus procesos, productos o servicios?",
-        oldname="ninova52"
-    )
-    x_ninova53 = fields.Text(
-        string="53. ¿Cuales?",
-        readonly=False,
-        oldname="ninova53")
-    x_ninova54 = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No'),
-         ('en_proceso', 'En proceso'),
-        ], "54. ¿El negocio ha desarrollado nuevos servicios o productos en los ultimos 2 años?",
-        oldname="ninova54"
-    )
-    x_innova41_inf = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No'),
-        ], "41. ¿Realiza actividades con los trabajadores para crear innovaciones en su negocio?",
-    )
-
-    x_innova41_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Totalmente de acuerdo'),
-         ('51', 'De acuerdo'),
-         ('52', 'Ni de acuerdo, ni en desacuerdo'),
-         ('53', 'En desacuerdo'),
-         ('54', 'Totalmente en desacuerdo'),
-
-        ], "41. ¿Cree qué capacitar a sus trabajadores puede aumentar los resultados de su negocio?",
-    )
-
-    x_innova42_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "42. ¿Ha recibido formación en creatividad e innovación? ",
-    )
-
-    x_innova42_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "42. ¿Realiza actividades con los trabajadores para crear innovaciones en su negocio?",
-    )
-
-    x_innova43_inf = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No'),
-        ], "51. ¿Ofrece con frecuencia productos o servicios nuevos a partir de sugerencias de sus clientes?",
-    )
-
-    x_innova43_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "43. ¿Ha recibido formación en creatividad e innovación? ",
-    )
-
-    x_innova44_inf = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "44. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (diseño, envase, promoción, forma de cotizar, etc.)",
-    )
-
-    x_innova44_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "44. ¿Ofrece con frecuencia productos o servicios nuevos a partir de sugerencias de sus clientes?",
-    )
-
-    x_innova45_form = fields.Selection(
-        #string="Sexo",
-        [('50', 'Si'),
-         ('51', 'No'),
-
-        ], "45. ¿Desarrolla o paga para innovar la forma en la que vende sus producto o servicios? (diseño, envase, promoción, forma de cotizar, etc.)",
-    )
+    
     #gavii
 #FORMALIZACION SECCION 3: ADMINISTRACION
     x_dcont3 = fields.Boolean(

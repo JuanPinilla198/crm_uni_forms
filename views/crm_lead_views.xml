@@ -121,7 +121,7 @@
                     <group>
                     <field name="x_microneg"  attrs="{'invisible': 1}"/>
                     </group>
-                     <group string="PROTOCOLOS DE BIOSEGURIDAD" style="line-height: 25px;">
+                     <group string="HACER" style="line-height: 25px;">
                       <group string="SECCION 1" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
                         <field name="x_dcont1" attrs=
                               "{'invisible': [('x_datos3','!=','si')]}"/>
@@ -151,8 +151,8 @@
                     </group>
                     </group>
 
-                  <group string="MODELO DE NEGOCIO" style="line-height: 25px;">
-                        <group string="SECCION 2:" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
+                  <group string="VERIFICAR" style="line-height: 25px;">
+                        <group string="SECCION 2" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
                               <field name="x_dcont2" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
                         </group>
                         <group>
@@ -180,8 +180,8 @@
                         </group>
                   </group>
 
-                  <group string="PRODUCCIÓN" style="line-height: 25px;">
-                        <group string="SECCION 3:" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
+                  <group string="ACTUAR" style="line-height: 25px;">
+                        <group string="SECCION 3" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
                               <field name="x_dcont3" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
                         </group>
                         <group>
