@@ -32,19 +32,14 @@
                                         'default_is_company': type == 'opportunity' and contact_name == False,
                                         'default_company_name': type == 'opportunity' and partner_name,
                                         'default_street2': street2,
-                                        'default_city': city,
                                         'default_title': title,
-                                        'default_state_id': state_id,
                                         'default_zip': zip,
-                                        'default_country_id': country_id,
                                         'default_function': function,
                                         'default_phone': phone,
                                         'default_mobile': mobile,
                                         'default_email': email_from,
-                                        
                                         'default_team_id': team_id,
                                         'default_doctype': doctype,
-                                        
                                         'default_x_sexo': x_sexo,
                                         'default_x_etnia': x_etnia,
                                         'default_x_edad': x_edad,
@@ -59,7 +54,6 @@
                                         'default_x_sector': x_sector,
                                         'default_x_ubic': x_ubic,
                                         'default_x_com_cuenta': x_com_cuenta,
-                                        'default_x_cont1': x_cont1,
                                         'default_x_datos3': x_datos3,
                                         'default_x_actcomer': x_actcomer,
                                         'default_x_nombre': x_nombre,
@@ -117,12 +111,6 @@
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_edad" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                             <field name="country_id" attrs=
-                              "{'invisible': ['|','|',('x_datos1','=','no'),('x_datos1','=',False),('x_datos1','=','si')]}"/>
-                            <field name="state_id" string="8. Departamento de Residencia" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="xcity" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_vereda" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="mobile" string="11. Teléfono Celular" attrs=
@@ -146,10 +134,7 @@
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_actcomer" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_state_id" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_city_id" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+          
                             <field name="x_ubic" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_dir_neg" attrs=
@@ -158,22 +143,6 @@
 
                         <group>                            
                             <field name="x_com_cuenta" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_merc78_form" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_merc80_form" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_merc79_form" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_merc81_form" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_que_por_ren" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_que_por_ren_ant" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="x_tien_dur" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
-                            <field name="tie_us_cre" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="tie_ca_ide" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
@@ -187,14 +156,7 @@
                    
                 </page>
 
-            <page string="MODULO 2 - PARTICIPACIÓN" name="modulo2">
-                  <group string="Módulo 2. Confirmación de participación - Encuentro 2">
-                        <div/>
-                        <field name="x_cont1" /> 
-                        <field name="x_cont1_por" attrs=
-                              "{'required': [('x_cont1','=','no')], 'invisible': ['|',('x_cont1','=','si'),('x_cont1','=',False)]}"/>             
-                  </group>
-                  </page>
+            
                   <page string="MODULO 3 DIAGNOSTICO FINAL" name="modulo3">
                     <group>
                         <div/> 
@@ -335,14 +297,10 @@
                         help="Opportunities that are assigned to me"/>
                   </filter>
 
-                  <filter name="country" position="replace">
-                      <filter string="Departamento de Residencia" name="state_id" context="{'group_by':'state_id'}"/>
-                  </filter>
+                 
                   
 
-                  <filter name="city" position="replace">
-                      <filter string="Municipio de Residencia" name="city" context="{'group_by':'xcity'}"/>
-                  </filter>
+                  
             </field>
     </record>
 
