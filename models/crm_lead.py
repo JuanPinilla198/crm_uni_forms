@@ -356,7 +356,7 @@ class Lead(models.Model):
     x_dcont2 = fields.Boolean(
         string="continuar con el Formulario",
     )
-       x_proto14 = fields.Selection(
+    x_proto14 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
