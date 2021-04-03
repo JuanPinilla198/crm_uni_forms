@@ -121,7 +121,7 @@
                     <group>
                     <field name="x_microneg"  attrs="{'invisible': 1}"/>
                     </group>
-                     <group string="HACER" style="line-height: 25px;">
+                     <group string="PLANEAR" style="line-height: 25px;">
                       <group string="SECCION 1" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
                         <field name="x_dcont1" attrs=
                               "{'invisible': [('x_datos3','!=','si')]}"/>
@@ -137,27 +137,24 @@
                         <field name="x_proto6"  attrs= "{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
                         <field name="x_proto7"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
                         <field name="x_proto8"  attrs= "{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                        <field name="x_proto9"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                        <field name="x_proto10"  attrs="{'required': [('x_dcont1','=',True)],'invisible': [('x_dcont1','=',False)]}"/>
+                        <field name="x_proto11"  attrs= "{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                        <field name="x_proto12"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
+                        <field name="x_proto13"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
                       </group>
-
-                    <group>
-                      <field name="x_proto9"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                      <field name="x_proto10"  attrs="{'required': [('x_dcont1','=',True)],'invisible': [('x_dcont1','=',False)]}"/>
-                      <field name="x_proto11"  attrs= "{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                      <field name="x_proto12"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                      <field name="x_proto13"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                      <field name="x_proto14"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                      <field name="x_proto15"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                      <field name="x_proto16"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                    </group>
                     </group>
 
-                  <group string="VERIFICAR" style="line-height: 25px;">
+                  <group string="HACER" style="line-height: 25px;">
                         <group string="SECCION 2" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
                               <field name="x_dcont2" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
                         </group>
                         <group>
                         </group>
                         <group>
+                            <field name="x_proto14"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="x_proto15"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                            <field name="x_proto16"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
                             <field name="x_model21"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
                             <field name="x_model22"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
                             <field name="x_model23"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
@@ -166,41 +163,32 @@
                             <field name="x_model26"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
                             <field name="x_model27"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
                             <field name="x_model28"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                        </group>
-                        <group>
                             <field name="x_model29"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                            <field name="x_model30"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                            <field name="x_model31"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                            <field name="x_model32"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                            <field name="x_model33"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                            <field name="x_model34"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                            <field name="x_model35"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                            <field name="x_model36"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                            <field name="x_model37"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
                         </group>
                   </group>
 
-                  <group string="ACTUAR" style="line-height: 25px;">
+                  <group string="VERIFICAR" style="line-height: 25px;">
                         <group string="SECCION 3" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
                               <field name="x_dcont3" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
                         </group>
                         <group>
                         </group>
                         <group>
-                            <field name="x_innova24"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="x_innova25"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="x_innova26"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="x_innova27"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="x_prodl42"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_model30"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_model31"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                            <field name="x_model32"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
+                        </group>     
+                  </group>
+                  <group string="ACTUAR" style="line-height: 25px;">
+                        <group string="SECCION 4" style="line-height: 25px;" attrs="{'invisible': [('x_datos3','!=','si')]}">
+                              <field name="x_dcont4" attrs="{'invisible': [('x_datos3','!=','si')]}"/>
                         </group>
                         <group>
-                            <field name="x_prodl43"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="x_innova29"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="x_innova33"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="x_innova36"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="x_prodl47"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
-                            <field name="x_innova39"  attrs="{'required': [('x_dcont3','=',True)], 'invisible': [('x_dcont3','=',False)]}"/>
                         </group>
+                        <group>
+                            <field name="x_model33"  attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
+                            <field name="x_model34"  attrs="{'required': [('x_dcont4','=',True)], 'invisible': [('x_dcont4','=',False)]}"/>
+                        </group>     
                   </group>
             </page>
             </xpath>
