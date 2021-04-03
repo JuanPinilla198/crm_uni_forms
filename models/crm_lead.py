@@ -166,40 +166,8 @@ class Lead(models.Model):
             ('fabrica_y_venta_de_productos_metalicos_hierro_acero_maquinaria_y_otras_aplicaciones_industriales', 'Fábrica y venta de productos metálicos hierro acero maquinaria y otras aplicaciones industriales'),
             ('jardin_infantil_salacuna_educacion', 'Jardín infantil, salacuna, educación'),
             ('transporte_de_pasajeros', 'Transporte de pasajeros'),
-        ], "20. ¿Cuál es la actividad comercial de su negocio?",
+        ], "¿Cuál es la actividad comercial de su negocio?",
         help="Escriba la actividad comercial de su negocio",
-    )
-
-    x_sector = fields.Selection(
-        [
-            ('agropecuario', 'Agropecuario'),
-            ('comercio', 'Comercio'),
-            ('servicios', 'Servicios'),
-            ('industrial', 'Industrial'),
-        ], "19. ¿En qué sector económico se encuentra su negocio?",
-        help="Escriba el sector económico de su negocio ",
-    )
-
-    
-    #campo actulizado
-    x_com_cuenta = fields.Selection(
-        [
-           ('establecimiento', 'Establecimiento'),
-           ('sin_establecimiento', 'Sin establecimiento'),
-    
-        ], "25. Su actividad comercial cuenta con",
-    )
-    x_dir_neg = fields.Char(
-        string="24. Direccion del negocio",
-        help="24. Direccion del negocio",
-    )
-   
-    x_cual_34 = fields.Char(
-        string="35. ¿Cual?",
-        help="",
-    )
-    x_por_34 = fields.Char(
-        string="36. ¿Por que?",
     )
 
     x_cont1 = fields.Selection(
@@ -208,9 +176,6 @@ class Lead(models.Model):
             ('no', 'No'),
         ], "1. Una vez comprendido el programa de acompañamiento, ¿usted desea continuar?",
     )
-    x_cont1_por = fields.Text(
-        string="2. ¿Por qué no desea continuar con el proceso?",
-    )
 
     x_datos3 = fields.Selection(
         [
@@ -218,26 +183,8 @@ class Lead(models.Model):
             ('no', 'No'),
         ], "DESEA CONTINUAR CON EL DIAGNOSTICO",
     )
-    in_empleo = fields.Selection(
-        [
-            ('si','Si'),
-            ('no','No')
-        ], "1. ¿Está interesado en la búsqueda de un empleo?"
-    )
-    #eliminado
-    x_microneg = fields.Selection(
-        [
-            ('si', 'Formalizado'),
-            ('no', 'Informal'),
-        ], "25. ¿Su micronegocio está?",
-    )
-
     
-    
-
-    
-
-    #MÓDULO 3-PROTOCOLOS DE BIOSEGURIDAD(seccion 1 bioseguridad)
+    #MÓDULO planear diagnostico
     x_dcont1 = fields.Boolean(
         string="Continuar con el Formulario",
     )
@@ -246,7 +193,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "1. ¿ Su empresa afilia a todos sus empleados a la Seguridad Social (pensiones, salud y ARL)?",
     )
 
@@ -261,7 +207,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "3. ¿Ha creado un Documento del Sistema de Gestión de Seguridad y Salud SGSST en el Trabajo?",
     )
 
@@ -269,7 +214,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "4. ¿Están definidos los objetivos del SG-SST, son medibles, coherentes con el Plan de trabajo Anual en SST, se encuentran documentados, comunicados a los trabajadores y son evaluados periódicamente y actualizados de ser necesario?",
     )
 
@@ -277,7 +221,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "5. ¿Cuenta con un documento “deberes y responsabilidades del Empleador y del trabajador”; está divulgado a sus trabajadores y se le hace seguimiento?",
     )
 
@@ -285,8 +228,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('no_aplica', 'No Aplica'),
-
         ], "6. ¿Sus empleados conocen sus responsabilidades en cuanto al Sistema de Seguridad y Salud en el Trabajo?",
     )
 
@@ -294,8 +235,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('no_aplica', 'No Aplica'),
-
         ], "7. ¿La empresa ha diseñado una herramienta de comunicación en doble dirección del (empleador con el empleado ), se encuentra documentada en algún documento especificando su procedimiento?",
     )
 
@@ -303,8 +242,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('no_aplica', 'No Aplica'),
-
         ], "8. ¿La empresa cuenta con Indicadores del sistema de gestión de seguridad y salud en el trabajo?",
     )
 
@@ -312,7 +249,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "9. ¿Su empresa Cuenta con el Vigía Ocupacional o con el Comité Paritario de Seguridad y salud en el Trabajo (COPASST)?",
     )
 
@@ -320,7 +256,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "10. ¿Su empresa Cuenta con el Reglamento interno de trabajo y lo divulga entre los trabajadores?",
     )
 
@@ -328,7 +263,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "11. ¿Cuenta con el Reglamento de Higiene y seguridad industrial y lo divulga?",
     )
 
@@ -336,8 +270,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('no_aplica', 'No Aplica'),
-
         ], "12. ¿Identifica sus Peligros, Evalua y Valora los Riesgos?",
     )
 
@@ -345,14 +277,13 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "13. ¿Cuenta con Programa anual de capacitación y lo divulga?",
     )
 
  
 
    
-    #INNOVACION DEL MODELO DE NEGOCIO
+    #hacer
     x_dcont2 = fields.Boolean(
         string="continuar con el Formulario",
     )
@@ -360,7 +291,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "14. Realiza Inspecciones planeadas y Realiza correctivos?",
     )
 
@@ -368,7 +298,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "15. Cuenta con Fichas de seguridad de las sustancias quimicas que utiliza?",
     )
 
@@ -376,7 +305,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "16. Cuenta con Procedimientos, instructivos y normas de seguridad para riesgos prioritarios?",
     )
 
@@ -384,7 +312,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-
         ], "17. ¿Ha recibido o recibe algun apoyo o beneficio económico por parte del Gobierno en la emergencia para usted?",
     )
     
@@ -393,7 +320,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            
         ], "17. Cuenta con un Programa de Elementos de Protección Personal, donde se identifique cuales necesita, como se utilizan, se capacite al personal y se tenga un plan de reposición?",
         oldname="model21"
     )
@@ -401,7 +327,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-           
         ], "18. Realiza Exámenes médicos de ingreso, periódicos y de retiro a sus trabajadores?",
         oldname="model22"
     )
@@ -409,7 +334,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            
         ], "19. Cuenta con Programas de Vigilancia Epidemiológica específicos de sus riesgos prioritarios que puedan generar una enfermedad laboral?",
         oldname="model23"
     )
@@ -417,23 +341,20 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            
         ], "20. Cuenta con un Plan de prevención, preparación y respuesta ante emergencias",
         oldname="model24"
     )
     x_model25 = fields.Selection(
         [
             ('si', 'Si'),
-            ('no', 'No'),
-            
+            ('no', 'No'),     
         ], "21. Cuenta con una Brigada de emergencias capacitada?",
         oldname="model25"
     )
     x_model26 = fields.Selection(
         [
             ('si', 'Si'),
-            ('no', 'No'),
-            
+            ('no', 'No'),    
         ], "22. Cuenta con un Plan de evacuación y sus responsables?",
         oldname="model26"
     )
@@ -441,7 +362,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-        
         ], "23. Realiza Simulacros por lo menos una vez al año?",
         oldname="model27"
     )
@@ -449,7 +369,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
         ], "24. Realiza la Investigación de los Accidentes de Trabajo en los tiempos establecidos por la legislación Nal?",
         oldname="model28"
     )
@@ -457,15 +376,15 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
         ], "25. Cumple con el desarrollo del programa de Capacitación?",
         oldname="model29"
     )
+
+    ##validar
     x_model30 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
         ], "26. Valida la gerencia el cumplimiento del sistema de gestión de seguridad y salud en el trabajo?",
         oldname="model30"
     )
@@ -473,7 +392,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
         ], "27. Gestiona los Correctivos generadados por la investigación de accidentes de trabajo?",
         oldname="model31"
     )
@@ -481,15 +399,15 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
         ], "28. Cuenta con indicadores para medir la gestión en seguridad y salud en el trabajo?",
         oldname="model32"
     )
+
+    ##actuar
     x_model33 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
         ], "29. Genera y gestiona Acciones preventivas y correctivas? (Una acción correctiva es aquella que llevamos a cabo para eliminar la causa de un problema. Las correcciones atacan los problemas, las acciones correctivas sus causas. Las acciones preventivas se anticipan a la causa, y pretenden eliminarla antes de su existencia. Evitan los problemas identificando los riesgos. Cualquier acción que disminuya un riesgo es una acción preventiva)?",
         oldname="model33"
     )
@@ -497,134 +415,8 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
         ], "30. Mejora continua: Da las directrices y otorgar los recursos necesarios PARA mejorar la eficacia de sus actividades en el sistema de gestión de seguridad y salud en el trabajo?",
         oldname="model34"
-    )
-    x_model35 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "35. ¿Las actividades claves del negocio hacen parte de procesos estandarizados y bien definidos?",
-        oldname="model35"
-    )
-    x_model36 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "36. ¿El negocio cuenta con acuerdos con proveedores y estos son suficientes y apropiados?",
-        oldname="model36"
-    )
-    x_model37 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "37. ¿El negocio cuenta con algún tipo de alianza para su desarrollo técnico?",
-        oldname="model37"
-    )
-    prodl39 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "39. ¿Cuenta con un espacio adecuado para la produccion y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad??",
-    )
-
-    x_prodl42 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "42. ¿Se tiene en el negocio definidos los estándares de los procesos de producción de los productos/servicios que vende?",
-        oldname="prodl42"
-    )
-    x_prodl43 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "43. ¿Tiene su negocio un sistema de control/ gestion de calidad adoptado e implementado?",
-        oldname="prodl43"
-    )
-    x_prodl46 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "46. ¿Sabe lo que le cuesta a su negocio la produccion y comercializacion del producto o servicio?",
-        oldname="prodl46"
-    )
-    x_prodl47 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
-        ], "47. ¿sabe cuáles son los costos de cada etapa del proceso de producción?",
-        oldname="prodl47"
-    )
-
-    x_innova24 = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No'),
-         ('en_proceso', 'En proceso'),
-        ], "38. ¿Cuenta con personal capacitado para la producción o manipulación del producto?",
-    )
-
-    x_innova25 = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No'),
-        ], "39. ¿Cuenta con un espacio adecuado para la producción y almacenamiento del producto, teniendo en cuenta medidas de higiene y de seguridad?",
-    )
-
-    x_innova26 = fields.Selection(
-        [
-          ('si', 'Si'),
-          ('no', 'No'),
-          ('en_proceso', 'En proceso'),
-        ], "40. ¿Tiene implementado un proceso de buenas practicas de manipulacion y produccion ?",
-    )
-
-    x_innova27 = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No'),
-        ], "41. ¿Para la obtención de la materia prima o mercancía depende de un solo proveedor?",
-    )
-
-    x_innova28 = fields.Selection(
-        [('50', 'De contado'),
-         ('51', 'A crédito'),
-         ('52', 'A plazos'),
-
-        ], "28. El pago de la materia prima la realiza ",
-    )
-
-    x_innova29 = fields.Selection(
-        [('si', 'Si'),
-          ('no', 'No'),
-        ], "44. ¿Ha representado retrasos en la entrega de su producto por falta de materia prima o mercancia?",
-    )
-
-    x_innova33 = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No'),
-         ('en_proceso', 'En proceso'),
-        ], "45. ¿Cuenta con un inventario donde registre las entradas y salidas del producto?",
-    )
-
-    x_innova36 = fields.Selection(
-        [('si', 'Si'),
-         ('no', 'No')
-        ], "46. ¿Sabe lo qué le cuesta a su negocio la producción y comercialización del producto o servicio?",
-    )
-
-    x_innova39 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-        ], "48. ¿Sabe cual es el punto de equilibrio de su negocio?",
     )
     
     #gavii
@@ -640,13 +432,7 @@ class Lead(models.Model):
     x_dcont5 = fields.Boolean(
         string="Continuar con el Formulario",
     )
-
-    x_cual_97 = fields.Char(
-        string="97.1 Cual?",
-        help="Escriba los detalles",
-    )
-
-    
+ 
     x_dcont6 = fields.Boolean(string="Continuar con el Formulario")
     
     x_dcont7 = fields.Boolean(string="Continuar con el Formulario")
