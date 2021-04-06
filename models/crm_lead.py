@@ -307,14 +307,6 @@ class Lead(models.Model):
             ('no', 'No'),
         ], "16. Cuenta con Procedimientos, instructivos y normas de seguridad para riesgos prioritarios?",
     )
-
-    x_proto17 = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-        ], "17. ¿Ha recibido o recibe algun apoyo o beneficio económico por parte del Gobierno en la emergencia para usted?",
-    )
-    
     
     x_model21 = fields.Selection(
         [
