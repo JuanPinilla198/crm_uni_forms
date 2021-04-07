@@ -93,7 +93,7 @@
                        
                    
                      <group string="PLANEAR" style="line-height: 50px;">
-                      </group>
+                      
                     
 
                       <group>
@@ -114,7 +114,7 @@
                     </group>
 
                   <group string="HACER" style="line-height: 50px;">
-                        </group>
+                        
                        
                         <group>
                             <field name="x_proto14"/>
@@ -133,7 +133,7 @@
                   </group>
 
                   <group string="VERIFICAR" style="line-height: 50px;">
-                        </group>
+                        
                         
                         <group>
                             <field name="x_model30"/>
@@ -143,7 +143,7 @@
                   </group>
                   <group string="ACTUAR" style="line-height: 50px;">
                              
-                        </group>
+                        
                      
                         <group>
                             <field name="x_model33"/>
