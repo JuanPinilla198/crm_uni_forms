@@ -82,22 +82,17 @@
                         <group>
                             <field name="x_nombre_negocio"/>
                             <field name="x_nombre"/>                
-                            <field name="doctype"/>
-                            <field name="x_identification"/>
-                            <field name="mobile" string="11. Teléfono Celular"/>
-                            <field name="email_from"  string="12. Correo electronico"/>
                         </group>
                     </group>
                 </page>
 
-                  <page string="DIAGNOSTICO" name="modulo3">
+                  <page string="DIAGNÓSTICO" name="modulo3">
                              
 
                     <!--group string="CARACTERIZACIÓN " style="line-height: 25px;"-->
                        
                    
                      <group string="PLANEAR" style="line-height: 50px;">
-                      <group string="SECCION 1" style="line-height: 50px;">
                       </group>
                     
 
@@ -119,7 +114,6 @@
                     </group>
 
                   <group string="HACER" style="line-height: 50px;">
-                        <group string="SECCION 2" style="line-height: 50px;">
                         </group>
                        
                         <group>
@@ -139,7 +133,6 @@
                   </group>
 
                   <group string="VERIFICAR" style="line-height: 50px;">
-                        <group string="SECCION 3" style="line-height: 50px;">
                         </group>
                         
                         <group>
@@ -149,7 +142,6 @@
                         </group>     
                   </group>
                   <group string="ACTUAR" style="line-height: 50px;">
-                        <group string="SECCION 4" style="line-height: 50px;">
                              
                         </group>
                      
