@@ -40,9 +40,6 @@
                                         'default_mobile': mobile,
                                         'default_email': email_from,
                                         'default_team_id': team_id,
-                                        'default_doctype': doctype,
-                                        'default_x_nombre': x_nombre,
-                                        'default_x_nombre_negocio': x_nombre_negocio,
                                         'show_vat': True,
                                     }"
                                 />
