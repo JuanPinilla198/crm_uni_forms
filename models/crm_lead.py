@@ -538,6 +538,12 @@ class Lead(models.Model):
             ('no','No')
         ], "1. ¿Está interesado en la búsqueda de un empleo?"
     )
+    x_in_empleo = fields.Selection(
+        [
+            ('si','Si'),
+            ('no','No')
+        ], "1. ¿Está interesado en la búsqueda de un empleo?"
+    )
     #eliminado
     x_microneg = fields.Selection(
         [
