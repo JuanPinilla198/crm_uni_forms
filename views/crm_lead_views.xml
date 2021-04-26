@@ -204,7 +204,7 @@
                     </group>
                     <group>
                         <div/>
-                        <field name="in_empleo" attrs=
+                        <field name="x_in_empleo" attrs=
                               "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
                         <field name="x_forma58_form" attrs=
                               "{'required': [('x_datos3','=','si')], 'invisible': ['|',('x_datos3','=','no'),('x_datos3','=',False)]}"/>
