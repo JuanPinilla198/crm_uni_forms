@@ -532,7 +532,7 @@ class Lead(models.Model):
             ('no', 'No'),
         ], "ACEPTA ENTREGARLE A UNIMINUTO LOS DATOS GENERALES SUYOS Y DEL MICRONEGOCIO CON FINES ACADÉMICOS",
     )
-    in_empleo = fields.Selection(
+    x_in_empleo = fields.Selection(
         [
             ('si','Si'),
             ('no','No')
