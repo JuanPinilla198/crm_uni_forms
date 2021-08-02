@@ -101,6 +101,11 @@
                     <group>
                         <field name="x_datos1" />
                     </group>
+                    <group>
+                        <field name="file_name" invisible="1"/>
+                        <field name="attach_file"  filename="file_name" attrs=
+                              "{'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                    </group>
                     <group string="Modúlo 1: Formulario de Registro - Encuentro 1" style="line-height: 25px;">
                         <group>
                             <field name="x_nombre_negocio" attrs=
