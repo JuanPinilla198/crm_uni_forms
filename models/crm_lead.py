@@ -107,6 +107,9 @@ class Lead(models.Model):
         ], "ACEPTA ENTREGARLE A UNIMINUTO LOS DATOS GENERALES SUYOS Y DEL MICRONEGOCIO CON FINES ACADÉMICOS",
     )
 
+    attach_file = fields.Binary(string="ACUERDO DE PRIVACIDAD")
+    file_name = fields.Char("File Name")
+
     doctype = fields.Selection(
         [
             ('sin_identificacion', 'Sin identificación'),
