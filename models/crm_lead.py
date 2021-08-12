@@ -80,24 +80,6 @@ class modelo176form(models.Model):
 class Lead(models.Model):
     _inherit = "crm.lead"
 
-    x_nombre = fields.Char(
-    	related ="name",
-        string="2. Nombre del Propietario",
-        help="Ingrese el nombre del propietario",
-        readonly=False
-    )
-
-    x_nombre_negocio = fields.Char(
-        string="1. Nombre del Negocio",
-        help="Ingrese el nombre del negocio",
-        readonly=False
-    )
-
-    x_vereda = fields.Char(
-        string="10. Barrio/Vereda",
-        help="Tax Identification Number. The first 2 characters are the "
-        "country code.",
-    )
 
     x_datos1 = fields.Selection(
         [
@@ -109,6 +91,19 @@ class Lead(models.Model):
 
     attach_file = fields.Binary(string="ACUERDO DE PRIVACIDAD")
     file_name = fields.Char("File Name")
+
+    x_nombre_negocio = fields.Char(
+        string="1. Nombre del Negocio",
+        help="Ingrese el nombre del negocio",
+        readonly=False
+    )
+
+    x_nombre = fields.Char(
+    	related ="name",
+        string="2. Nombre del Propietario",
+        help="Ingrese el nombre del propietario",
+        readonly=False
+    )
 
     doctype = fields.Selection(
         [
@@ -140,19 +135,115 @@ class Lead(models.Model):
         ], "5. Sexo", 
     )
 
+    x_edad = fields.Integer(
+        string="6. Edad",
+        help="Escriba su edad", 
+    )
+
+    x_dir_res = fields.Char(
+        string="9. Dirección de residencia",
+        help="9. Dirección de residencia",
+    )
+
+    x_comuna = fields.Char(
+        string="10. Comuna o localidad de residencia",
+        help="10. Comuna o localidad de residencia",
+    )
+
+    x_vereda = fields.Char(
+        string="11. Barrio/Vereda",
+        help="Tax Identification Number. The first 2 characters are the "
+        "country code.",
+    )
+
+    x_ubicacion_negocio = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+        ], "12. ¿Su micronegocio esta ubicado en la misma ciudad o municipio donde reside?",
+        
+    )
+
+    x_state_id = fields.Many2one('res.country.state', '12.1. Departamento donde se ubica su negocio')
+    x_city_id = fields.Many2one('res.country.state.city', '12.2. Municipio donde se ubica su negocio')
+
+    x_ubic = fields.Selection(
+        [
+            ('zona_Urbana', 'Zona Urbana'),
+            ('zona_rural', 'Zona rural'),
+        ], "15. Ubicación del negocio",
+    )
+
+    x_dir_neg = fields.Char(
+            string="12.3. Direccion del negocio",
+            help="12.3. Direccion del negocio",
+        )
+
+    #13. mobile
+
+    x_estrato = fields.Selection(
+        [
+            ('1', '1'),
+            ('2', '2'),
+            ('3', '3'),
+            ('4', '4'),
+            ('5', '5'),
+            ('6', '6'),
+        ], "15. Estrato socioeconómico de residencia ",
+    )
+
+    x_pobl_esp = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+        ], "19. ¿Pertenece a alguna población especial?",
+        
+    )
+
+    #NUEVA
+    x_tipo_vivienda = fields.Selection(
+        [
+            ('casa', 'Casa'),
+            ('apartamento', 'Apartamento'),
+            ('cuartos_inquilinato', 'Cuarto(s) en inquilinato'),
+            ('cuartos_otro_tipo', 'Cuarto(s) en otro tipo de estructura'),
+            ('vivienda_indigena', 'Vivienda indígena'),
+            ('otro_tipo_vivienda', 'Otro tipo de vivienda (carpa, tienda, vagón, embarcación, refugio natural, puente, etc.)'),
+
+        ], "20. Tipo de vivienda", 
+    )
+
+    x_no_personas_viven_propietario = fields.Char(
+        string="21. ¿Cuántas personas conviven con el propietario?",
+        help="No de personas eque viven con el propietario",
+    )
+
     x_etnia = fields.Selection(
         [
             ('narp', 'NARP'),
             ('gitano_rom', 'Gitano ROM'),
             ('indigena', 'Indígena'),
+            ('lgtbi', 'LGTBI'),
             ('no_pertenezco', 'No pertenezco'),
 
-        ], "6. ¿Pertenece a algún tipo de etnia?", 
+        ], "22. ¿Pertenece a algún tipo de etnia?", 
     )
 
-    x_edad = fields.Integer(
-        string="7. Edad",
-        help="Escriba su edad", 
+    x_sisben = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+
+        ], "23. ¿Usted pertenece al Sisben?",
+    )
+    x_nsisben = fields.Selection(
+        [
+            ('a', 'A'),
+            ('b', 'B'),
+            ('c', 'C'),
+            ('d', 'D'),
+
+        ], "24. ¿Cuál es el nivel de Sisben que usted tiene?",
     )
 
     x_limitacion = fields.Char(
@@ -190,16 +281,7 @@ class Lead(models.Model):
         help="16. ¿A qué tipo de organización, asociación, corporación, cooperativa, grupo pertenece?",
     )
 
-    x_estrato = fields.Selection(
-        [
-            ('1', '1'),
-            ('2', '2'),
-            ('3', '3'),
-            ('4', '4'),
-            ('5', '5'),
-            ('6', '6'),
-        ], "17. Estrato socioeconómico de residencia ",
-    )
+    
 
     x_situacion = fields.Selection(
         [
@@ -264,12 +346,7 @@ class Lead(models.Model):
         help="Escriba el sector económico de su negocio ",
     )
 
-    x_ubic = fields.Selection(
-        [
-            ('zona_Urbana', 'Zona Urbana'),
-            ('zona_rural', 'Zona rural'),
-        ], "23. Ubicación del negocio",
-    )
+    
     #campo actulizado
     x_com_cuenta = fields.Selection(
         [
@@ -278,10 +355,7 @@ class Lead(models.Model):
     
         ], "25. Su actividad comercial cuenta con",
     )
-    x_dir_neg = fields.Char(
-        string="24. Direccion del negocio",
-        help="24. Direccion del negocio",
-    )
+    
     x_que_por_ren = fields.Selection(
         [
            ('1', '1%'),
@@ -555,13 +629,7 @@ class Lead(models.Model):
         ], "25. ¿Su micronegocio está?",
     )
 
-    x_sisben = fields.Selection(
-        [
-            ('50', 'Si'),
-            ('51', 'No'),
-
-        ], "26. ¿Usted pertenece al Sisben?",
-    )
+   
 
     x_tsisben = fields.Selection(
         #string="Sexo",
@@ -572,15 +640,7 @@ class Lead(models.Model):
         ], "27. ¿Su Sisben es?",
     )
 
-    x_nsisben = fields.Selection(
-        #string="Sexo",
-        [
-            ('50', 'Nivel 1 '),
-            ('51', 'Nivel 2 '),
-            ('52', 'Nivel 3 '),
-
-        ], "28. ¿Cuál es el nivel de Sisben que usted tiene?",
-    )
+    
 
     x_estrato_neg = fields.Selection(
         [
@@ -2975,12 +3035,11 @@ class Lead(models.Model):
     )
 
     country_id = fields.Many2one('res.country', "Country")
-    xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
+    xcity = fields.Many2one('res.country.state.city', "8. Municipio de Residencia")
     city = fields.Char(related="xcity.name")
 
 
-    x_state_id = fields.Many2one('res.country.state', '21. Departamento donde se ubica su negocio')
-    x_city_id = fields.Many2one('res.country.state.city', '22. Municipio donde se ubica su negocio')
+    
 
     @api.onchange('country_id', 'state_id')
     def onchange_location(self):
