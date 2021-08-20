@@ -1245,15 +1245,24 @@ class Lead(models.Model):
             ('ninguna', 'Ninguna'),
         ], "5. ¿Sabe por qué le compran sus clientes? ¿Promociones, referidos, redes?",
     )
-    x_neg6 = fields.Selection(
-        [
-            ('pres_virt', 'Presencial - Virtual (redes sociales o página web)'),
-            ('domicilio', 'Venta a domicilio'),
-            ('local', 'En un local comercial'),
-            ('vehiculo', 'En un vehículo (Carro, carreta, moto, bicicleta etc…) Propio o prestado o alquilado'),
-            ('ubicacion', 'Ubicación: (Aire libre, parques, estación, semáforos,  etc)')
-        ], "6. ¿Cómo ofrece y  vende sus productos?",
+    #CAMBIAR A MANY2MANY
+    # x_neg6 = fields.Selection(
+    #     [
+    #         ('pres_virt', 'Presencial - Virtual (redes sociales o página web)'),
+    #         ('domicilio', 'Venta a domicilio'),
+    #         ('local', 'En un local comercial'),
+    #         ('vehiculo', 'En un vehículo (Carro, carreta, moto, bicicleta etc…) Propio o prestado o alquilado'),
+    #         ('ubicacion', 'Ubicación: (Aire libre, parques, estación, semáforos,  etc)')
+    #     ], "6. ¿Cómo ofrece y  vende sus productos?",
+    # )
+
+    x_neg6 = fields.Many2many(
+        comodel_name="modelo.negocios.model",
+        string="6. ¿Cómo ofrece y  vende sus productos?",
+        readonly=False,
+        store=True,
     )
+
     x_neg7 = fields.Selection(
         [
             ('si', 'Si'),

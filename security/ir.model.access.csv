@@ -10,3 +10,4 @@ access_model_many2many76,access.model.many2many76.group.user,model_model_many2ma
 access_model_many2many102,access.model.many2many102.group.user,model_model_many2many102,base.group_user,1,1,1,1
 access_model_many2many176,access.model.many2many176.group.user,model_model_many2many176,base.group_user,1,1,1,1
 access_model_many2many177,access.model.many2many177.group.user,model_model_many2many177,base.group_user,1,1,1,1
+access_modelo_negocios_model,access_modelo_negocios_model,model_modelo_negocios_model,base.group_user,1,1,1,1
