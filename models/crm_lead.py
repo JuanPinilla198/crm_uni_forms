@@ -194,8 +194,18 @@ class Lead(models.Model):
 
     x_pobl_esp = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
+            ('menores_desvinculados', 'Menores desvinculados del conflicto armado'),
+            ('comunidades_indigenas', 'Comunidades Indígenas'),
+            ('pob_desmov', 'Población desmovilizada'),
+            ('adult_mayores', 'Adultos mayores en centros de protección'),
+            ('pob_rrom', 'Población Rrom'),
+            ('personas_protec_testigos', 'Personas incluidas en el programa de protección a testigos'),
+            ('vic_conflic_armado', 'Víctimas del conflicto armado interno'),
+            ('habitante_calle', 'Población Habitante de la calle'),
+            ('migrante_repartida', 'Población migrante colombiana repatriada'),
+            ('migrante_venezolano', 'Migrantes venezolanos sin capacidad de pago, pobres y vulnerables con PEP'),
+            ('voluntarios_acreditados', 'Los voluntarios acreditados'),
+            ('persona_discapacitada', 'Personas con discapacidad en centros de protección'),
         ], "19. ¿Pertenece a alguna población especial?",
         
     )
@@ -267,7 +277,7 @@ class Lead(models.Model):
             ('maestria', 'Maestría'),
             ('otro', 'Otro ¿Cuál?'),
             ('ninguno', 'Ninguno'),
-        ], "26. Último año de escolaridad", 
+        ], "26. Nivel de escolaridad", 
     )
 
     x_limitacion = fields.Char(
@@ -362,7 +372,7 @@ class Lead(models.Model):
            ('establecimiento', 'Establecimiento'),
            ('sin_establecimiento', 'Sin establecimiento'),
     
-        ], "28. ¿Su micronecicio cuenta con estalecimiento comercial?",
+        ], "28. ¿Su micronegocio cuenta con establecimiento comercial?",
     )
     
     x_que_por_ren = fields.Selection(
