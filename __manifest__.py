@@ -18,6 +18,12 @@
         "views/crm_team_views.xml",
         'data/l10n_cities_co_data.xml',
         'data/severalfields.xml',
-        'data/modelo_negocios_model_data.xml'
+        'data/modelo_negocios_model_data.xml',
+        'data/modelo_conseguir_nuevos_clientes_data.xml',
+        'data/modelo_herramientas_tecnologicas_data.xml',
+        'data/modelo_metodos_venta_data.xml',
+        'data/modelo_porque_compran_clientes.xml',
+        'data/modelo_promocion_productos_data.xml',
+        'data/modelo_temas_para_asesorarse_data.xml',
     ],
 }

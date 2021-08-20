@@ -242,7 +242,7 @@
                             <field name="x_tien_dur" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                             <field name="x_herramientas" attrs=
-                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
+                              "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}" widget="many2many_tags"/>
                             <field name="x_depend" attrs=
                               "{'required': [('x_datos1','=','si')], 'invisible': ['|',('x_datos1','=','no'),('x_datos1','=',False)]}"/>
                         <!-- 
@@ -316,7 +316,7 @@
                         </group>
                         <group>
                           <field name="x_neg4"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                          <field name="x_neg5"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
+                          <field name="x_neg5"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}" widget="many2many_tags"/>
                           <field name="x_neg6"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}" widget="many2many_tags"/>
                           <field name="x_neg7"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
                           <field name="x_neg8"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
@@ -369,13 +369,13 @@
                               <group>
                                   <field name="x_mer_com30" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}"/>
                                   <field name="x_mer_com31" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}"/>
-                                  <field name="x_mer_com32" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}"/>
+                                  <field name="x_mer_com32" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}" widget="many2many_tags"/>
                                   <field name="x_mer_com33" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}"/>
-                                  <field name="x_mer_com34" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}"/>
+                                  <field name="x_mer_com34" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}" widget="many2many_tags"/>
                               </group>
                               <group>
                                   <field name="x_mer_com35" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}"/>
-                                  <field name="x_mer_com36" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}"/>
+                                  <field name="x_mer_com36" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}" widget="many2many_tags"/>
                                   <field name="x_mer_com37" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}"/>
                                   <field name="x_mer_com38" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}"/>
                                   <field name="x_mer_com39" attrs="{'required': [('x_dcont7','=',True)], 'invisible': [('x_dcont7','=',False)]}"/>                </group>
@@ -404,7 +404,7 @@
                                   <field name="x_forma48" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
                                   <field name="x_forma49" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
                                   <field name="x_forma50" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
-                                  <field name="x_forma51" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
+                                  <field name="x_forma51" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}" widget="many2many_tags"/>
                                   <field name="x_forma52" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
                                     <!-- <field name="x_forma54_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>
                                     <field name="x_forma56_inf" attrs="{'required': [('x_dcont5','=',True)], 'invisible': [('x_dcont5','=',False)]}"/>

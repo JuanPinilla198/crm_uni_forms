@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="porque_compran_clientes_data1" model="modelo.porque.compran.clientes">
+            <field name="name">Promociones</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="porque_compran_clientes_data2" model="modelo.porque.compran.clientes">
+            <field name="name">Referidos</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="porque_compran_clientes_data3" model="modelo.porque.compran.clientes">
+            <field name="name">Redes Sociales</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="porque_compran_clientes_data4" model="modelo.porque.compran.clientes">
+            <field name="name">Ninguna</field>
+            <field name="descripcion"></field>
+        </record>
+
+    </data>
+</odoo>

@@ -582,21 +582,29 @@ class Lead(models.Model):
          ('no_pienso_continuar_con_el_negocio', 'No pienso continuar con el negocio'),
         ], "29. Tiene usted proyectado continuar con su micronegocio durante:",
     )
-    x_herramientas = fields.Selection(
-        [
-            ('computador', 'Computador de escritorio o portatil'),
-            ('tel_no_smart', 'Telefono celular no smart'),
-            ('smartphone', 'Smartphone'), ('tablet', 'tablet'),
-            ('herr_ofi', 'Herramientas de oficina u ofimaticas(Como Word, PowerPoint, etc)'),
-            ('hoja_cal', 'Hojas de calculo (Como Excel)'),
-            ('navegador', 'Navegadores (Como google chrome, explorer, morzilla, opera, etc)'),
-            ('correo_elec', 'Correo electronico'), ('whatsapp', 'Whatsapp'),
-            ('redes', 'Redes sociales'),
-            ('nube','Servicios de la nube para almacenar y compartir documentos (Como Google drive, Dropbox, etc)'),
-            ('blogs', 'Manejo de blogs'),
-            ('web', 'Herramientas para la creación de paginas web (como wix, Jimdo, squarespace)'),
-            ('ninguna', 'Ninguna de las anteriores')
-        ], "30. ¿Que herramientas tecnologicas maneja el propietario?",
+
+    # x_herramientas = fields.Selection(
+    #     [
+    #         ('computador', 'Computador de escritorio o portatil'),
+    #         ('tel_no_smart', 'Telefono celular no smart'),
+    #         ('smartphone', 'Smartphone'), ('tablet', 'tablet'),
+    #         ('herr_ofi', 'Herramientas de oficina u ofimaticas(Como Word, PowerPoint, etc)'),
+    #         ('hoja_cal', 'Hojas de calculo (Como Excel)'),
+    #         ('navegador', 'Navegadores (Como google chrome, explorer, morzilla, opera, etc)'),
+    #         ('correo_elec', 'Correo electronico'), ('whatsapp', 'Whatsapp'),
+    #         ('redes', 'Redes sociales'),
+    #         ('nube','Servicios de la nube para almacenar y compartir documentos (Como Google drive, Dropbox, etc)'),
+    #         ('blogs', 'Manejo de blogs'),
+    #         ('web', 'Herramientas para la creación de paginas web (como wix, Jimdo, squarespace)'),
+    #         ('ninguna', 'Ninguna de las anteriores')
+    #     ], "30. ¿Que herramientas tecnologicas maneja el propietario?",
+    # )
+
+    x_herramientas = fields.Many2many(
+        comodel_name="modelo.herramientas.tecnologicas",
+        string="30. ¿Que herramientas tecnologicas maneja el propietario?",
+        readonly=False,
+        store=True,
     )
 
     x_depend = fields.Selection(
@@ -1237,14 +1245,21 @@ class Lead(models.Model):
             ('no', 'No'),
         ], "4. ¿Identifica cuáles son sus principales compradores?",
     )
-    x_neg5 = fields.Selection(
-        [
-            ('promociones', 'Promociones'),
-            ('referidos', 'Referidos'),
-            ('redes_sociales', 'Redes sociales'),
-            ('ninguna', 'Ninguna'),
-        ], "5. ¿Sabe por qué le compran sus clientes? ¿Promociones, referidos, redes?",
+    # x_neg5 = fields.Selection(
+    #     [
+    #         ('promociones', 'Promociones'),
+    #         ('referidos', 'Referidos'),
+    #         ('redes_sociales', 'Redes sociales'),
+    #         ('ninguna', 'Ninguna'),
+    #     ], "5. ¿Sabe por qué le compran sus clientes? ¿Promociones, referidos, redes?",
+    # )
+    x_neg5 = fields.Many2many(
+        comodel_name="modelo.porque.compran.clientes",
+        string="5. ¿Sabe por qué le compran sus clientes? ¿Promociones, referidos, redes?",
+        readonly=False,
+        store=True,
     )
+
     #CAMBIAR A MANY2MANY
     # x_neg6 = fields.Selection(
     #     [
@@ -1424,39 +1439,64 @@ class Lead(models.Model):
             ('en_proceso', 'En proceso'),
         ], "31. ¿Sus productos son empacados por usted con algúna marca, tarjeta, logo?",
     )
-    x_mer_com32 = fields.Selection(
-        [
-            ('redes_soc', 'Utiliza redes las redes sociales'),
-            ('eventos', 'Hace algún evento'),
-            ('descuentos', 'Ofrece descuentos'),
-            ('ferias', 'Participan en ferias'),
-            ('publicidad', 'Utiliza  publicidad impresa'),
-            ('otros', 'Otros medios'),
-        ], "32. ¿Qué hace usted para lograr vender más? (Utiliza redes las redes sociales, hace algún evento, descuentos, participan en ferias, etc)",
+    # x_mer_com32 = fields.Selection(
+    #     [
+    #         ('redes_soc', 'Utiliza redes las redes sociales'),
+    #         ('eventos', 'Hace algún evento'),
+    #         ('descuentos', 'Ofrece descuentos'),
+    #         ('ferias', 'Participan en ferias'),
+    #         ('publicidad', 'Utiliza  publicidad impresa'),
+    #         ('otros', 'Otros medios'),
+    #     ], "32. ¿Qué hace usted para lograr vender más? (Utiliza redes las redes sociales, hace algún evento, descuentos, participan en ferias, etc)",
+    # )
+
+    x_mer_com32 = fields.Many2many(
+        comodel_name="modelo.metodos.venta",
+        string="32. ¿Qué hace usted para lograr vender más? (Utiliza redes las redes sociales, hace algún evento, descuentos, participan en ferias, etc)",
+        readonly=False,
+        store=True,
     )
+
+
     x_mer_com33 = fields.Char("33. ¿Cuáles otros medios usa para vender mas?",
     )
-    x_mer_com34 = fields.Selection(
-        [
-            ('redes_soc', 'Utiliza redes las redes sociales'),
-            ('eventos', 'Hace algún evento'),
-            ('descuentos', 'Ofrece descuentos'),
-            ('ferias', 'Participan en ferias'),
-            ('publicidad', 'Utiliza  publicidad impresa'),
-            ('otros', 'Otros medios'),
-        ], "34. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+    # x_mer_com34 = fields.Selection(
+    #     [
+    #         ('redes_soc', 'Utiliza redes las redes sociales'),
+    #         ('eventos', 'Hace algún evento'),
+    #         ('descuentos', 'Ofrece descuentos'),
+    #         ('ferias', 'Participan en ferias'),
+    #         ('publicidad', 'Utiliza  publicidad impresa'),
+    #         ('otros', 'Otros medios'),
+    #     ], "34. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+    # )
+
+    x_mer_com34 = fields.Many2many(
+        comodel_name="modelo.promocion.productos",
+        string="34. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+        readonly=False,
+        store=True,
     )
+
+
     x_mer_com35 = fields.Char( "35. ¿Cuáles otros medios usa para contarle a sus clientes?")
 
-    x_mer_com36 = fields.Selection(
-        [
-            ('redes_soc', 'Utiliza redes las redes sociales'),
-            ('eventos', 'Hace algún evento'),
-            ('descuentos', 'Ofrece descuentos'),
-            ('ferias', 'Participan en ferias'),
-            ('publicidad', 'Utiliza  publicidad impresa'),
-            ('otros', 'Otros medios'),
-        ], "36. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+    # x_mer_com36 = fields.Selection(
+    #     [
+    #         ('redes_soc', 'Utiliza redes las redes sociales'),
+    #         ('eventos', 'Hace algún evento'),
+    #         ('descuentos', 'Ofrece descuentos'),
+    #         ('ferias', 'Participan en ferias'),
+    #         ('publicidad', 'Utiliza  publicidad impresa'),
+    #         ('otros', 'Otros medios'),
+    #     ], "36. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+    # )
+
+    x_mer_com36 = fields.Many2many(
+        comodel_name="modelo.conseguir.nuevos.clientes",
+        string="36. ¿Cómo consigue nuevos clientes? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+        readonly=False,
+        store=True,
     )
 
     x_mer_com37 = fields.Char("37. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)")
@@ -1544,7 +1584,16 @@ class Lead(models.Model):
             ('en_proceso', 'En proceso'),
         ], "50. ¿Está interesado en emplearse?",
     )
-    x_forma51 = fields.Char("51. ¿En que temas está interesado en recibir asesorías o acompañamiento y o formación o capacitación? (Financiera, Comercial, Logística, Administrativa, Gerencia, Recursos Humanos etc)")
+    # x_forma51 = fields.Char("51. ¿En que temas está interesado en recibir asesorías o acompañamiento y o formación o capacitación? (Financiera, Comercial, Logística, Administrativa, Gerencia, Recursos Humanos etc)")
+
+    x_forma51 = fields.Many2many(
+        comodel_name="modelo.temas.para.asesorarse",
+        string="51. ¿En que temas está interesado en recibir asesorías o acompañamiento y o formación o capacitación? (Financiera, Comercial, Logística, Administrativa, Gerencia, Recursos Humanos etc)",
+        readonly=False,
+        store=True,
+    )
+
+
     x_forma52 = fields.Char("52. ¿Cuántas personas viven o dependen del Micronegocio?")
     x_model21 = fields.Selection(
         [

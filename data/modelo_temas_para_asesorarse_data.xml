@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="modelo_temas_para_asesorarse_data1" model="modelo.temas.para.asesorarse">
+            <field name="name">Comercial</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="modelo_temas_para_asesorarse_data2" model="modelo.temas.para.asesorarse">
+            <field name="name">Logistica</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="modelo_temas_para_asesorarse_data3" model="modelo.temas.para.asesorarse">
+            <field name="name">Administrativa</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="modelo_temas_para_asesorarse_data4" model="modelo.temas.para.asesorarse">
+            <field name="name">Desarrollo de Habilidades Gerenciales</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="modelo_temas_para_asesorarse_data5" model="modelo.temas.para.asesorarse">
+            <field name="name">Recursos Humanos</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="modelo_temas_para_asesorarse_data6" model="modelo.temas.para.asesorarse">
+            <field name="name">Resilencia</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="modelo_temas_para_asesorarse_data7" model="modelo.temas.para.asesorarse">
+            <field name="name">Mentalidad Empresarial</field>
+            <field name="descripcion"></field>
+        </record>
+        <record id="modelo_temas_para_asesorarse_data8" model="modelo.temas.para.asesorarse">
+            <field name="name">Marketing Digital</field>
+            <field name="descripcion"></field>
+        </record>
+        <record id="modelo_temas_para_asesorarse_data9" model="modelo.temas.para.asesorarse">
+            <field name="name">Transformacion Digital</field>
+            <field name="descripcion"></field>
+        </record>
+        <record id="modelo_temas_para_asesorarse_data10" model="modelo.temas.para.asesorarse">
+            <field name="name">Formalizacion Empresarial</field>
+            <field name="descripcion"></field>
+        </record>
+        <record id="modelo_temas_para_asesorarse_data11" model="modelo.temas.para.asesorarse">
+            <field name="name">Reconversion de Negocio</field>
+            <field name="descripcion"></field>
+        </record>
+        <record id="modelo_temas_para_asesorarse_data12" model="modelo.temas.para.asesorarse">
+            <field name="name">Inclusion Financiera</field>
+            <field name="descripcion"></field>
+        </record>
+        <record id="modelo_temas_para_asesorarse_data13" model="modelo.temas.para.asesorarse">
+            <field name="name">Asociatividad</field>
+            <field name="descripcion"></field>
+        </record>
+        
+    </data>
+</odoo>

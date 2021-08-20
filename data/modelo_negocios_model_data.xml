@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="1">
-
+    <data noupdate="0">
         <record id="opcion_marketing_data1" model="modelo.negocios.model">
             <field name="name">Presencial - Virtual</field>
             <field name="descripcion">Presencial - Virtual (redes sociales o página web)</field>

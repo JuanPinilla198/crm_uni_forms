@@ -2,3 +2,4 @@
 
 from . import crm_lead
 from . import many2many_models_fields_modulo3
+from . import many2many_models_fields_modulo1
