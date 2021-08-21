@@ -16,6 +16,8 @@
         'security/ir.model.access.csv',
         "views/crm_lead_views.xml",
         "views/crm_team_views.xml",
+        "views/many2many_models_fields_modulo1.xml",
+        "views/many2many_models_fields_modulo3.xml",
         'data/l10n_cities_co_data.xml',
         'data/severalfields.xml',
         'data/modelo_negocios_model_data.xml',

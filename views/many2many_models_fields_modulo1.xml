@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <data>
+
+        <record  model="ir.ui.view" id="herraminetas_tecnologicas_view_form">
+            <field name="name">herraminetas_tecnologicas_view_form</field>
+            <field name="model">modelo.herramientas.tecnologicas</field>
+            <field name="arch" type="xml">
+                <form string="Herramientas Tecnologicas" edit="0" create="0" delete="0">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title text-center">
+                            <h1>
+                                <span>Herramientas Tecnologicas</span>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="left data">
+                                <field name="name" />
+                                <field name="descripcion" string="Descripcion" />
+                                <field name="puntaje" string="Puntaje" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="herramientas_tecnologicas_view_tree" model="ir.ui.view">
+            <field name="name">herramientas_tecnologicas_view_tree</field>
+            <field name="model">modelo.herramientas.tecnologicas</field>
+            <field name="arch" type="xml">
+                <tree string="Herramientas Tecnoloicas" >
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="puntaje"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="herramientas_tecnologicas_action_tree">
+            <field name="name">Herramientas tecnologicas</field>
+            <field name="res_model">modelo.herramientas.tecnologicas</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <!-- <field name="search_view_id" ref="crm_diagnostic_view_search"/> -->
+            <!-- <field name="context">{
+                }
+            </field> -->
+        </record>
+
+        <record id="herramientas_tecnologicas_all_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="herramientas_tecnologicas_view_tree"/>
+            <field name="act_window_id" ref="herramientas_tecnologicas_action_tree"/>
+        </record>
+
+        <menuitem id="crm_diagnostic_root_menu_config_categ"
+            name="Configuracion Preguntas Diagnostico"
+            parent="crm.crm_menu_root"
+            sequence="20"
+        />
+
+        <menuitem id="crm_diagnostic_menu_config_herramientas"
+            name="Herramientas tecnologicas"
+            parent="crm_uni_forms.crm_diagnostic_root_menu_config_categ"
+            action="crm_uni_forms.herramientas_tecnologicas_action_tree"
+            sequence="10"/>
+
+    </data>
+</odoo>

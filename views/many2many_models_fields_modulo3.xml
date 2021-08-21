@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <data>
+
+        <record  model="ir.ui.view" id="modelo_porque_compran_clientes_view_form">
+            <field name="name">modelo_porque_compran_clientes_view_form</field>
+            <field name="model">modelo.porque.compran.clientes</field>
+            <field name="arch" type="xml">
+                <form string="Por que Compran Los Clientes" edit="1" create="1" delete="1">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title text-center">
+                            <h1>
+                                <span>Por que Compran Los Clientes</span>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="left data">
+                                <field name="name" />
+                                <field name="descripcion" string="Descripcion" />
+                                <field name="puntaje" string="Puntaje" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="modelo_porque_comrpran_clientes_view_tree" model="ir.ui.view">
+            <field name="name">modelo_porque_comrpran_clientes_view_tree</field>
+            <field name="model">modelo.porque.compran.clientes</field>
+            <field name="arch" type="xml">
+                <tree string="Porque Compran Los Clientes" >
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="puntaje"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="modelo_porque_compran_clientes_action_tree">
+            <field name="name">Porque Compran Los Clientes</field>
+            <field name="res_model">modelo.porque.compran.clientes</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <!-- <field name="search_view_id" ref="crm_diagnostic_view_search"/> -->
+            <!-- <field name="context">{
+                }
+            </field> -->
+        </record>
+
+        <record id="all_modelo_porque_compran_clientes_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="modelo_porque_comrpran_clientes_view_tree"/>
+            <field name="act_window_id" ref="modelo_porque_compran_clientes_action_tree"/>
+        </record>
+
+        <menuitem id="crm_diagnostic_menu_config_modelo_porque_compran_clientes"
+            name="Porque Compran Los Clientes"
+            parent="crm_uni_forms.crm_diagnostic_root_menu_config_categ"
+            action="crm_uni_forms.modelo_porque_compran_clientes_action_tree"
+            sequence="11"/>
+       
+
+    </data>
+</odoo>
