@@ -17,6 +17,8 @@ class ModeloPorqueCompranClientes(models.Model):
         readonly=False
     )
 
+    puntaje = fields.Integer(string='Puntaje')
+
 
 class ModeloNegociosModel(models.Model):
     _name = "modelo.negocios.model"
@@ -29,6 +31,8 @@ class ModeloNegociosModel(models.Model):
         help="Ingrese la descripcion",
         readonly=False
     )
+
+    puntaje = fields.Integer(string='Puntaje')
 
 
 class ModeloMetodosVenta(models.Model):
@@ -43,6 +47,8 @@ class ModeloMetodosVenta(models.Model):
         readonly=False
     )
 
+    puntaje = fields.Integer(string='Puntaje')
+
 
 class ModeloPromocionProductos(models.Model):
     _name = "modelo.promocion.productos"
@@ -55,6 +61,8 @@ class ModeloPromocionProductos(models.Model):
         help="Ingrese la descripcion",
         readonly=False
     )
+
+    puntaje = fields.Integer(string='Puntaje')
 
     
 class ModeloConseguirNuevosClientes(models.Model):
@@ -69,6 +77,8 @@ class ModeloConseguirNuevosClientes(models.Model):
         readonly=False
     )
 
+    puntaje = fields.Integer(string='Puntaje')
+
 
 class ModeloTemasParaAsesorarse(models.Model):
     _name = "modelo.temas.para.asesorarse"
@@ -81,4 +91,6 @@ class ModeloTemasParaAsesorarse(models.Model):
         help="Ingrese la descripcion",
         readonly=False
     )
+
+    puntaje = fields.Integer(string='Puntaje')
 

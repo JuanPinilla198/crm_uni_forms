@@ -16,3 +16,5 @@ class ModeloHerramientasTecnologicas(models.Model):
         help="Ingrese la descripcion",
         readonly=False
     )
+
+    puntaje = fields.Integer(string='Puntaje')

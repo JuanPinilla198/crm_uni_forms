@@ -1355,7 +1355,7 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "18. ¿Lleva cuentas de las ganancias que obtiene el Micronegocio?",
     )
     x_financiero19 = fields.Selection(
@@ -1374,49 +1374,50 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "20. ¿Lleva cuentas de los gastos que genera el Micronegocio?",
     )
     x_financiero21 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "21. ¿Sabe cuanto tiene que vender y a qué precio para cubrir todos sus costos y gastos? (Punto de equilibrio)",
     )
     x_financiero22 = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            ('cuenta_del_negocio', 'Cuenta Bancaria del Negocio'),
+            ('cuenta_personal', 'Cuenta Bancaria del Personal'),
+            ('los_dos_tipos_cuenta', 'Tiene las dos cuentas'),
+            ('no_tiene', 'No tiene ninguna'),
         ], "22. ¿Tiene cuenta  bancaria el negocio o cuenta bancaria personal?",
     )
     x_financiero23 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "23. ¿Tiene actualmente deudas del Micronegocio? (Pagos a un proveedor, banco. etc)",
     )
     x_financiero24 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "24. ¿Conoce su nivel de endeudamiento?",
     )
     x_financiero25 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "25. ¿Tiene estados financieros y contables de su negocio?",
     )
     x_financiero26 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "26. ¿Esta interesado en adquirir credito?",
     )
     x_financiero27 = fields.Char("27. ¿Para que quiere adquirir un credito?")
@@ -1431,7 +1432,7 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+           # ('en_proceso', 'En proceso'),
         ], "29. ¿Presenta declaración de renta?",
     )
 
@@ -1446,7 +1447,7 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+           # ('en_proceso', 'En proceso'),
         ], "31. ¿Sus productos son empacados por usted con algúna marca, tarjeta, logo?",
     )
     # x_mer_com32 = fields.Selection(
@@ -1514,21 +1515,73 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "38. ¿Hace promoción en las redes sociales?",
     )
     x_mer_com39 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "39. ¿Vende a través de redes sociales o páginas web?",
     )
 
-    x_forma40 = fields.Char("40. ¿En que sector económico se encuentra su negocio?")
-    x_forma41 = fields.Char("41. ¿Cual es la actividad economica de su negocio?")
+    x_forma40 = fields.Selection(
+        [
+            ('agropecuario', 'Agropecuario'),
+            ('comercio', 'Comercio'),
+            ('servicios', 'Servicios'),
+            ('industrial', 'Industrial'),
+        ], "40. ¿En que sector económico se encuentra su negocio?",
+    ) 
+    x_forma41 = fields.Selection(
+        [
+            ('peluqueria_salon_de_belleza_barberia_arreglo_de_unas', 'Peluquería, salón de belleza, barbería, arreglo de uñas'),
+            ('cafeteria_o _salon_de_onces', 'Cafetería o  salón de onces'),
+            ('elaboracion_de_productos_de_panaderia_tortas_pasteles_pudin_ponques', 'Elaboración de productos de panadería, tortas, pasteles, pudin, ponques'),
+            ('comidas_rapidas', 'Comidas rápidas'),
+            ('bar_taberna_estanco_licorera_discoteca_rumbeadero', 'Bar, taberna, estanco, licorera, discoteca, rumbeadero'),
+            ('tienda', 'Tienda'),
+            ('billares_juegos_de_mesa_rana_gallera', 'Billares, juegos de mesa, rana, gallera'),
+            ('comercio_de_colchones_muebles', 'Comercio  de colchones, muebles'),
+            ('comercio_de_elementos_deportivos_implementos_balones_tienda_de_bicicletas', 'Comercio de elementos deportivos, implementos, balones, tienda de bicicletas'),
+            ('veterinaria_venta_de_alimento_o_enseres_para_mascotas_o_animales_perros_gatos_peces', 'Veterinaria, venta de alimento o enseres para mascotas o animales, perros, gatos, peces'),
+            ('comercio_de_productos_de_tecnologia_celulares_computadores', 'Comercio de productos de tecnología, celulares, computadores'),
+            ('productos_asociados_al_arte_cuadros_pintura_joyeria_relojeria_actividades_de_fotografia', 'Productos asociados al arte, cuadros, pintura, joyería, relojería, actividades de fotografía'),
+            ('comercio_de_regalos_variedades_adornos_tajetas_articulos_diversos', 'Comercio de regalos, variedades, adornos, tajetas, articulos diversos.'),
+            ('heladeria_o_fruteria', 'Heladería o frutería'),
+            ('otro', 'Otro tipo'),
+        ], "41. ¿Cual es la actividad economica de su negocio?",
+    ) 
+
     x_forma42 = fields.Char("42. Otro tipo de actividad")
-    x_forma43 = fields.Char("43. ¿Qué tipo de producto o servicio vende?")
+    x_forma43 = fields.Selection(
+        [
+            ('alimentos', 'Alimentos'),
+            ('insumos_papeleria', 'insumos de papeleria y oficinas'),
+            ('tecnologia', 'Tecnologia'),
+            ('reparaciones_mantenimiento', 'Reparaciones y/o mantenimiento'),
+            ('limpieza', 'Limpieza'),
+            ('auditoria', 'Auditoria'),
+            ('asesoria', 'Asesoría'),
+            ('mensajeria', 'Mensajería'),
+            ('catering', 'Catering'),
+            ('articulos_limpieza', 'Articulos de limpieza'),
+            ('organizacion_eventos_fiestas', 'Organización de eventos y fiestas'),
+            ('diseno', 'Diseño'),
+            ('articulos_multimedia', 'Articulos multimedia'),
+            ('electrodomesticos', 'Electrodomesticos'),
+            ('muebles_decoraciones_hogar', 'Muebles y decoraciones del hogar'),
+            ('utencilios_implementos_cocina', 'Utencilio e implementos de cocina'),
+            ('articulos_varios', 'Articulos varios'),
+            ('ropa_accesorios', 'Ropa o accesorios'),
+            ('articulos_deportivos', 'Articulos deportivos'),
+            ('articulos_personales', 'Articulos musicales'),
+            ('compra_venta', 'Compra y venta'),
+            ('lavanderia', 'Lavanderia'),
+        ],
+        string="43. ¿Qué tipo de producto o servicio vende?")
+
     x_forma44 = fields.Selection(
         [
             ('si', 'Si'),
@@ -1591,7 +1644,6 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
         ], "50. ¿Está interesado en emplearse?",
     )
     # x_forma51 = fields.Char("51. ¿En que temas está interesado en recibir asesorías o acompañamiento y o formación o capacitación? (Financiera, Comercial, Logística, Administrativa, Gerencia, Recursos Humanos etc)")
