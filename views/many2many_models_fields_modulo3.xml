@@ -59,10 +59,316 @@
         </record>
 
         <menuitem id="crm_diagnostic_menu_config_modelo_porque_compran_clientes"
-            name="Porque Compran Los Clientes"
+            name="Por que Compran Los Clientes"
             parent="crm_uni_forms.crm_diagnostic_root_menu_config_categ"
             action="crm_uni_forms.modelo_porque_compran_clientes_action_tree"
+            sequence="10"/>
+
+        <record  model="ir.ui.view" id="modelo_negocios_model_view_form">
+            <field name="name">modelo_negocios_model_view_form</field>
+            <field name="model">modelo.negocios.model</field>
+            <field name="arch" type="xml">
+                <form string="Modelo de Negocios" edit="1" create="1" delete="1">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title text-center">
+                            <h1>
+                                <span>Modelo de Negocios</span>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="left data">
+                                <field name="name" />
+                                <field name="descripcion" string="Descripcion" />
+                                <field name="puntaje" string="Puntaje" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="modelo_negocios_model_view_tree" model="ir.ui.view">
+            <field name="name">modelo_negocios_model_view_tree</field>
+            <field name="model">modelo.negocios.model</field>
+            <field name="arch" type="xml">
+                <tree string="Modelo de Negocios" >
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="puntaje"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="modelo_negocios_model_action_tree">
+            <field name="name">Modelo de Negocios</field>
+            <field name="res_model">modelo.negocios.model</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <!-- <field name="search_view_id" ref="crm_diagnostic_view_search"/> -->
+            <!-- <field name="context">{
+                }
+            </field> -->
+        </record>
+
+        <record id="all_modelo_negocios_model_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="modelo_negocios_model_view_tree"/>
+            <field name="act_window_id" ref="modelo_negocios_model_action_tree"/>
+        </record>
+
+        <menuitem id="crm_diagnostic_menu_config_modelo_negocios_model"
+            name="Modelo de Negocios"
+            parent="crm_uni_forms.crm_diagnostic_root_menu_config_categ"
+            action="crm_uni_forms.modelo_negocios_model_action_tree"
             sequence="11"/>
+
+        <record  model="ir.ui.view" id="modelo_metodos_venta_view_form">
+            <field name="name">modelo_metodos_venta_view_form</field>
+            <field name="model">modelo.metodos.venta</field>
+            <field name="arch" type="xml">
+                <form string="Modelo Metodos de Venta" edit="1" create="1" delete="1">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title text-center">
+                            <h1>
+                                <span>Modelo Metodos de Venta</span>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="left data">
+                                <field name="name" />
+                                <field name="descripcion" string="Descripcion" />
+                                <field name="puntaje" string="Puntaje" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="modelo_metodos_venta_view_tree" model="ir.ui.view">
+            <field name="name">modelo_metodos_venta_view_tree</field>
+            <field name="model">modelo.metodos.venta</field>
+            <field name="arch" type="xml">
+                <tree string="Modelo Metodos de Venta" >
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="puntaje"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="modelo_metodos_venta_action_tree">
+            <field name="name">Modelo Metodos de Venta</field>
+            <field name="res_model">modelo.metodos.venta</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <!-- <field name="search_view_id" ref="crm_diagnostic_view_search"/> -->
+            <!-- <field name="context">{
+                }
+            </field> -->
+        </record>
+
+        <record id="all_modelo_metodos_venta_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="modelo_metodos_venta_view_tree"/>
+            <field name="act_window_id" ref="modelo_metodos_venta_action_tree"/>
+        </record>
+
+        <menuitem id="crm_diagnostic_menu_config_modelo_metodos_venta"
+            name="Modelo Metodos de Venta"
+            parent="crm_uni_forms.crm_diagnostic_root_menu_config_categ"
+            action="crm_uni_forms.modelo_metodos_venta_action_tree"
+            sequence="12"/>
+       
+
+       <record  model="ir.ui.view" id="modelo_promocion_productos_view_form">
+            <field name="name">modelo_promocion_productos_view_form</field>
+            <field name="model">modelo.promocion.productos</field>
+            <field name="arch" type="xml">
+                <form string="Modelo Promocion de Productos" edit="1" create="1" delete="1">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title text-center">
+                            <h1>
+                                <span>Modelo Promocion de Productos</span>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="left data">
+                                <field name="name" />
+                                <field name="descripcion" string="Descripcion" />
+                                <field name="puntaje" string="Puntaje" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="modelo_promocion_productos_view_tree" model="ir.ui.view">
+            <field name="name">modelo_promocion_productos_view_tree</field>
+            <field name="model">modelo.promocion.productos</field>
+            <field name="arch" type="xml">
+                <tree string="Modelo Promocion de Productos" >
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="puntaje"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="modelo_promocion_productos_action_tree">
+            <field name="name">Modelo Promocion de Productos</field>
+            <field name="res_model">modelo.promocion.productos</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <!-- <field name="search_view_id" ref="crm_diagnostic_view_search"/> -->
+            <!-- <field name="context">{
+                }
+            </field> -->
+        </record>
+
+        <record id="all_modelo_promocion_productos_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="modelo_promocion_productos_view_tree"/>
+            <field name="act_window_id" ref="modelo_promocion_productos_action_tree"/>
+        </record>
+
+        <menuitem id="crm_diagnostic_menu_config_modelo_promocion_productos"
+            name="Modelo Promocion de Productos"
+            parent="crm_uni_forms.crm_diagnostic_root_menu_config_categ"
+            action="crm_uni_forms.modelo_promocion_productos_action_tree"
+            sequence="13"/>
+
+        <record  model="ir.ui.view" id="modelo_conseguir_nuevos_clientes_view_form">
+            <field name="name">modelo_conseguir_nuevos_clientes_view_form</field>
+            <field name="model">modelo.conseguir.nuevos.clientes</field>
+            <field name="arch" type="xml">
+                <form string="Modelo Como Consigue Nuevos Clientes" edit="1" create="1" delete="1">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title text-center">
+                            <h1>
+                                <span>Modelo Como Consigue Nuevos Clientes</span>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="left data">
+                                <field name="name" />
+                                <field name="descripcion" string="Descripcion" />
+                                <field name="puntaje" string="Puntaje" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="modelo_como_consigue_nuevos_clientes_view_tree" model="ir.ui.view">
+            <field name="name">modelo_como_consigue_nuevos_clientes_view_tree</field>
+            <field name="model">modelo.conseguir.nuevos.clientes</field>
+            <field name="arch" type="xml">
+                <tree string="Modelo Como Consigue Nuevos Clientes" >
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="puntaje"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="modelo_como_consigue_nuevos_clientes_action_tree">
+            <field name="name">Modelo Como Consigue Nuevos Clientes</field>
+            <field name="res_model">modelo.conseguir.nuevos.clientes</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <!-- <field name="search_view_id" ref="crm_diagnostic_view_search"/> -->
+            <!-- <field name="context">{
+                }
+            </field> -->
+        </record>
+
+        <record id="all_modelo_como_consigue_nuevos_clientes_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="modelo_como_consigue_nuevos_clientes_view_tree"/>
+            <field name="act_window_id" ref="modelo_como_consigue_nuevos_clientes_action_tree"/>
+        </record>
+
+        <menuitem id="crm_diagnostic_menu_config_modelo_nuevos_clientes"
+            name="Modelo Como Consigue Nuevos Clientes"
+            parent="crm_uni_forms.crm_diagnostic_root_menu_config_categ"
+            action="crm_uni_forms.modelo_como_consigue_nuevos_clientes_action_tree"
+            sequence="14"/>
+
+        <record  model="ir.ui.view" id="modelo_temas_para_asesorarse_view_form">
+            <field name="name">modelo_temas_para_asesorarse_view_form</field>
+            <field name="model">modelo.temas.para.asesorarse</field>
+            <field name="arch" type="xml">
+                <form string="Modelo Temas para Asesorarse" edit="1" create="1" delete="1">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title text-center">
+                            <h1>
+                                <span>Modelo Temas para Asesorarse</span>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="left data">
+                                <field name="name" />
+                                <field name="descripcion" string="Descripcion" />
+                                <field name="puntaje" string="Puntaje" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="modelo_temas_para_asesorarse_view_tree" model="ir.ui.view">
+            <field name="name">modelo_temas_para_asesorarse_view_tree</field>
+            <field name="model">modelo.temas.para.asesorarse</field>
+            <field name="arch" type="xml">
+                <tree string="Modelo Temas para Asesorarse" >
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="puntaje"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="modelo_temas_para_asesorarse_action_tree">
+            <field name="name">Modelo Temas para Asesorarse</field>
+            <field name="res_model">modelo.temas.para.asesorarse</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <!-- <field name="search_view_id" ref="crm_diagnostic_view_search"/> -->
+            <!-- <field name="context">{
+                }
+            </field> -->
+        </record>
+
+        <record id="all_modelo_temas_para_asesorarse_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="modelo_temas_para_asesorarse_view_tree"/>
+            <field name="act_window_id" ref="modelo_temas_para_asesorarse_action_tree"/>
+        </record>
+
+        <menuitem id="crm_diagnostic_menu_config_modelo_temas_para_asesorarse"
+            name="Modelo Temas para Asesorarse"
+            parent="crm_uni_forms.crm_diagnostic_root_menu_config_categ"
+            action="crm_uni_forms.modelo_temas_para_asesorarse_action_tree"
+            sequence="15"/>
        
 
     </data>
