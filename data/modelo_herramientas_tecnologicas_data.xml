@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="modelo_herramientas_tecnologicas_data1" model="modelo.herramientas.tecnologicas">
+            <field name="name">Computador</field>
+            <field name="descripcion">Computador de escritorio o portatil</field>
+        </record>
+
+        <record id="modelo_herramientas_tecnologicas_data2" model="modelo.herramientas.tecnologicas">
+            <field name="name">Telefono Celular</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="modelo_herramientas_tecnologicas_data3" model="modelo.herramientas.tecnologicas">
+            <field name="name">Smartphone</field>
+            <field name="descripcion">Telefono celular inteligente</field>
+        </record>
+
+        <record id="modelo_herramientas_tecnologicas_data4" model="modelo.herramientas.tecnologicas">
+            <field name="name">Herramientas de oficina u ofimaticas</field>
+            <field name="descripcion">Herramientas de oficina u ofimaticas(Como Word, PowerPoint, etc)</field>
+        </record>
+
+        <record id="modelo_herramientas_tecnologicas_data5" model="modelo.herramientas.tecnologicas">
+            <field name="name">Hojas de calculo</field>
+            <field name="descripcion">Hojas de calculo (Como Excel)</field>
+        </record>
+
+        <record id="modelo_herramientas_tecnologicas_data6" model="modelo.herramientas.tecnologicas">
+            <field name="name">Navegadores</field>
+            <field name="descripcion">Navegadores (Como google chrome, explorer, morzilla, opera, etc)</field>
+        </record>
+
+        <record id="modelo_herramientas_tecnologicas_data7" model="modelo.herramientas.tecnologicas">
+            <field name="name">Correo electronico</field>
+            <field name="descripcion"></field>
+        </record>
+        <record id="modelo_herramientas_tecnologicas_data8" model="modelo.herramientas.tecnologicas">
+            <field name="name">Whatsapp</field>
+            <field name="descripcion"></field>
+        </record>
+        <record id="modelo_herramientas_tecnologicas_data9" model="modelo.herramientas.tecnologicas">
+            <field name="name">Redes Sociales</field>
+            <field name="descripcion"></field>
+        </record>
+        <record id="modelo_herramientas_tecnologicas_data10" model="modelo.herramientas.tecnologicas">
+            <field name="name">Servicios de la nube para almacenar y compartir documentos</field>
+            <field name="descripcion">Servicios de la nube para almacenar y compartir documentos (Como Google drive, Dropbox, etc)</field>
+        </record>
+        <record id="modelo_herramientas_tecnologicas_data11" model="modelo.herramientas.tecnologicas">
+            <field name="name">Manejo de Blogs</field>
+            <field name="descripcion"></field>
+        </record>
+        <record id="modelo_herramientas_tecnologicas_data12" model="modelo.herramientas.tecnologicas">
+            <field name="name">Herramientas para la creación de paginas web</field>
+            <field name="descripcion">Herramientas para la creación de paginas web (como wix, Jimdo, squarespace)</field>
+        </record>
+        <record id="modelo_herramientas_tecnologicas_data13" model="modelo.herramientas.tecnologicas">
+            <field name="name">Ninguna</field>
+            <field name="descripcion"></field>
+        </record>
+
+        <record id="modelo_herramientas_tecnologicas_data14" model="modelo.herramientas.tecnologicas">
+            <field name="name">Tablet</field>
+            <field name="descripcion"></field>
+        </record>
+        
+    </data>
+</odoo>

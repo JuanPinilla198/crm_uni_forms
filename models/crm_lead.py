@@ -194,8 +194,18 @@ class Lead(models.Model):
 
     x_pobl_esp = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
+            ('menores_desvinculados', 'Menores desvinculados del conflicto armado'),
+            ('comunidades_indigenas', 'Comunidades Indígenas'),
+            ('pob_desmov', 'Población desmovilizada'),
+            ('adult_mayores', 'Adultos mayores en centros de protección'),
+            ('pob_rrom', 'Población Rrom'),
+            ('personas_protec_testigos', 'Personas incluidas en el programa de protección a testigos'),
+            ('vic_conflic_armado', 'Víctimas del conflicto armado interno'),
+            ('habitante_calle', 'Población Habitante de la calle'),
+            ('migrante_repartida', 'Población migrante colombiana repatriada'),
+            ('migrante_venezolano', 'Migrantes venezolanos sin capacidad de pago, pobres y vulnerables con PEP'),
+            ('voluntarios_acreditados', 'Los voluntarios acreditados'),
+            ('persona_discapacitada', 'Personas con discapacidad en centros de protección'),
         ], "19. ¿Pertenece a alguna población especial?",
         
     )
@@ -267,7 +277,7 @@ class Lead(models.Model):
             ('maestria', 'Maestría'),
             ('otro', 'Otro ¿Cuál?'),
             ('ninguno', 'Ninguno'),
-        ], "26. Último año de escolaridad", 
+        ], "26. Nivel de escolaridad", 
     )
 
     x_limitacion = fields.Char(
@@ -362,7 +372,7 @@ class Lead(models.Model):
            ('establecimiento', 'Establecimiento'),
            ('sin_establecimiento', 'Sin establecimiento'),
     
-        ], "28. ¿Su micronecicio cuenta con estalecimiento comercial?",
+        ], "28. ¿Su micronegocio cuenta con establecimiento comercial?",
     )
     
     x_que_por_ren = fields.Selection(
@@ -582,21 +592,29 @@ class Lead(models.Model):
          ('no_pienso_continuar_con_el_negocio', 'No pienso continuar con el negocio'),
         ], "29. Tiene usted proyectado continuar con su micronegocio durante:",
     )
-    x_herramientas = fields.Selection(
-        [
-            ('computador', 'Computador de escritorio o portatil'),
-            ('tel_no_smart', 'Telefono celular no smart'),
-            ('smartphone', 'Smartphone'), ('tablet', 'tablet'),
-            ('herr_ofi', 'Herramientas de oficina u ofimaticas(Como Word, PowerPoint, etc)'),
-            ('hoja_cal', 'Hojas de calculo (Como Excel)'),
-            ('navegador', 'Navegadores (Como google chrome, explorer, morzilla, opera, etc)'),
-            ('correo_elec', 'Correo electronico'), ('whatsapp', 'Whatsapp'),
-            ('redes', 'Redes sociales'),
-            ('nube','Servicios de la nube para almacenar y compartir documentos (Como Google drive, Dropbox, etc)'),
-            ('blogs', 'Manejo de blogs'),
-            ('web', 'Herramientas para la creación de paginas web (como wix, Jimdo, squarespace)'),
-            ('ninguna', 'Ninguna de las anteriores')
-        ], "30. ¿Que herramientas tecnologicas maneja el propietario?",
+
+    # x_herramientas = fields.Selection(
+    #     [
+    #         ('computador', 'Computador de escritorio o portatil'),
+    #         ('tel_no_smart', 'Telefono celular no smart'),
+    #         ('smartphone', 'Smartphone'), ('tablet', 'tablet'),
+    #         ('herr_ofi', 'Herramientas de oficina u ofimaticas(Como Word, PowerPoint, etc)'),
+    #         ('hoja_cal', 'Hojas de calculo (Como Excel)'),
+    #         ('navegador', 'Navegadores (Como google chrome, explorer, morzilla, opera, etc)'),
+    #         ('correo_elec', 'Correo electronico'), ('whatsapp', 'Whatsapp'),
+    #         ('redes', 'Redes sociales'),
+    #         ('nube','Servicios de la nube para almacenar y compartir documentos (Como Google drive, Dropbox, etc)'),
+    #         ('blogs', 'Manejo de blogs'),
+    #         ('web', 'Herramientas para la creación de paginas web (como wix, Jimdo, squarespace)'),
+    #         ('ninguna', 'Ninguna de las anteriores')
+    #     ], "30. ¿Que herramientas tecnologicas maneja el propietario?",
+    # )
+
+    x_herramientas = fields.Many2many(
+        comodel_name="modelo.herramientas.tecnologicas",
+        string="30. ¿Que herramientas tecnologicas maneja el propietario?",
+        readonly=False,
+        store=True,
     )
 
     x_depend = fields.Selection(
@@ -1237,23 +1255,39 @@ class Lead(models.Model):
             ('no', 'No'),
         ], "4. ¿Identifica cuáles son sus principales compradores?",
     )
-    x_neg5 = fields.Selection(
-        [
-            ('promociones', 'Promociones'),
-            ('referidos', 'Referidos'),
-            ('redes_sociales', 'Redes sociales'),
-            ('ninguna', 'Ninguna'),
-        ], "5. ¿Sabe por qué le compran sus clientes? ¿Promociones, referidos, redes?",
+    # x_neg5 = fields.Selection(
+    #     [
+    #         ('promociones', 'Promociones'),
+    #         ('referidos', 'Referidos'),
+    #         ('redes_sociales', 'Redes sociales'),
+    #         ('ninguna', 'Ninguna'),
+    #     ], "5. ¿Sabe por qué le compran sus clientes? ¿Promociones, referidos, redes?",
+    # )
+    x_neg5 = fields.Many2many(
+        comodel_name="modelo.porque.compran.clientes",
+        string="5. ¿Sabe por qué le compran sus clientes? ¿Promociones, referidos, redes?",
+        readonly=False,
+        store=True,
     )
-    x_neg6 = fields.Selection(
-        [
-            ('pres_virt', 'Presencial - Virtual (redes sociales o página web)'),
-            ('domicilio', 'Venta a domicilio'),
-            ('local', 'En un local comercial'),
-            ('vehiculo', 'En un vehículo (Carro, carreta, moto, bicicleta etc…) Propio o prestado o alquilado'),
-            ('ubicacion', 'Ubicación: (Aire libre, parques, estación, semáforos,  etc)')
-        ], "6. ¿Cómo ofrece y  vende sus productos?",
+
+    #CAMBIAR A MANY2MANY
+    # x_neg6 = fields.Selection(
+    #     [
+    #         ('pres_virt', 'Presencial - Virtual (redes sociales o página web)'),
+    #         ('domicilio', 'Venta a domicilio'),
+    #         ('local', 'En un local comercial'),
+    #         ('vehiculo', 'En un vehículo (Carro, carreta, moto, bicicleta etc…) Propio o prestado o alquilado'),
+    #         ('ubicacion', 'Ubicación: (Aire libre, parques, estación, semáforos,  etc)')
+    #     ], "6. ¿Cómo ofrece y  vende sus productos?",
+    # )
+
+    x_neg6 = fields.Many2many(
+        comodel_name="modelo.negocios.model",
+        string="6. ¿Cómo ofrece y  vende sus productos?",
+        readonly=False,
+        store=True,
     )
+
     x_neg7 = fields.Selection(
         [
             ('si', 'Si'),
@@ -1321,7 +1355,7 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "18. ¿Lleva cuentas de las ganancias que obtiene el Micronegocio?",
     )
     x_financiero19 = fields.Selection(
@@ -1340,49 +1374,50 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "20. ¿Lleva cuentas de los gastos que genera el Micronegocio?",
     )
     x_financiero21 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "21. ¿Sabe cuanto tiene que vender y a qué precio para cubrir todos sus costos y gastos? (Punto de equilibrio)",
     )
     x_financiero22 = fields.Selection(
         [
-            ('si', 'Si'),
-            ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            ('cuenta_del_negocio', 'Cuenta Bancaria del Negocio'),
+            ('cuenta_personal', 'Cuenta Bancaria del Personal'),
+            ('los_dos_tipos_cuenta', 'Tiene las dos cuentas'),
+            ('no_tiene', 'No tiene ninguna'),
         ], "22. ¿Tiene cuenta  bancaria el negocio o cuenta bancaria personal?",
     )
     x_financiero23 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "23. ¿Tiene actualmente deudas del Micronegocio? (Pagos a un proveedor, banco. etc)",
     )
     x_financiero24 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "24. ¿Conoce su nivel de endeudamiento?",
     )
     x_financiero25 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "25. ¿Tiene estados financieros y contables de su negocio?",
     )
     x_financiero26 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "26. ¿Esta interesado en adquirir credito?",
     )
     x_financiero27 = fields.Char("27. ¿Para que quiere adquirir un credito?")
@@ -1397,7 +1432,7 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+           # ('en_proceso', 'En proceso'),
         ], "29. ¿Presenta declaración de renta?",
     )
 
@@ -1412,42 +1447,67 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+           # ('en_proceso', 'En proceso'),
         ], "31. ¿Sus productos son empacados por usted con algúna marca, tarjeta, logo?",
     )
-    x_mer_com32 = fields.Selection(
-        [
-            ('redes_soc', 'Utiliza redes las redes sociales'),
-            ('eventos', 'Hace algún evento'),
-            ('descuentos', 'Ofrece descuentos'),
-            ('ferias', 'Participan en ferias'),
-            ('publicidad', 'Utiliza  publicidad impresa'),
-            ('otros', 'Otros medios'),
-        ], "32. ¿Qué hace usted para lograr vender más? (Utiliza redes las redes sociales, hace algún evento, descuentos, participan en ferias, etc)",
+    # x_mer_com32 = fields.Selection(
+    #     [
+    #         ('redes_soc', 'Utiliza redes las redes sociales'),
+    #         ('eventos', 'Hace algún evento'),
+    #         ('descuentos', 'Ofrece descuentos'),
+    #         ('ferias', 'Participan en ferias'),
+    #         ('publicidad', 'Utiliza  publicidad impresa'),
+    #         ('otros', 'Otros medios'),
+    #     ], "32. ¿Qué hace usted para lograr vender más? (Utiliza redes las redes sociales, hace algún evento, descuentos, participan en ferias, etc)",
+    # )
+
+    x_mer_com32 = fields.Many2many(
+        comodel_name="modelo.metodos.venta",
+        string="32. ¿Qué hace usted para lograr vender más? (Utiliza redes las redes sociales, hace algún evento, descuentos, participan en ferias, etc)",
+        readonly=False,
+        store=True,
     )
+
+
     x_mer_com33 = fields.Char("33. ¿Cuáles otros medios usa para vender mas?",
     )
-    x_mer_com34 = fields.Selection(
-        [
-            ('redes_soc', 'Utiliza redes las redes sociales'),
-            ('eventos', 'Hace algún evento'),
-            ('descuentos', 'Ofrece descuentos'),
-            ('ferias', 'Participan en ferias'),
-            ('publicidad', 'Utiliza  publicidad impresa'),
-            ('otros', 'Otros medios'),
-        ], "34. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+    # x_mer_com34 = fields.Selection(
+    #     [
+    #         ('redes_soc', 'Utiliza redes las redes sociales'),
+    #         ('eventos', 'Hace algún evento'),
+    #         ('descuentos', 'Ofrece descuentos'),
+    #         ('ferias', 'Participan en ferias'),
+    #         ('publicidad', 'Utiliza  publicidad impresa'),
+    #         ('otros', 'Otros medios'),
+    #     ], "34. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+    # )
+
+    x_mer_com34 = fields.Many2many(
+        comodel_name="modelo.promocion.productos",
+        string="34. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+        readonly=False,
+        store=True,
     )
+
+
     x_mer_com35 = fields.Char( "35. ¿Cuáles otros medios usa para contarle a sus clientes?")
 
-    x_mer_com36 = fields.Selection(
-        [
-            ('redes_soc', 'Utiliza redes las redes sociales'),
-            ('eventos', 'Hace algún evento'),
-            ('descuentos', 'Ofrece descuentos'),
-            ('ferias', 'Participan en ferias'),
-            ('publicidad', 'Utiliza  publicidad impresa'),
-            ('otros', 'Otros medios'),
-        ], "36. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+    # x_mer_com36 = fields.Selection(
+    #     [
+    #         ('redes_soc', 'Utiliza redes las redes sociales'),
+    #         ('eventos', 'Hace algún evento'),
+    #         ('descuentos', 'Ofrece descuentos'),
+    #         ('ferias', 'Participan en ferias'),
+    #         ('publicidad', 'Utiliza  publicidad impresa'),
+    #         ('otros', 'Otros medios'),
+    #     ], "36. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+    # )
+
+    x_mer_com36 = fields.Many2many(
+        comodel_name="modelo.conseguir.nuevos.clientes",
+        string="36. ¿Cómo consigue nuevos clientes? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)",
+        readonly=False,
+        store=True,
     )
 
     x_mer_com37 = fields.Char("37. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)")
@@ -1455,21 +1515,73 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "38. ¿Hace promoción en las redes sociales?",
     )
     x_mer_com39 = fields.Selection(
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
+            #('en_proceso', 'En proceso'),
         ], "39. ¿Vende a través de redes sociales o páginas web?",
     )
 
-    x_forma40 = fields.Char("40. ¿En que sector económico se encuentra su negocio?")
-    x_forma41 = fields.Char("41. ¿Cual es la actividad economica de su negocio?")
+    x_forma40 = fields.Selection(
+        [
+            ('agropecuario', 'Agropecuario'),
+            ('comercio', 'Comercio'),
+            ('servicios', 'Servicios'),
+            ('industrial', 'Industrial'),
+        ], "40. ¿En que sector económico se encuentra su negocio?",
+    ) 
+    x_forma41 = fields.Selection(
+        [
+            ('peluqueria_salon_de_belleza_barberia_arreglo_de_unas', 'Peluquería, salón de belleza, barbería, arreglo de uñas'),
+            ('cafeteria_o _salon_de_onces', 'Cafetería o  salón de onces'),
+            ('elaboracion_de_productos_de_panaderia_tortas_pasteles_pudin_ponques', 'Elaboración de productos de panadería, tortas, pasteles, pudin, ponques'),
+            ('comidas_rapidas', 'Comidas rápidas'),
+            ('bar_taberna_estanco_licorera_discoteca_rumbeadero', 'Bar, taberna, estanco, licorera, discoteca, rumbeadero'),
+            ('tienda', 'Tienda'),
+            ('billares_juegos_de_mesa_rana_gallera', 'Billares, juegos de mesa, rana, gallera'),
+            ('comercio_de_colchones_muebles', 'Comercio  de colchones, muebles'),
+            ('comercio_de_elementos_deportivos_implementos_balones_tienda_de_bicicletas', 'Comercio de elementos deportivos, implementos, balones, tienda de bicicletas'),
+            ('veterinaria_venta_de_alimento_o_enseres_para_mascotas_o_animales_perros_gatos_peces', 'Veterinaria, venta de alimento o enseres para mascotas o animales, perros, gatos, peces'),
+            ('comercio_de_productos_de_tecnologia_celulares_computadores', 'Comercio de productos de tecnología, celulares, computadores'),
+            ('productos_asociados_al_arte_cuadros_pintura_joyeria_relojeria_actividades_de_fotografia', 'Productos asociados al arte, cuadros, pintura, joyería, relojería, actividades de fotografía'),
+            ('comercio_de_regalos_variedades_adornos_tajetas_articulos_diversos', 'Comercio de regalos, variedades, adornos, tajetas, articulos diversos.'),
+            ('heladeria_o_fruteria', 'Heladería o frutería'),
+            ('otro', 'Otro tipo'),
+        ], "41. ¿Cual es la actividad economica de su negocio?",
+    ) 
+
     x_forma42 = fields.Char("42. Otro tipo de actividad")
-    x_forma43 = fields.Char("43. ¿Qué tipo de producto o servicio vende?")
+    x_forma43 = fields.Selection(
+        [
+            ('alimentos', 'Alimentos'),
+            ('insumos_papeleria', 'insumos de papeleria y oficinas'),
+            ('tecnologia', 'Tecnologia'),
+            ('reparaciones_mantenimiento', 'Reparaciones y/o mantenimiento'),
+            ('limpieza', 'Limpieza'),
+            ('auditoria', 'Auditoria'),
+            ('asesoria', 'Asesoría'),
+            ('mensajeria', 'Mensajería'),
+            ('catering', 'Catering'),
+            ('articulos_limpieza', 'Articulos de limpieza'),
+            ('organizacion_eventos_fiestas', 'Organización de eventos y fiestas'),
+            ('diseno', 'Diseño'),
+            ('articulos_multimedia', 'Articulos multimedia'),
+            ('electrodomesticos', 'Electrodomesticos'),
+            ('muebles_decoraciones_hogar', 'Muebles y decoraciones del hogar'),
+            ('utencilios_implementos_cocina', 'Utencilio e implementos de cocina'),
+            ('articulos_varios', 'Articulos varios'),
+            ('ropa_accesorios', 'Ropa o accesorios'),
+            ('articulos_deportivos', 'Articulos deportivos'),
+            ('articulos_personales', 'Articulos musicales'),
+            ('compra_venta', 'Compra y venta'),
+            ('lavanderia', 'Lavanderia'),
+        ],
+        string="43. ¿Qué tipo de producto o servicio vende?")
+
     x_forma44 = fields.Selection(
         [
             ('si', 'Si'),
@@ -1532,10 +1644,18 @@ class Lead(models.Model):
         [
             ('si', 'Si'),
             ('no', 'No'),
-            ('en_proceso', 'En proceso'),
         ], "50. ¿Está interesado en emplearse?",
     )
-    x_forma51 = fields.Char("51. ¿En que temas está interesado en recibir asesorías o acompañamiento y o formación o capacitación? (Financiera, Comercial, Logística, Administrativa, Gerencia, Recursos Humanos etc)")
+    # x_forma51 = fields.Char("51. ¿En que temas está interesado en recibir asesorías o acompañamiento y o formación o capacitación? (Financiera, Comercial, Logística, Administrativa, Gerencia, Recursos Humanos etc)")
+
+    x_forma51 = fields.Many2many(
+        comodel_name="modelo.temas.para.asesorarse",
+        string="51. ¿En que temas está interesado en recibir asesorías o acompañamiento y o formación o capacitación? (Financiera, Comercial, Logística, Administrativa, Gerencia, Recursos Humanos etc)",
+        readonly=False,
+        store=True,
+    )
+
+
     x_forma52 = fields.Char("52. ¿Cuántas personas viven o dependen del Micronegocio?")
     x_model21 = fields.Selection(
         [

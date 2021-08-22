@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="metodo_promocion_productos_data1" model="modelo.promocion.productos">
+            <field name="name">Redes Sociales</field>
+            <field name="descripcion">Utiliza las redes sociales</field>
+        </record>
+
+        <record id="metodo_promocion_productos_data2" model="modelo.promocion.productos">
+            <field name="name">Eventos</field>
+            <field name="descripcion">Realiza algun evento</field>
+        </record>
+
+        <record id="metodo_promocion_productos_data3" model="modelo.promocion.productos">
+            <field name="name">Descuentos</field>
+            <field name="descripcion">Ofrece Descuentos</field>
+        </record>
+
+        <record id="metodo_promocion_productos_data4" model="modelo.promocion.productos">
+            <field name="name">Ferias</field>
+            <field name="descripcion">Participa en Ferias</field>
+        </record>
+
+        <record id="metodo_promocion_productos_data5" model="modelo.promocion.productos">
+            <field name="name">Publicidad impresa</field>
+            <field name="descripcion">Utiliza publicidad impresa</field>
+        </record>
+
+        <record id="metodo_promocion_productos_data6" model="modelo.promocion.productos">
+            <field name="name">Otros</field>
+            <field name="descripcion"> Utiliza otros medios</field>
+        </record>
+
+    </data>
+</odoo>

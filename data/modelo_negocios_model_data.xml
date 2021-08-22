@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="opcion_marketing_data1" model="modelo.negocios.model">
+            <field name="name">Presencial - Virtual</field>
+            <field name="descripcion">Presencial - Virtual (redes sociales o página web)</field>
+        </record>
+
+        <record id="opcion_marketing_data2" model="modelo.negocios.model">
+            <field name="name">Venta a domicilio</field>
+            <field name="descripcion">Venta a domicilio</field>
+        </record>
+
+        <record id="opcion_marketing_data3" model="modelo.negocios.model">
+            <field name="name">Local comercial</field>
+            <field name="descripcion">En un local comercial</field>
+        </record>
+
+        <record id="opcion_marketing_data4" model="modelo.negocios.model">
+            <field name="name">En vehículo</field>
+            <field name="descripcion">En un vehículo (Carro, carreta, moto, bicicleta etc…) Propio o prestado o alquilado')</field>
+        </record>
+
+        <record id="opcion_marketing_data5" model="modelo.negocios.model">
+            <field name="name">Ubicación</field>
+            <field name="descripcion">Aire libre, parques, estación, semáforos,  etc</field>
+        </record>
+    </data>
+</odoo>
