@@ -303,7 +303,7 @@
 
                       <group>
                         <field name="x_proto1_bio"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto2_bio"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': ['|',('x_proto1_bio','!=','si'),('x_dcont1','=',False)]}"/>
+                        <field name="x_proto2_bio"  attrs="{'required': [('x_proto1_bio','=','si')], 'invisible': ['|',('x_proto1_bio','!=','no'),('x_dcont1','=',False)]}"/>
                         <field name="x_proto3_bio"  attrs="{'required': [('x_proto1_bio','=', 'no')], 'invisible': ['|',('x_proto1_bio','!=','no'),('x_dcont1','=',False)]}"/>
                       </group>
                     </group>
@@ -330,7 +330,7 @@
                             <field name="x_neg14"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
                             <field name="x_neg15"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
                             <field name="x_neg16"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                            <field name="x_neg17"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': ['|',('x_neg16','=',False),('x_neg16','=','no')]}"/>
+                            <field name="x_neg17"  attrs="{'required': [('x_neg16','=','si')], 'invisible': ['|',('x_neg16','=',False),('x_neg16','=','no')]}"/>
                         </group>
                   </group>
 
