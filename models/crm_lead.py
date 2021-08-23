@@ -3520,14 +3520,14 @@ class Lead(models.Model):
     country_id = fields.Many2one('res.country', "Country")
     xcity = fields.Many2one('res.country.state.city', "8. Municipio de Residencia")
     city = fields.Char(related="xcity.name")
-    
+   """ 
     @api.depends('state_id')
     def _onchange_state_id(self):
         if self.state_id:
             return {'domain': {'city_id': [('state_id', '=', self.state_id.id)]}}
         else:
             return {'domain': {'xcity_id': []}}
-
+"""
     
 """
     @api.onchange('country_id', 'state_id')
