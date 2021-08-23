@@ -3520,7 +3520,7 @@ class Lead(models.Model):
     )
 
     country_id = fields.Many2one('res.country', "Country")
-    #xcity = fields.Many2one('res.country.state.city', "8. Municipio de Residencia")
+    xcity = fields.Many2one('res.country.state.city', "8. Municipio de Residencia")
     city = fields.Char(related="xcity.name")
     state_id = fields.Many2one('res.country.state', 'State')
     
