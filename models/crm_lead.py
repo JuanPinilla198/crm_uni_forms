@@ -3520,20 +3520,26 @@ class Lead(models.Model):
     country_id = fields.Many2one('res.country', "Country")
     xcity = fields.Many2one('res.country.state.city', "8. Municipio de Residencia")
     city = fields.Char(related="xcity.name")
-
+    
+    @api.onchange('state_id')
+    def _onchange_state_id(self):
+        if self.state_id:
+            return {'domain': {'city_id': [('state_id', '=', self.state_id.id)]}}
+        else:
+            return {'domain': {'xcity_id': []}}
 
     
-
+"""
     @api.onchange('country_id', 'state_id')
     def onchange_location(self):
-        """
+      
         This functions is a great helper when you enter the customer's
         location. It solves the problem of various cities with the same name in
         a country
         @param country_id: Country Id (ISO)
         @param state_id: State Id (ISO)
         @return: object
-        """
+      
 
         if self.state_id:
             mymodel = 'res.country.state.city'
@@ -3553,7 +3559,7 @@ class Lead(models.Model):
             'domain': {domain: [('id', 'in', id_domain)]},
             'value': {domain: ''}
         }
-        #
+        """"
 
      
 
