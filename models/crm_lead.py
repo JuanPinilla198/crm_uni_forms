@@ -15,7 +15,30 @@ class CountryStateCity(models.Model):
     name = fields.Char('City Name', size=64, )
     state_id = fields.Many2one('res.country.state', 'State')
     country_id = fields.Many2one('res.country', 'Country', default='Colombia')
+    xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
     _order = 'code'
+    
+    @api.onchange('country_id', 'state_id')
+    def onchange_location(self):
+        """
+        This functions is a great helper when you enter the customer's
+        location. It solves the problem of various cities with the same name in
+        a country
+        @param country_id: Country Id (ISO)
+        @param state_id: State Id (ISO)
+        @return: object
+        """
+        if self.country_id:
+            return {'domain': {'state_id': [('country_id', '=', self.country_id.id)]}}
+        else:
+            return {'domain': {'state_id': []}}
+       
+    @api.onchange('state_id')
+    def _onchange_state_id(self):
+        if self.state_id:
+            return {'domain': {'xcity_id': [('state_id', '=', self.state_id.id)]}}
+        else:
+            return {'domain': {'xcity_id': []}}
 
 class SeveralFields(models.Model):
     _description = 'Modelo para Manipular Many2many'
@@ -2889,7 +2912,7 @@ class Lead(models.Model):
         oldname="fin90"
     )
     country_id = fields.Many2one('res.country', "Country")
-    xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
+    #xcity = fields.Many2one('res.country.state.city', "9. Municipio de Residencia")
     city = fields.Char(related="xcity.name")
 
 
