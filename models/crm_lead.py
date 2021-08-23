@@ -2906,6 +2906,18 @@ class Lead(models.Model):
         @param state_id: State Id (ISO)
         @return: object
         """
+        if self.country_id:
+            return {'domain': {'state_id': [('country_id', '=', self.country_id.id)]}}
+        else:
+            return {'domain': {'state_id': []}}
+       
+    @api.onchange('state_id')
+    def _onchange_state_id(self):
+        if self.state_id:
+            return {'domain': {'xcity_id': [('state_id', '=', self.state_id.id)]}}
+        else:
+            return {'domain': {'xcity_id': []}}
+        """
 
         if self.state_id:
             mymodel = 'res.country.state.city'
@@ -2925,6 +2937,7 @@ class Lead(models.Model):
             'domain': {domain: [('id', 'in', id_domain)]},
             'value': {domain: ''}
         }
+        """
 
      
 
