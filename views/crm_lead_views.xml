@@ -303,7 +303,7 @@
 
                       <group>
                         <field name="x_proto1_bio"  attrs="{'required': [('x_dcont1','=',True)], 'invisible': [('x_dcont1','=',False)]}"/>
-                        <field name="x_proto2_bio"  attrs="{'required': [('x_proto1_bio','=','si')], 'invisible': ['|',('x_proto1_bio','!=','no'),('x_dcont1','=',False)]}"/>
+                        <field name="x_proto2_bio"  attrs="{'required': [('x_proto1_bio','=','si')], 'invisible': ['|',('x_proto1_bio','!=','si'),('x_dcont1','=',False)]}"/>
                         <field name="x_proto3_bio"  attrs="{'required': [('x_proto1_bio','=', 'no')], 'invisible': ['|',('x_proto1_bio','!=','no'),('x_dcont1','=',False)]}"/>
                       </group>
                     </group>
