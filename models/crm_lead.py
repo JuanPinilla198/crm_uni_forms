@@ -2894,6 +2894,7 @@ class Lead(models.Model):
 
 
     x_state_id = fields.Many2one('res.country.state', '21. Departamento donde se ubica su negocio')
+    state_id = fields.Many2one('res.country.state', 'State')
     x_city_id = fields.Many2one('res.country.state.city', '22. Municipio donde se ubica su negocio')
 
     @api.onchange('country_id', 'state_id')
