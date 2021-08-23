@@ -15,6 +15,7 @@ class CountryStateCity(models.Model):
     name = fields.Char('City Name', size=64, )
     state_id = fields.Many2one('res.country.state', 'State')
     country_id = fields.Many2one('res.country', 'Country', default='Colombia')
+    xcity = fields.Many2one('res.country.state.city', "8. Municipio de Residencia")
     _order = 'code'
     
     @api.onchange('country_id', 'state_id')
