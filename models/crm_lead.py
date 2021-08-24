@@ -3523,15 +3523,9 @@ class Lead(models.Model):
     xcity = fields.Many2one('res.country.state.city', "8. Municipio de Residencia")
     city = fields.Char(related="xcity.name")
     state_id = fields.Many2one('res.country.state', 'State')
+   
     
-    @api.onchange('state_id')
-    def _onchange_state_id_wrapper(self):
-    res = {'domain': {'xcity': []}}
-            if self.country_id:
-                    res['domain']['xcity'] = [('state_id', '=', self.state_id.id)]
-    return res
-    
-    """
+ 
     
     @api.onchange('country_id')
     def _onchange_country_id(self):
@@ -3546,7 +3540,7 @@ class Lead(models.Model):
             return {'domain': {'xcity_id': [('state_id', '=', self.state_id.id)]}}
         else:
             return {'domain': {'xcity_id': []}}
-            """
+          
 """
      @api.onchange('country_id', 'state_id')
     def onchange_location(self):
