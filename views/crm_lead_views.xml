@@ -325,7 +325,7 @@
                         <group>
                             <field name="x_neg11"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': ['|',('x_neg8','=',False),('x_neg8','=','no')]}"/>
                             <field name="x_neg12"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
-                            <field name="x_neg13"  attrs="{'required': [('x_neg12','=','no')], 'invisible': [('x_neg12','=','si')]}"/>
+                            <field name="x_neg13"  attrs="{'required': [('x_neg12','=','no')], 'invisible': ['|',('x_neg12','=','si'),('x_neg8','=',False),('x_neg8','=','no')]}"/>
                             <field name="x_neg14"  attrs="{'required': [('x_neg12','=','no')], 'invisible': [('x_neg12','=','si')]}"/>
                             <field name="x_neg15"  attrs="{'required': [('x_neg12','=','no')], 'invisible': [('x_neg12','=','si')]}"/>
                             <field name="x_neg16"  attrs="{'required': [('x_dcont2','=',True)], 'invisible': [('x_dcont2','=',False)]}"/>
