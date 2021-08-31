@@ -208,6 +208,7 @@ class Lead(models.Model):
             ('migrante_venezolano', 'Migrantes venezolanos sin capacidad de pago, pobres y vulnerables con PEP'),
             ('voluntarios_acreditados', 'Los voluntarios acreditados'),
             ('persona_discapacitada', 'Personas con discapacidad en centros de protección'),
+            ('ninguna', 'Ninguna'),
         ], "19. ¿Pertenece a alguna población especial?",
         
     )
