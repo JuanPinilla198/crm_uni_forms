@@ -53,6 +53,12 @@
             </field>
         </record>
 
+        <menuitem id="crm_modelo_cuales_aplican_clientes_menu"
+            name="Cuales aplican"
+            parent="crm_uni_forms.crm_diagnostic_root_menu_config_categ"
+            action="crm_uni_forms.modelo_porque_compran_clientes_action_tree"
+            sequence="100"/>
+
 
         <record id="modelo_porque_comrpran_clientes_view_tree" model="ir.ui.view">
             <field name="name">modelo_porque_comrpran_clientes_view_tree</field>
