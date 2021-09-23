@@ -1515,7 +1515,7 @@ class Lead(models.Model):
         store=True,
     )
 
-    x_mer_com37 = fields.Char("37. ¿Cómo le cuenta a sus clientes de sus nuevos productos? (Redes sociales, Muestras, eventos, promociones, publicidad impresa otros cuales?)")
+    x_mer_com37 = fields.Char("¿Cuáles otros medios usa para conseguir nuevos clientes?")
     x_mer_com38 = fields.Selection(
         [
             ('si', 'Si'),
