@@ -93,4 +93,18 @@ class ModeloTemasParaAsesorarse(models.Model):
     )
 
     puntaje = fields.Integer(string='Puntaje')
+    
+class ModeloCualesaplican(models.Model):
+    _name = "modelo.cuales.aplican"
+
+
+    name = fields.Char("Name")
+
+    descripcion = fields.Char(
+        string="Descripcion",
+        help="Ingrese la descripcion",
+        readonly=False
+    )
+
+    puntaje = fields.Integer(string='Puntaje')
 

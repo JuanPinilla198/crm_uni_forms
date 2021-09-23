@@ -28,6 +28,32 @@
             </field>
         </record>
 
+        <record  model="ir.ui.view" id="modelo_cuales_aplican_clientes_view_form">
+            <field name="name">modelo_cuales_aplican_view_form</field>
+            <field name="model">modelo.cuales.aplican</field>
+            <field name="arch" type="xml">
+                <form string="Cuales aplican" edit="1" create="1" delete="1">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title text-center">
+                            <h1>
+                                <span>Cuales aplican</span>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="left data">
+                                <field name="name" />
+                                <field name="descripcion" string="Descripcion" />
+                                <field name="puntaje" string="Puntaje" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
         <record id="modelo_porque_comrpran_clientes_view_tree" model="ir.ui.view">
             <field name="name">modelo_porque_comrpran_clientes_view_tree</field>
             <field name="model">modelo.porque.compran.clientes</field>

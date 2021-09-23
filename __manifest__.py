@@ -20,6 +20,7 @@
         "views/many2many_models_fields_modulo3.xml",
         'data/l10n_cities_co_data.xml',
         'data/severalfields.xml',
+        'data/modelo_cuales_aplican.xml',
         'data/modelo_negocios_model_data.xml',
         'data/modelo_conseguir_nuevos_clientes_data.xml',
         'data/modelo_herramientas_tecnologicas_data.xml',

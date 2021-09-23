@@ -1092,7 +1092,9 @@ class Lead(models.Model):
 
         ], "1. ¿Aplica medidas para mitigar el contagio del Covid 19?",
     )
-    x_proto2_bio = fields.Selection(
+    
+    #se cambia por solicitud MD_26
+    """x_proto2_bio = fields.Selection(
         [
             ('alcohol', 'Uso de alchol'),
             ('gel', 'Uso de gel antibacterial'),
@@ -1102,7 +1104,15 @@ class Lead(models.Model):
             ('desinfeccion', 'Desinfección de superficies e implementos'),
 
         ], "2. ¿Cuáles aplica?",
+    )"""
+    
+    x_proto2_bio = fields.Many2many(
+        comodel_name="modelo.cuales.aplican",
+        string="2. ¿Cuáles aplica?",
+        readonly=False,
+        store=True,
     )
+    
     x_proto3_bio = fields.Char(
         string="3. ¿Porque?",
     )
