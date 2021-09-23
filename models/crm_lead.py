@@ -263,6 +263,8 @@ class Lead(models.Model):
         [
             ('independiente', 'Independiente'),
             ('empleado', 'Empleado'),
+            ('pensionado','Pensionados'),
+            ('ninguno', 'Ninguno'),
 
         ], "25. ¿Se encuentra afiliado al sistema de salud como independiente o empleado?",
     )
