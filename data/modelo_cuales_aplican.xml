@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="1">
+    <data noupdate="0">
             <record id="uso_gel" model="modelo.cuales.aplican">
                 <field name="name">Uso del gel antibacterial</field>
             </record>
-        
+
+            <record id="uso_alchol" model="modelo.cuales.aplican">
+                <field name="name">Uso de alchol</field>
+            </record>
+            
+            <record id="l_manos" model="modelo.cuales.aplican">
+                <field name="name">Lavado de manos</field>
+            </record>
+
+            <record id="distanciamiento_social" model="modelo.cuales.aplican">
+                <field name="name">Distanciamiento social</field>
+            </record>
+
+            <record id="uso_tapabocas" model="modelo.cuales.aplican">
+                <field name="name">Uso de tapabocas</field>
+            </record>
+
+            <record id="desinfecci_implementos" model="modelo.cuales.aplican">
+                <field name="name">Desinfección de superficies e implementos</field>
+            </record>
     
     </data>
 </odoo>
