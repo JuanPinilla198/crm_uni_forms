@@ -1525,7 +1525,7 @@ class Lead(models.Model):
         store=True,
     )
 
-    x_mer_com37 = fields.Char("¿Cuáles otros medios usa para conseguir nuevos clientes?")
+    x_mer_com37 = fields.Char(" 37. ¿Cuáles otros medios usa para conseguir nuevos clientes?")
     x_mer_com38 = fields.Selection(
         [
             ('si', 'Si'),
