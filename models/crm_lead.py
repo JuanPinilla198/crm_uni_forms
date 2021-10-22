@@ -140,6 +140,7 @@ class Lead(models.Model):
     x_edad = fields.Integer(
         string="6. Edad",
         help="Escriba su edad", 
+        size=2
     )
 
     x_dir_res = fields.Char(
