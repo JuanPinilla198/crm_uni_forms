@@ -3,6 +3,10 @@
 
 from odoo import fields, models, api, exceptions
 from odoo.exceptions import ValidationError
+import json
+import logging
+
+_logger = logging.getLogger(__name__)
 
 class CountryStateCity(models.Model):
     """
@@ -3554,6 +3558,37 @@ class Lead(models.Model):
             return {'domain': {'xcity_id': [('state_id', '=', self.state_id.id)]}}
         else:
             return {'domain': {'xcity_id': []}}
+    
+    @api.model
+    def create(self, values):
+        if values.get('x_datos1'):
+            if values.get('x_identification') != 0 or values.get('x_identification') != False:
+                if values.get('x_edad') != 0 or values.get('x_edad') != False:
+                    if values.get('x_no_personas_viven_propietario').isdigit():
+                        return super(Lead, self).create(values)
+                    else:
+                        raise ValidationError("La pregunta 21 debe contener solo números")
+                else:
+                    raise ValidationError("La edad no puede ser cero o estar vacía")
+            else:
+                raise ValidationError("El número de identificación no puede ser cero o estar vacía")
+        else:
+            return super(Lead, self).create(values)
+    
+    def write(self, values):
+        if values.get('x_no_personas_viven_propietario'): 
+            if not values.get('x_no_personas_viven_propietario').isdigit():
+                raise ValidationError("La pregunta 21 solo acepta números")
+        if values.get('x_forma52'):
+            if not values.get('x_forma52').isdigit():
+                raise ValidationError("La pregunta 52 solo acepta números")
+        if values.get('x_identification') != 0 or values.get('x_identification') != False:
+            if values.get('x_edad') != 0 or values.get('x_edad') != False:
+                return super(Lead, self).write(values)
+            else:
+                raise ValidationError("La edad no puede ser cero o estar vacía")
+        else:
+            raise ValidationError("El número de identificación no puede ser cero o estar vacía")
           
 """
      @api.onchange('country_id', 'state_id')
