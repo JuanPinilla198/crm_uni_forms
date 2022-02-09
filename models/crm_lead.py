@@ -122,6 +122,17 @@ class Lead(models.Model):
         ], "3. Tipo de identificación", default='cedula'
     )
 
+    doctype1 = fields.Selection(
+        [
+            ('documento_identificacion', 'Documento de identificación'),
+            ('cedula', 'Cédula'),
+            ('cedula_de_extranjeria', 'Cédula de extranjería'),
+            ('pasaporte', 'Pasaporte'),
+            ('permiso_especial_de_permanencia_pep', 'Permiso especial de permanencia (PEP)'),
+
+        ], "3. Tipo de identificación", default='cedula'
+    )
+
     x_identification = fields.Integer(
         string="4. Número de identificación",
         help="Ingrese el tipo de identificación ",
@@ -142,6 +153,12 @@ class Lead(models.Model):
     )
 
     x_edad = fields.Integer(
+        string="6. Edad",
+        help="Escriba su edad", 
+        size=2
+    )
+
+    x_edad1 = fields.Selection(selection=[('15a85', '15 a 85'), ('mas85','Mayor de 85')],
         string="6. Edad",
         help="Escriba su edad", 
         size=2
@@ -384,6 +401,225 @@ class Lead(models.Model):
     
         ], "28. ¿Su micronegocio cuenta con establecimiento comercial?",
     )
+
+    x_com_cuenta1 = fields.Selection(
+        [
+           ('vivienda', 'En su vivienda o en otra vivienda'),
+           ('local', 'Un local, tienda, taller, fabrica, oficina, consultorio'),
+           ('aire_libre_movil', 'Al aire libre, movil (se moviliza por diferentes lugares)'),
+           ('aire_libre_estacionario', 'Al aire libre, estacionario (mismo lugar todos los dias)'),
+           ('puerta_a_puerta', 'De puerta a puerta (a domicilio)'),
+           ('finca', 'Finca'),
+    
+        ], "28. Su negocio o actividad comercial se desarrolla principalmente en:",
+    )
+
+    x_aire_libre = fields.Selection(
+        [
+           ('via_acera', 'En la Via - andén - acerca'),
+           ('esquina_semaforo', 'Esquina de semáforo'),
+           ('vehiculo_calle', 'En un vehículo (Carro, carretera, moto, bicicleta, etc.) en la calle'),
+           ('transporte_publico', 'Transporte público - estación de bus'),
+           ('parques', 'Parques'),
+           ('plazas', 'Plazas'),
+    
+        ], "29. Si los ofrece al aire libre, ¿Dónde se ubican usualmente?",
+    )
+
+    x_permisos = fields.Selection(
+        [
+           ('si', 'Si'),
+           ('no', 'No'),
+    
+        ], "30. ¿Cuenta con permisos por una entidad publica o pivada para ocupar vender sus productos o servicios?",
+    )
+
+    x_tien_dur = fields.Selection(
+        [('de_1_a_3', 'De 1 mes a 3 meses'),
+         ('de_4_a_6', 'De 4 meses a 6 meses'),
+         ('de_7_a_11', 'De 7 meses a 11 meses'),
+         ('mas_de_1_ano', 'Mas de 1 año'),
+         ('no_pienso_continuar_con_el_negocio', 'No pienso continuar con el negocio'),
+        ], "31. Tiene usted proyectado continuar con su micronegocio durante:",
+    )
+
+    x_herramientas = fields.Selection(
+        [
+            ('computador', 'Computador de escritorio o portatil'),
+            ('tel_no_smart', 'Telefono celular no smart'),
+            ('smartphone', 'Smartphone'), ('tablet', 'tablet'),
+            ('herr_ofi', 'Herramientas de oficina u ofimaticas(Como Word, PowerPoint, etc)'),
+            ('hoja_cal', 'Hojas de calculo (Como Excel)'),
+            ('navegador', 'Navegadores (Como google chrome, explorer, morzilla, opera, etc)'),
+            ('correo_elec', 'Correo electronico'), ('whatsapp', 'Whatsapp'),
+            ('redes', 'Redes sociales'),
+            ('nube','Servicios de la nube para almacenar y compartir documentos (Como Google drive, Dropbox, etc)'),
+            ('blogs', 'Manejo de blogs'),
+            ('web', 'Herramientas para la creación de paginas web (como wix, Jimdo, squarespace)'),
+            ('ninguna', 'Ninguna de las anteriores')
+        ], "32. ¿Que herramientas tecnologicas maneja el propietario?",
+    )
+
+    x_depend = fields.Selection(
+        [
+            ('si', 'Si'),
+            ('no', 'No'),
+        ], "33. ¿Depende usted y/o su familia de la operación-ganancias exclusivamente de este negocio para subsistir?",
+    )
+
+    x_forma52 = fields.Char("34. ¿Cuántas personas viven o dependen del Micronegocio?")
+
+    x_forma40 = fields.Selection(
+        [
+            ('agropecuario', 'Agropecuario'),
+            ('comercio', 'Comercio'),
+            ('servicios', 'Servicios'),
+            ('industrial', 'Industrial'),
+        ], "35. ¿En que sector económico se encuentra su negocio?",
+    )
+
+    x_actividad_economica_agro = fields.Selection(
+        [
+            ('cultivos_agricolas_trans', 'Cultivos agrícolas transitorios (cultivos de cereales, lejumbres, arroz, hortalizas, tuberculos, tabaco, plantas textiles, etc)'),
+            ('cultivo_agricolas_perm', 'Cultivos agrícolas permanentes (cultivos de frutas, platano, café, caña de azucar, plantas para bebidas o medicinales, etc)'),
+            ('propagacion_plantas', 'Propagación de plantas (actividades de los viveros, excepto viveros forestales)'),
+            ('ganaderia', 'Ganaderia'),
+            ('explotacion_mixta', 'Explotación mixta (agrícola y pecuaria)'),
+            ('caza_ordinaria', 'Caza ordinaria y mediante trampas y actividades de servicios conexas'),
+            ('silvicultura', 'Silvicultura y otras actividades forestales'),
+            ('extraccion_madera', 'Extracción de madera'),
+            ('productos_forestales', 'Recolección de productos forestales diferentes a la madera'),
+            ('pesca', 'Pesca (maritima o de agua dulce)'),
+            ('acuicultura', 'Acuicultura (maritima o de agua dulce)'),
+            ('mineria_carbon', 'Mineria de carbón de piedra y lignito'),
+            ('mineria_minerales', 'Mineria de minerales metalíferos (Hierro, minerales no ferrosos, oro, niquel, etc)'),
+            ('mineria_piedra', 'Mineria de piedra, arena, arcillas, cal, yeso, caolín, bentonitas y similares'),
+            ('mineria_esmeraldas', 'Mineria de esmeraldas, piedras preciosas y semipreciosas'),
+            ('otros', 'Otros tipo'),
+        ], "Actividad economica agraria",
+    ) 
+
+    x_actividad_economica_com = fields.Selection(
+        [
+            ('comercio_vehiculos', 'Comercio de vehículos automotores'),
+            ('mantenimiento', 'Mantenimiento y reparación de vehículos automotores'),
+            ('com_man_rep_motos', 'Comercio, mantenimiento y reparación de motocicletas y de sus partes, piezas y accesorios'),
+            ('comercio_alimentos', 'Comercio de alimentos, bebidas y tabaco'),
+            ('comercio_textiles', 'Comercio de productos textiles, productos confeccionados para uso doméstico'),
+            ('comercio_prendas', 'Comercio de prendas de vestir'),
+            ('comercio_calzado', 'Comercio de calzado'),
+            ('comercio_apa_eq_dom', 'Comercio de aparatos y equipo de uso doméstico'),
+            ('comercio_farma', 'Comercio de productos farmacéuticos, medicinales, cosméticos y de tocador'),
+            ('comercio_computadores', 'Comercio  de computadores, equipo periférico y programas de informática'),
+            ('comercio_electronicos', 'Comercio  de equipo, partes y piezas electrónicos y de telecomunicaciones'),
+            ('comercio_quimicos', 'Comercio de productos químicos básicos, cauchos y plásticos en formas primarias y productos químicos de uso agropecuario'),
+            ('comercio_desechos', 'Comercio de desperdicios, desechos y chatarra'),
+            ('comercio_elem_depor', 'Comercio de elementos deportivos, implementos, balones, tienda de bicicletas'),
+            ('comercio_tecnologia', 'Comercio de productos de tecnologia, celulares, computadores'),
+            ('comercio_regalos', 'Comercio de regalos, variedades, adornos, tajetas, articulos diversos.'),
+            ('comercio_hogar', 'Comercio de colchones, muebles y decoraciones para el hogar'),
+            ('comercio_prod_varios', 'Comercio de productos varios no especializados'),
+            ('comercio_establecimientos_esp', 'Comercio de alimentos, bebidas y tabaco en establecimientos especilizados'),
+            ('comercio_combustible', 'Comercio  de combustible, lubricantes, aditivos y productos de limpieza para automotores, en establecimientos especializados'),
+            ('comercio_ferreteria', 'Comercio  de artículos de ferretería, pinturas y productos de vidrio en establecimientos especializados'),
+            ('comercio_paredes_pisos', 'Comercio  de tapices, alfombras y cubrimientos para paredes y pisos en establecimientos especializados.'),
+            ('comercio_electrodomesticos_esta_esp', 'Comercio  de electrodomésticos y gasodomésticos, muebles y equipos de iluminación en establecimientos especializados'),
+            ('comercio_papeleria', 'Comercio  de libros, periódicos, materiales y artículos de papelería y escritorio, en establecimientos especializados'),
+            ('comercio_segunda_mano', 'Comercio  de artículos de segunda mano'),
+            ('otros', 'Otros tipo'),
+        ], "Actividad economica comercia",
+    )
+
+    x_actividad_economica_ser = fields.Selection(
+        [
+            ('transporte_terrestre', 'Transporte terrestre'),
+            ('transporte_acuatico', 'Transporte acuático (Maritimo/fluvial)'),
+            ('almacenamiento', 'Almacenamiento y depósito'),
+            ('actividades_estaciones', 'Actividades de las estaciones, vías y servicios complementarios para el transporte'),
+            ('actividades_alojamiento', 'Actividades de alojamiento de estancias cortas (Hoteles, apartahoteles, centros vacacionales, rural, alojamiento para visitantes)'),
+            ('zonas_camping', 'Actividades de zonas de camping y parques para vehículos recreacionales'),
+            ('actividades_comidas', 'Actividades de restaurantes, cafeterías y servicio móvil de comidas'),
+            ('actividades_catering', 'Actividades de catering para eventos y otros servicios de comidas'),
+            ('expendio_bebidas_alcoholicas', 'Expendio de bebidas alcohólicas para el consumo dentro del establecimiento'),
+            ('edicion_libros', 'Edición de libros, publicaciones periódicas y otras actividades de edición'),
+            ('desarrollo_software', 'Desarrollo de programas de informática (software)'),
+            ('deasrrollo_sis_informaticos', 'Desarrollo de sistemas informáticos (planificación, análisis, diseño, programación, pruebas), consultoría informática y actividades relacionadas'),
+            ('actividades_musica', 'Actividades de grabación de sonido y edición de música'),
+            ('actividades_comunicaciones', 'Actividades de programación, transmisión y/o difusión de radio difución o televisión'),
+            ('actividades_inmobiliarias', 'Actividades inmobiliarias'),
+            ('actividades_juridicas', 'Actividades jurídicas y de contabilidad'),
+            ('actividades_gestion', 'Actividades de administración empresarial; actividades de consultoría de gestión'),
+            ('actividades_arq_ing', 'Actividades de arquitectura e ingeniería; ensayos y análisis técnicos'),
+            ('publicidad', 'Publicidad y estudios de mercado'),
+            ('actividades_veterinarias', 'Actividades veterinarias'),
+            ('actividad_agencias_viajes', 'Actividades de las agencias de viajes, operadores turísticos, servicios de reserva y actividades relacionadas'),
+            ('alquiles_equipo_rec_dep', 'Alquiler y arrendamiento de equipo recreativo y deportivo'),
+            ('actividades_seguridad', 'Actividades de seguridad e investigación privada'),
+            ('actividades_edi_pai', 'Actividades de servicios a edificios y paisajismo (jardines, zonas verdes)'),
+            ('actividades_administrativas', 'Actividades administrativas y de apoyo de oficina'),
+            ('organizacion_eventos', 'Organización de convenciones y eventos comerciales'),
+            ('educacion_academica', 'Educación de distintos niveles academicos'),
+            ('formacion_trabajo', 'Formación para el trabajo'),
+            ('enseñanza_dep_rec', 'Enseñanza deportiva y recreativa'),
+            ('enseñanza_cul', 'Enseñanza cultural'),
+            ('actividades_med_odo', 'Actividades de práctica médica y odontológica, sin internación'),
+            ('actividades_asistencia_soc', 'Actividades de asistencia social sin alojamiento para personas mayores y discapacitadas'),
+            ('actividades_guarderia', 'Actividades de guarderías para niños y niñas'),
+            ('actividades_artes', 'Actividades creativas, artísticas, audiovisuales y de entretenimiento'),
+            ('actividades_juegos_azar', 'Actividades de juegos de azar y apuestas'),
+            ('actividades_dep_rec', 'Actividades deportivas y actividades recreativas y de esparcimiento'),
+            ('lavado_limpieza', 'Lavado y limpieza, incluso la limpieza en seco, de productos textiles y de piel'),
+            ('peluqueria', 'Peluquería y otros tratamientos de belleza'),
+            ('mantenimiento_reparacion_com', 'Mantenimiento y reparación de computadores y equipo de comunicaciones'),
+            ('mantenimiento_reparacion_dom', 'Mantenimiento y reparación de efectos personales y enseres domésticos. (Ropa, zapatos, electrodomesticos, etc)'),
+            ('otros', 'Otros tipo'),
+        ], "Actividad economica servicio",
+    ) 
+
+    x_actividad_economica_ind = fields.Selection(
+        [
+            ('procesamiento_carne', 'Procesamiento y conservación de carne, pescado, crustáceos y moluscos'),
+            ('procesamiento_frutas', 'Procesamiento y conservación de frutas, legumbres, hortalizas y tubérculos'),
+            ('elaboracion_aceites', 'Elaboración de aceites y grasas de origen vegetal y animal'),
+            ('elaboracion_lacteos', 'Elaboración de productos lácteos'),
+            ('elaboracion_molineria', 'Elaboración de productos de molinería, almidones y productos derivados del almidón'),
+            ('elaboracion_cafe', 'Elaboración de productos de café (Trilla de café, descafeinado, tostión, molienda de café, etc)'),
+            ('elaboracion_azucar', 'Elaboración de azúcar y panela'),
+            ('elaboracion_panaderia', 'Elaboración de productos de panadería'),
+            ('elaboracion_cacao', 'Elaboración de cacao, chocolate y productos de confitería'),
+            ('elaboracion_farinacios', 'Elaboración de macarrones, fideos, alcuzcuz y productos farináceos similares'),
+            ('elaboracion_preparados', 'Elaboración de comidas y platos preparados'),
+            ('elaboracion_preparados_animales', 'Elaboración de alimentos preparados para animales'),
+            ('destilados', 'Destilación, rectificación y mezcla de bebidas alcohólicas'),
+            ('fermentados', 'Elaboración de bebidas fermentadas no destiladas'),
+            ('produccion_malta', 'Producción de malta, elaboración de cervezas y otras bebidas malteadas'),
+            ('bebidas_no_alcohol', 'Elaboración de bebidas no alcohólicas, producción de aguas minerales y otras aguas embotelladas'),
+            ('textiles', 'Preparación, hilatura, tejeduría y acabado de productos textiles'),
+            ('tejidos', 'Fabricación de tejidos de punto y ganchillo'),
+            ('confeccion_no_prendas', 'Confección de artículos con materiales textiles, excepto prendas de vestir'),
+            ('fabricacion_tap_alf', 'Fabricación de tapetes y alfombras para pisos'),
+            ('fabricacion_cuerdas', 'Fabricación de cuerdas, cordeles, cables, bramantes y redes'),
+            ('confeccion_prendas', 'Confección de prendas de vestir, excepto prendas de piel'),
+            ('articulos_piel', 'Fabricación de artículos de piel'),
+            ('curtidos', 'Curtido y recurtido de cueros; recurtido y teñido de pieles'),
+            ('fabricacion_art_viajes', 'Fabricación de artículos de viaje, bolsos de mano y artículos similares'),
+            ('fabricacion_calzado', 'Fabricación de calzado'),
+            ('transformacion_madera', 'Transformación de la madera y fabricación de productos de madera y de caucho'),
+            ('fabricacion_papel', 'Fabricación de papel, cartón y productos de papel y cartón'),
+            ('fabricacion_quimicos', 'Fabricación de sustancias y productos químicos'),
+            ('fabricacion_pinturas', 'Fabricación de pinturas, barnices y revestimientos similares, tintas para impresión y masillas'),
+            ('fabricacion_jab_det', 'Fabricación de jabones y detergentes, preparados para limpiar y pulir; perfumes y preparados de tocador'),
+            ('fabricacion_prod_caucho', 'Fabricación de productos de caucho y de plástico (Neumaticos, botellas, etc)'),
+            ('fabricacion_vidrio', 'Fabricación de vidrio y productos de vidrio'),
+            ('fabricacion_mat_construccion', 'Fabricación de productos de materiales para construcción'),
+            ('fabricacion_prod_metalurgicos', 'Fabricación de productos metalúrgicos'),
+            ('fabricacion_prod_informaticos', 'Fabricación de productos informáticos, electrónicos y ópticos'),
+            ('fabricacion_eq_electronico', 'Fabricación de aparatos y equipo eléctrico'),
+            ('fabricacion_maq_eq', 'Fabricación de maquinaria y equipo'),
+            ('fabricacion_automotores', 'Fabricación de vehículos automotores, remolques y semirremolques'),
+            ('otros', 'Otros tipo'),
+        ], "Actividad economica industrial",
+    ) 
     
     x_que_por_ren = fields.Selection(
         [
@@ -487,7 +723,7 @@ class Lead(models.Model):
            ('98', '98%'),
            ('99', '99%'),
            ('100', '100%')
-        ], "30. ¿Que porcentaje de rentabilidad le dejo su negocio durante de la pandemia COVID-19?",
+        ], "31. ¿Que porcentaje de rentabilidad le dejo su negocio durante de la pandemia COVID-19?",
     )
     x_que_por_ren_ant = fields.Selection(
         [
@@ -591,47 +827,14 @@ class Lead(models.Model):
            ('98', '98%'),
            ('99', '99%'),
            ('100', '100%')
-        ], "31. ¿Que porcentaje de rentabilidad le dejo su negocio antes de la pandemia COVID-19?",
+        ], "32. ¿Que porcentaje de rentabilidad le dejo su negocio antes de la pandemia COVID-19?",
     )
-
-    x_tien_dur = fields.Selection(
-        [('de_1_a_3', 'De 1 mes a 3 meses'),
-         ('de_4_a_6', 'De 4 meses a 6 meses'),
-         ('de_7_a_11', 'De 7 meses a 11 meses'),
-         ('mas_de_1_ano', 'Mas de 1 año'),
-         ('no_pienso_continuar_con_el_negocio', 'No pienso continuar con el negocio'),
-        ], "29. Tiene usted proyectado continuar con su micronegocio durante:",
-    )
-
-    # x_herramientas = fields.Selection(
-    #     [
-    #         ('computador', 'Computador de escritorio o portatil'),
-    #         ('tel_no_smart', 'Telefono celular no smart'),
-    #         ('smartphone', 'Smartphone'), ('tablet', 'tablet'),
-    #         ('herr_ofi', 'Herramientas de oficina u ofimaticas(Como Word, PowerPoint, etc)'),
-    #         ('hoja_cal', 'Hojas de calculo (Como Excel)'),
-    #         ('navegador', 'Navegadores (Como google chrome, explorer, morzilla, opera, etc)'),
-    #         ('correo_elec', 'Correo electronico'), ('whatsapp', 'Whatsapp'),
-    #         ('redes', 'Redes sociales'),
-    #         ('nube','Servicios de la nube para almacenar y compartir documentos (Como Google drive, Dropbox, etc)'),
-    #         ('blogs', 'Manejo de blogs'),
-    #         ('web', 'Herramientas para la creación de paginas web (como wix, Jimdo, squarespace)'),
-    #         ('ninguna', 'Ninguna de las anteriores')
-    #     ], "30. ¿Que herramientas tecnologicas maneja el propietario?",
-    # )
 
     x_herramientas = fields.Many2many(
         comodel_name="modelo.herramientas.tecnologicas",
         string="30. ¿Que herramientas tecnologicas maneja el propietario?",
         readonly=False,
         store=True,
-    )
-
-    x_depend = fields.Selection(
-        [
-            ('si', 'Si'),
-            ('no', 'No'),
-        ], "31. ¿Depende usted o su familia de la operación o venta de este negocio?",
     )
 
     tie_us_cre = fields.Selection(
@@ -1546,14 +1749,6 @@ class Lead(models.Model):
         ], "39. ¿Vende a través de redes sociales o páginas web?",
     )
 
-    x_forma40 = fields.Selection(
-        [
-            ('agropecuario', 'Agropecuario'),
-            ('comercio', 'Comercio'),
-            ('servicios', 'Servicios'),
-            ('industrial', 'Industrial'),
-        ], "40. ¿En que sector económico se encuentra su negocio?",
-    ) 
     x_forma41 = fields.Selection(
         [
             ('peluqueria_salon_de_belleza_barberia_arreglo_de_unas', 'Peluquería, salón de belleza, barbería, arreglo de uñas'),
@@ -1675,8 +1870,6 @@ class Lead(models.Model):
         store=True,
     )
 
-
-    x_forma52 = fields.Char("52. ¿Cuántas personas viven o dependen del Micronegocio?")
     x_model21 = fields.Selection(
         [
             ('si', 'Si'),
