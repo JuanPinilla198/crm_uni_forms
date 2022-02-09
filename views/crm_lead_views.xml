@@ -43,7 +43,7 @@
                                         'default_email': email_from,
                                         
                                         'default_team_id': team_id,
-                                        'default_doctype': doctype1,
+                                        'default_doctype': doctype,
                                         
                                         'default_x_sexo': x_sexo,
                                         'default_x_etnia': x_etnia,
